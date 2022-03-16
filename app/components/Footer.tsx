@@ -5,10 +5,17 @@ export const Footer = (_props: FooterProps) => {
   const year = date.getFullYear();
 
   return (
-    <footer className="text-sm text-center text-color-copy-light">
+    <footer className="text-center text-sm">
       <p>
-        Built with <span className="text-color-primary">&hearts;</span> in San
-        Diego, California. &copy; {year}
+        Built with <span className="text-color-primary">&hearts;</span> in{" "}
+        <a
+          href="https://www.google.com/search?q=san+diego+weather"
+          rel="noreferrer"
+          target="_blank"
+        >
+          San Diego
+        </a>
+        , California. &copy; {year}
       </p>
     </footer>
   );

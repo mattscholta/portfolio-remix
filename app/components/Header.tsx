@@ -5,8 +5,8 @@ export interface HeaderProps {}
 
 export const Header = (_props: HeaderProps) => {
   return (
-    <header className="bg-color-background border-b-color-border border text-color-copy">
-      <div className="max-w-2xl mx-auto flex gap-20 items-center justify-center uppercase font-semibold text-sm">
+    <header className="header">
+      <div className="mx-auto flex max-w-2xl items-center justify-center gap-20 text-sm font-semibold uppercase">
         {/*
         <NavLink className="header-link" to="/">
           Home

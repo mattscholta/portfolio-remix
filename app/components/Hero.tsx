@@ -14,9 +14,9 @@ export const Hero = (props: HeroProps) => {
 
   return (
     <div className={css}>
-      <h1 className="mb-5 font-font-serif text-6xl font-extrabold text-color-copy text-center">
+      <h1 className="mb-5 text-center font-font-serif text-6xl font-extrabold">
         {copy}
-        <div className="text-transparent bg-clip-text bg-gradient-to-r from-color-primary to-blue-500 pt-6 pb-12 text-7xl">
+        <div className="bg-gradient-to-r from-color-primary to-blue-500 bg-clip-text pt-6 pb-12 text-7xl text-transparent">
           {highlight}
         </div>
       </h1>

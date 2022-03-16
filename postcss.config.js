@@ -7,9 +7,11 @@
  */
 module.exports = {
   plugins: [
-    require("autoprefixer"),
     require("postcss-import"),
-    require("postcss-preset-env"),
+    require("postcss-preset-env")({
+      importFrom: "styles/variables.css"
+    }),
+    require("autoprefixer"),
     require("tailwindcss"),
     require("cssnano")
   ]

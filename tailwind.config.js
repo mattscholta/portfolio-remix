@@ -3,11 +3,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "color-background-lighter": "#fff",
         "color-background-light": "#fff",
         "color-background": "#f5f8fa",
         "color-background-dark": "#24292e",
-        "color-background-darker": "#161b22",
 
         "color-border-light": "#f5f8fa",
         "color-border": "#cfd7dd",

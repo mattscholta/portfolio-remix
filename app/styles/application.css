@@ -1,0 +1,1 @@
+.header-link{padding:1rem;transition:color .2s ease-out}.header-link.active,.header-link:hover{color:red}.header-logo.active,.header-logo:hover{fill:red}.section-full{min-height:calc(100vh - var(--footer-height))}

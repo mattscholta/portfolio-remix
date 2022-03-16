@@ -1,0 +1,31 @@
+html {
+  background-color: var(--color-background-light);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-copy);
+}
+
+body {
+  position: relative;
+}
+
+footer {
+  height: var(--footer-height);
+}
+
+header {
+  background-color: var(--color-background-light);
+  color: var(--color-copy);
+  border-bottom: 1px solid var(--color-border);
+  height: var(--header-height);
+  left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  top: 0;
+}

@@ -4,10 +4,25 @@ exports[`Footer Component > should render our footer 1`] = `
 <body>
   <div>
     <footer
-      class="text-sm text-center text-color-copy-light"
+      class="text-sm text-center"
     >
       <p>
-        Built with ♥ in San Diego, California. © 
+        Built with 
+        <span
+          class="text-color-primary"
+        >
+          ♥
+        </span>
+         in
+         
+        <a
+          href="https://www.google.com/search?q=san+diego+weather"
+          rel="noreferrer"
+          target="_blank"
+        >
+          San Diego
+        </a>
+        , California. © 
         2022
       </p>
     </footer>
