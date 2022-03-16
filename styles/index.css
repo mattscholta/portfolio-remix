@@ -1,0 +1,57 @@
+@import "./variables.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --header-height: 4rem;
+  --footer-height: 2rem;
+}
+
+html,
+body {
+  background-color: var(--theme-background);
+}
+
+body {
+  position: relative;
+}
+
+footer {
+  height: var(--footer-height);
+}
+
+header {
+  height: var(--header-height);
+  left: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  top: 0;
+}
+
+.header-link {
+  padding: 1rem;
+  transition: color 200ms ease-out;
+}
+
+.header-link:hover,
+.header-link.active {
+  color: red;
+}
+
+.header-logo:hover,
+.header-logo.active {
+  fill: red;
+}
+
+.section-full {
+  min-height: calc(100vh - var(--footer-height));
+  /* min-height: 800px; */
+}
+
+header .logo {
+}

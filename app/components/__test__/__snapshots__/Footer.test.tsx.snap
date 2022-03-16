@@ -1,0 +1,16 @@
+// Vitest Snapshot v1
+
+exports[`Footer Component > should render our footer 1`] = `
+<body>
+  <div>
+    <footer
+      class="text-sm text-center text-color-copy-light"
+    >
+      <p>
+        Built with ♥ in San Diego, California. © 
+        2022
+      </p>
+    </footer>
+  </div>
+</body>
+`;
