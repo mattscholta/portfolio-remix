@@ -5,6 +5,7 @@ import { Hero } from "~/components/Hero";
 import { loader } from "~/routes/api/qualities";
 import { ScrollTo } from "~/components/ScrollTo";
 import {
+  SITE_AUTHOR,
   SITE_DESCRIPTION,
   SITE_TITLE,
   SOCIAL_LINKEDIN
@@ -49,13 +50,13 @@ export default function Index() {
     <>
       <section className={cssSection}>
         <div className="mt-20 flex flex-col-reverse items-center gap-4 md:mt-0 md:flex-row">
-          <Hero copy={heading} highlight="Matthew Scholta" />
+          <Hero copy={heading} highlight={SITE_AUTHOR} />
           <div>
             <img
-              alt=""
+              alt={SITE_AUTHOR}
               className="max-h-32 cursor-pointer rounded-full bg-gradient-to-l from-color-primary to-blue-500 p-1 transition-transform hover:rotate-6 hover:scale-110 md:max-h-40"
               onClick={onClick}
-              src="/matt.jpg"
+              src="/matt-scaled.webp"
             />
           </div>
         </div>
