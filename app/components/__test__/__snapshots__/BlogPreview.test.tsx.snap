@@ -1,0 +1,48 @@
+// Vitest Snapshot v1
+
+exports[`BlogPreview Component > should render our BlogPreview 1`] = `
+<body>
+  <div>
+    <a
+      class="blog-preview flex flex-grow flex-col aspect-video p-4"
+      href="/blog/10"
+    >
+      <h3
+        class="text-2xl my-4 font-font-serif font-extrabold"
+      >
+        test title
+      </h3>
+    </a>
+  </div>
+</body>
+`;
+
+exports[`Footer Component > should render our footer 1`] = `
+<body>
+  <div>
+    <footer
+      class="text-center text-sm"
+    >
+      <p>
+        Built with 
+        <span
+          class="text-color-primary"
+        >
+          ♥
+        </span>
+         in
+         
+        <a
+          href="https://www.surfline.com/surf-report/carlsbad-state-beach-north/5d4dc10680c2430001b119fb"
+          rel="noreferrer"
+          target="_blank"
+        >
+          San Diego
+        </a>
+        , California. © 
+        2022
+      </p>
+    </footer>
+  </div>
+</body>
+`;
