@@ -16,7 +16,8 @@ export const Hero = (props: HeroProps) => {
     <div className={cssComponent}>
       <h1 className="font-font-serif text-4xl font-extrabold md:text-4xl">
         {copy && copy}
-        <div className="text-highlight text-5xl md:text-7xl">{highlight}</div>
+        <br />
+        <span className="text-highlight text-5xl md:text-7xl">{highlight}</span>
       </h1>
     </div>
   );

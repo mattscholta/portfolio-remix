@@ -31,11 +31,14 @@ export default function Work() {
           alt=""
         />
          */}
-        <Hero
-          className="my-20 md:my-40"
-          copy={data.company}
-          highlight={data.title}
-        />
+        <div>
+          <Hero
+            className="my-20 md:my-40"
+            copy={data.company}
+            highlight={data.title}
+          />
+        </div>
+
         <div
           className="wysiwyg px-4"
           dangerouslySetInnerHTML={{ __html: data.content.html }}

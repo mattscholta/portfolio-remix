@@ -10,11 +10,12 @@ exports[`Hero Component > should render our Hero 1`] = `
         class="font-font-serif text-4xl font-extrabold md:text-4xl"
       >
         Test Copy
-        <div
+        <br />
+        <span
           class="text-highlight text-5xl md:text-7xl"
         >
           The HIGHLIGHT
-        </div>
+        </span>
       </h1>
     </div>
   </div>
