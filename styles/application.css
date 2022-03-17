@@ -15,6 +15,11 @@
   background-image: unset;
 }
 
+.experience div {
+  color: var(--color-copy-light);
+  font-style: italic;
+}
+
 .header-link {
   font-weight: 600;
   /* padding: 1rem; */

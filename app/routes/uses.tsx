@@ -17,7 +17,7 @@ export default function About() {
   return (
     <>
       <section className={cssSection}>
-        <Hero copy="Tools of the trade" highlight="Have a look" />
+        <Hero copy="Tools of the trade" highlight="Coming soon!" />
       </section>
     </>
   );

@@ -58,6 +58,38 @@ export default function About() {
             <li>A list item here</li>
             <li>A list item here</li>
           </ul>
+
+          <h3>An h3 tag</h3>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            laborum rerum quo amet ullam veniam dolore architecto perspiciatis
+            cupiditate laudantium dolorem, unde nisi blanditiis aspernatur,
+            nostrum molestias rem, quos temporibus!
+          </p>
+
+          <h4>An h4 tag</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            laborum rerum quo amet ullam veniam dolore architecto perspiciatis
+            cupiditate laudantium dolorem, unde nisi blanditiis aspernatur,
+            nostrum molestias rem, quos temporibus!
+          </p>
+
+          <h5>An h5 tag</h5>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            laborum rerum quo amet ullam veniam dolore architecto perspiciatis
+            cupiditate laudantium dolorem, unde nisi blanditiis aspernatur,
+            nostrum molestias rem, quos temporibus!
+          </p>
+
+          <h6>An h6 tag</h6>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            laborum rerum quo amet ullam veniam dolore architecto perspiciatis
+            cupiditate laudantium dolorem, unde nisi blanditiis aspernatur,
+            nostrum molestias rem, quos temporibus!
+          </p>
         </div>
 
         <div className="section-subcontent w-full">
