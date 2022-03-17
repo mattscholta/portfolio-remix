@@ -7,7 +7,7 @@ export interface HeaderProps {}
 export const Header = (_props: HeaderProps) => {
   return (
     <header className="header">
-      <div className="mx-auto flex max-w-2xl items-center justify-center gap-1 text-sm uppercase md:gap-20">
+      <div className="mx-auto flex w-full max-w-2xl items-center justify-evenly gap-1 text-sm uppercase md:gap-20">
         {/*
         <NavLink className="header-link" to="/">
           Home

@@ -10,6 +10,7 @@ html {
 body {
   background-color: var(--color-background);
   color: var(--color-copy);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -35,6 +36,7 @@ blockquote {
 }
 
 p {
+  line-height: 1.6;
   margin-bottom: 1rem;
 }
 
@@ -65,8 +67,10 @@ header {
   z-index: 10;
 }
 
+/*
 @media (prefers-reduced-motion) {
   html {
     scroll-behavior: unset;
   }
 }
+*/

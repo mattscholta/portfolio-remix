@@ -35,6 +35,7 @@
 .wysiwyg p {
   color: var(--color-copy);
   margin-bottom: 1rem;
+  line-height: 1.8;
 }
 
 .wysiwyg a {

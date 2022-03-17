@@ -160,7 +160,7 @@ export default function Index() {
             twice actually... Otherwise reach out and connect on LinkedIn.
           </p>
         </div>
-        <ScrollTo rotate="rotate-0" to="/work" />
+        <ScrollTo className="mb-20" rotate="rotate-0" to="/work" />
       </section>
     </>
   );

@@ -2,10 +2,11 @@ import classnames from "classnames";
 export interface LogoProps {
   className?: string;
   fill?: string;
+  height?: number;
 }
 
 export const Logo = (props: LogoProps) => {
-  const { className = "", fill = "" } = props;
+  const { className = "", fill = "", height = 59 } = props;
 
   // Styles
   const cssComponent = classnames("logo", className);
@@ -13,9 +14,8 @@ export const Logo = (props: LogoProps) => {
   return (
     <svg
       className={cssComponent}
-      height="59"
+      height={height}
       viewBox="0 0 100 59"
-      width="100"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
