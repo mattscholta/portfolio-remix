@@ -4,7 +4,7 @@
 }
 
 .blog-preview.both {
-  transition: all 200ms ease-out;
+  transition: all 140ms ease-out;
 }
 
 .blog-preview:hover {
@@ -14,7 +14,7 @@
 .header-link {
   font-weight: 600;
   padding: 1rem;
-  transition: color 200ms ease-out;
+  transition: color 140ms ease-out;
 }
 
 .header-link:hover,
@@ -28,7 +28,7 @@
 
 .header-logo path {
   fill: var(--color-copy-light);
-  transition: fill 200ms ease-out;
+  transition: fill 140ms ease-out;
 }
 
 .header-logo:hover path,
@@ -54,11 +54,14 @@
   animation: pulse 1400ms infinite;
 }
 
-/*
-.pulse:hover {
-  animation-duration: 14000ms;
+.scroll-to {
+  transition: border 140ms ease-out, color 140ms ease-out;
 }
-*/
+
+.scroll-to:hover {
+  border-color: var(--color-background);
+  color: var(--color-primary);
+}
 
 .section-full {
   min-height: calc(100vh - var(--footer-height));

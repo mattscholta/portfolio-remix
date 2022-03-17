@@ -31,24 +31,19 @@ export default function Index() {
     setHeading(data);
   };
 
-  React.useEffect(() => {
-    window.addEventListener("click", onClick);
-
-    return () => {
-      window.addEventListener("click", onClick);
-    };
-  }, []);
-
   return (
     <main>
       <section className={cssSection}>
-        <div className="flex">
+        <div className="flex flex-col items-center md:flex-row">
           <Hero copy={heading} highlight="Matthew Scholta" />
-          <img
-            alt=""
-            className="max-h-40 rounded-full bg-gradient-to-l from-color-primary to-blue-500 p-1 transition-transform hover:rotate-6 hover:scale-110"
-            src={src}
-          />
+          <div>
+            <img
+              alt=""
+              className="max-h-40 cursor-pointer rounded-full bg-gradient-to-l from-color-primary to-blue-500 p-1 transition-transform hover:rotate-6 hover:scale-110"
+              onClick={onClick}
+              src={src}
+            />
+          </div>
         </div>
         <ScrollTo to="/#section-2" />
       </section>

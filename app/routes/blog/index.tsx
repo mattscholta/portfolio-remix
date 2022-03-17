@@ -40,7 +40,7 @@ export default function About() {
 
       <div className="section-anchor" id="section-2" />
       <section className={cssSection}>
-        <div className="flex items-center gap-16">
+        <div className="flex flex-col items-center gap-16 p-8 md:flex-row">
           <div className="flex-1">
             <h2 className="mb-4 font-font-serif text-3xl font-extrabold">
               Introducing{" "}
