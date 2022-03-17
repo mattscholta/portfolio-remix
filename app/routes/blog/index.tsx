@@ -20,14 +20,14 @@ export default function About() {
   const data = useLoaderData();
 
   // Styles
-  const cssSection = `section-full flex flex-col items-center justify-center max-w-6xl gap-20`;
+  const cssSection = `section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20`;
   const cssHeading = "text-3xl mb-8 font-font-serif font-extrabold";
 
   // Setup
   const featured = `https://picsum.photos/id/158/1200/600`;
 
   return (
-    <main>
+    <>
       <section className={cssSection} id="section-1">
         <Hero
           className="mx-auto max-w-6xl"
@@ -91,6 +91,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }

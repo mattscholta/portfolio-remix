@@ -8,25 +8,25 @@ export const Footer = (_props: FooterProps) => {
     <footer className="text-center text-sm">
       <div className="mb-2 flex items-center justify-center gap-4">
         <img
+          alt="Follow me on GitHub"
           className="footer-social"
-          src="/twitter.svg"
-          alt=""
-          height={20}
-          width={20}
-        />
-        <img
-          className="footer-social"
+          height={16}
           src="/github.svg"
-          alt=""
-          height={20}
-          width={20}
+          width={16}
         />
         <img
+          alt="Follow me on Twitter"
           className="footer-social"
+          height={16}
+          src="/twitter.svg"
+          width={16}
+        />
+        <img
+          alt="Follow me on LinkedIn"
+          className="footer-social"
+          height={16}
           src="/linkedin.svg"
-          alt=""
-          height={20}
-          width={20}
+          width={16}
         />
       </div>
       <p>

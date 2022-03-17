@@ -13,6 +13,14 @@ body {
   position: relative;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
+p:last-of-type {
+  margin: unset;
+}
+
 footer {
   height: var(--footer-height);
 }

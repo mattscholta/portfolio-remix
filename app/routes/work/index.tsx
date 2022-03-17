@@ -20,10 +20,10 @@ export default function Work() {
   const data = useLoaderData<LoaderData>();
 
   // Styles
-  const cssSection = `section-full flex flex-col items-center justify-center max-w-6xl gap-20`;
+  const cssSection = `section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20`;
 
   return (
-    <main>
+    <>
       {/*
       <section className={cssSection}>
         <Hero
@@ -42,6 +42,6 @@ export default function Work() {
           ))}
         </div>
       </section>
-    </main>
+    </>
   );
 }

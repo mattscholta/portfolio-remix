@@ -16,24 +16,62 @@ export default function About() {
   const { id } = useParams();
 
   // Styles
-  const cssSection = `section-full flex flex-col items-center justify-center max-w-6xl gap-20`;
-  const cssHeading = "text-3xl mb-4 font-font-serif font-extrabold";
+  const cssSection = `section-full m-auto flex flex-col items-center justify-center gap-20`;
+  const cssSection2 = `${cssSection} gap-0`;
+
+  const twFont = `font-font-serif font-extrabold`;
+  const cssHeading = `${twFont} text-3xl mb-4`;
+  const cssHeading2 = `${twFont} text-xl mb-2`;
 
   return (
-    <main>
+    <>
       <section className={cssSection} id="section-1">
         <Hero
           className="mx-auto max-w-6xl"
           copy="June 2022"
-          highlight={`Blog post #${id}`}
+          highlight={`#${id}`}
         />
         <ScrollTo to={`/blog/${id}/#section-2`} />
       </section>
 
       <div className="section-anchor" id="section-2" />
-      <section className={cssSection}>
-        <h2 className={cssHeading}>Blog Post #{id}</h2>
+      <section className={cssSection2}>
+        <div className="wysiwyg max-w-3xl p-4">
+          <h1 className={cssHeading}>Post #{id}</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim ex
+            quisquam minima explicabo ad non dolores quae ducimus dicta omnis
+            molestiae, quaerat reprehenderit ut ea, itaque harum iure obcaecati
+            laboriosam!
+          </p>
+
+          <h2>A secondary heading</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            laborum rerum quo amet ullam veniam dolore architecto perspiciatis
+            cupiditate laudantium dolorem, unde nisi blanditiis aspernatur,
+            nostrum molestias rem, quos temporibus!
+          </p>
+
+          <ul>
+            <li>A list item here</li>
+            <li>A list item here</li>
+            <li>A list item here</li>
+          </ul>
+        </div>
+
+        <div className="section-subcontent w-full">
+          <div className="m-auto max-w-6xl p-4">
+            <h3 className={cssHeading2}>More posts</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              expedita possimus amet pariatur provident reiciendis earum
+              accusamus! Nobis earum voluptatem doloremque deleniti praesentium
+              laboriosam beatae corrupti ea sit iste. Impedit!
+            </p>
+          </div>
+        </div>
       </section>
-    </main>
+    </>
   );
 }

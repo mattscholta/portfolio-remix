@@ -13,7 +13,6 @@ import type { MetaFunction } from "remix";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import { intro } from "./config/intro";
-import { Layout } from "./components/Layout";
 
 import styles from "./styles/index.css";
 
@@ -41,9 +40,9 @@ export default function App() {
       </head>
       <body>
         <Header />
-        <Layout>
+        <main>
           <Outlet />
-        </Layout>
+        </main>
         <Footer />
         <ScrollRestoration />
         <Scripts />

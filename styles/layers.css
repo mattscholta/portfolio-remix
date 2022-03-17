@@ -4,6 +4,8 @@
   .text-highlight {
     @apply bg-gradient-to-r from-color-primary to-blue-500 bg-clip-text text-transparent;
     letter-spacing: -0.05em;
+    line-height: 1.1 !important;
+    overflow: visible;
   }
 
   .work-preview span {
@@ -11,6 +13,10 @@
   }
 
   .work-preview:hover span {
+    @apply text-highlight;
+  }
+
+  .wysiwyg blockquote a {
     @apply text-highlight;
   }
 }

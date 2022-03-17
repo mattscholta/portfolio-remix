@@ -11,9 +11,14 @@ export const meta: MetaFunction = () => {
 };
 
 export default function About() {
+  // Styles
+  const cssSection = `section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20`;
+
   return (
-    <main>
-      <Hero copy="Tools of the trade" highlight="Have a look" />
-    </main>
+    <>
+      <section className={cssSection}>
+        <Hero copy="Tools of the trade" highlight="Have a look" />
+      </section>
+    </>
   );
 }

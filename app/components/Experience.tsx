@@ -10,7 +10,7 @@ export const Experience = (props: ExperienceProps) => {
   const { className, company, role } = props;
 
   // Styles
-  const tailwind = `flex-1`;
+  const tailwind = `flex-1 max-w-sm m-auto`;
   const cssComponent = classnames("experience", tailwind, className);
 
   return (

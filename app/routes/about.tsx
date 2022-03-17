@@ -10,9 +10,14 @@ export const meta: MetaFunction = () => {
 };
 
 export default function About() {
+  // Styles
+  const cssSection = `section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20`;
+
   return (
-    <main>
-      <Hero copy="A problem solver 🤔" highlight="Matthew Scholta" />
-    </main>
+    <>
+      <section className={cssSection}>
+        <Hero copy="A problem solver 🤔" highlight="Matthew Scholta" />
+      </section>
+    </>
   );
 }

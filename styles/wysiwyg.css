@@ -12,6 +12,21 @@
   margin-top: 2rem;
 }
 
+.wysiwyg h1,
+.wysiwyg h2 {
+  font-size: 1.8rem;
+}
+
+.wysiwyg h3,
+.wysiwyg h4 {
+  font-size: 1.6rem;
+}
+
+.wysiwyg h5,
+.wysiwyg h6 {
+  font-size: 1.4rem;
+}
+
 .wysiwyg p {
   color: var(--color-copy);
   margin-bottom: 1rem;
@@ -21,6 +36,17 @@
   color: red;
 }
 
+.wysiwyg blockquote {
+  box-sizing: content-box;
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 4rem 4rem;
+  overflow: auto;
+  overflow: visible;
+  text-align: center;
+}
+
 .wysiwyg ul {
   padding-left: 1rem;
   margin-bottom: 1rem;
@@ -28,6 +54,4 @@
 
 .wysiwyg ul li {
   list-style: disc;
-  /* color: var(--color-copy); */
-  /* margin-bottom: 1rem; */
 }
