@@ -19,16 +19,6 @@ export default function About() {
   // Hooks
   const data = useLoaderData();
 
-  console.log(` 💬 ~ data`, data);
-
-  const copy = (
-    <>
-      Always leave the{" "}
-      <span className="text-color-copy-light line-through">campground</span>{" "}
-      code cleaner than you found it. 🏕️
-    </>
-  );
-
   // Styles
   const cssSection = `section-full flex flex-col items-center justify-center max-w-6xl gap-20`;
   const cssHeading = "text-3xl mb-8 font-font-serif font-extrabold";

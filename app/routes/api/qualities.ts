@@ -10,6 +10,5 @@ const qualities = [
 ];
 
 export const loader: LoaderFunction = async (): Promise<string> => {
-  console.log(`🟠 Fetching the qualities list`);
   return qualities[Math.floor(Math.random() * qualities.length)];
 };
