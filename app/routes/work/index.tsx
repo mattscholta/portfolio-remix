@@ -1,11 +1,19 @@
-import { useLoaderData } from "remix";
+import { MetaFunction, useLoaderData } from "remix";
 
 import { Hero } from "~/components/Hero";
 import { ScrollTo } from "~/components/ScrollTo";
 import { WorkPreview } from "~/components/WorkPreview";
+import { SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
 import { loader, LoaderData } from "~/routes/api/work";
 
 export { loader };
+
+export const meta: MetaFunction = () => {
+  return {
+    description: SITE_DESCRIPTION,
+    title: `Work | ${SITE_TITLE}`
+  };
+};
 
 export default function Work() {
   // Hooks
@@ -26,7 +34,7 @@ export default function Work() {
 
       <div className="section-anchor" id="section-2" />
       <section className={cssSection}>
-        <div className="mb-40 grid grid-cols-2 gap-16">
+        <div className="mb-40 grid grid-cols-3 gap-16">
           {data.map((node) => (
             <WorkPreview data={node} key={node.slug} />
           ))}

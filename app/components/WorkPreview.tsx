@@ -13,12 +13,15 @@ export const WorkPreview = (props: WorkPreviewProps) => {
 
   // Styles
   const tailwind = `flex flex-grow flex-col aspect-video--`;
-  const cssComponent = classnames(tailwind, className);
-  const cssHeading = "text-3xl mb-4 font-font-serif font-extrabold";
+  const cssComponent = classnames("work-preview", tailwind, className);
+  const cssHeading = `text-xl mb-4 font-font-serif font-extrabold `;
+  const cssSpan = `hover:text-highlight`;
 
   return (
     <Link className={cssComponent} to={`/work/${data.slug}`}>
-      <h3 className={cssHeading}>{data.title}</h3>
+      <h3 className={cssHeading}>
+        <span>{data.title}</span>
+      </h3>
       <p>{data.overview}</p>
     </Link>
   );

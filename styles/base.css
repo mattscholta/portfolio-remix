@@ -1,6 +1,7 @@
 html {
   background-color: var(--color-background-light);
   scroll-behavior: smooth;
+  font-family: var(--font-sans-serif);
 }
 
 body {

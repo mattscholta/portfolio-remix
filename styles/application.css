@@ -1,20 +1,14 @@
 .blog-preview {
   background: url("https://picsum.photos/500/250");
+  background-size: contain;
 }
 
 .blog-preview.both {
   transition: all 200ms ease-out;
-  background: linear-gradient(-45deg, rgba(0 0 0 / 50%), rgba(255 0 0 / 70%)),
-    url("https://picsum.photos/500/250");
 }
 
-.blog-preview:hover.both {
-  background: linear-gradient(
-      -45deg,
-      rgba(255 255 255 / 50%),
-      rgba(255 0 0 / 70%)
-    ),
-    url("https://picsum.photos/500/250");
+.blog-preview:hover {
+  background-image: unset;
 }
 
 .header-link {

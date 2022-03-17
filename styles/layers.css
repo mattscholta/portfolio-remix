@@ -1,0 +1,11 @@
+@tailwind components;
+
+@layer components {
+  .text-highlight {
+    @apply bg-gradient-to-r from-color-primary to-blue-500 bg-clip-text text-transparent;
+  }
+
+  .work-preview:hover span {
+    @apply text-highlight;
+  }
+}

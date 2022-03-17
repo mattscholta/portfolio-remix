@@ -34,15 +34,15 @@ export default function About() {
   const cssHeading = "text-3xl mb-8 font-font-serif font-extrabold";
 
   // Setup
-  const featured = `https://picsum.photos/id/158/1200/500`;
+  const featured = `https://picsum.photos/id/158/1200/600`;
 
   return (
     <main>
       <section className={cssSection} id="section-1">
         <Hero
           className="mx-auto max-w-6xl"
-          copy={copy}
-          highlight="A developers ramblings"
+          copy="One of those blog things"
+          highlight="a developers ramblings"
         />
 
         <ScrollTo to="/blog/#section-2" />
@@ -52,8 +52,11 @@ export default function About() {
       <section className={cssSection}>
         <div className="flex items-center gap-16">
           <div className="flex-1">
-            <h2 className="mb-2 font-font-serif text-3xl font-extrabold">
-              Featured article
+            <h2 className="mb-4 font-font-serif text-3xl font-extrabold">
+              Introducing{" "}
+              <span className="bg-gradient-to-r from-color-primary to-blue-500 bg-clip-text text-transparent">
+                RocketCMS
+              </span>
             </h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi

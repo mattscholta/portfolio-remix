@@ -17,6 +17,10 @@
   margin-bottom: 1rem;
 }
 
+.wysiwyg a {
+  color: red;
+}
+
 .wysiwyg ul {
   padding-left: 1rem;
   margin-bottom: 1rem;
