@@ -1,4 +1,4 @@
-import { MetaFunction, useLoaderData } from "remix";
+import { Link, MetaFunction, useLoaderData } from "remix";
 
 import { BlogPreview } from "~/components/BlogPreview";
 import { Hero } from "~/components/Hero";
@@ -54,6 +54,14 @@ export default function About() {
               repudiandae nam error vero doloremque possimus pariatur iusto
               distinctio quas, porro obcaecati temporibus.
             </p>
+            <div className="mt-2 text-right">
+              <Link
+                className="text-highlight text-xs font-bold uppercase text-color-primary"
+                to="/blog/rocketcms"
+              >
+                Read more
+              </Link>
+            </div>
           </div>
           <div className="flex-1">
             <img

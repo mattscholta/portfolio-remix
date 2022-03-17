@@ -1,6 +1,7 @@
 import { Link, MetaFunction, useParams } from "remix";
 
 import { Hero } from "~/components/Hero";
+import { ScrollTo } from "~/components/ScrollTo";
 import { SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
 
 export const meta: MetaFunction = (args) => {
@@ -27,7 +28,7 @@ export default function About() {
           copy="June 2022"
           highlight={`Blog post #${id}`}
         />
-        <Link to={`/blog/${id}/#section-2`}>Continue</Link>
+        <ScrollTo to={`/blog/${id}/#section-2`} />
       </section>
 
       <div className="section-anchor" id="section-2" />

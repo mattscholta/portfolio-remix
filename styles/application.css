@@ -12,6 +12,7 @@
 }
 
 .header-link {
+  font-weight: 600;
   padding: 1rem;
   transition: color 200ms ease-out;
 }
@@ -53,10 +54,11 @@
   animation: pulse 1400ms infinite;
 }
 
+/*
 .pulse:hover {
-  animation: unset;
-  transform: scale(1.3);
+  animation-duration: 14000ms;
 }
+*/
 
 .section-full {
   min-height: calc(100vh - var(--footer-height));

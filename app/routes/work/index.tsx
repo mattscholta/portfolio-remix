@@ -24,6 +24,7 @@ export default function Work() {
 
   return (
     <main>
+      {/*
       <section className={cssSection}>
         <Hero
           copy="I've been at it a while now"
@@ -31,10 +32,11 @@ export default function Work() {
         />
         <ScrollTo to={`/work#section-2`} />
       </section>
+      */}
 
-      <div className="section-anchor" id="section-2" />
+      {/* <div className="section-anchor" id="section-2" /> */}
       <section className={cssSection}>
-        <div className="mb-40 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-40 mt-40 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3">
           {data.map((node) => (
             <WorkPreview data={node} key={node.slug} />
           ))}
