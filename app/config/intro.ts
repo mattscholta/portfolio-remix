@@ -24,8 +24,6 @@ ${SITE_EMAIL_ADDRESS}
  * @description A message for the console
  */
 const intro = () => {
-  // if (IS_TEST) return;
-
   const styleContact = "color: default; font-size: 14px;";
   const styleMessage = `color: #f00; font-size: 18px;`;
 

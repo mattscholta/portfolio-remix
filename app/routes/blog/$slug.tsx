@@ -18,15 +18,12 @@ export default function About() {
   // Hooks
   const { slug } = useParams();
   const data = useLoaderData<LoaderData>();
-  console.log(` 💬 ~ data`, data);
 
   // Styles
+  const twFont = `font-font-serif font-extrabold`;
+  const cssHeading = `${twFont} text-xl mb-2`;
   const cssSection = `section-full m-auto flex flex-col items-center justify-center gap-20`;
   const cssSection2 = `${cssSection} gap-0`;
-
-  const twFont = `font-font-serif font-extrabold`;
-  const cssHeading = `${twFont} text-3xl mb-4`;
-  const cssHeading2 = `${twFont} text-xl mb-2`;
 
   return (
     <>
@@ -39,8 +36,15 @@ export default function About() {
         <ScrollTo to={`/blog/${slug}/#section-2`} />
       </section>
 
+      <img src={data.imageTemp} alt="" />
       <div className="section-anchor" id="section-2" />
+
       <section className={cssSection2}>
+        {/*
+        <h2 className={`${cssHeading} text-highlight text-left text-3xl`}>
+          {data.title}
+        </h2>
+        */}
         <div
           className="wysiwyg max-w-3xl p-4"
           dangerouslySetInnerHTML={{ __html: data.content.html }}
@@ -48,7 +52,7 @@ export default function About() {
 
         <div className="section-subcontent w-full">
           <div className="m-auto max-w-6xl p-4">
-            <h3 className={cssHeading2}>More posts</h3>
+            <h3 className={cssHeading}>More posts</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
               expedita possimus amet pariatur provident reiciendis earum
