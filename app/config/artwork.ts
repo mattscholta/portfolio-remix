@@ -1,4 +1,5 @@
 import {
+  MESSAGE_HIRE_ARTWORK,
   SITE_AUTHOR,
   SITE_EMAIL_ADDRESS,
   SOCIAL_GITHUB,
@@ -14,18 +15,21 @@ import {
 const artwork = `
 <!--
 
+  ${MESSAGE_HIRE_ARTWORK}
+
            |
-          / \\          Founder: ${SITE_AUTHOR}
-         / _ \\         Email: ${SITE_EMAIL_ADDRESS}
-        |.o '.|
-        |'._.'|           - Github: ${SOCIAL_GITHUB}
-        |     |           - LinkedIn ${SOCIAL_LINKEDIN}
-      .*|  |  |*.         - Twitter ${SOCIAL_TWITTER}
-     /  |  |  |  \\
-     |,-'--|--'-.|      Ⓒ ${new Date().getFullYear()}
-        \\     /
+          / \\
+         / _ \\         Founder: ${SITE_AUTHOR}
+        |.o '.|        Email: ${SITE_EMAIL_ADDRESS}
+        |'._.'|
+        |     |         - Github: ${SOCIAL_GITHUB}
+      .*|  |  |*.       - LinkedIn ${SOCIAL_LINKEDIN}
+     /  |  |  |  \\      - Twitter ${SOCIAL_TWITTER}
+     |,-'--|--'-.|
+        \\     /        Ⓒ ${new Date().getFullYear()}
          \\ | /
            |
+
 -->
 `;
 

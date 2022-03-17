@@ -28,6 +28,8 @@
   --color-copy-light: #57606a;
   --color-copy: #24292e;
   --color-copy-dark: #57606a;
+
+  --color-primary: #f00;
 }
 
 @media (prefers-color-scheme: dark) {

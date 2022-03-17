@@ -10,13 +10,13 @@ export interface HeroProps {
 export const Hero = (props: HeroProps) => {
   const { className, copy, highlight } = props;
 
-  const css = classnames("p-4", className);
+  const cssComponent = classnames("hero p-4", className);
 
   return (
-    <div className={css}>
-      <h1 className="mb-5 text-center font-font-serif text-6xl font-extrabold">
+    <div className={cssComponent}>
+      <h1 className="text-center font-font-serif text-6xl font-extrabold">
         {copy}
-        <div className="bg-gradient-to-r from-color-primary to-blue-500 bg-clip-text pt-6 pb-12 text-7xl text-transparent">
+        <div className="bg-gradient-to-r from-color-primary to-blue-500 bg-clip-text text-7xl text-transparent">
           {highlight}
         </div>
       </h1>

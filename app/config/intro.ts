@@ -1,4 +1,5 @@
 import {
+  MESSAGE_HIRE_CONOSLE,
   SITE_AUTHOR,
   SITE_EMAIL_ADDRESS,
   SOCIAL_GITHUB,
@@ -7,6 +8,10 @@ import {
 } from "./constants";
 
 const strContact = `%c
+${MESSAGE_HIRE_CONOSLE}
+
+-----------------------------------------------------
+
 ${SITE_AUTHOR}
 ${SITE_EMAIL_ADDRESS}
 

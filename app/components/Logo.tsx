@@ -5,7 +5,7 @@ export interface LogoProps {
 }
 
 export const Logo = (props: LogoProps) => {
-  const { className = "", fill = "#f00" } = props;
+  const { className = "", fill = "" } = props;
 
   // Styles
   const cssComponent = classnames("logo", className);

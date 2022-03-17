@@ -11,3 +11,9 @@ export const SITE_URL = "https://rocket-cms.com";
 export const SOCIAL_GITHUB = `https://github.com/visormatt`;
 export const SOCIAL_LINKEDIN = `https://linkedin.com/in/MatthewScholta`;
 export const SOCIAL_TWITTER = `https://www.twitter.com/visormatt`;
+
+export const MESSAGE_HIRE_CONOSLE = `Well, since you've taken the time to read this, I guess you're interested... I'm a software engineer, and I'm a pretty good at making things.`;
+export const MESSAGE_HIRE_ARTWORK = `
+  Well, since you've taken the time to read this, I guess you're interested...
+  I'm a software engineer, and I'm a pretty good at making things.
+`;

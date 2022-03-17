@@ -9,7 +9,8 @@ export const Footer = (_props: FooterProps) => {
       <p>
         Built with <span className="text-color-primary">&hearts;</span> in{" "}
         <a
-          href="https://www.google.com/search?q=san+diego+weather"
+          // href="https://www.google.com/search?q=san+diego+weather"
+          href="https://www.surfline.com/surf-report/carlsbad-state-beach-north/5d4dc10680c2430001b119fb"
           rel="noreferrer"
           target="_blank"
         >

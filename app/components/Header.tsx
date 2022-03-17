@@ -21,8 +21,7 @@ export const Header = (_props: HeaderProps) => {
 
         {/* Logo / Homepage */}
         <NavLink className="header-logo" to="/">
-          {/* <img alt="" src="/logo.svg" /> */}
-          <Logo className="p-2" />
+          <Logo />
         </NavLink>
 
         <NavLink className="header-link" to="/work">
