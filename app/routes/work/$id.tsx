@@ -22,16 +22,20 @@ export default function Work() {
 
   return (
     <>
-      <div className="m-auto flex max-w-3xl flex-col gap-20">
-        <Hero className="mt-40" copy={data.company} highlight={data.title} />
+      <div className="m-auto flex max-w-3xl flex-col">
+        <Hero
+          className="my-20 md:my-40"
+          copy={data.company}
+          highlight={data.title}
+        />
         <div
-          className="wysiwyg"
+          className="wysiwyg px-4"
           dangerouslySetInnerHTML={{ __html: data.content.html }}
         />
       </div>
 
-      <div className="border-1 my-20 border-b border-t border-color-border bg-color-background-light">
-        <div className="m-auto flex max-w-6xl flex-col px-4 py-20">
+      <div className="section-subcontent w-full">
+        <div className="m-auto max-w-6xl p-4">
           <h3 className={cssHeading}>Want to see another?</h3>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem

@@ -41,10 +41,16 @@
   font-size: 1.6rem;
   font-weight: 900;
   line-height: 1.1;
-  margin: 4rem 4rem;
+  margin: 4rem 2rem;
   overflow: auto;
   overflow: visible;
   text-align: center;
+}
+
+@screen md {
+  .wysiwyg blockquote {
+    margin: 4rem 4rem;
+  }
 }
 
 .wysiwyg ul {

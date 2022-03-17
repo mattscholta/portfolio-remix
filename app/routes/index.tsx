@@ -80,7 +80,7 @@ export default function Index() {
 
       <div className="section-anchor" id="section-3" />
       <section className={cssSection2}>
-        <div>
+        <div className="px-4">
           <h2 className={cssHeading2}>Opportunity awaits 🧑‍💻</h2>
           <p>
             After 5+ great years pushing the envelope at thredUP.com the time

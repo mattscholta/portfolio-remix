@@ -21,6 +21,10 @@ p:last-of-type {
   margin: unset;
 }
 
+main {
+  margin-top: var(--header-height);
+}
+
 footer {
   height: var(--footer-height);
 }
