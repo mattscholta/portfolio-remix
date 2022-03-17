@@ -4,13 +4,12 @@
 html {
   background-color: var(--color-background-light);
   scroll-behavior: smooth;
-  font-family: var(--font-sans-serif);
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-copy);
-  scroll-behavior: smooth;
+  font-family: var(--font-sans-serif);
 }
 
 body {

@@ -1,4 +1,5 @@
 import classnames from "classnames";
+import React from "react";
 import { Link } from "remix";
 
 export interface ScrollToProps {
@@ -19,8 +20,31 @@ export const ScrollTo = (props: ScrollToProps) => {
   const isDown = rotate === "rotate-0";
   const style = isDown ? { top: "22%", left: "42%" } : { top: "35%" };
 
+  const onClick = (event: any) => {
+    const path = event.target.getAttribute("href") || "";
+    const [_href, hash] = path.split("#");
+    const node = document.querySelector<HTMLDivElement>(`#${hash}`);
+
+    if (!hash) return;
+
+    event.preventDefault();
+
+    const top = node?.offsetTop ? node?.offsetTop + 100 : 0;
+    console.log(` 💬 ~ hash`, hash, top);
+
+    scroll({
+      behavior: "smooth",
+      top
+    });
+  };
+
   return (
-    <Link className={cssComponent} to={to} style={{ lineHeight: 1 }}>
+    <Link
+      className={cssComponent}
+      onClick={onClick}
+      to={to}
+      style={{ lineHeight: 1 }}
+    >
       <span className={cssArrow} style={style}>
         &#x3009;
       </span>
