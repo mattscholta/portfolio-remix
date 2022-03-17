@@ -29,7 +29,6 @@ export default function Index() {
   const cssHeading2 = `${cssHeading} text-3xl`;
 
   // Setup
-  const src = `https://media-exp1.licdn.com/dms/image/C5603AQGOIqLiltzE6Q/profile-displayphoto-shrink_800_800/0/1607310269762?e=1652918400&v=beta&t=ejJuCWmtmTXc5qekueVDpqqCmCv7zRncqNS6cLI7bBI`;
   const linkedIn = (
     <a
       className="text-color-primary"
@@ -56,7 +55,7 @@ export default function Index() {
               alt=""
               className="max-h-32 cursor-pointer rounded-full bg-gradient-to-l from-color-primary to-blue-500 p-1 transition-transform hover:rotate-6 hover:scale-110 md:max-h-40"
               onClick={onClick}
-              src={src}
+              src="/matt.jpg"
             />
           </div>
         </div>
@@ -105,7 +104,8 @@ export default function Index() {
                 build?
               </p>
               <small className="mt-4 block italic text-color-copy-light">
-                Visit {linkedIn} a <b>full list</b> of my skills and experience.
+                Visit {linkedIn} for a <b>full list</b> of my skills and
+                experience.
               </small>
             </div>
             <div className="grid flex-1 grid-cols-1 gap-12">
@@ -113,16 +113,19 @@ export default function Index() {
                 company="Haldi"
                 date="April 2021 – Present"
                 role="Principal Engineer"
+                url="https://haldi.com"
               />
               <Experience
                 company="thredUP"
                 date="Feb 2016 – April 2021"
                 role="Staff Engineer"
+                url="https://thredup.com"
               />
               <Experience
                 company="Beyond"
                 date="Nov 2011 – Apr 2015"
                 role="Technical Team Lead"
+                url="https://bynd.com"
               />
             </div>
           </div>

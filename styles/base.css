@@ -16,6 +16,10 @@ body {
   position: relative;
 }
 
+blockquote {
+  font-family: var(--font-serif);
+}
+
 p {
   margin-bottom: 1rem;
 }

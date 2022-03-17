@@ -11,7 +11,7 @@ export { loader };
 export const meta: MetaFunction = () => {
   return {
     description: SITE_DESCRIPTION,
-    title: `Work | ${SITE_TITLE}`
+    title: `Featured Work | ${SITE_TITLE}`
   };
 };
 

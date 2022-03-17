@@ -19,8 +19,8 @@ export const Header = (_props: HeaderProps) => {
         <NavLink className="header-link" to="/">
           Home
         </NavLink>
-        <NavLink className="header-link" to="/blog">
-          Blog
+        <NavLink className="header-link" to="/work">
+          Work
         </NavLink>
 
         {/* Logo / Homepage */}
@@ -28,8 +28,8 @@ export const Header = (_props: HeaderProps) => {
           <Logo />
         </NavLink>
 
-        <NavLink className="header-link" to="/work">
-          Work
+        <NavLink className="header-link" to="/blog">
+          Blog
         </NavLink>
         <NavLink className="header-link" to="/uses">
           Uses

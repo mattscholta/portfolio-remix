@@ -31,7 +31,7 @@ export default function About() {
       <section className={cssSection} id="section-1">
         <Hero
           className="mx-auto max-w-6xl"
-          copy="One of those blog things"
+          // copy="Yet another blog"
           highlight="a developers ramblings"
         />
 

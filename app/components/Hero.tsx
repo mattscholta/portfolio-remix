@@ -3,7 +3,7 @@ import { ReactElement } from "react";
 
 export interface HeroProps {
   className?: string;
-  copy: string | ReactElement;
+  copy?: string | ReactElement;
   highlight: string;
 }
 
@@ -15,7 +15,7 @@ export const Hero = (props: HeroProps) => {
   return (
     <div className={cssComponent}>
       <h1 className="text-center font-font-serif text-4xl font-extrabold md:text-6xl">
-        {copy}
+        {copy && copy}
         <div className="text-highlight text-5xl md:text-7xl">{highlight}</div>
       </h1>
     </div>
