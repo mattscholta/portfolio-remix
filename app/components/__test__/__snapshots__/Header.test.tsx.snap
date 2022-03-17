@@ -18,9 +18,9 @@ exports[`Header Component > should render our footer 1`] = `
         </a>
         <a
           class="header-link"
-          href="/blog"
+          href="/work"
         >
-          Blog
+          Work
         </a>
         <a
           aria-current="page"
@@ -40,12 +40,17 @@ exports[`Header Component > should render our footer 1`] = `
               fill-rule="evenodd"
             />
           </svg>
+          <span
+            class="sr-only"
+          >
+            Home
+          </span>
         </a>
         <a
           class="header-link"
-          href="/work"
+          href="/blog"
         >
-          Work
+          Blog
         </a>
         <a
           class="header-link"

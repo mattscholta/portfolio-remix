@@ -60,10 +60,10 @@ export default function Index() {
             />
           </div>
         </div>
-        <ScrollTo to="/#section-2" />
+        <ScrollTo to="/#about" />
       </section>
 
-      <div className="section-anchor" id="section-2" />
+      <div className="section-anchor" id="about" />
       <section className={cssSection2}>
         <div className="px-4">
           <h2 className="my-4 font-font-serif text-3xl font-extrabold">
@@ -87,10 +87,10 @@ export default function Index() {
             twice actually... Otherwise reach out and connect on LinkedIn.
           </p>
         </div>
-        <ScrollTo to="/#section-3" />
+        <ScrollTo to="/#experience" />
       </section>
 
-      <div className="section-anchor" id="section-3" />
+      <div className="section-anchor" id="experience" />
       <section className={cssSection2}>
         <div className="h-full w-full p-4 ">
           {/* Maybe a swiper kinda thing here  */}
@@ -130,26 +130,11 @@ export default function Index() {
               />
             </div>
           </div>
-          {/*
-          <div className="mt-2 text-center italic opacity-50">
-            <small>
-              * Visit{" "}
-              <a
-                className=" text-color-primary"
-                title="Follow on LinkedIn"
-                href={SOCIAL_LINKEDIN}
-              >
-                LinkedIn
-              </a>{" "}
-              for more info.
-            </small>
-          </div>
-          */}
         </div>
-        <ScrollTo to="/#section-4" />
+        <ScrollTo to="/#next" />
       </section>
 
-      <div className="section-anchor" id="section-4" />
+      <div className="section-anchor" id="next" />
       <section className={cssSection2}>
         <div className="px-4">
           <h2 className={cssHeading2}>Whats next 🧑‍💻</h2>
@@ -171,6 +156,7 @@ export default function Index() {
             twice actually... Otherwise reach out and connect on LinkedIn.
           </p>
         </div>
+        <ScrollTo rotate="rotate-0" to="/work" />
       </section>
     </>
   );
