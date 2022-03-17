@@ -4,7 +4,7 @@ import { BlogPreview } from "~/components/BlogPreview";
 import { Hero } from "~/components/Hero";
 import { ScrollTo } from "~/components/ScrollTo";
 import { SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
-import { loader } from "~/routes/api/blog";
+import { loader, LoaderData } from "~/routes/api/blog";
 
 export { loader };
 
@@ -17,7 +17,7 @@ export const meta: MetaFunction = () => {
 
 export default function About() {
   // Hooks
-  const data = useLoaderData();
+  const data = useLoaderData<LoaderData>();
 
   // Styles
   const cssSection = `section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20`;
@@ -80,11 +80,11 @@ export default function About() {
         <div className="w-full p-8">
           <h2 className={cssHeading}>More articles</h2>
           <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {data.map((item: any) => (
+            {data.map((item) => (
               <BlogPreview
-                id={item.id}
                 image={item.imageTemp}
                 key={item.id}
+                slug={item.slug}
                 title={item.title}
               />
             ))}

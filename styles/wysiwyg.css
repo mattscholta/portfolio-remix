@@ -41,9 +41,14 @@
   color: red;
 }
 
+.wysiwyg ol,
 .wysiwyg ul {
-  padding-left: 1rem;
+  padding-left: 2rem;
   margin-bottom: 1rem;
+}
+
+.wysiwyg ol li {
+  list-style: decimal;
 }
 
 .wysiwyg ul li {

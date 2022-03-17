@@ -1,4 +1,4 @@
-import { LoaderFunction } from "remix";
+import { json, LoaderFunction } from "remix";
 
 import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
 
@@ -26,7 +26,10 @@ const getPosts = gql`
 
 export const loader: LoaderFunction = async (): Promise<LoaderData> => {
   const data = await fetchFromGraphCMS(getPosts);
-  const json = await data.json();
+  const res = await data.json();
+  const posts = res.data.posts ?? [];
 
-  return json.data.posts ?? [];
+  if (!posts.length) throw json(`Blog posts not found`, { status: 404 });
+
+  return posts;
 };

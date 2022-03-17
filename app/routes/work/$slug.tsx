@@ -2,7 +2,7 @@ import { MetaFunction, useLoaderData } from "remix";
 
 import { Hero } from "~/components/Hero";
 import { SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
-import { loader, LoaderData } from "~/routes/api/work";
+import { loader, LoaderData } from "~/routes/api/work/$slug";
 
 export { loader };
 
@@ -15,8 +15,7 @@ export const meta: MetaFunction = (args) => {
 
 export default function Work() {
   // Hooks
-  const data = useLoaderData();
-  console.log(` 💬 ~ data`, data);
+  const data = useLoaderData<LoaderData>();
 
   // Styles
   const cssHeading = `text-2xl mb-8 font-font-serif font-extrabold`;
