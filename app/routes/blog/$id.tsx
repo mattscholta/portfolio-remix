@@ -1,5 +1,15 @@
-import { Link, useParams } from "remix";
+import { Link, MetaFunction, useParams } from "remix";
+
 import { Hero } from "~/components/Hero";
+import { SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
+
+export const meta: MetaFunction = (args) => {
+  return {
+    description: SITE_DESCRIPTION,
+    // title: `${args.data.title} | ${SITE_TITLE}`
+    title: `${args.params.id?.substring(0, 4)}... | ${SITE_TITLE}`
+  };
+};
 
 export default function About() {
   // Hooks

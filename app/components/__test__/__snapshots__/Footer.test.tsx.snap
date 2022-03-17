@@ -4,7 +4,7 @@ exports[`Footer Component > should render our footer 1`] = `
 <body>
   <div>
     <footer
-      class="text-sm text-center"
+      class="text-center text-sm"
     >
       <p>
         Built with 
@@ -16,7 +16,7 @@ exports[`Footer Component > should render our footer 1`] = `
          in
          
         <a
-          href="https://www.google.com/search?q=san+diego+weather"
+          href="https://www.surfline.com/surf-report/carlsbad-state-beach-north/5d4dc10680c2430001b119fb"
           rel="noreferrer"
           target="_blank"
         >

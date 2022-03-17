@@ -1,13 +1,15 @@
 import { useLoaderData } from "remix";
+
 import { Hero } from "~/components/Hero";
 import { ScrollTo } from "~/components/ScrollTo";
 import { WorkPreview } from "~/components/WorkPreview";
+import { loader, LoaderData } from "~/routes/api/work";
 
-export { loader } from "~/routes/api/work";
+export { loader };
 
 export default function Work() {
   // Hooks
-  const data = useLoaderData();
+  const data = useLoaderData<LoaderData>();
 
   // Styles
   const cssSection = `section-full flex flex-col items-center justify-center max-w-6xl gap-20`;
@@ -25,7 +27,7 @@ export default function Work() {
       <div className="section-anchor" id="section-2" />
       <section className={cssSection}>
         <div className="mb-40 grid grid-cols-2 gap-16">
-          {data.map((node: any) => (
+          {data.map((node) => (
             <WorkPreview data={node} key={node.slug} />
           ))}
         </div>

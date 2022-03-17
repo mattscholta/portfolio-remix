@@ -1,20 +1,31 @@
 import { LoaderFunction } from "remix";
+
 import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
 
-const getBlogPosts = gql`
+export interface Post {
+  id: string;
+  imageTemp: string;
+  slug: string;
+  sticky: string;
+  title: string;
+}
+
+export type LoaderData = Post[];
+
+const getPosts = gql`
   query {
     posts {
       id
       imageTemp
-      sticky
       slug
+      sticky
       title
     }
   }
 `;
 
-export const loader: LoaderFunction = async () => {
-  const data = await fetchFromGraphCMS(getBlogPosts);
+export const loader: LoaderFunction = async (): Promise<LoaderData> => {
+  const data = await fetchFromGraphCMS(getPosts);
   const json = await data.json();
 
   return json.data.posts ?? [];

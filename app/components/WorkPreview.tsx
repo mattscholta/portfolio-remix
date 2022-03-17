@@ -1,14 +1,11 @@
 import classnames from "classnames";
 import { Link } from "remix";
 
+import { Portfolio } from "~/routes/api/work";
+
 export interface WorkPreviewProps {
   className?: string;
-  data: {
-    overview: string;
-    slug: string;
-    thumbnailTemp: string;
-    title: string;
-  };
+  data: Portfolio;
 }
 
 export const WorkPreview = (props: WorkPreviewProps) => {

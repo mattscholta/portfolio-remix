@@ -1,9 +1,19 @@
-import { useLoaderData } from "remix";
+import { MetaFunction, useLoaderData } from "remix";
+
 import { BlogPreview } from "~/components/BlogPreview";
 import { Hero } from "~/components/Hero";
 import { ScrollTo } from "~/components/ScrollTo";
+import { SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
+import { loader } from "~/routes/api/blog";
 
-export { loader } from "~/routes/api/blog";
+export { loader };
+
+export const meta: MetaFunction = () => {
+  return {
+    description: SITE_DESCRIPTION,
+    title: `Blog | ${SITE_TITLE}`
+  };
+};
 
 export default function About() {
   // Hooks

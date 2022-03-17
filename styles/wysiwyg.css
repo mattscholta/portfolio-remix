@@ -1,0 +1,29 @@
+.wysiwyg h1,
+.wysiwyg h2,
+.wysiwyg h3,
+.wysiwyg h4,
+.wysiwyg h5,
+.wysiwyg h6 {
+  color: var(--color-copy);
+  font-weight: 900;
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.wysiwyg p {
+  color: var(--color-copy);
+  margin-bottom: 1rem;
+}
+
+.wysiwyg ul {
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.wysiwyg ul li {
+  list-style: disc;
+  /* color: var(--color-copy); */
+  /* margin-bottom: 1rem; */
+}
