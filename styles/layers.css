@@ -1,5 +1,8 @@
 @tailwind components;
 
+/**
+ * tbd...
+ */
 @layer components {
   .text-highlight {
     @apply bg-gradient-to-r from-color-primary to-blue-500 bg-clip-text text-transparent;

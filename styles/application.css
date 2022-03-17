@@ -1,3 +1,7 @@
+/**
+ * The bits that we need to style outside of just inline classes
+ */
+
 .blog-preview {
   background: url("https://picsum.photos/500/250");
   background-size: contain;

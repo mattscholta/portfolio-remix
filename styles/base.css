@@ -1,3 +1,6 @@
+/**
+ * The "base" style sheet is used to customize our generic HTML tags a bit
+ */
 html {
   background-color: var(--color-background-light);
   scroll-behavior: smooth;

@@ -1,3 +1,8 @@
+/**
+ * We save raw HTML markup for some elements that are controlled using
+ * GraphCMS, so we add this selector to normalize the styles a bit w/o
+ * requiring nested classes.
+ */
 .wysiwyg h1,
 .wysiwyg h2,
 .wysiwyg h3,
