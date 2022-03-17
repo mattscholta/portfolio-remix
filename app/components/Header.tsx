@@ -26,6 +26,7 @@ export const Header = (_props: HeaderProps) => {
         {/* Logo / Homepage */}
         <NavLink className="header-logo" to="/">
           <Logo />
+          <span className="sr-only">Home</span>
         </NavLink>
 
         <NavLink className="header-link" to="/blog">
