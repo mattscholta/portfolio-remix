@@ -1,35 +1,5 @@
 // Vitest Snapshot v1
 
-exports[`Footer Component > should render our footer 1`] = `
-<body>
-  <div>
-    <footer
-      class="text-center text-sm"
-    >
-      <p>
-        Built with 
-        <span
-          class="text-color-primary"
-        >
-          ♥
-        </span>
-         in
-         
-        <a
-          href="https://www.surfline.com/surf-report/carlsbad-state-beach-north/5d4dc10680c2430001b119fb"
-          rel="noreferrer"
-          target="_blank"
-        >
-          San Diego
-        </a>
-        , California. © 
-        2022
-      </p>
-    </footer>
-  </div>
-</body>
-`;
-
 exports[`Header Component > should render our footer 1`] = `
 <body>
   <div>
@@ -37,7 +7,7 @@ exports[`Header Component > should render our footer 1`] = `
       class="header"
     >
       <div
-        class="mx-auto flex max-w-2xl items-center justify-center gap-20 text-sm uppercase"
+        class="mx-auto flex max-w-2xl items-center justify-center gap-1 text-sm uppercase md:gap-20"
       >
         <a
           aria-current="page"

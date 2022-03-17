@@ -10,25 +10,25 @@ exports[`Footer Component > should render our footer 1`] = `
         class="mb-2 flex items-center justify-center gap-4"
       >
         <img
-          alt=""
+          alt="Follow me on GitHub"
           class="footer-social"
-          height="20"
-          src="/twitter.svg"
-          width="20"
-        />
-        <img
-          alt=""
-          class="footer-social"
-          height="20"
+          height="16"
           src="/github.svg"
-          width="20"
+          width="16"
         />
         <img
-          alt=""
+          alt="Follow me on Twitter"
           class="footer-social"
-          height="20"
+          height="16"
+          src="/twitter.svg"
+          width="16"
+        />
+        <img
+          alt="Follow me on LinkedIn"
+          class="footer-social"
+          height="16"
           src="/linkedin.svg"
-          width="20"
+          width="16"
         />
       </div>
       <p>
