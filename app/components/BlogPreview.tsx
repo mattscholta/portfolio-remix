@@ -18,7 +18,7 @@ export const BlogPreview = (props: BlogPreviewProps) => {
     both: id % 2 !== 0
   });
 
-  const backgroundImage = `url("${image}"), linear-gradient(-45deg, rgba(255 255 255 / 50%), rgba(255 0 0 / 70%))`;
+  const backgroundImage = `linear-gradient(-45deg, rgba(255 255 255 / 50%), rgba(255 0 0 / 70%)), url("${image}")`;
 
   return (
     <Link
@@ -27,14 +27,14 @@ export const BlogPreview = (props: BlogPreviewProps) => {
       style={{ backgroundImage }}
     >
       {/* <img alt="" loading="lazy" src={image} /> */}
-      <h3 className={cssHeading}>{title}</h3>
       {/*
+      <h3 className={cssHeading}>{title}</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat
         pariatur molestias ad id fugit expedita dicta quam repellat minima nulla
         praesentium quasi cum sint tempora vel, debitis incidunt quod ipsum.
       </p>
-      */}
+       */}
     </Link>
   );
 };

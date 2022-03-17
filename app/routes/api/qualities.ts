@@ -2,11 +2,11 @@ import { LoaderFunction } from "remix";
 
 const qualities = [
   "A problem solver 🤔",
+  "A team player 🤝",
   "A self starter  🏇",
+  "An innovator 💡",
   "A perpetual learner 📚",
-  "A innovator 💡",
-  "A rule breaker ♟️",
-  "A team player 🤝"
+  "A rule breaker 🙈"
 ];
 
 export const loader: LoaderFunction = async (): Promise<string> => {
