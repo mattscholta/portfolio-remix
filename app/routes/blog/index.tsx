@@ -56,7 +56,7 @@ export default function About() {
             </p>
             <div className="mt-2 text-right">
               <Link
-                className="text-highlight text-xs font-bold uppercase text-color-primary"
+                className="text-xs font-bold uppercase text-color-primary"
                 to="/blog/rocketcms"
               >
                 Read more

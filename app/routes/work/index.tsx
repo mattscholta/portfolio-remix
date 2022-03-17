@@ -25,7 +25,7 @@ export default function Work() {
   return (
     <>
       <section className={cssSection}>
-        <Hero copy="Tools of the trade" highlight="Coming soon!" />
+        <Hero copy="Show me the goods" highlight="Recent Work" />
         <ScrollTo to="/work/#section-2" />
       </section>
 

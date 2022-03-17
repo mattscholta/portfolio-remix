@@ -54,7 +54,7 @@ export default function Index() {
           <div>
             <img
               alt=""
-              className="max-h-32 cursor-crosshair rounded-full bg-gradient-to-l from-color-primary to-blue-500 p-1 transition-transform hover:rotate-6 hover:scale-110 md:max-h-40"
+              className="max-h-32 cursor-pointer rounded-full bg-gradient-to-l from-color-primary to-blue-500 p-1 transition-transform hover:rotate-6 hover:scale-110 md:max-h-40"
               onClick={onClick}
               src={src}
             />
@@ -94,10 +94,10 @@ export default function Index() {
       <section className={cssSection2}>
         <div className="h-full w-full p-4 ">
           {/* Maybe a swiper kinda thing here  */}
-          <div className="flex flex-col items-center justify-center gap-20 sm:flex-row">
+          <div className="flex flex-col items-center justify-center gap-20 sm:flex-row md:mt-20">
             <div className="flex-1 text-center">
               <h3 className="mb-4 font-font-serif text-2xl font-extrabold">
-                Experience
+                Professional Experience
               </h3>
               <p>
                 If you do what you love, you'll never work a day in your life...
@@ -105,7 +105,7 @@ export default function Index() {
                 build?
               </p>
               <small className="mt-4 block italic text-color-copy-light">
-                Visit {linkedIn} a full list of my skills and experience.
+                Visit {linkedIn} a <b>full list</b> of my skills and experience.
               </small>
             </div>
             <div className="grid flex-1 grid-cols-1 gap-12">
