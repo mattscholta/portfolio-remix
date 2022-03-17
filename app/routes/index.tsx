@@ -40,7 +40,7 @@ export default function Index() {
           <div>
             <img
               alt=""
-              className="max-h-40 cursor-pointer rounded-full bg-gradient-to-l from-color-primary to-blue-500 p-1 transition-transform hover:rotate-6 hover:scale-110"
+              className="max-h-32 cursor-pointer rounded-full bg-gradient-to-l from-color-primary to-blue-500 p-1 transition-transform hover:rotate-6 hover:scale-110 md:max-h-40"
               onClick={onClick}
               src={src}
             />
@@ -51,17 +51,18 @@ export default function Index() {
 
       <div className="section-anchor" id="section-2" />
       <section className={cssSection2}>
-        <div className="h-full w-full ">
+        <div className="h-full w-full p-4 ">
           {/* Maybe a swiper kinda thing here  */}
-          <div className="grid grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
             <Experience company="Haldi" role="Principal Engineer" />
             <Experience company="thredUP" role="Staff Engineer" />
-            <Experience company="Beyond" role="Tech. Team Lead" />
+            <Experience company="Beyond" role="Team Lead" />
           </div>
-
+          {/*
           <small>
             Visit <a href="">LinkedIn</a> for more info.
           </small>
+          */}
         </div>
       </section>
     </main>
