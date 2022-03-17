@@ -1,3 +1,5 @@
+import { GRAPHCMS_URL } from "~/config/settings.server";
+
 /**
  * @name fetchFromGraphCMS
  * @external https://css-tricks.com/raw-graphql-querying
@@ -8,15 +10,11 @@ export const fetchFromGraphCMS = async (
   query: string,
   variables?: Record<string, any>
 ) => {
-  if (!process.env.GRAPHQL_API) {
-    throw new Error("GRAPHQL_API is required");
-  }
-
   const body: any = { query };
 
   if (variables) body.variables = variables;
 
-  return fetch(process.env.GRAPHQL_API, {
+  return fetch(GRAPHCMS_URL, {
     body: JSON.stringify(body),
     headers: { "Content-Type": "application/json" },
     method: "POST"

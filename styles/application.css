@@ -4,11 +4,7 @@
 
 .blog-preview.both {
   transition: all 200ms ease-out;
-  background: linear-gradient(
-      -45deg,
-      /* rgba(255 255 255 / 50%), */ rgba(0 0 0 / 50%),
-      rgba(255 0 0 / 70%)
-    ),
+  background: linear-gradient(-45deg, rgba(0 0 0 / 50%), rgba(255 0 0 / 70%)),
     url("https://picsum.photos/500/250");
 }
 
@@ -51,6 +47,12 @@
 
 .hero h1 {
   letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.hero h1,
+.hero h1 span {
+  line-height: 1.1;
 }
 
 .pulse {

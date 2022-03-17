@@ -13,7 +13,11 @@ export default function Index() {
       <section className={cssSection}>
         <div className="flex">
           <Hero copy="Welcome friend 👋" highlight="Matthew Scholta" />
-          <img alt="" className="max-h-40 rounded-full" src={src} />
+          <img
+            alt=""
+            className="max-h-40 rounded-full bg-gradient-to-l from-color-primary to-blue-500 p-1"
+            src={src}
+          />
         </div>
         <ScrollTo to="/#section-2" />
       </section>

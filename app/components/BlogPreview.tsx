@@ -4,10 +4,12 @@ import { Link } from "remix";
 export interface BlogPreviewProps {
   className?: string;
   id: number;
+  title: string;
+  image: string;
 }
 
 export const BlogPreview = (props: BlogPreviewProps) => {
-  const { className, id = 21 } = props;
+  const { className, id, image, title } = props;
 
   // Styles
   const tailwind = `flex flex-grow flex-col aspect-video`;
@@ -16,13 +18,10 @@ export const BlogPreview = (props: BlogPreviewProps) => {
     both: id % 2 !== 0
   });
 
-  // Setup
-  // const src = `https://picsum.photos/id/${id}/1200/500`;
-
   return (
     <Link className={cssComponent} to={`/blog/${id}`}>
-      {/* <img alt="" loading="lazy" src={src} /> */}
-      <h3 className={cssHeading}>Title {id}</h3>
+      {/* <img alt="" loading="lazy" src={image} /> */}
+      <h3 className={cssHeading}>{title}</h3>
     </Link>
   );
 };

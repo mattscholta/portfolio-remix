@@ -1,9 +1,16 @@
-import { Link } from "remix";
+import { useLoaderData } from "remix";
 import { BlogPreview } from "~/components/BlogPreview";
 import { Hero } from "~/components/Hero";
 import { ScrollTo } from "~/components/ScrollTo";
 
+export { loader } from "~/routes/api/blog";
+
 export default function About() {
+  // Hooks
+  const data = useLoaderData();
+
+  console.log(` 💬 ~ data`, data);
+
   const copy = (
     <>
       Always leave the{" "}
@@ -62,11 +69,14 @@ export default function About() {
         <div className="w-full p-8">
           <h2 className={cssHeading}>More articles</h2>
           <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <BlogPreview id={21} />
-            <BlogPreview id={22} />
-            <BlogPreview id={23} />
-            <BlogPreview id={24} />
-            <BlogPreview id={25} />
+            {data.map((item: any) => (
+              <BlogPreview
+                id={item.id}
+                image={item.imageTemp}
+                key={item.id}
+                title={item.title}
+              />
+            ))}
           </div>
         </div>
       </section>
