@@ -34,7 +34,7 @@ export default function Work() {
 
       <div className="section-anchor" id="section-2" />
       <section className={cssSection}>
-        <div className="mb-40 grid grid-cols-3 gap-16">
+        <div className="mb-40 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3">
           {data.map((node) => (
             <WorkPreview data={node} key={node.slug} />
           ))}
