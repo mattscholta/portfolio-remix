@@ -19,30 +19,26 @@ export default function Work() {
   console.log(` 💬 ~ data`, data);
 
   // Styles
-  const cssHeading = "text-2xl mb-8 font-font-serif font-extrabold";
+  const cssHeading = `text-2xl mb-8 font-font-serif font-extrabold`;
+  const cssImage = `border-1 my-20 border border-color-border`;
+
+  // Setup
+  const img = data.images[0] ? data.images[0]?.url : false;
 
   return (
     <>
       <div className="relative m-auto flex max-w-3xl flex-col">
-        {/*
-        <img
-          className="absolute -top-1/3 -right-1/2 rotate-[30deg] scale-50"
-          src={data.images[0].url}
-          alt=""
+        <Hero
+          className="my-20 md:my-40"
+          copy={data.company}
+          highlight={data.title}
         />
-         */}
-        <div>
-          <Hero
-            className="my-20 md:my-40"
-            copy={data.company}
-            highlight={data.title}
-          />
-        </div>
-
         <div
           className="wysiwyg px-4"
           dangerouslySetInnerHTML={{ __html: data.content.html }}
         />
+        {img && <img alt="" className={cssImage} src={img} />}
+        <blockquote>{data.intro}</blockquote>
       </div>
 
       <div className="section-subcontent w-full">
