@@ -10,11 +10,11 @@ export interface HeroProps {
 export const Hero = (props: HeroProps) => {
   const { className, copy, highlight } = props;
 
-  const cssComponent = classnames("hero p-4", className);
+  const cssComponent = classnames("hero p-4 text-center", className);
 
   return (
     <div className={cssComponent}>
-      <h1 className="text-center font-font-serif text-4xl font-extrabold md:text-6xl">
+      <h1 className="font-font-serif text-4xl font-extrabold md:text-4xl">
         {copy && copy}
         <div className="text-highlight text-5xl md:text-7xl">{highlight}</div>
       </h1>

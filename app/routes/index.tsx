@@ -21,7 +21,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   // Hooks
-  const [heading, setHeading] = React.useState("Welcome friend 👋");
+  const [heading, setHeading] = React.useState("A Software Engineer");
 
   // Styles
   const cssSection = `section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20`;
@@ -50,7 +50,11 @@ export default function Index() {
     <>
       <section className={cssSection}>
         <div className="mt-20 flex flex-col-reverse items-center gap-4 md:mt-0 md:flex-row">
-          <Hero copy={heading} highlight={SITE_AUTHOR} />
+          <Hero
+            className="md:text-right"
+            copy={heading}
+            highlight={SITE_AUTHOR}
+          />
           <div>
             <img
               alt={SITE_AUTHOR}

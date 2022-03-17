@@ -16,7 +16,7 @@ export default function About() {
   return (
     <>
       <section className={cssSection}>
-        <Hero copy="A problem solver 🤔" highlight="Matthew Scholta" />
+        <Hero copy="A problem solver 🤔" highlight="Matt Scholta" />
       </section>
     </>
   );

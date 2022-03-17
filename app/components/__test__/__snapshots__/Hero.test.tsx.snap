@@ -4,10 +4,10 @@ exports[`Hero Component > should render our Hero 1`] = `
 <body>
   <div>
     <div
-      class="hero p-4"
+      class="hero p-4 text-center"
     >
       <h1
-        class="text-center font-font-serif text-4xl font-extrabold md:text-6xl"
+        class="font-font-serif text-4xl font-extrabold md:text-4xl"
       >
         Test Copy
         <div
