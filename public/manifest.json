@@ -1,0 +1,67 @@
+{
+  "author": "Matthew Scholta",
+  "background_color": "#fff",
+  "default_locale": "en",
+  "display": "standalone",
+  "dir": "ltr",
+  "description": "2022 Portfolio",
+  "icons": [
+    {
+      "purpose": "any",
+      "sizes": "48x48",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/48x48.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "96x96",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/96x96.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "144x144",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/144x144.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "192x192",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/192x192.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "256x256",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/256x256.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any maskable",
+      "sizes": "256x256",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/256x256.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "384x384",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/384x384.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/512x512.png",
+      "type": "image/png"
+    }
+  ],
+  "lang": "en-US",
+  "manifest_version": 1.0,
+  "name": "2022 Portfolio",
+  "orientation": "portrait",
+  "scope": "/",
+  "short_name": "Portfolio",
+  "start_url": "/",
+  "theme_color": "#f5f8fa",
+  "version": "1.0"
+}
