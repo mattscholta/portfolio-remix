@@ -40,7 +40,7 @@ export default function Work() {
       {img && (
         <img
           alt=""
-          className="mb-20 w-full border-t border-b border-color-border"
+          className="my-20 w-full border-t border-b border-color-border"
           src={img}
         />
       )}

@@ -15,9 +15,10 @@ import type { MetaFunction } from "remix";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import { intro } from "./config/intro";
+import { parseCookieHeader } from "./utils/cookies";
 
 import styles from "./styles/index.css";
-import { parseCookieHeader } from "./utils/cookies";
+import { cookieTheme } from "./cookies";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
@@ -28,11 +29,14 @@ export interface LoaderData {
   theme?: "light" | "dark";
 }
 
-export const loader: LoaderFunction = (args): LoaderData => {
-  const canonical = args.request.url;
-  const header = args.request.headers.get("cookie");
-  const cookies = parseCookieHeader(header === null ? "" : header);
-  const { theme } = cookies;
+export const loader: LoaderFunction = async (args): Promise<LoaderData> => {
+  const { request } = args;
+
+  const canonical = request.url;
+  const header = request.headers.get("cookie");
+
+  const cookie = (await cookieTheme.parse(header)) ?? {};
+  const { theme } = cookie;
 
   return { canonical, theme };
 };
@@ -44,6 +48,10 @@ export const meta: MetaFunction = (args) => ({
 export default function App() {
   // Hooks
   const { canonical, theme } = useLoaderData<LoaderData>();
+
+  // Setup
+  const isDark = theme === "dark";
+  const favicon = isDark ? "/favicon-dark.png" : "/favicon.png";
 
   // Life Cycle
   React.useEffect(() => {
@@ -60,8 +68,8 @@ export default function App() {
         <Meta />
 
         <link href={canonical} rel="canonical" />
-        <link href="/favicon.ico" rel="icon" />
-        <link href="/favicon.png" rel="apple-touch-icon" sizes="48x48" />
+        <link href={favicon} rel="icon" />
+        <link href={favicon} rel="apple-touch-icon" sizes="48x48" />
         <link href="/manifest.json" rel="manifest" />
         <Links />
       </head>
