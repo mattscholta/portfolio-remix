@@ -21,8 +21,7 @@
 }
 
 .header-link {
-  font-weight: 600;
-  /* padding: 1rem; */
+  font-weight: 500;
   transition: color 140ms ease-out;
 }
 
@@ -36,7 +35,17 @@
 }
 
 .header-logo svg {
-  max-height: 32px;
+  max-height: 24px;
+}
+
+@screen md {
+  .header-link {
+    font-weight: 600;
+  }
+
+  .header-logo svg {
+    max-height: 32px;
+  }
 }
 
 .header-logo path {
@@ -81,12 +90,14 @@
   padding-top: calc(var(--header-height) + calc(var(--footer-height) / 2));
 }
 
+/*
 @screen md {
   .section-anchor {
     margin-top: calc(var(--header-height) + calc(var(--footer-height) / 2));
     padding-top: calc(var(--header-height) + calc(var(--footer-height) / 2));
   }
 }
+*/
 
 .section-subcontent {
   background-color: var(--color-background-light);

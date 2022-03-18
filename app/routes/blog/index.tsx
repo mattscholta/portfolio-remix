@@ -21,7 +21,6 @@ export default function About() {
 
   // Styles
   const cssSection = `section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20`;
-  const cssHeading = "text-3xl mb-8 font-font-serif font-extrabold";
 
   // Setup
   const featured = `https://picsum.photos/id/158/1200/600`;
@@ -35,9 +34,10 @@ export default function About() {
           highlight="a developers ramblings"
         />
 
-        <ScrollTo to="/blog/#section-2" />
+        <ScrollTo id="section-2" />
       </section>
 
+      {/*
       <div className="section-anchor" id="section-2" />
       <section className={cssSection}>
         <div className="flex flex-col items-center gap-16 p-8 md:flex-row">
@@ -72,13 +72,14 @@ export default function About() {
             />
           </div>
         </div>
-        <ScrollTo className="mt-8" to="/blog/#section-3" />
+        <ScrollTo className="mt-8" id="section-3" />
       </section>
+      */}
 
-      <div className="section-anchor" id="section-3" />
+      <div className="section-anchor" id="section-2" />
       <section className={cssSection}>
         <div className="w-full p-8">
-          <h2 className={cssHeading}>More articles</h2>
+          <h2 className="mb-12 text-3xl">More articles</h2>
           <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
             {data.map((item) => (
               <BlogPreview

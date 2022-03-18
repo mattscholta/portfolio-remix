@@ -12,6 +12,7 @@ export interface Post {
     url: string;
   };
   imageTemp: string;
+  intro: string;
   title: string;
   updatedAt: string;
 }
@@ -30,6 +31,7 @@ const getPost = gql`
         url
       }
       imageTemp
+      intro
       title
       updatedAt
     }

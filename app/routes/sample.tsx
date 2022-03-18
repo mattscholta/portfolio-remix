@@ -29,7 +29,7 @@ export default function About() {
           copy="Sample page"
           highlight="Enjoy"
         />
-        <ScrollTo to={`/sample#section-2`} />
+        <ScrollTo id="section-2" />
       </section>
 
       <div className="section-anchor" id="section-2" />

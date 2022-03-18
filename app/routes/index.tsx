@@ -26,8 +26,6 @@ export default function Index() {
   // Styles
   const cssSection = `section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20`;
   const cssSection2 = `${cssSection} max-w-3xl`;
-  const cssHeading = "text-2xl my-4 font-font-serif font-extrabold";
-  const cssHeading2 = `${cssHeading} text-3xl`;
 
   // Setup
   const linkedIn = (
@@ -46,15 +44,13 @@ export default function Index() {
     setHeading(data);
   };
 
+  const copy = <span className="whitespace-nowrap">{heading}</span>;
+
   return (
     <>
       <section className={cssSection}>
         <div className="mt-20 flex flex-col-reverse items-center gap-4 md:mt-0 md:flex-row">
-          <Hero
-            className="md:text-right"
-            copy={heading}
-            highlight={SITE_AUTHOR}
-          />
+          <Hero className="md:text-right" copy={copy} highlight={SITE_AUTHOR} />
           <div>
             <img
               alt={SITE_AUTHOR}
@@ -64,10 +60,10 @@ export default function Index() {
             />
           </div>
         </div>
-        <ScrollTo to="/#about" />
+        <ScrollTo id="section-about" />
       </section>
 
-      <div className="section-anchor" id="about" />
+      <div className="section-anchor" id="section-about" />
       <section className={cssSection2}>
         <div className="px-4">
           <h2 className="my-4 font-font-serif text-3xl font-extrabold">
@@ -91,10 +87,10 @@ export default function Index() {
             twice actually... Otherwise reach out and connect on LinkedIn.
           </p>
         </div>
-        <ScrollTo to="/#experience" />
+        <ScrollTo id="section-experience" />
       </section>
 
-      <div className="section-anchor" id="experience" />
+      <div className="section-anchor" id="section-experience" />
       <section className={cssSection2}>
         <div className="h-full w-full p-4 ">
           {/* Maybe a swiper kinda thing here  */}
@@ -135,13 +131,13 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <ScrollTo to="/#next" />
+        <ScrollTo id="section-next" />
       </section>
 
-      <div className="section-anchor" id="next" />
+      <div className="section-anchor" id="section-next" />
       <section className={cssSection2}>
         <div className="px-4">
-          <h2 className={cssHeading2}>Whats next 🧑‍💻</h2>
+          <h2 className="my-4 text-3xl">Whats next 🧑‍💻</h2>
           <p>
             After 5+ great years pushing the envelope at thredUP.com the time
             has come for a new set of challenges. With a focus on front end
@@ -160,7 +156,6 @@ export default function Index() {
             twice actually... Otherwise reach out and connect on LinkedIn.
           </p>
         </div>
-        <ScrollTo className="mb-20" rotate="rotate-0" to="/work" />
       </section>
     </>
   );

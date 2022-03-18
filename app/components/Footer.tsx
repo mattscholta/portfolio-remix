@@ -6,6 +6,7 @@ export const Footer = (_props: FooterProps) => {
 
   return (
     <footer className="text-center text-sm">
+      {/*
       <div className="mb-2 flex items-center justify-center gap-4">
         <img
           alt="Follow me on GitHub"
@@ -29,6 +30,7 @@ export const Footer = (_props: FooterProps) => {
           width={16}
         />
       </div>
+      */}
       <p>
         Built with <span className="text-color-primary">&hearts;</span> in{" "}
         <a

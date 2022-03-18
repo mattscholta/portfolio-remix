@@ -7,7 +7,7 @@ exports[`Header Component > should render our footer 1`] = `
       class="header"
     >
       <div
-        class="mx-auto flex max-w-2xl items-center justify-center gap-1 text-sm uppercase md:gap-20"
+        class="mx-auto flex w-full max-w-2xl items-center justify-evenly gap-1 text-xs uppercase md:gap-20 md:text-sm"
       >
         <a
           aria-current="page"
@@ -31,7 +31,6 @@ exports[`Header Component > should render our footer 1`] = `
             class="logo"
             height="59"
             viewBox="0 0 100 59"
-            width="100"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

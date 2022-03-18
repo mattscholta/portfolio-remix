@@ -6,31 +6,6 @@ exports[`Footer Component > should render our footer 1`] = `
     <footer
       class="text-center text-sm"
     >
-      <div
-        class="mb-2 flex items-center justify-center gap-4"
-      >
-        <img
-          alt="Follow me on GitHub"
-          class="footer-social"
-          height="16"
-          src="/github.svg"
-          width="16"
-        />
-        <img
-          alt="Follow me on Twitter"
-          class="footer-social"
-          height="16"
-          src="/twitter.svg"
-          width="16"
-        />
-        <img
-          alt="Follow me on LinkedIn"
-          class="footer-social"
-          height="16"
-          src="/linkedin.svg"
-          width="16"
-        />
-      </div>
       <p>
         Built with 
         <span

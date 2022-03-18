@@ -16,43 +16,48 @@ export const meta: MetaFunction = (args) => {
 
 export default function About() {
   // Hooks
-  const { slug } = useParams();
   const data = useLoaderData<LoaderData>();
 
-  // Styles
-  const twFont = `font-font-serif font-extrabold`;
-  const cssHeading = `${twFont} text-xl mb-2`;
-  const cssSection = `section-full m-auto flex flex-col items-center justify-center gap-20`;
-  const cssSection2 = `${cssSection} gap-0`;
+  // Setup
+  const created = new Date(data.date);
+  const date = created.toLocaleDateString("en-US", {
+    weekday: undefined,
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  });
 
   return (
     <>
-      <section className={cssSection} id="section-1">
+      <section
+        className="section-full m-auto flex flex-col items-center justify-center gap-20"
+        id="section-1"
+      >
         <Hero
           className="mx-auto max-w-6xl"
-          copy={data.date}
+          copy={date}
           highlight={data.title}
         />
-        <ScrollTo to={`/blog/${slug}/#section-2`} />
+        <ScrollTo id="section-2" />
       </section>
 
       <img src={data.imageTemp} alt="" />
-      <div className="section-anchor" id="section-2" />
 
-      <section className={cssSection2}>
-        {/*
-        <h2 className={`${cssHeading} text-highlight text-left text-3xl`}>
-          {data.title}
-        </h2>
-        */}
-        <div
-          className="wysiwyg max-w-3xl p-4"
-          dangerouslySetInnerHTML={{ __html: data.content.html }}
-        />
+      <div className="section-anchor !mt-0" id="section-2" />
+      <section className="section-full m-auto flex flex-col items-center justify-center">
+        <div className="max-w-3xl p-4">
+          <h2 className="text-highlight mb-6 inline-block text-left text-4xl md:mb-12">
+            {data.title}
+          </h2>
+          <div
+            className="wysiwyg"
+            dangerouslySetInnerHTML={{ __html: data.content.html }}
+          />
+        </div>
 
         <div className="section-subcontent w-full">
           <div className="m-auto max-w-6xl p-4">
-            <h3 className={cssHeading}>More posts</h3>
+            <h3 className="mb-2 text-xl">More posts</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
               expedita possimus amet pariatur provident reiciendis earum

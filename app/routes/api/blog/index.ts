@@ -17,6 +17,7 @@ const getPosts = gql`
     posts {
       id
       imageTemp
+      intro
       slug
       sticky
       title
