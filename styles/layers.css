@@ -22,4 +22,11 @@
   .wysiwyg blockquote a {
     @apply text-highlight;
   }
+
+  /* We can do it... Just doesn't look great */
+  @media (prefers-color-scheme: dark) {
+    .text-highlight {
+      @apply bg-gradient-to-l from-[#FD5A1E] to-yellow-400;
+    }
+  }
 }
