@@ -3,10 +3,12 @@ import {
   Links,
   LinksFunction,
   LiveReload,
+  LoaderFunction,
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
+  useLoaderData
 } from "remix";
 import type { MetaFunction } from "remix";
 
@@ -20,11 +22,27 @@ export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
 };
 
-export const meta: MetaFunction = () => {
-  return { title: "New Remix App" };
+export interface LoaderData {
+  canonnical: string;
+}
+
+export const loader: LoaderFunction = (args): LoaderData => {
+  const canonnical = args.request.url;
+  // const canonnical = `${process.env.BASE_URL}`;
+
+  return { canonnical };
+};
+
+export const meta: MetaFunction = (args) => {
+  return {
+    title: "New Remix App"
+  };
 };
 
 export default function App() {
+  // Hooks
+  const { canonnical } = useLoaderData<LoaderData>();
+
   // Life Cycle
   React.useEffect(() => {
     intro();
@@ -36,6 +54,7 @@ export default function App() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
+        <link rel="canonnical" href={canonnical} />
         <Links />
       </head>
       <body>
