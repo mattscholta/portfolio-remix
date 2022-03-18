@@ -3,6 +3,9 @@ import { json, LoaderFunction } from "remix";
 import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
 
 export interface Post {
+  content: {
+    html: string;
+  };
   id: string;
   imageTemp: string;
   slug: string;
@@ -15,6 +18,9 @@ export type LoaderData = Post[];
 const getPosts = gql`
   query {
     posts {
+      content {
+        html
+      }
       id
       imageTemp
       intro

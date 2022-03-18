@@ -1,4 +1,4 @@
-import { Link, MetaFunction, useLoaderData } from "remix";
+import { MetaFunction, useLoaderData } from "remix";
 
 import { BlogPreview } from "~/components/BlogPreview";
 import { Hero } from "~/components/Hero";
@@ -8,12 +8,10 @@ import { loader, LoaderData } from "~/routes/api/blog";
 
 export { loader };
 
-export const meta: MetaFunction = () => {
-  return {
-    description: SITE_DESCRIPTION,
-    title: `Blog | ${SITE_TITLE}`
-  };
-};
+export const meta: MetaFunction = () => ({
+  description: SITE_DESCRIPTION,
+  title: `Blog | ${SITE_TITLE}`
+});
 
 export default function About() {
   // Hooks
@@ -79,10 +77,12 @@ export default function About() {
       <div className="section-anchor" id="section-2" />
       <section className={cssSection}>
         <div className="w-full p-8">
-          <h2 className="mb-12 text-3xl">More articles</h2>
+          <h2 className="mb-12 text-3xl">Posts</h2>
+
           <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
             {data.map((item) => (
               <BlogPreview
+                content={item.content.html}
                 image={item.imageTemp}
                 key={item.id}
                 slug={item.slug}

@@ -7,13 +7,13 @@ exports[`Hero Component > should render our Hero 1`] = `
       class="hero p-4 text-center"
     >
       <h1
-        class="font-font-serif text-4xl font-extrabold md:text-4xl"
+        class="inline-block font-font-serif text-xl font-extrabold md:text-4xl"
       >
         <div>
           Test Copy
         </div>
         <div
-          class="text-highlight text-5xl md:text-7xl"
+          class="text-highlight text-4xl md:text-7xl"
         >
           The HIGHLIGHT
         </div>

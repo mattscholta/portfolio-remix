@@ -4,11 +4,11 @@ exports[`BlogPreview Component > should render our BlogPreview 1`] = `
 <body>
   <div>
     <a
-      class="blog-preview flex flex-grow flex-col aspect-video p-4"
+      class="blog-preview flex flex-col aspect-video---"
       href="/blog/undefined"
     >
       <h3
-        class="text-2xl my-4 font-font-serif font-extrabold"
+        class="my-4 text-2xl"
       >
         test title
       </h3>

@@ -30,7 +30,7 @@ export default function About() {
     <>
       <section className="section-full m-auto flex flex-col items-center justify-center">
         <Hero
-          className="my-12 mx-auto max-w-6xl md:my-20"
+          className="my-20 mx-auto max-w-6xl md:my-40"
           copy={date}
           highlight={data.title}
         />
