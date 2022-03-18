@@ -1,3 +1,5 @@
+export const COOKIE_THEME = "theme";
+
 export const DEFAULT_SEARCH = "fragments";
 
 export const SITE_AUTHOR = `Matt Scholta`;

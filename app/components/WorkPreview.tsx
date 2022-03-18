@@ -11,15 +11,12 @@ export interface WorkPreviewProps {
 export const WorkPreview = (props: WorkPreviewProps) => {
   const { className, data } = props;
 
-  // Styles
-  const tailwind = `flex flex-grow flex-col aspect-video--`;
-  const cssComponent = classnames("work-preview", tailwind, className);
-  const cssHeading = `text-xl mb-4 font-font-serif font-extrabold `;
-  const cssSpan = `hover:text-highlight`;
-
   return (
-    <Link className={cssComponent} to={`/work/${data.slug}`}>
-      <h3 className={cssHeading}>
+    <Link
+      className={classnames("work-preview flex flex-grow flex-col", className)}
+      to={`/work/${data.slug}`}
+    >
+      <h3 className="mb-4 font-font-serif text-xl font-extrabold">
         <span>{data.title}</span>
       </h3>
       <p>{data.overview}</p>

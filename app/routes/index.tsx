@@ -29,11 +29,7 @@ export default function Index() {
 
   // Setup
   const linkedIn = (
-    <a
-      className="text-color-primary"
-      title="Follow on LinkedIn"
-      href={SOCIAL_LINKEDIN}
-    >
+    <a title="Follow on LinkedIn" href={SOCIAL_LINKEDIN}>
       LinkedIn
     </a>
   );
@@ -54,7 +50,7 @@ export default function Index() {
           <div>
             <img
               alt={SITE_AUTHOR}
-              className="max-h-32 cursor-pointer rounded-full bg-gradient-to-l from-color-primary to-blue-500 p-1 transition-transform hover:scale-110 active:rotate-6 md:max-h-40"
+              className="custom-bg-gradient max-h-32 cursor-pointer rounded-full p-1 transition-transform hover:scale-110 active:rotate-6 md:max-h-40"
               onClick={onClick}
               src="/matt-scaled.webp"
             />

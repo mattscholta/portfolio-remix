@@ -34,7 +34,11 @@ export default function About() {
           copy={date}
           highlight={data.title}
         />
-        <img src={data.imageTemp} alt="" />
+        <img
+          className="border-b border-t border-color-border-dark"
+          src={data.imageTemp}
+          alt=""
+        />
         <div className="max-w-3xl p-4">
           <h2 className="text-highlight my-6 inline-block text-left text-4xl md:my-12">
             {data.title}

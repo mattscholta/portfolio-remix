@@ -27,6 +27,7 @@
 }
 
 .header-link {
+  color: unset;
   font-weight: 600;
   transition: color 140ms ease-out;
 }

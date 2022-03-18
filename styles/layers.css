@@ -4,15 +4,50 @@
  * tbd...
  */
 @layer components {
-  .text-highlight {
+  .custom-bg-gradient,
+  .light .custom-bg-gradient {
+    @apply bg-gradient-to-l from-color-primary to-blue-500;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .custom-bg-gradient {
+      @apply bg-gradient-to-l from-[#FD5A1E] to-yellow-400;
+    }
+  }
+
+  .dark .custom-bg-gradient {
+    @apply bg-gradient-to-l from-[#FD5A1E] to-yellow-400;
+  }
+
+  .text-highlight,
+  .light .text-highlight {
     @apply bg-gradient-to-r from-color-primary to-blue-500 bg-clip-text text-transparent;
     letter-spacing: -0.05em;
     line-height: 1.1 !important;
     overflow: visible;
   }
 
+  .dark .text-highlight {
+    @apply bg-gradient-to-r from-[#FD5A1E] to-yellow-400;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .text-highlight {
+      @apply bg-gradient-to-r from-[#FD5A1E] to-yellow-400;
+    }
+  }
+
   .work-preview span {
     letter-spacing: -0.05em;
+  }
+
+  .work-preview p {
+    color: var(--color-copy-dark);
+    transition: color 140ms ease-out;
+  }
+
+  .work-preview:hover p {
+    color: var(--color-copy);
   }
 
   .work-preview span {
@@ -21,12 +56,5 @@
 
   .wysiwyg blockquote a {
     @apply text-highlight;
-  }
-
-  /* We can do it... Just doesn't look great */
-  @media (prefers-color-scheme: dark) {
-    .text-highlight {
-      @apply bg-gradient-to-l from-[#FD5A1E] to-yellow-400;
-    }
   }
 }

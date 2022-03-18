@@ -19,7 +19,6 @@ export default function Work() {
 
   // Styles
   const cssHeading = `text-2xl mb-8 font-font-serif font-extrabold`;
-  const cssImage = `border-1 my-20 border border-color-border`;
 
   // Setup
   const img = data.images[0] ? data.images[0]?.url : false;
@@ -36,7 +35,17 @@ export default function Work() {
           className="wysiwyg px-4"
           dangerouslySetInnerHTML={{ __html: data.content.html }}
         />
-        {img && <img alt="" className={cssImage} src={img} />}
+      </div>
+
+      {img && (
+        <img
+          alt=""
+          className="mb-20 w-full border-t border-b border-color-border"
+          src={img}
+        />
+      )}
+
+      <div className="relative m-auto flex max-w-3xl flex-col">
         <blockquote>{data.intro}</blockquote>
       </div>
 

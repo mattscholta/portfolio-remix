@@ -26,6 +26,10 @@ h6 {
   font-weight: 900;
 }
 
+a {
+  color: var(--color-primary);
+}
+
 blockquote {
   box-sizing: content-box;
   font-family: var(--font-serif);
