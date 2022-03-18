@@ -27,7 +27,7 @@ export const Experience = (props: ExperienceProps) => {
           title="Open in new window"
           target="_blank"
         >
-          <img alt="" src="/open-link.svg" width={16} />
+          <img alt="" className="pt-1" src="/open-link.svg" width={16} />
         </a>
       </h3>
       <div className="font-medium">{date}</div>

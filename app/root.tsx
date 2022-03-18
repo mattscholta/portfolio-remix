@@ -52,8 +52,8 @@ export default function App() {
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <meta content="width=device-width,initial-scale=1" name="viewport" />
         <meta content="#f00" name="theme-color" />
+        <meta content="width=device-width,initial-scale=1" name="viewport" />
         <Meta />
 
         <link href={canonnical} rel="canonnical" />
