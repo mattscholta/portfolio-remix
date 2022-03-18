@@ -54,7 +54,11 @@ export default function App() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Meta />
-        <link rel="canonnical" href={canonnical} />
+
+        <link href={canonnical} rel="canonnical" />
+        <link href="/favicon.ico" rel="icon" />
+        <link href="/favicon.png" rel="apple-touch-icon" sizes="48x48" />
+        <link href="/manifest.json" rel="manifest" />
         <Links />
       </head>
       <body>
