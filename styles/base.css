@@ -3,7 +3,7 @@
  */
 html {
   background-color: var(--color-background-light);
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
 }
 
 body {

@@ -1,5 +1,5 @@
 import {
-  MESSAGE_HIRE_ARTWORK,
+  MESSAGE_HIRE_CONOSLE,
   SITE_AUTHOR,
   SITE_EMAIL_ADDRESS,
   SOCIAL_GITHUB,
@@ -15,12 +15,12 @@ import {
 const artwork = `
 <!--
 
-  ${MESSAGE_HIRE_ARTWORK}
+  ${MESSAGE_HIRE_CONOSLE}
 
            |
           / \\
-         / _ \\         Founder: ${SITE_AUTHOR}
-        |.o '.|        Email: ${SITE_EMAIL_ADDRESS}
+         / _ \\         ${SITE_AUTHOR}
+        |.o '.|        ${SITE_EMAIL_ADDRESS}
         |'._.'|
         |     |         - Github: ${SOCIAL_GITHUB}
       .*|  |  |*.       - LinkedIn ${SOCIAL_LINKEDIN}

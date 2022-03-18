@@ -23,9 +23,10 @@ export const BlogPreview = (props: BlogPreviewProps) => {
     <Link
       className={cssComponent}
       to={`/blog/${slug}`}
-      style={{ backgroundImage }}
+      // style={{ backgroundImage }}
     >
       <h3 className={cssHeading}>{title}</h3>
+      {/* <p>{}</p> */}
       {/* <img alt="" loading="lazy" src={image} /> */}
       {/*
       <p>

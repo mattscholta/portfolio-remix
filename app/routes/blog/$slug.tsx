@@ -1,7 +1,6 @@
-import { MetaFunction, useLoaderData, useParams } from "remix";
+import { MetaFunction, useLoaderData } from "remix";
 
 import { Hero } from "~/components/Hero";
-import { ScrollTo } from "~/components/ScrollTo";
 import { SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
 import { loader, LoaderData } from "~/routes/api/blog/$slug";
 
@@ -29,24 +28,15 @@ export default function About() {
 
   return (
     <>
-      <section
-        className="section-full m-auto flex flex-col items-center justify-center gap-20"
-        id="section-1"
-      >
+      <section className="section-full m-auto flex flex-col items-center justify-center">
         <Hero
-          className="mx-auto max-w-6xl"
+          className="my-12 mx-auto max-w-6xl md:my-20"
           copy={date}
           highlight={data.title}
         />
-        <ScrollTo id="section-2" />
-      </section>
-
-      <img src={data.imageTemp} alt="" />
-
-      <div className="section-anchor !mt-0" id="section-2" />
-      <section className="section-full m-auto flex flex-col items-center justify-center">
+        <img src={data.imageTemp} alt="" />
         <div className="max-w-3xl p-4">
-          <h2 className="text-highlight mb-6 inline-block text-left text-4xl md:mb-12">
+          <h2 className="text-highlight my-6 inline-block text-left text-4xl md:my-12">
             {data.title}
           </h2>
           <div
@@ -54,7 +44,6 @@ export default function About() {
             dangerouslySetInnerHTML={{ __html: data.content.html }}
           />
         </div>
-
         <div className="section-subcontent w-full">
           <div className="m-auto max-w-6xl p-4">
             <h3 className="mb-2 text-xl">More posts</h3>
