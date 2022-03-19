@@ -35,7 +35,7 @@ export default function Index() {
               alt={SITE_AUTHOR}
               className="custom-bg-gradient max-h-32 cursor-pointer rounded-full p-1 transition-transform hover:scale-110 active:rotate-6 md:max-h-40"
               onClick={onClick}
-              src="/matt-scaled.webp"
+              src="/images/assets/matt-scaled.webp"
             />
           </div>
         </div>

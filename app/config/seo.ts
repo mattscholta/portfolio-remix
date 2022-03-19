@@ -16,7 +16,7 @@ export const getMetaTags = (url: string, isDark: boolean) => {
   const defaults = {
     author: SITE_AUTHOR,
     description: SITE_DESCRIPTION,
-    image: `${url}/share.jpg`,
+    image: `${url}/images/assets/share.jpg`,
     robots: "index, follow",
     title: SITE_TITLE
   };

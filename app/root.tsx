@@ -88,6 +88,27 @@ export default function App() {
         <link href={favicon} rel="icon" />
         <link href={favicon} rel="apple-touch-icon" sizes="48x48" />
         <link href={manifest} rel="manifest" />
+
+        {/*
+        <link
+          href="https://github.githubassets.com/pinned-octocat.svg"
+          rel="mask-icon"
+          color="#000000"
+        />
+        <link
+          className="js-site-favicon"
+          href="https://github.githubassets.com/favicons/favicon.png"
+          rel="alternate icon"
+          type="image/png"
+        />
+        <link
+          className="js-site-favicon"
+          href="https://github.githubassets.com/favicons/favicon.svg"
+          rel="icon"
+          type="image/svg+xml"
+        />
+        */}
+
         <Links />
         <TrackingGA id={googleAnalytics} />
       </head>

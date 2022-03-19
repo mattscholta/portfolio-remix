@@ -9,7 +9,7 @@ exports[`Footer Component > should render our footer 1`] = `
       <p>
         Built with 
         <span
-          class="text-color-primary"
+          class="text-color-primary--"
         >
           ♥
         </span>

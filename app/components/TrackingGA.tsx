@@ -12,6 +12,7 @@ export const TrackingGA = (props: TrackingGAProps) => {
   const { id } = props;
 
   // Setup
+  const src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
   const __html = `
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -21,11 +22,7 @@ export const TrackingGA = (props: TrackingGAProps) => {
 
   return (
     <>
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
-        type="text/javascript"
-      />
+      <script async defer src={src} type="text/javascript" />
       <script dangerouslySetInnerHTML={{ __html }} type="text/javascript" />
     </>
   );

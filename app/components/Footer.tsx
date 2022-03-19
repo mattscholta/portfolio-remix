@@ -12,30 +12,29 @@ export const Footer = (_props: FooterProps) => {
           alt="Follow me on GitHub"
           className="footer-social"
           height={16}
-          src="/github.svg"
+          src="/images/svg/github.svg"
           width={16}
         />
         <img
           alt="Follow me on Twitter"
           className="footer-social"
           height={16}
-          src="/twitter.svg"
+          src="/images/svg/twitter.svg"
           width={16}
         />
         <img
           alt="Follow me on LinkedIn"
           className="footer-social"
           height={16}
-          src="/linkedin.svg"
+          src="/images/svg/linkedin.svg"
           width={16}
         />
       </div>
       */}
       <p>
-        Built with <span className="text-color-primary">&hearts;</span> in{" "}
+        Built with <span className="text-color-primary--">&hearts;</span> in{" "}
         <a
           href="https://www.google.com/search?q=san+diego+weather"
-          // href="https://www.surfline.com/surf-report/carlsbad-state-beach-north/5d4dc10680c2430001b119fb"
           rel="noreferrer"
           target="_blank"
         >

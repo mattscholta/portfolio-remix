@@ -7,17 +7,17 @@ exports[`Header Component > should render our footer 1`] = `
       class="header"
     >
       <div
-        class="relative mx-auto flex w-full max-w-2xl items-center justify-evenly gap-1 text-xs uppercase md:gap-20 md:text-sm"
+        class="relative mx-auto flex h-full w-full max-w-2xl items-center justify-evenly gap-1 text-xs uppercase md:gap-20 md:text-sm"
       >
         <a
           aria-current="page"
-          class="header-link active"
+          class="header-link px-4 md:px-8 active"
           href="/"
         >
           Home
         </a>
         <a
-          class="header-link"
+          class="header-link px-4 md:px-8"
           href="/work"
         >
           Work
@@ -46,13 +46,13 @@ exports[`Header Component > should render our footer 1`] = `
           </span>
         </a>
         <a
-          class="header-link"
+          class="header-link px-4 md:px-8"
           href="/blog"
         >
           Blog
         </a>
         <a
-          class="header-link"
+          class="header-link px-4 md:px-8"
           href="/uses"
         >
           Uses
