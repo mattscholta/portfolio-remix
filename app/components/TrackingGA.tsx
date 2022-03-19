@@ -19,5 +19,14 @@ export const TrackingGA = (props: TrackingGAProps) => {
     gtag('config', '${id}');
   `;
 
-  return <script dangerouslySetInnerHTML={{ __html }} type="text/javascript" />;
+  return (
+    <>
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
+        type="text/javascript"
+      />
+      <script dangerouslySetInnerHTML={{ __html }} type="text/javascript" />
+    </>
+  );
 };
