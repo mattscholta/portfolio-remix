@@ -21,7 +21,6 @@ import { Header } from "~/components/Header";
 import { intro } from "./config/intro";
 import { SITE_TITLE } from "./config/constants";
 import { TrackingGA } from "./components/TrackingGA";
-import { worker } from "./config/worker";
 
 import styles from "./styles/index.css";
 
@@ -119,10 +118,6 @@ export default function App() {
           <Outlet />
         </main>
         <Footer />
-        <script
-          dangerouslySetInnerHTML={{ __html: worker }}
-          type="text/javascript"
-        />
 
         {/* Remix */}
         <ScrollRestoration />
