@@ -15,7 +15,7 @@ import type { MetaFunction } from "remix";
 
 import { cookieTheme } from "./cookies";
 import { Footer } from "~/components/Footer";
-import { GOOGLE_ANALYTICS } from "./config/settings.server";
+import { BASE_URL, GOOGLE_ANALYTICS } from "./config/settings.server";
 import { Header } from "~/components/Header";
 import { intro } from "./config/intro";
 import { SITE_TITLE } from "./config/constants";
@@ -30,6 +30,7 @@ export const links: LinksFunction = () => {
 export interface LoaderData {
   canonical: string;
   theme?: "light" | "dark";
+  googleAnalytics: string;
 }
 
 export const loader: LoaderFunction = async (args): Promise<LoaderData> => {
@@ -40,7 +41,7 @@ export const loader: LoaderFunction = async (args): Promise<LoaderData> => {
   const cookie = (await cookieTheme.parse(header)) ?? {};
   const { theme } = cookie;
 
-  return { canonical, theme };
+  return { canonical, theme, googleAnalytics: GOOGLE_ANALYTICS };
 };
 
 export const meta: MetaFunction = (args) => ({
@@ -49,7 +50,7 @@ export const meta: MetaFunction = (args) => ({
 
 export default function App() {
   // Hooks
-  const { canonical, theme } = useLoaderData<LoaderData>();
+  const { canonical, googleAnalytics, theme } = useLoaderData<LoaderData>();
   const { pathname } = useLocation();
   // const theme = "dark";
   // const [] = React.useState(theme);
@@ -62,7 +63,12 @@ export default function App() {
 
   // Life Cycle
   React.useEffect(() => {
-    console.log(` 💬 ~ pathname`, pathname);
+    if (!window.gtag) return;
+
+    window.gtag("event", "page_view", {
+      // page_title: "My Profile",
+      page_location: `${BASE_URL}${pathname}`
+    });
   }, [pathname]);
 
   React.useEffect(() => {
@@ -83,7 +89,7 @@ export default function App() {
         <link href={favicon} rel="apple-touch-icon" sizes="48x48" />
         <link href={manifest} rel="manifest" />
         <Links />
-        <TrackingGA id={GOOGLE_ANALYTICS} />
+        <TrackingGA id={googleAnalytics} />
       </head>
       <body>
         <Header />

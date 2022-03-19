@@ -1,3 +1,4 @@
+export const BASE_URL = process.env.BASE_URL ?? "";
 export const GOOGLE_ANALYTICS = process.env.GOOGLE_ANALYTICS ?? "";
 export const GOOGLE_TAG_MANAGER = process.env.GOOGLE_TAG_MANAGER ?? "";
 
