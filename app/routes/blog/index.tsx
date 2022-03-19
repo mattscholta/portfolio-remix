@@ -32,7 +32,7 @@ export default function About() {
 
       <div className="section-anchor" id="posts" />
       <section className="section-full m-auto mb-40 flex max-w-6xl flex-col items-center justify-center gap-20">
-        <div className="w-full p-8 ">
+        <div className="w-full p-4 md:p-8">
           <h2 className="mb-12 text-center text-3xl md:text-4xl">All Posts</h2>
           <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
             {data.map((item) => (
