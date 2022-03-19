@@ -76,6 +76,7 @@
 }
 
 .scroll-to {
+  border-color: var(--color-border);
   transition: border 140ms ease-out, color 140ms ease-out;
 }
 
