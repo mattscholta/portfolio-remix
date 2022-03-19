@@ -8,7 +8,8 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLoaderData
+  useLoaderData,
+  useLocation
 } from "remix";
 import type { MetaFunction } from "remix";
 
@@ -17,6 +18,7 @@ import { Footer } from "~/components/Footer";
 import { GOOGLE_ANALYTICS } from "./config/settings.server";
 import { Header } from "~/components/Header";
 import { intro } from "./config/intro";
+import { SITE_TITLE } from "./config/constants";
 import { TrackingGA } from "./components/TrackingGA";
 
 import styles from "./styles/index.css";
@@ -42,12 +44,13 @@ export const loader: LoaderFunction = async (args): Promise<LoaderData> => {
 };
 
 export const meta: MetaFunction = (args) => ({
-  title: "New Remix App"
+  title: SITE_TITLE
 });
 
 export default function App() {
   // Hooks
   const { canonical, theme } = useLoaderData<LoaderData>();
+  const { pathname } = useLocation();
   // const theme = "dark";
   // const [] = React.useState(theme);
 
@@ -58,6 +61,10 @@ export default function App() {
   const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
 
   // Life Cycle
+  React.useEffect(() => {
+    console.log(` 💬 ~ pathname`, pathname);
+  }, [pathname]);
+
   React.useEffect(() => {
     intro();
   }, []);
