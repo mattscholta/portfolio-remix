@@ -19,23 +19,21 @@ export default function Work() {
   // Hooks
   const data = useLoaderData<LoaderData>();
 
-  // Styles
-  const cssSection = `section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20`;
-
   return (
     <>
-      <section className={cssSection}>
+      <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20">
         <Hero copy="Show me the goods" highlight="Recent Work" />
         <ScrollTo id="/work#samples" />
       </section>
 
       <div className="section-anchor" id="samples" />
-      <section className={cssSection}>
-        <div className="mb-40 mt-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3">
+      <section className="section-full m-auto mb-40 flex max-w-6xl flex-col items-center justify-center gap-20">
+        <div className="mt-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3">
           {data.map((node) => (
             <WorkPreview data={node} key={node.slug} />
           ))}
         </div>
+        <ScrollTo id="/blog" rotate="rotate-0" />
       </section>
     </>
   );

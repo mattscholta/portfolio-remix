@@ -17,15 +17,15 @@ export default function About() {
   // Hooks
   const data = useLoaderData<LoaderData>();
 
-  // Styles
-  const cssSection = `section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20`;
-
   // Setup
   const featured = `https://picsum.photos/id/158/1200/600`;
 
   return (
     <>
-      <section className={cssSection} id="section-1">
+      <section
+        className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20"
+        id="section-1"
+      >
         <Hero
           className="mx-auto max-w-6xl"
           copy="Yes, another blog..."
@@ -37,7 +37,7 @@ export default function About() {
 
       {/*
       <div className="section-anchor" id="posts" />
-      <section className={cssSection}>
+      <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20">
         <div className="flex flex-col items-center gap-16 p-8 md:flex-row">
           <div className="flex-1">
             <h2 className="mb-4 font-font-serif text-3xl font-extrabold">
@@ -75,11 +75,10 @@ export default function About() {
       */}
 
       <div className="section-anchor" id="posts" />
-      <section className={cssSection}>
-        <div className="w-full p-8">
+      <section className="section-full m-auto mb-40 flex max-w-6xl flex-col items-center justify-center gap-20">
+        <div className="w-full p-8 ">
           <h2 className="mb-12 text-center text-3xl md:text-4xl">All Posts</h2>
-
-          <div className="mb-40 grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
             {data.map((item) => (
               <BlogPreview
                 content={item.content.html}
@@ -92,6 +91,7 @@ export default function About() {
             ))}
           </div>
         </div>
+        <ScrollTo id="/uses" rotate="rotate-0" />
       </section>
     </>
   );
