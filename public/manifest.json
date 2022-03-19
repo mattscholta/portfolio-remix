@@ -8,44 +8,50 @@
   "icons": [
     {
       "purpose": "any",
-      "sizes": "72x42",
-      "src": "https://mattscholta.com/images/branding/logo-72.png",
+      "sizes": "48x48",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/48x48.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
-      "sizes": "96x56",
-      "src": "https://mattscholta.com/images/branding/logo-96.png",
+      "sizes": "96x96",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/96x96.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
-      "sizes": "144x85",
-      "src": "https://mattscholta.com/images/branding/logo-144.png",
+      "sizes": "144x144",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/144x144.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
-      "sizes": "192x113",
-      "src": "https://mattscholta.com/images/branding/logo-192.png",
+      "sizes": "192x192",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/192x192.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
-      "sizes": "384x225",
-      "src": "https://mattscholta.com/images/branding/logo-384.png",
+      "sizes": "256x256",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/256x256.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any maskable",
+      "sizes": "256x256",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/256x256.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
-      "sizes": "512x301",
-      "src": "https://mattscholta.com/images/branding/logo-512.png",
+      "sizes": "384x384",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/384x384.png",
       "type": "image/png"
     },
     {
-      "purpose": "maskable",
-      "sizes": "512x301",
-      "src": "https://mattscholta.com/images/branding/logo-512.png",
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/512x512.png",
       "type": "image/png"
     }
   ],
