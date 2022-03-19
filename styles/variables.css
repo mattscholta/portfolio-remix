@@ -22,6 +22,7 @@
  */
 :root {
   --color-background-transparent: rgb(255 255 255 / 85%);
+  --color-background-transparent-light: rgb(255 255 255 / 25%);
 
   --color-background-light: #fff;
   --color-background: #f5f8fa;
@@ -41,6 +42,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background-transparent: rgb(0 0 0 / 85%);
+    --color-background-transparent: rgb(0 0 0 / 25%);
 
     --color-background-light: #101214;
     --color-background: #000;

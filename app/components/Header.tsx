@@ -25,9 +25,11 @@ export const Header = (_props: HeaderProps) => {
           Uses
         </NavLink>
       </div>
+      {/*
       <button className="absolute right-8" type="submit">
         Toggle
       </button>
+      */}
     </header>
   );
 };

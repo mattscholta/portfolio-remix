@@ -6,6 +6,7 @@ export interface Post {
   content: {
     html: string;
   };
+  date: string;
   id: string;
   imageTemp: string;
   slug: string;
@@ -21,6 +22,7 @@ const getPosts = gql`
       content {
         html
       }
+      date
       id
       imageTemp
       intro

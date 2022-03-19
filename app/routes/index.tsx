@@ -23,30 +23,21 @@ export default function Index() {
   // Hooks
   const [heading, setHeading] = React.useState("A Software Engineer");
 
-  // Styles
-  const cssSection = `section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20`;
-  const cssSection2 = `${cssSection} max-w-3xl`;
-
-  // Setup
-  const linkedIn = (
-    <a title="Follow on LinkedIn" href={SOCIAL_LINKEDIN}>
-      LinkedIn
-    </a>
-  );
-
   // Handlers
   const onClick = async () => {
     const data = await loader({} as any);
     setHeading(data);
   };
 
-  const copy = <span className="whitespace-nowrap">{heading}</span>;
-
   return (
     <>
-      <section className={cssSection}>
+      <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20">
         <div className="mt-20 flex flex-col-reverse items-center gap-4 md:mt-0 md:flex-row">
-          <Hero className="md:text-right" copy={copy} highlight={SITE_AUTHOR} />
+          <Hero
+            className="md:text-right"
+            copy={<span className="whitespace-nowrap">{heading}</span>}
+            highlight={SITE_AUTHOR}
+          />
           <div>
             <img
               alt={SITE_AUTHOR}
@@ -60,7 +51,7 @@ export default function Index() {
       </section>
 
       <div className="section-anchor" id="section-about" />
-      <section className={cssSection2}>
+      <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
         <div className="px-4">
           <h2 className="my-4 font-font-serif text-3xl font-extrabold">
             About Matt 🧑‍💻
@@ -87,23 +78,15 @@ export default function Index() {
       </section>
 
       <div className="section-anchor" id="section-experience" />
-      <section className={cssSection2}>
+      <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
         <div className="h-full w-full p-4 ">
           {/* Maybe a swiper kinda thing here  */}
           <div className="flex flex-col items-center justify-center gap-20 sm:flex-row md:mt-20">
             <div className="flex-1 text-center">
-              <h3 className="mb-4 font-font-serif text-2xl font-extrabold">
-                Professional Experience
-              </h3>
-              <p>
-                If you do what you love, you'll never work a day in your life...
-                I love solving problems and building things, what can I help you
-                build?
-              </p>
-              <small className="mt-4 block italic text-color-copy-light">
-                Visit {linkedIn} for a <b>full list</b> of my skills and
-                experience.
-              </small>
+              <blockquote className="m-0 p-0">
+                If you <span className="text-highlight">do what you love,</span>{" "}
+                you'll never work a day in your life...
+              </blockquote>
             </div>
             <div className="grid flex-1 grid-cols-1 gap-12">
               <Experience
@@ -131,25 +114,14 @@ export default function Index() {
       </section>
 
       <div className="section-anchor" id="section-next" />
-      <section className={cssSection2}>
+      <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
         <div className="px-4">
           <h2 className="my-4 text-3xl">Whats next 🧑‍💻</h2>
           <p>
-            After 5+ great years pushing the envelope at thredUP.com the time
-            has come for a new set of challenges. With a focus on front end
-            development, user-experience, user-interaction and a passion for
-            developer productivity I am beyond excited to see what opportunities
-            the future holds.
-          </p>
-          <p>
-            The technology and tools listed on this page are my preferred stack
-            as of 2022. This year I'll be launching a new version of a long time
-            project BarGuide.io with all that "free time" I have. 🤣
-          </p>
-          <p>
-            So, if you're interested in learning more, ask the nearest developer
-            to help you find my email address. I've hidden it into the website,
-            twice actually... Otherwise reach out and connect on LinkedIn.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            omnis ipsam odio atque alias amet, harum reprehenderit officiis.
+            Laborum quibusdam dicta suscipit atque veniam tempora fugiat dolorum
+            repellat ut quaerat!
           </p>
         </div>
       </section>

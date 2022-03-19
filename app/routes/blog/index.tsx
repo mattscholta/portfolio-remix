@@ -77,12 +77,13 @@ export default function About() {
       <div className="section-anchor" id="section-2" />
       <section className={cssSection}>
         <div className="w-full p-8">
-          <h2 className="mb-12 text-3xl">Posts</h2>
+          <h2 className="mb-12 text-center text-3xl md:text-4xl">All Posts</h2>
 
-          <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mb-40 grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
             {data.map((item) => (
               <BlogPreview
                 content={item.content.html}
+                date={item.date}
                 image={item.imageTemp}
                 key={item.id}
                 slug={item.slug}

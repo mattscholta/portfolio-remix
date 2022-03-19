@@ -3,10 +3,15 @@
  */
 
 .blog-preview {
+  color: var(--color-copy);
   line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.blog-preview img {
+  border: 1px solid var(--color-border-light);
 }
 
 .blog-preview.both {
@@ -15,6 +20,12 @@
 
 .blog-preview:hover {
   background-image: unset;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog-preview img {
+    border-color: var(--color-border-light);
+  }
 }
 
 .experience div {
