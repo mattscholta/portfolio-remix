@@ -26,10 +26,10 @@ export default function Work() {
     <>
       <section className={cssSection}>
         <Hero copy="Show me the goods" highlight="Recent Work" />
-        <ScrollTo id="/work/#section-2" />
+        <ScrollTo id="/work#samples" />
       </section>
 
-      <div className="section-anchor" id="section-2" />
+      <div className="section-anchor" id="samples" />
       <section className={cssSection}>
         <div className="mb-40 mt-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3">
           {data.map((node) => (

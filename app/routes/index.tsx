@@ -47,37 +47,28 @@ export default function Index() {
             />
           </div>
         </div>
-        <ScrollTo id="/#section-about" />
+        <ScrollTo id="/#about" />
       </section>
 
-      <div className="section-anchor" id="section-about" />
+      <div className="section-anchor" id="about" />
       <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
-        <div className="px-4">
-          <h2 className="my-4 font-font-serif text-3xl font-extrabold">
-            About Matt 🧑‍💻
-          </h2>
-          <p>
-            After 5+ great years pushing the envelope at thredUP.com the time
-            has come for a new set of challenges. With a focus on front end
-            development, user-experience, user-interaction and a passion for
-            developer productivity I am beyond excited to see what opportunities
-            the future holds.
-          </p>
-          <p>
-            The technology and tools listed on this page are my preferred stack
-            as of 2022. This year I'll be launching a new version of a long time
-            project BarGuide.io with all that "free time" I have. 🤣
-          </p>
-          <p>
-            So, if you're interested in learning more, ask the nearest developer
-            to help you find my email address. I've hidden it into the website,
-            twice actually... Otherwise reach out and connect on LinkedIn.
-          </p>
-        </div>
-        <ScrollTo id="/#section-experience" />
+        <blockquote>
+          Passionate about quality <span className="text-highlight">code</span>{" "}
+          written for <span className="text-highlight">humans,</span> unlocking{" "}
+          <span className="text-highlight">developer productivity,</span> and{" "}
+          <span className="text-highlight">creating</span> delightful{" "}
+          <span className="underline">user experiences</span>.
+          {/*
+          <div className="mt-4 text-right">
+            <cite className="text-highlight">Matt</cite>
+          </div>
+          */}
+        </blockquote>
+
+        <ScrollTo id="/#experience" />
       </section>
 
-      <div className="section-anchor" id="section-experience" />
+      <div className="section-anchor" id="experience" />
       <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
         <div className="h-full w-full p-4 ">
           {/* Maybe a swiper kinda thing here  */}
@@ -110,10 +101,10 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <ScrollTo id="/#section-next" />
+        <ScrollTo id="/#whats-next" />
       </section>
 
-      <div className="section-anchor" id="section-next" />
+      <div className="section-anchor" id="whats-next" />
       <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
         <div className="px-4">
           <h2 className="my-4 text-3xl">Whats next 🧑‍💻</h2>
@@ -124,6 +115,7 @@ export default function Index() {
             repellat ut quaerat!
           </p>
         </div>
+        <ScrollTo id="/work" rotate="rotate-0" />
       </section>
     </>
   );

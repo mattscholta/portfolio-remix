@@ -29,10 +29,10 @@ export default function About() {
           copy="Sample page"
           highlight="Enjoy"
         />
-        <ScrollTo id="/sample/#section-2" />
+        <ScrollTo id="/sample#anchor" />
       </section>
 
-      <div className="section-anchor" id="section-2" />
+      <div className="section-anchor" id="anchor" />
       <section className={cssSection2}>
         <div className="wysiwyg max-w-3xl p-4">
           <h1 className={cssHeading}>Post #{slug}</h1>

@@ -32,11 +32,11 @@ export default function About() {
           highlight="a developers ramblings"
         />
 
-        <ScrollTo id="/blog/#section-2" />
+        <ScrollTo id="/blog#posts" />
       </section>
 
       {/*
-      <div className="section-anchor" id="section-2" />
+      <div className="section-anchor" id="posts" />
       <section className={cssSection}>
         <div className="flex flex-col items-center gap-16 p-8 md:flex-row">
           <div className="flex-1">
@@ -74,7 +74,7 @@ export default function About() {
       </section>
       */}
 
-      <div className="section-anchor" id="section-2" />
+      <div className="section-anchor" id="posts" />
       <section className={cssSection}>
         <div className="w-full p-8">
           <h2 className="mb-12 text-center text-3xl md:text-4xl">All Posts</h2>
