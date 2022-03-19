@@ -7,11 +7,20 @@ exports[`BlogPreview Component > should render our BlogPreview 1`] = `
       class="blog-preview flex flex-col aspect-video---"
       href="/blog/undefined"
     >
+      <img
+        alt=""
+        class="border-color-border-- border- mt-4"
+        loading="lazy"
+        src=""
+      />
       <h3
-        class="my-4 text-2xl"
+        class="text-highlight mt-4 text-2xl"
       >
         test title
       </h3>
+      <div>
+        Invalid Date
+      </div>
     </a>
   </div>
 </body>

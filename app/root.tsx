@@ -54,6 +54,7 @@ export default function App() {
 
   // Setup
   const isDark = theme === "dark";
+  const color = isDark ? "#f5f8fa" : "#000";
   const favicon = isDark ? "/favicon-dark.png" : "/favicon.png";
   const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
 
@@ -67,6 +68,7 @@ export default function App() {
       <head>
         <meta charSet="utf-8" />
         <meta content="dark light" name="color-scheme" />
+        <meta content={color} name="theme-color" />
         <meta content="width=device-width,initial-scale=1" name="viewport" />
         <Meta />
 
