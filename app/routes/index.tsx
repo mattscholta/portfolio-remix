@@ -92,9 +92,9 @@ export default function Index() {
 
       <div className="section-anchor" id="whats-next" />
       <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
-        <div className="px-4">
+        <div className="px-4 text-center">
           <h2 className="my-4 text-3xl">Whats next 🧑‍💻</h2>
-          <p>That my friend is a wonderful question.</p>
+          <p>That my friend is a wonderful question...</p>
         </div>
         <ScrollTo id="/work" rotate="rotate-0" />
       </section>

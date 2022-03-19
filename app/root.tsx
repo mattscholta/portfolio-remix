@@ -1,4 +1,5 @@
 import * as React from "react";
+import classnames from "classnames";
 import {
   Links,
   LinksFunction,
@@ -63,6 +64,9 @@ export default function App() {
   const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
   const metadata = getMetaTags(baseUrl, isDark);
 
+  // Styles
+  const cssComponent = classnames(theme ?? "", isDark);
+
   // Life Cycle
   React.useEffect(() => {
     if (!window.gtag) return;
@@ -77,7 +81,7 @@ export default function App() {
   }, []);
 
   return (
-    <html lang="en" className={theme ?? ""}>
+    <html lang="en" className={cssComponent}>
       <head>
         {metadata.map((meta, index) => (
           <meta {...meta} key={meta.name ?? meta.property ?? index} />
