@@ -12,16 +12,14 @@ import {
 } from "remix";
 import type { MetaFunction } from "remix";
 
+import { cookieTheme } from "./cookies";
 import { Footer } from "~/components/Footer";
+import { GOOGLE_ANALYTICS } from "./config/settings.server";
 import { Header } from "~/components/Header";
 import { intro } from "./config/intro";
-import { cookieTheme } from "./cookies";
+import { TrackingGA } from "./components/TrackingGA";
 
 import styles from "./styles/index.css";
-import { TrackingGTMScript } from "./components/TrackingGTMScript";
-import { TrackingGTMIFrame } from "./components/TrackingGTMIFrame";
-import { TrackingGA } from "./components/TrackingGA";
-import { GOOGLE_ANALYTICS, GOOGLE_TAG_MANAGER } from "./config/settings.server";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
@@ -78,12 +76,9 @@ export default function App() {
         <link href={favicon} rel="apple-touch-icon" sizes="48x48" />
         <link href={manifest} rel="manifest" />
         <Links />
-
-        <TrackingGTMScript id={GOOGLE_TAG_MANAGER} />
         <TrackingGA id={GOOGLE_ANALYTICS} />
       </head>
       <body>
-        <TrackingGTMIFrame id={GOOGLE_TAG_MANAGER} />
         <Header />
         <main>
           <Outlet />
