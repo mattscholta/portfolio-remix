@@ -1,4 +1,5 @@
 import classnames from "classnames";
+import { IconLink } from "./IconLink";
 
 export interface ExperienceProps {
   className?: string;
@@ -18,16 +19,16 @@ export const Experience = (props: ExperienceProps) => {
   return (
     <div className={cssComponent}>
       <h3 className="flex gap-2 text-xl font-bold">
-        <span>
-          {company} <span className="text-highlight">{role}</span>
-        </span>
+        {company}
         <a
+          className=""
           href={url}
           rel="noreferrer"
           title="Open in new window"
           target="_blank"
         >
-          <img alt="" className="pt-1" src="/open-link.svg" width={16} />
+          <span className="text-highlight">{role}</span>
+          <IconLink className="ml-2 mb-1 inline" size={16} />
         </a>
       </h3>
       <div className="font-medium">{date}</div>

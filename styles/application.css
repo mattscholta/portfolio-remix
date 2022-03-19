@@ -28,6 +28,10 @@
   }
 }
 
+.icon-link path {
+  fill: var(--color-primary);
+}
+
 .experience div {
   color: var(--color-copy-light);
   font-style: italic;

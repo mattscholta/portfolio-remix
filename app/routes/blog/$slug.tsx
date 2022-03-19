@@ -39,7 +39,7 @@ export default function About() {
           src={data.imageTemp}
           alt=""
         />
-        <div className="max-w-3xl p-4">
+        <div className="mb-20 max-w-3xl p-4">
           <h2 className="text-highlight my-8 inline-block text-left text-3xl md:my-12 md:text-4xl">
             {data.title}
           </h2>
@@ -48,6 +48,8 @@ export default function About() {
             dangerouslySetInnerHTML={{ __html: data.content.html }}
           />
         </div>
+
+        {/*
         <div className="section-subcontent w-full">
           <div className="m-auto max-w-6xl p-4">
             <h3 className="mb-2 text-xl">More posts</h3>
@@ -59,6 +61,7 @@ export default function About() {
             </p>
           </div>
         </div>
+        */}
       </section>
     </>
   );

@@ -45,10 +45,11 @@ export default function Work() {
         />
       )}
 
-      <div className="relative m-auto flex max-w-3xl flex-col">
+      <div className="relative m-auto mb-20 flex max-w-3xl flex-col">
         <blockquote>{data.intro}</blockquote>
       </div>
 
+      {/*
       <div className="section-subcontent w-full">
         <div className="m-auto max-w-6xl p-4">
           <h3 className={cssHeading}>Want to see another?</h3>
@@ -60,6 +61,7 @@ export default function Work() {
           </p>
         </div>
       </div>
+      */}
     </>
   );
 }

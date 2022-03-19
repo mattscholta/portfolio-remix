@@ -108,12 +108,7 @@ export default function Index() {
       <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
         <div className="px-4">
           <h2 className="my-4 text-3xl">Whats next 🧑‍💻</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-            omnis ipsam odio atque alias amet, harum reprehenderit officiis.
-            Laborum quibusdam dicta suscipit atque veniam tempora fugiat dolorum
-            repellat ut quaerat!
-          </p>
+          <p>That my friend is a wonderful question.</p>
         </div>
         <ScrollTo id="/work" rotate="rotate-0" />
       </section>

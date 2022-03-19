@@ -1,17 +1,20 @@
+import classnames from "classnames";
+
 export interface IconLinkProps {
+  className?: string;
   fill?: string;
+  size?: number;
 }
 
 export const IconLink = (props: IconLinkProps) => {
-  const { fill = "#f00" } = props;
-
-  console.log(` 💬 ~ props`, props);
+  const { className, fill = "#f00", size = 40 } = props;
 
   return (
     <svg
-      height="52px"
+      className={classnames("icon-link", className)}
+      height={size}
       viewBox="0 0 52 52"
-      width="52px"
+      width={size}
       x="0px"
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
