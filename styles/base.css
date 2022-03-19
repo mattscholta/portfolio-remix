@@ -80,10 +80,8 @@ header {
   z-index: 10;
 }
 
-/*
 @media (prefers-reduced-motion) {
   html {
     scroll-behavior: unset;
   }
 }
-*/

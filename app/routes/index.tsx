@@ -4,20 +4,13 @@ import { MetaFunction } from "remix";
 import { Hero } from "~/components/Hero";
 import { loader } from "~/routes/api/qualities";
 import { ScrollTo } from "~/components/ScrollTo";
-import {
-  SITE_AUTHOR,
-  SITE_DESCRIPTION,
-  SITE_TITLE,
-  SOCIAL_LINKEDIN
-} from "~/config/constants";
+import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
 import { Experience } from "~/components/Experience";
 
-export const meta: MetaFunction = () => {
-  return {
-    description: SITE_DESCRIPTION,
-    title: `Welcome | ${SITE_TITLE}`
-  };
-};
+export const meta: MetaFunction = () => ({
+  description: SITE_DESCRIPTION,
+  title: `Welcome | ${SITE_TITLE}`
+});
 
 export default function Index() {
   // Hooks
@@ -58,11 +51,6 @@ export default function Index() {
           <span className="text-highlight">developer productivity,</span> and{" "}
           <span className="text-highlight">creating</span> delightful{" "}
           <span className="underline">user experiences</span>.
-          {/*
-          <div className="mt-4 text-right">
-            <cite className="text-highlight">Matt</cite>
-          </div>
-          */}
         </blockquote>
 
         <ScrollTo id="/#experience" />
@@ -71,7 +59,6 @@ export default function Index() {
       <div className="section-anchor" id="experience" />
       <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
         <div className="h-full w-full p-4 ">
-          {/* Maybe a swiper kinda thing here  */}
           <div className="flex flex-col items-center justify-center gap-20 sm:flex-row md:mt-20">
             <div className="flex-1 text-center">
               <blockquote className="m-0 p-0">

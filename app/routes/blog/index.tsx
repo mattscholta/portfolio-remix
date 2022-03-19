@@ -17,9 +17,6 @@ export default function About() {
   // Hooks
   const data = useLoaderData<LoaderData>();
 
-  // Setup
-  const featured = `https://picsum.photos/id/158/1200/600`;
-
   return (
     <>
       <section
@@ -31,48 +28,8 @@ export default function About() {
           copy="Yes, another blog..."
           highlight="a developers ramblings"
         />
-
         <ScrollTo id="/blog#posts" />
       </section>
-
-      {/*
-      <div className="section-anchor" id="posts" />
-      <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20">
-        <div className="flex flex-col items-center gap-16 p-8 md:flex-row">
-          <div className="flex-1">
-            <h2 className="mb-4 font-font-serif text-3xl font-extrabold">
-              Introducing{" "}
-              <span className="bg-gradient-to-r from-color-primary to-blue-500 bg-clip-text text-transparent">
-                RocketCMS
-              </span>
-            </h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-              blanditiis ipsum qui velit dolor similique cupiditate doloribus
-              repudiandae nam error vero doloremque possimus pariatur iusto
-              distinctio quas, porro obcaecati temporibus.
-            </p>
-            <div className="mt-2 text-right">
-              <Link
-                className="text-xs font-bold uppercase text-color-primary"
-                to="/blog/rocketcms"
-              >
-                Read more
-              </Link>
-            </div>
-          </div>
-          <div className="flex-1">
-            <img
-              alt="Featured Article"
-              className="mb-8"
-              loading="lazy"
-              src={featured}
-            />
-          </div>
-        </div>
-        <ScrollTo className="mt-8" id="/blog/#section-3" />
-      </section>
-      */}
 
       <div className="section-anchor" id="posts" />
       <section className="section-full m-auto mb-40 flex max-w-6xl flex-col items-center justify-center gap-20">

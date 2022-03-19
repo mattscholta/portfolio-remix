@@ -15,7 +15,6 @@ import type { MetaFunction } from "remix";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import { intro } from "./config/intro";
-import { parseCookieHeader } from "./utils/cookies";
 
 import styles from "./styles/index.css";
 import { cookieTheme } from "./cookies";
@@ -34,7 +33,6 @@ export const loader: LoaderFunction = async (args): Promise<LoaderData> => {
 
   const canonical = request.url;
   const header = request.headers.get("cookie");
-
   const cookie = (await cookieTheme.parse(header)) ?? {};
   const { theme } = cookie;
 
@@ -46,10 +44,9 @@ export const meta: MetaFunction = (args) => ({
 });
 
 export default function App() {
-  // const theme = "dark";
-
   // Hooks
   const { canonical, theme } = useLoaderData<LoaderData>();
+  // const theme = "dark";
   // const [] = React.useState(theme);
 
   // Setup
@@ -67,8 +64,8 @@ export default function App() {
     <html lang="en" className={theme ?? ""}>
       <head>
         <meta charSet="utf-8" />
-        <meta content="dark light" name="color-scheme" />
         <meta content={color} name="theme-color" />
+        <meta content="dark light" name="color-scheme" />
         <meta content="width=device-width,initial-scale=1" name="viewport" />
         <Meta />
 

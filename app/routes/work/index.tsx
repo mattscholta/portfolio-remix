@@ -8,12 +8,10 @@ import { loader, LoaderData } from "~/routes/api/work";
 
 export { loader };
 
-export const meta: MetaFunction = () => {
-  return {
-    description: SITE_DESCRIPTION,
-    title: `Featured Work | ${SITE_TITLE}`
-  };
-};
+export const meta: MetaFunction = () => ({
+  description: SITE_DESCRIPTION,
+  title: `Featured Work | ${SITE_TITLE}`
+});
 
 export default function Work() {
   // Hooks

@@ -10,9 +10,8 @@
 .wysiwyg h5,
 .wysiwyg h6 {
   color: var(--color-copy);
-  font-weight: 900;
   font-family: var(--font-serif);
-  /* font-size: 1.8rem; */
+  font-weight: 900;
   margin-bottom: 1rem;
   margin-top: 2rem;
 }
@@ -39,8 +38,8 @@
 
 .wysiwyg ol,
 .wysiwyg ul {
-  padding-left: 2rem;
   margin-bottom: 1rem;
+  padding-left: 2rem;
 }
 
 .wysiwyg ol li {
