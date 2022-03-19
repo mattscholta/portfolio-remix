@@ -46,8 +46,10 @@ export const meta: MetaFunction = (args) => ({
 });
 
 export default function App() {
+  const theme = "dark";
+
   // Hooks
-  const { canonical, theme } = useLoaderData<LoaderData>();
+  const { canonical } = useLoaderData<LoaderData>();
   // const [] = React.useState(theme);
 
   // Setup

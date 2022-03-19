@@ -32,7 +32,7 @@ export default function About() {
           highlight="a developers ramblings"
         />
 
-        <ScrollTo id="section-2" />
+        <ScrollTo id="/blog/#section-2" />
       </section>
 
       {/*
@@ -70,7 +70,7 @@ export default function About() {
             />
           </div>
         </div>
-        <ScrollTo className="mt-8" id="section-3" />
+        <ScrollTo className="mt-8" id="/blog/#section-3" />
       </section>
       */}
 

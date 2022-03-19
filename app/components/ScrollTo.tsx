@@ -1,5 +1,6 @@
 import * as React from "react";
 import classnames from "classnames";
+import { Link } from "remix";
 
 export interface ScrollToProps {
   className?: string;
@@ -19,24 +20,25 @@ export const ScrollTo = (props: ScrollToProps) => {
   const isDown = rotate === "rotate-0";
   const style = isDown ? { top: "22%", left: "42%" } : { top: "35%" };
 
-  const onClick = (event: any) => {
-    const node = document.getElementById(id);
-    if (!node) return;
+  // const onClick = (event: any) => {
+  //   const node = document.getElementById(id);
+  //   if (!node) return;
 
-    event.preventDefault();
-    node.scrollIntoView({ behavior: "smooth" });
-  };
+  //   event.preventDefault();
+  //   node.scrollIntoView({ behavior: "smooth" });
+  // };
 
   return (
-    <button
+    <Link
       className={cssComponent}
-      onClick={onClick}
+      // onClick={onClick}
       style={{ lineHeight: 1 }}
+      to={id}
       type="button"
     >
       <span className={cssArrow} style={style}>
         &#x3009;
       </span>
-    </button>
+    </Link>
   );
 };

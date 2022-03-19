@@ -26,7 +26,7 @@ export default function Work() {
     <>
       <section className={cssSection}>
         <Hero copy="Show me the goods" highlight="Recent Work" />
-        <ScrollTo id="section-2" />
+        <ScrollTo id="/work/#section-2" />
       </section>
 
       <div className="section-anchor" id="section-2" />

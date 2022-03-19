@@ -56,7 +56,7 @@ export default function Index() {
             />
           </div>
         </div>
-        <ScrollTo id="section-about" />
+        <ScrollTo id="/#section-about" />
       </section>
 
       <div className="section-anchor" id="section-about" />
@@ -83,7 +83,7 @@ export default function Index() {
             twice actually... Otherwise reach out and connect on LinkedIn.
           </p>
         </div>
-        <ScrollTo id="section-experience" />
+        <ScrollTo id="/#section-experience" />
       </section>
 
       <div className="section-anchor" id="section-experience" />
@@ -127,7 +127,7 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <ScrollTo id="section-next" />
+        <ScrollTo id="/#section-next" />
       </section>
 
       <div className="section-anchor" id="section-next" />
