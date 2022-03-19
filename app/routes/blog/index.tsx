@@ -3,13 +3,12 @@ import { MetaFunction, useLoaderData } from "remix";
 import { BlogPreview } from "~/components/BlogPreview";
 import { Hero } from "~/components/Hero";
 import { ScrollTo } from "~/components/ScrollTo";
-import { SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
+import { SITE_TITLE } from "~/config/constants";
 import { loader, LoaderData } from "~/routes/api/blog";
 
 export { loader };
 
 export const meta: MetaFunction = () => ({
-  description: SITE_DESCRIPTION,
   title: `Blog | ${SITE_TITLE}`
 });
 

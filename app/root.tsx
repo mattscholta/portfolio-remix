@@ -14,6 +14,7 @@ import {
 import type { MetaFunction } from "remix";
 
 import { cookieTheme } from "./cookies";
+import { getMetaTags } from "./config/seo";
 import { Footer } from "~/components/Footer";
 import { BASE_URL, GOOGLE_ANALYTICS } from "./config/settings.server";
 import { Header } from "~/components/Header";
@@ -28,6 +29,7 @@ export const links: LinksFunction = () => {
 };
 
 export interface LoaderData {
+  baseUrl: string;
   canonical: string;
   theme?: "light" | "dark";
   googleAnalytics: string;
@@ -37,11 +39,12 @@ export const loader: LoaderFunction = async (args): Promise<LoaderData> => {
   const { request } = args;
 
   const canonical = request.url;
+  const baseUrl = BASE_URL;
   const header = request.headers.get("cookie");
   const cookie = (await cookieTheme.parse(header)) ?? {};
   const { theme } = cookie;
 
-  return { canonical, theme, googleAnalytics: GOOGLE_ANALYTICS };
+  return { baseUrl, canonical, theme, googleAnalytics: GOOGLE_ANALYTICS };
 };
 
 export const meta: MetaFunction = (args) => ({
@@ -50,23 +53,21 @@ export const meta: MetaFunction = (args) => ({
 
 export default function App() {
   // Hooks
-  const { canonical, googleAnalytics, theme } = useLoaderData<LoaderData>();
+  const loader = useLoaderData<LoaderData>();
   const { pathname } = useLocation();
-  // const theme = "dark";
-  // const [] = React.useState(theme);
 
   // Setup
+  const { baseUrl, canonical, googleAnalytics, theme } = loader;
   const isDark = theme === "dark";
-  const color = isDark ? "#f5f8fa" : "#000";
   const favicon = isDark ? "/favicon-dark.png" : "/favicon.png";
   const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
+  const metadata = getMetaTags(baseUrl, isDark);
 
   // Life Cycle
   React.useEffect(() => {
     if (!window.gtag) return;
 
     window.gtag("event", "page_view", {
-      // page_title: "My Profile",
       page_location: `${BASE_URL}${pathname}`
     });
   }, [pathname]);
@@ -78,10 +79,9 @@ export default function App() {
   return (
     <html lang="en" className={theme ?? ""}>
       <head>
-        <meta charSet="utf-8" />
-        <meta content={color} name="theme-color" />
-        <meta content="dark light" name="color-scheme" />
-        <meta content="width=device-width,initial-scale=1" name="viewport" />
+        {metadata.map((meta, index) => (
+          <meta {...meta} key={meta.name ?? meta.property ?? index} />
+        ))}
         <Meta />
 
         <link href={canonical} rel="canonical" />

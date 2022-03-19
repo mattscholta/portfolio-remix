@@ -18,7 +18,7 @@ export const Experience = (props: ExperienceProps) => {
 
   return (
     <div className={cssComponent}>
-      <h3 className="flex gap-2 text-xl font-bold">
+      <h2 className="flex gap-2 text-xl font-bold">
         {company}
         <a
           className=""
@@ -30,7 +30,7 @@ export const Experience = (props: ExperienceProps) => {
           <span className="text-highlight">{role}</span>
           <IconLink className="ml-2 mb-1 inline" size={16} />
         </a>
-      </h3>
+      </h2>
       <div className="font-medium">{date}</div>
 
       {/*

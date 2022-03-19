@@ -4,11 +4,10 @@ import { MetaFunction } from "remix";
 import { Hero } from "~/components/Hero";
 import { loader } from "~/routes/api/qualities";
 import { ScrollTo } from "~/components/ScrollTo";
-import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
+import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { Experience } from "~/components/Experience";
 
 export const meta: MetaFunction = () => ({
-  description: SITE_DESCRIPTION,
   title: `Welcome | ${SITE_TITLE}`
 });
 

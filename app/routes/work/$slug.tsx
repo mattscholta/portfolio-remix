@@ -1,13 +1,12 @@
 import { MetaFunction, useLoaderData } from "remix";
 
 import { Hero } from "~/components/Hero";
-import { SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
+import { SITE_TITLE } from "~/config/constants";
 import { loader, LoaderData } from "~/routes/api/work/$slug";
 
 export { loader };
 
 export const meta: MetaFunction = (args) => ({
-  description: SITE_DESCRIPTION,
   title: `${args.data.title} | ${SITE_TITLE}`
 });
 

@@ -3,7 +3,7 @@ export const COOKIE_THEME = "theme";
 export const DEFAULT_SEARCH = "fragments";
 
 export const SITE_AUTHOR = `Matt Scholta`;
-export const SITE_DESCRIPTION = `Something something, da da da.`;
+export const SITE_DESCRIPTION = `The online portfolio of ${SITE_AUTHOR}, a Software Engineer!`;
 export const SITE_EMAIL_ADDRESS = `matthew.scholta@gmail.com`;
 export const SITE_EMAIL_LINK = `mailto:${SITE_EMAIL_ADDRESS}`;
 export const SITE_FACEBOOK = "https://www.facebook.com/rocket-cms";

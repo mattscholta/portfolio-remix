@@ -2,10 +2,9 @@ import { MetaFunction, useParams } from "remix";
 
 import { Hero } from "~/components/Hero";
 import { ScrollTo } from "~/components/ScrollTo";
-import { SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
+import { SITE_TITLE } from "~/config/constants";
 
 export const meta: MetaFunction = (args) => ({
-  description: SITE_DESCRIPTION,
   title: `Sample Page | ${SITE_TITLE}`
 });
 

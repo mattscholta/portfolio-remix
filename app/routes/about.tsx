@@ -1,9 +1,8 @@
 import { MetaFunction } from "remix";
 import { Hero } from "~/components/Hero";
-import { SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
+import { SITE_TITLE } from "~/config/constants";
 
 export const meta: MetaFunction = () => ({
-  description: SITE_DESCRIPTION,
   title: `About | ${SITE_TITLE}`
 });
 
