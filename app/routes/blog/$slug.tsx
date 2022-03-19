@@ -40,7 +40,7 @@ export default function About() {
           alt=""
         />
         <div className="max-w-3xl p-4">
-          <h2 className="text-highlight my-6 inline-block text-left text-4xl md:my-12">
+          <h2 className="text-highlight my-8 inline-block text-left text-3xl md:my-12 md:text-4xl">
             {data.title}
           </h2>
           <div

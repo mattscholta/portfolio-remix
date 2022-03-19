@@ -48,10 +48,12 @@ export const meta: MetaFunction = (args) => ({
 export default function App() {
   // Hooks
   const { canonical, theme } = useLoaderData<LoaderData>();
+  // const [] = React.useState(theme);
 
   // Setup
   const isDark = theme === "dark";
   const favicon = isDark ? "/favicon-dark.png" : "/favicon.png";
+  const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
 
   // Life Cycle
   React.useEffect(() => {
@@ -62,7 +64,6 @@ export default function App() {
     <html lang="en" className={theme ?? ""}>
       <head>
         <meta charSet="utf-8" />
-        <meta content="#f00" name="theme-color" />
         <meta content="dark light" name="color-scheme" />
         <meta content="width=device-width,initial-scale=1" name="viewport" />
         <Meta />
@@ -70,11 +71,10 @@ export default function App() {
         <link href={canonical} rel="canonical" />
         <link href={favicon} rel="icon" />
         <link href={favicon} rel="apple-touch-icon" sizes="48x48" />
-        <link href="/manifest.json" rel="manifest" />
+        <link href={manifest} rel="manifest" />
         <Links />
       </head>
       <body>
-        <button>theme = </button>
         <Header />
         <main>
           <Outlet />

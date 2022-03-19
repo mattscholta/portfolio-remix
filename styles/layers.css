@@ -1,5 +1,9 @@
 @tailwind components;
 
+.test {
+  color: #f5f8fa;
+}
+
 /**
  * tbd...
  */

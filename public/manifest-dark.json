@@ -1,6 +1,6 @@
 {
   "author": "Matt Scholta",
-  "background_color": "#f5f8fa",
+  "background_color": "#000",
   "default_locale": "en",
   "display": "standalone",
   "dir": "ltr",
@@ -88,6 +88,6 @@
   ],
   "short_name": "Portfolio",
   "start_url": "/",
-  "theme_color": "#f00",
+  "theme_color": "#FD5A1E",
   "version": "1.0"
 }
