@@ -4,6 +4,8 @@
 
 This repo is rebuild and re-skin of my [NextJS][nextjs] portfolio from 2021. Both are hosted on using [Vercel][vercel] and really both are **incredible**.
 
+That being said I am really excited to see what the future holds for Remix. Its one of those `full circle` moments where in our industry and beautifully orchestrated by Remix. More to come in a blog post, it deserves it.
+
 - [2022 Portfolio](https://mattscholta.com) build with [Remix][remix]
 - [2021 Portfolio](https://2021.mattscholta.com) build with [NextJS][nextjs]
 
