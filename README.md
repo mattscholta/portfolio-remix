@@ -17,7 +17,7 @@ This repo is rebuild and re-skin of my [NextJS][nextjs] portfolio from 2021. Bot
 
 ## Setup
 
-Currently the API calls are made to an external service, [GraphCMS][graphcml]. Now, until we can move to [Prisma](https://www.prisma.io/) (or something a little more portable for "local development") you'll see failed API calls 🤷‍♂️.
+Currently the API calls are made to an external service, [GraphCMS][graphcms]. Now, until we can move to [Prisma](https://www.prisma.io/) (or something a little more portable for "local development") you'll see failed API calls 🤷‍♂️.
 
 ```bash
 npm install
