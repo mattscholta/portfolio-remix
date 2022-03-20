@@ -1,9 +1,5 @@
 @tailwind components;
 
-.test {
-  color: #f5f8fa;
-}
-
 /**
  * tbd...
  */
@@ -39,19 +35,6 @@
     .text-highlight {
       @apply bg-gradient-to-r from-[#FD5A1E] to-yellow-400;
     }
-  }
-
-  .work-preview span {
-    letter-spacing: -0.05em;
-  }
-
-  .work-preview p {
-    color: var(--color-copy-dark);
-    transition: color 140ms ease-out;
-  }
-
-  .work-preview:hover p {
-    color: var(--color-copy);
   }
 
   .work-preview span {

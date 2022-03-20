@@ -125,6 +125,19 @@
   min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
+.work-preview span {
+  letter-spacing: -0.05em;
+}
+
+.work-preview p {
+  color: var(--color-copy-dark);
+  transition: color 140ms ease-out;
+}
+
+.work-preview:hover p {
+  color: var(--color-copy);
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1);
