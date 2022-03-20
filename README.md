@@ -12,7 +12,7 @@ This repo is rebuild and re-skin of my [NextJS][nextjs] portfolio from 2021. Bot
 - [Remix][remix]
 - [React](https://reactjs.org)
 - [TailwindCSS](https://tailwindcss.com)
-- [GraphCMS][graphcml]
+- [GraphCMS][graphcms]
 - [Vercel][vercel]
 
 ## Setup
