@@ -43,10 +43,11 @@ export default function Index() {
       </section>
 
       <div className="section-anchor" id="about" />
-      <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
-        <blockquote>
-          Passionate about quality <span className="text-highlight">code</span>{" "}
-          written for <span className="text-highlight">humans,</span> unlocking{" "}
+      <section className="section-full m-auto flex flex-col items-center justify-center gap-20">
+        <blockquote className="max-w-4xl text-2xl md:text-3xl">
+          A Software Engineer passionate about quality{" "}
+          <span className="text-highlight">code</span> written for{" "}
+          <span className="text-highlight">humans,</span> unlocking{" "}
           <span className="text-highlight">developer productivity,</span> and{" "}
           <span className="text-highlight">creating</span> delightful{" "}
           <span className="underline">user experiences</span>.
@@ -60,7 +61,7 @@ export default function Index() {
         <div className="h-full w-full p-4 ">
           <div className="flex flex-col items-center justify-center gap-20 sm:flex-row md:mt-20">
             <div className="flex-1 text-center">
-              <blockquote className="m-0 p-0">
+              <blockquote className="m-0 p-0 text-2xl md:text-3xl">
                 If you <span className="text-highlight">do what you love,</span>{" "}
                 you'll never work a day in your life...
               </blockquote>
@@ -87,9 +88,11 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <ScrollTo id="/#whats-next" />
+        {/* <ScrollTo id="/#whats-next" /> */}
+        <ScrollTo id="/work" rotate="rotate-0" />
       </section>
 
+      {/*
       <div className="section-anchor" id="whats-next" />
       <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
         <div className="px-4 text-center">
@@ -98,6 +101,7 @@ export default function Index() {
         </div>
         <ScrollTo id="/work" rotate="rotate-0" />
       </section>
+      */}
     </>
   );
 }

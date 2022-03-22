@@ -2,7 +2,7 @@ import {
   SOCIAL_GITHUB,
   SOCIAL_LINKEDIN,
   SOCIAL_TWITTER
-} from "~/config/constants";
+} from "../config/constants";
 
 export interface FooterProps {}
 

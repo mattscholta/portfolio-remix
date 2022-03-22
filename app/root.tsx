@@ -9,8 +9,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLoaderData,
-  useLocation
+  useLoaderData
 } from "remix";
 import type { MetaFunction } from "remix";
 
@@ -19,9 +18,10 @@ import { getMetaTags } from "./config/seo";
 import { Footer } from "~/components/Footer";
 import { BASE_URL, GOOGLE_ANALYTICS } from "./config/settings.server";
 import { Header } from "~/components/Header";
-import { intro } from "./config/intro";
 import { SITE_TITLE } from "./config/constants";
 import { TrackingGA } from "./components/TrackingGA";
+import { useIntro } from "./hooks/useIntro";
+import { usePageTracking } from "./hooks/usePageTracking";
 
 import styles from "./styles/index.css";
 
@@ -55,7 +55,6 @@ export const meta: MetaFunction = (args) => ({
 export default function App() {
   // Hooks
   const loader = useLoaderData<LoaderData>();
-  const { pathname } = useLocation();
 
   // Setup
   const { baseUrl, canonical, googleAnalytics, theme } = loader;
@@ -68,17 +67,8 @@ export default function App() {
   const cssComponent = classnames(theme ?? "", isDark);
 
   // Life Cycle
-  React.useEffect(() => {
-    if (!window.gtag) return;
-
-    window.gtag("event", "page_view", {
-      page_location: `${BASE_URL}${pathname}`
-    });
-  }, [pathname]);
-
-  React.useEffect(() => {
-    intro();
-  }, []);
+  useIntro();
+  usePageTracking();
 
   return (
     <html lang="en" className={cssComponent}>
@@ -114,6 +104,7 @@ export default function App() {
         */}
 
         <Links />
+
         <TrackingGA id={googleAnalytics} />
       </head>
       <body>

@@ -13,12 +13,7 @@ export const TrackingGA = (props: TrackingGAProps) => {
 
   // Setup
   const src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
-  const __html = `
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '${id}');
-  `;
+  const __html = `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', '${id}');`;
 
   return (
     <>

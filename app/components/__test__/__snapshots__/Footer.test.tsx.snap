@@ -4,7 +4,7 @@ exports[`Footer Component > should render our footer 1`] = `
 <body>
   <div>
     <footer
-      class="text-center text-sm"
+      class="justify-center gap-2 text-center text-sm"
     >
       <p>
         Built with 
@@ -22,9 +22,54 @@ exports[`Footer Component > should render our footer 1`] = `
         >
           San Diego
         </a>
-        , California. © 
-        2022
+        , CA.
       </p>
+      <div
+        class="m-auto flex justify-center gap-4"
+      >
+        <a
+          class="p-2"
+          href="https://linkedin.com/in/MatthewScholta"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Follow me on LinkedIn"
+            class="footer-social"
+            height="16"
+            src="/images/svg/linkedin.svg"
+            width="16"
+          />
+        </a>
+        <a
+          class="p-2"
+          href="https://github.com/visormatt"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Follow me on GitHub"
+            class="footer-social"
+            height="16"
+            src="/images/svg/github.svg"
+            width="16"
+          />
+        </a>
+        <a
+          class="p-2"
+          href="https://twitter.com/visormatt"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Follow me on Twitter"
+            class="footer-social"
+            height="16"
+            src="/images/svg/twitter.svg"
+            width="16"
+          />
+        </a>
+      </div>
     </footer>
   </div>
 </body>
