@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import {
-  MESSAGE_HIRE_CONOSLE,
   SITE_AUTHOR,
   SITE_EMAIL_ADDRESS,
   SOCIAL_GITHUB,
@@ -16,7 +15,7 @@ export const useIntro = () => {
   const styleContact = "color: default; font-size: 14px;";
   const styleMessage = `color: #f00; font-size: 18px;`;
   const strContact = `%c
-  ${MESSAGE_HIRE_CONOSLE}
+  Well, since you've taken the time to read this shoot me an email and lets talk!
 
   -----------------------------------------------------
 
