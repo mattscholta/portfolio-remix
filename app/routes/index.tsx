@@ -88,9 +88,11 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <ScrollTo id="/#whats-next" />
+        {/* <ScrollTo id="/#whats-next" /> */}
+        <ScrollTo id="/work" rotate="rotate-0" />
       </section>
 
+      {/*
       <div className="section-anchor" id="whats-next" />
       <section className="section-full m-auto flex max-w-3xl flex-col items-center justify-center gap-20">
         <div className="px-4 text-center">
@@ -99,6 +101,7 @@ export default function Index() {
         </div>
         <ScrollTo id="/work" rotate="rotate-0" />
       </section>
+      */}
     </>
   );
 }

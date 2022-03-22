@@ -19,8 +19,9 @@ export default function Work() {
   return (
     <>
       <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20">
-        {/* <Hero copy="Show me the goods" highlight="Recent Work" /> */}
-        <Hero highlight="Recent Work" />
+        <Hero copy="Work / Experience" highlight="What I've built" />
+        {/* <Hero highlight="What I've built" /> */}
+        {/* <Hero copy="What I've built" highlight="Experience" /> */}
         <ScrollTo id="/work#samples" />
       </section>
 
