@@ -125,6 +125,16 @@
   min-height: calc(100vh - var(--header-height) - var(--footer-height));
 }
 
+.svg-social path {
+  fill: #24292e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .svg-social path {
+    fill: #cfd7dd;
+  }
+}
+
 .work-preview span {
   letter-spacing: -0.05em;
 }
