@@ -1,0 +1,21 @@
+########################################################################
+#
+#   Used to help automate the process of updating packages. While the
+#   example below is for Javascript, it supports much more. Check the docs.
+#
+#       @external https://dependabot.com "Official Website"
+#       @external https://bit.ly/3hbTxRQ "config options"
+#
+########################################################################
+version: 2
+updates:
+  - directory: "/"
+    labels:
+      - "dependencies"
+    package-ecosystem: "npm"
+    rebase-strategy: "auto"
+    schedule:
+      day: "sunday"
+      interval: weekly
+      time: "07:00"
+    target-branch: "main"

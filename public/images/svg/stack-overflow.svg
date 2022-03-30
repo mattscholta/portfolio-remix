@@ -1,10 +1,15 @@
 <svg
+  class="svg-social"
   height="24px"
   viewBox="0 0 24 24"
   xml:space="preserve"
   xmlns="http://www.w3.org/2000/svg"
   width="24px"
 >
+  <style>
+    .svg-social path { fill: #24292e; }
+    @media (prefers-color-scheme: dark) { .svg-social path { fill: #cfd7dd; } }
+  </style>
   <g>
     <path
       d="M0 0h24v24H0z"
