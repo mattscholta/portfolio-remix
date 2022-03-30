@@ -25,7 +25,6 @@ export default function Index() {
     <>
       <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20">
         <div className="mt-20 flex flex-col-reverse items-center gap-4 md:mt-0 md:flex-row">
-          <img src="/images/svg/logo.svg" alt="" />
           <Hero
             className="md:text-right"
             copy={<span className="whitespace-nowrap">{heading}</span>}
