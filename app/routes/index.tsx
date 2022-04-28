@@ -1,5 +1,5 @@
 import * as React from "react";
-import { MetaFunction } from "remix";
+import type { MetaFunction } from "remix";
 
 import { Hero } from "~/components/Hero";
 import { loader } from "~/routes/api/qualities";
@@ -34,6 +34,7 @@ export default function Index() {
             <img
               alt={SITE_AUTHOR}
               className="custom-bg-gradient max-h-32 cursor-pointer overflow-hidden rounded-full p-1 transition-transform hover:scale-110 active:rotate-6 md:max-h-40"
+              loading="eager"
               onClick={onClick}
               src="/images/assets/matt-scaled.webp"
             />

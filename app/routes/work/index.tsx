@@ -18,21 +18,19 @@ export default function Work() {
 
   return (
     <>
-      <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20">
-        <Hero copy="Work / Experience" highlight="What I've built" />
-        {/* <Hero highlight="What I've built" /> */}
-        {/* <Hero copy="What I've built" highlight="Experience" /> */}
-        <ScrollTo id="/work#samples" />
-      </section>
+      <section className="m-auto mb-40 flex max-w-6xl flex-col items-center justify-center">
+        <Hero
+          className="my-36"
+          copy="Relevant Work"
+          highlight="What I've built"
+        />
 
-      <div className="section-anchor" id="samples" />
-      <section className="section-full m-auto mb-40 flex max-w-6xl flex-col items-center justify-center gap-20">
-        <div className="mt-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3">
           {data.map((node) => (
             <WorkPreview data={node} key={node.slug} />
           ))}
         </div>
-        <ScrollTo id="/blog" rotate="rotate-0" />
+        <ScrollTo className="my-20" id="/blog" rotate="rotate-0" />
       </section>
     </>
   );

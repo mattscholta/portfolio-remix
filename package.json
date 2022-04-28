@@ -22,6 +22,7 @@
     "dotenv": "^16.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "reading-time": "^1.5.0",
     "remix": "^1.4.3"
   },
   "devDependencies": {

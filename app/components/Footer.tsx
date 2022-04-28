@@ -1,3 +1,4 @@
+import { useLocation } from "remix";
 import {
   SOCIAL_GITHUB,
   SOCIAL_LINKEDIN,
@@ -9,6 +10,15 @@ export interface FooterProps {}
 export const Footer = (_props: FooterProps) => {
   // const date = new Date();
   // const year = date.getFullYear();
+
+  // Hooks
+  const { pathname } = useLocation();
+
+  // Setup
+  const isResume = pathname.startsWith("/resume");
+
+  // 🔌 Short Circuit
+  if (isResume) return null;
 
   return (
     <footer className="justify-center gap-2 text-center text-sm">
