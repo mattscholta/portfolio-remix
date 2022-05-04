@@ -10,7 +10,7 @@ export const meta: MetaFunction = (args) => ({
   title: `${args.data.title} | ${SITE_TITLE}`
 });
 
-export default function Work() {
+export default function () {
   // Hooks
   const data = useLoaderData<LoaderData>();
 
@@ -21,13 +21,9 @@ export default function Work() {
     <>
       <div className="relative m-auto flex max-w-3xl flex-col">
         <Hero
-          className="my-20 md:my-40"
+          className="my-20 md:my-20"
           copy={data.company}
           highlight={data.title}
-        />
-        <div
-          className="wysiwyg px-4"
-          dangerouslySetInnerHTML={{ __html: data.content.html }}
         />
       </div>
 
@@ -38,6 +34,12 @@ export default function Work() {
           src={img}
         />
       )}
+      <div className="relative m-auto flex max-w-3xl flex-col">
+        <div
+          className="wysiwyg px-4"
+          dangerouslySetInnerHTML={{ __html: data.content.html }}
+        />
+      </div>
 
       <div className="relative m-auto mb-20 flex max-w-3xl flex-col">
         <blockquote>{data.intro}</blockquote>

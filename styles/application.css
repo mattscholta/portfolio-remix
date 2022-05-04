@@ -44,14 +44,14 @@
 .header-link {
   color: unset;
   height: 100%;
-  font-size: 18px;
+  font-size: 16px;
+  /* font-weight: 600; */
   transition: color 140ms ease-out;
 }
 
 .header-link:hover,
 .header-link.active {
   color: var(--color-primary);
-  font-weight: 600;
   /* background-color: var(--color-background); */
   /* border-bottom: 1px solid var(--color-primary); */
   /* border-top: 1px solid var(--color-primary); */

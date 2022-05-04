@@ -12,18 +12,18 @@ export const meta: MetaFunction = () => ({
   title: `Blog | ${SITE_TITLE}`
 });
 
-export default function About() {
+export default function () {
   // Hooks
   const data = useLoaderData<LoaderData>();
 
   return (
     <>
       <section
-        className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20"
+        className="section-full- m-auto flex max-w-6xl flex-col items-center justify-center gap-20"
         id="section-1"
       >
         <Hero
-          className="mx-auto max-w-6xl"
+          className="mx-auto mt-20 max-w-6xl"
           copy="Yes, another blog..."
           highlight="a developers ramblings"
         />
@@ -31,7 +31,8 @@ export default function About() {
       </section>
 
       <div className="section-anchor" id="posts" />
-      <section className="section-full m-auto mb-40 flex max-w-6xl flex-col items-center justify-center gap-20">
+
+      <section className="section-full= m-auto mb-40 flex max-w-6xl flex-col items-center justify-center gap-20">
         <div className="w-full p-4 md:p-8">
           <h2 className="mb-12 text-center text-3xl md:text-4xl">All Posts</h2>
           <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">

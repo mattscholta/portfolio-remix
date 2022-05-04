@@ -1,13 +1,28 @@
 import type { MetaFunction } from "remix";
 import { images } from "~/data/uses";
-import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
+import { SITE_TITLE } from "~/config/constants";
 import { Hero } from "~/components/Hero";
 
 export const meta: MetaFunction = () => ({
   title: `Uses | ${SITE_TITLE}`
 });
 
-export default function Resume() {
+export default function () {
+  // Setup
+  const laptop = `https://www.apple.com/shop/buy-mac/macbook-pro/14-inch-space-gray-10-core-cpu-16-core-gpu-1tb`;
+  const monitor = `https://www.amazon.com/gp/product/B074JKT894`;
+  const storage = `https://www.amazon.com/gp/product/B01MRSRQLA`;
+  const disks = `https://www.amazon.com/gp/product/B01AV1697A`;
+  const desk = `https://www.amazon.com/gp/product/B07HJJLLML`;
+  const keyboard = `https://www.apple.com/shop/product/MLA22B/A/magic-keyboard-us-english`;
+  const headphones = `https://www.amazon.com/Bose-QuietComfort-Wireless-Headphones-Cancelling/dp/B0756CYWWD`;
+  const mouse = `https://www.apple.com/shop/product/MLA02LL/A/magic-mouse-2-silver`;
+
+  const linkProps = {
+    target: "_blank",
+    rel: "noreferrer"
+  };
+
   return (
     <div className="m-auto max-w-5xl pt-10">
       <div className="flex flex-col">
@@ -30,15 +45,34 @@ export default function Resume() {
           </p>
 
           <ul className="my-10 list-disc columns-2 pl-4">
-            <li>Laptop - 14" MacBook Pro, 2021</li>
-            <li className="ml-4">M1 Max with 64GB of RAM 😍🔥</li>
-            <li>Monitor - 34" LG Curved Ultra-wide</li>
-            <li>Storage - TerraMaster RAID Enclosure</li>
-            <li className="ml-4">2x WD Gold 4TB @7200 RPM</li>
-            <li>Desk - Adjustable height Desk</li>
-            <li>Keyboard - Apple Magic Keyboard</li>
-            <li>Music - Bose Headphones</li>
-            <li>Mouse - Apple Magic Mouse</li>
+            <li>
+              Laptop -{" "}
+              <a {...linkProps} href={laptop}>
+                14" MacBook Pro, 2021
+              </a>
+            </li>
+            <li className="ml-4">M1 Max with 64GB of RAM 😍 🔥</li>
+            <li>
+              Monitor - <a href={monitor}>34" LG Curved Ultra-wide</a>
+            </li>
+            <li>
+              Storage - <a href={storage}>TerraMaster RAID Enclosure</a>
+            </li>
+            <li className="ml-4">
+              2x <a href={disks}>WD Gold 4TB @7200 RPM</a>
+            </li>
+            <li>
+              Desk - <a href={desk}>Adjustable height Desk</a>
+            </li>
+            <li>
+              Keyboard - <a href={keyboard}>Apple Magic Keyboard</a>
+            </li>
+            <li>
+              Music - <a href={headphones}>Bose Headphones</a>
+            </li>
+            <li>
+              Mouse - <a href={mouse}>Apple Magic Mouse</a>
+            </li>
           </ul>
         </section>
 
@@ -57,8 +91,11 @@ export default function Resume() {
           <div className="my-10 grid grid-cols-2 gap-10">
             <div>
               <h3 className="my-4 text-xl">
-                <a href="https://code.visualstudio.com/insiders">
-                  🧰 Visual Studio Code
+                <a
+                  className="font-normal"
+                  href="https://code.visualstudio.com/insiders"
+                >
+                  <span className="mr-2">🧰</span> Visual Studio Code
                 </a>
               </h3>
               <p>
@@ -70,7 +107,9 @@ export default function Resume() {
 
             <div>
               <h3 className="my-4 text-xl">
-                <a href="https://iterm2.com/">$ Iterm2</a>
+                <a className="font-normal" href="https://iterm2.com/">
+                  <span className="mr-2">$</span> Iterm2
+                </a>
               </h3>
               <p>
                 As far as terminal users go, I use it heavily every day. iTerm2
@@ -81,8 +120,11 @@ export default function Resume() {
 
             <div>
               <h3 className="my-4 text-xl">
-                <a href="https://www.docker.com/products/docker-desktop">
-                  🐳 Docker Desktop
+                <a
+                  className="font-normal"
+                  href="https://www.docker.com/products/docker-desktop"
+                >
+                  <span className="mr-2">🐳</span> Docker Desktop
                 </a>
               </h3>
               <p>
@@ -94,8 +136,10 @@ export default function Resume() {
 
             <div>
               <h3 className="my-4 text-xl">
-                🎨 <a href="https://www.figma.com/">Figma</a> /{" "}
-                <a href="https://www.sketch.com/">Sketch</a>
+                <span className="mr-2">🎨</span>{" "}
+                <a className="font-normal" href="https://www.figma.com/">
+                  Figma
+                </a>{" "}
               </h3>
               <p>
                 It's not that often that get to play designer but I do enjoy
@@ -119,7 +163,12 @@ export default function Resume() {
 
           <div className="mb-20 grid grid-cols-5 gap-10 py-10">
             {images.map((data, index) => (
-              <img alt="" key={index} src={data.src} />
+              <img
+                alt=""
+                className="rounded-md p-2"
+                key={index}
+                src={data.src}
+              />
             ))}
           </div>
         </section>

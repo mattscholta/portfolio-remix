@@ -16,9 +16,9 @@ export const Header = (_props: HeaderProps) => {
   const cssResume = classnames({ relative: isResume });
 
   return (
-    <header className={`${cssResume} header`}>
-      <div className="mx-auto flex h-full w-full items-center justify-evenly md:text-sm">
-        <NavLink className="header-logo active px-4" to="/">
+    <header className={`${cssResume} header overflow-hidden print:hidden`}>
+      <div className="mx-auto flex h-full w-full max-w-5xl items-center justify-evenly  md:text-sm">
+        <NavLink className="header-logo active ml-4 px-4" to="/">
           <Logo />
           <span className="sr-only">Home</span>
         </NavLink>
@@ -26,14 +26,14 @@ export const Header = (_props: HeaderProps) => {
         <div className="flex-1" />
 
         <div className="mr-8 flex gap-10">
-          <NavLink className="header-link" to="/">
+          <NavLink className="header-link" to="/about">
             About
           </NavLink>
           <NavLink className="header-link" to="/blog">
             Blog
           </NavLink>
           <NavLink className="header-link" to="/work">
-            Work
+            Portfolio
           </NavLink>
           <NavLink className="header-link" to="/resume">
             Resume

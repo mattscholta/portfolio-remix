@@ -1,25 +1,41 @@
-import classnames from "classnames";
 import { Link } from "remix";
 
 import { Portfolio } from "~/routes/api/work";
 
 export interface WorkPreviewProps {
-  className?: string;
   data: Portfolio;
 }
 
 export const WorkPreview = (props: WorkPreviewProps) => {
-  const { className, data } = props;
+  const { data } = props;
+
+  // Markup
+  const renderImage = () => (
+    <div>
+      <img
+        alt=""
+        className="h-20 border transition-all hover:rotate-6 hover:scale-110"
+        src={data.images[0].url}
+      />
+    </div>
+  );
 
   return (
     <Link
-      className={classnames("work-preview flex flex-grow flex-col", className)}
+      className="work-preview flex items-center gap-4"
       to={`/work/${data.slug}`}
     >
-      <h3 className="mb-4 font-font-serif text-xl font-extrabold">
-        <span>{data.title}</span>
-      </h3>
-      <p>{data.overview}</p>
+      {data.images[0] && renderImage()}
+      <div className="flex flex-col">
+        <h3 className="mb-4 font-font-serif text-xl font-extrabold">
+          <span>{data.title}</span>
+        </h3>
+        <div className="mb-4 -mt-4 text-sm font-extrabold text-color-copy">
+          {data.company}
+        </div>
+      </div>
+
+      {/* <p>{data.overview}</p> */}
     </Link>
   );
 };

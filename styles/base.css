@@ -85,3 +85,7 @@ header {
     scroll-behavior: unset;
   }
 }
+
+.main {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}

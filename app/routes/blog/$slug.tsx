@@ -10,7 +10,7 @@ export const meta: MetaFunction = (args) => ({
   title: `${args.data.title}... | ${SITE_TITLE}`
 });
 
-export default function About() {
+export default function () {
   // Hooks
   const data = useLoaderData<LoaderData>();
 
@@ -36,14 +36,22 @@ export default function About() {
           src={data.imageTemp}
           alt=""
         />
-        <div className="mb-20 max-w-3xl p-4">
+
+        <div className="mb-20 max-w-5xl p-4">
           <h2 className="text-highlight my-8 inline-block text-left text-3xl md:my-12 md:text-4xl">
             {data.title}
           </h2>
-          <div
-            className="wysiwyg"
-            dangerouslySetInnerHTML={{ __html: data.content.html }}
-          />
+
+          {/* Content */}
+          <div className="flex gap-10">
+            <div
+              className="wysiwyg"
+              dangerouslySetInnerHTML={{ __html: data.content.html }}
+            />
+            <aside className="min-w-[200px] bg-purple-500 p-4">
+              <h3>Other Posts</h3>
+            </aside>
+          </div>
         </div>
       </section>
     </>

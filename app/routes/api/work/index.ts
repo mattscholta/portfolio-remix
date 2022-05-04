@@ -3,6 +3,8 @@ import { json, LoaderFunction } from "remix";
 import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
 
 export interface Portfolio {
+  company: string;
+  images: any;
   overview: string;
   slug: string;
   thumbnailTemp: string;
@@ -14,6 +16,10 @@ export type LoaderData = Portfolio[];
 const getPortfolios = gql`
   query {
     portfolios {
+      company
+      images {
+        url
+      }
       overview
       slug
       thumbnailTemp

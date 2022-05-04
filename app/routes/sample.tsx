@@ -8,7 +8,7 @@ export const meta: MetaFunction = (args) => ({
   title: `Sample Page | ${SITE_TITLE}`
 });
 
-export default function About() {
+export default function () {
   // Hooks
   const { slug } = useParams();
 

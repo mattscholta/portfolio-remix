@@ -21,19 +21,7 @@ export const Footer = (_props: FooterProps) => {
   if (isResume) return null;
 
   return (
-    <footer className="justify-center gap-2 text-center text-sm">
-      <p>
-        Built with <span className="text-color-primary--">&hearts;</span> in{" "}
-        <a
-          href="https://www.google.com/search?q=san+diego+weather"
-          rel="noreferrer"
-          target="_blank"
-        >
-          San Diego
-        </a>
-        , CA.
-      </p>
-
+    <footer className="justify-center gap-2 text-center text-sm print:hidden">
       <div className="m-auto flex justify-center gap-4">
         <a
           className="p-2"
@@ -78,6 +66,17 @@ export const Footer = (_props: FooterProps) => {
           />
         </a>
       </div>
+      <p>
+        Built with <span className="text-color-primary--">&hearts;</span> in{" "}
+        <a
+          href="https://www.google.com/search?q=san+diego+weather"
+          rel="noreferrer"
+          target="_blank"
+        >
+          San Diego
+        </a>
+        , CA.
+      </p>
     </footer>
   );
 };

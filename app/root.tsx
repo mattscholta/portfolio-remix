@@ -1,16 +1,14 @@
-import * as React from "react";
 import classnames from "classnames";
 import {
   Links,
-  LinksFunction,
   LiveReload,
-  LoaderFunction,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
   useLoaderData
 } from "remix";
+import type { LinksFunction, LoaderFunction } from "remix";
 import type { MetaFunction } from "remix";
 
 import { cookieTheme } from "./cookies";
@@ -118,6 +116,34 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
+      </body>
+    </html>
+  );
+}
+
+export function ErrorBoundary({ error }: any) {
+  console.error(error);
+
+  return (
+    <html>
+      <head>
+        <title>Oh no!</title>
+        <Meta />
+        <Links />
+      </head>
+
+      <body>
+        {/* add the UI you want your users to see */}
+        <div className="m-auto max-w-5xl">
+          <h1>Oh no!</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+            enim minima esse ipsam! Sit consequatur doloribus earum facere eaque
+            quaerat molestiae. Sed cupiditate ea non ipsum? Sed aliquid quis
+            quia.
+          </p>
+        </div>
+        <Scripts />
       </body>
     </html>
   );
