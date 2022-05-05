@@ -1,10 +1,13 @@
-import { MetaFunction, useLoaderData } from "remix";
+import { useLoaderData } from "remix";
+import type { MetaFunction } from "remix";
 
 import { BlogPreview } from "~/components/BlogPreview";
 import { Hero } from "~/components/Hero";
-import { ScrollTo } from "~/components/ScrollTo";
 import { SITE_TITLE } from "~/config/constants";
-import { loader, LoaderData } from "~/routes/api/blog";
+import { loader } from "~/routes/api/blog";
+import type { LoaderData } from "~/routes/api/blog";
+import { BlogTags } from "~/components/BlogTags";
+import { BlogFeatured } from "~/components/BlogFeatured";
 
 export { loader };
 
@@ -19,20 +22,20 @@ export default function () {
   return (
     <>
       <section
-        className="section-full- m-auto flex max-w-6xl flex-col items-center justify-center gap-20"
+        className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20"
         id="section-1"
       >
         <Hero
-          className="mx-auto mt-20 max-w-6xl"
+          className="mx-auto my-20 max-w-6xl"
           copy="Yes, another blog..."
           highlight="a developers ramblings"
         />
-        <ScrollTo id="/blog#posts" />
-      </section>
 
-      <div className="section-anchor" id="posts" />
+        <div className="flex gap-10">
+          <BlogFeatured className="basis-2/3" />
+          <BlogTags className="basis-1/3" />
+        </div>
 
-      <section className="section-full= m-auto mb-40 flex max-w-6xl flex-col items-center justify-center gap-20">
         <div className="w-full p-4 md:p-8">
           <h2 className="mb-12 text-center text-3xl md:text-4xl">All Posts</h2>
           <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -48,7 +51,6 @@ export default function () {
             ))}
           </div>
         </div>
-        <ScrollTo id="/uses" rotate="rotate-0" />
       </section>
     </>
   );

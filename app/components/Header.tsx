@@ -18,7 +18,7 @@ export const Header = (_props: HeaderProps) => {
   return (
     <header className={`${cssResume} header overflow-hidden print:hidden`}>
       <div className="mx-auto flex h-full w-full max-w-5xl items-center justify-evenly  md:text-sm">
-        <NavLink className="header-logo active ml-4 px-4" to="/">
+        <NavLink className="header-logo ml-4 gap-2 px-4" to="/">
           <Logo />
           <span className="sr-only">Home</span>
         </NavLink>
@@ -26,11 +26,8 @@ export const Header = (_props: HeaderProps) => {
         <div className="flex-1" />
 
         <div className="mr-8 flex gap-10">
-          <NavLink className="header-link" to="/about">
-            About
-          </NavLink>
-          <NavLink className="header-link" to="/blog">
-            Blog
+          <NavLink className="header-link" to="/">
+            Home
           </NavLink>
           <NavLink className="header-link" to="/work">
             Portfolio
@@ -40,6 +37,9 @@ export const Header = (_props: HeaderProps) => {
           </NavLink>
           <NavLink className="header-link" to="/uses">
             Uses
+          </NavLink>
+          <NavLink className="header-link" to="/blog">
+            Blog
           </NavLink>
         </div>
       </div>

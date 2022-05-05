@@ -4,26 +4,8 @@ exports[`Footer Component > should render our footer 1`] = `
 <body>
   <div>
     <footer
-      class="justify-center gap-2 text-center text-sm"
+      class="justify-center gap-2 text-center text-sm print:hidden"
     >
-      <p>
-        Built with 
-        <span
-          class="text-color-primary--"
-        >
-          ♥
-        </span>
-         in
-         
-        <a
-          href="https://www.google.com/search?q=san+diego+weather"
-          rel="noreferrer"
-          target="_blank"
-        >
-          San Diego
-        </a>
-        , CA.
-      </p>
       <div
         class="m-auto flex justify-center gap-4"
       >
@@ -70,6 +52,24 @@ exports[`Footer Component > should render our footer 1`] = `
           />
         </a>
       </div>
+      <p>
+        Built with 
+        <span
+          class="text-color-primary--"
+        >
+          ♥
+        </span>
+         in
+         
+        <a
+          href="https://www.google.com/search?q=san+diego+weather"
+          rel="noreferrer"
+          target="_blank"
+        >
+          San Diego
+        </a>
+        , CA.
+      </p>
     </footer>
   </div>
 </body>

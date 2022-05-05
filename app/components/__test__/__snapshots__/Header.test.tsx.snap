@@ -4,27 +4,14 @@ exports[`Header Component > should render our footer 1`] = `
 <body>
   <div>
     <header
-      class="header"
+      class=" header overflow-hidden print:hidden"
     >
       <div
-        class="relative mx-auto flex h-full w-full max-w-2xl items-center justify-evenly gap-1 text-xs uppercase md:gap-20 md:text-sm"
+        class="mx-auto flex h-full w-full max-w-5xl items-center justify-evenly  md:text-sm"
       >
         <a
           aria-current="page"
-          class="header-link px-4 md:px-8 active"
-          href="/"
-        >
-          Home
-        </a>
-        <a
-          class="header-link px-4 md:px-8"
-          href="/work"
-        >
-          Work
-        </a>
-        <a
-          aria-current="page"
-          class="header-logo active"
+          class="header-logo ml-4 gap-2 px-4 active"
           href="/"
         >
           <svg
@@ -45,18 +32,44 @@ exports[`Header Component > should render our footer 1`] = `
             Home
           </span>
         </a>
-        <a
-          class="header-link px-4 md:px-8"
-          href="/blog"
+        <div
+          class="flex-1"
+        />
+        <div
+          class="mr-8 flex gap-10"
         >
-          Blog
-        </a>
-        <a
-          class="header-link px-4 md:px-8"
-          href="/uses"
-        >
-          Uses
-        </a>
+          <a
+            aria-current="page"
+            class="header-link active"
+            href="/"
+          >
+            Home
+          </a>
+          <a
+            class="header-link"
+            href="/work"
+          >
+            Portfolio
+          </a>
+          <a
+            class="header-link"
+            href="/resume"
+          >
+            Resume
+          </a>
+          <a
+            class="header-link"
+            href="/uses"
+          >
+            Uses
+          </a>
+          <a
+            class="header-link"
+            href="/blog"
+          >
+            Blog
+          </a>
+        </div>
       </div>
     </header>
   </div>

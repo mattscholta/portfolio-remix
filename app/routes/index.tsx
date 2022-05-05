@@ -37,6 +37,12 @@ export default function () {
           />
         </div>
       </div>
+
+      <blockquote className="max-w-4xl text-2xl font-normal md:text-3xl">
+        Passionate about <b>quality code</b> written <b>for humans</b>,
+        unlocking <b>developer productivity</b>, and creating a delightful{" "}
+        <b>user experience</b>.
+      </blockquote>
     </section>
   );
 }

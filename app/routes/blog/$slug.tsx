@@ -1,8 +1,10 @@
-import { MetaFunction, useLoaderData } from "remix";
+import { useLoaderData } from "remix";
+import type { MetaFunction } from "remix";
 
 import { Hero } from "~/components/Hero";
 import { SITE_TITLE } from "~/config/constants";
-import { loader, LoaderData } from "~/routes/api/blog/$slug";
+import type { LoaderData } from "~/routes/api/blog/$slug";
+import { loader } from "~/routes/api/blog/$slug";
 
 export { loader };
 
