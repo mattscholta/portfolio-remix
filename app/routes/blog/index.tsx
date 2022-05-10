@@ -28,16 +28,16 @@ export default function () {
         <Hero
           className="mx-auto my-20 max-w-6xl"
           copy="Yes, another blog..."
-          highlight="a developers ramblings"
+          highlight="a developers ramblings&nbsp;"
         />
 
-        <div className="flex gap-10">
+        <div className="flex gap-10 p-4 md:p-8">
           <BlogFeatured className="basis-2/3" />
           <BlogTags className="basis-1/3" />
         </div>
 
-        <div className="w-full p-4 md:p-8">
-          <h2 className="mb-12 text-center text-3xl md:text-4xl">All Posts</h2>
+        <div className="w-full p-4 md:p-4">
+          <h2 className="mb-12 text-3xl md:text-4xl">All Posts</h2>
           <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
             {data.map((item) => (
               <BlogPreview
@@ -51,6 +51,10 @@ export default function () {
             ))}
           </div>
         </div>
+
+        <button className="mb-20 border border-color-border p-4">
+          Load more +
+        </button>
       </section>
     </>
   );

@@ -3,7 +3,13 @@ import type { MetaFunction } from "remix";
 
 import { Hero } from "~/components/Hero";
 import { loader } from "~/routes/api/qualities";
-import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
+import {
+  SITE_AUTHOR,
+  SITE_EMAIL_ADDRESS,
+  SITE_EMAIL_LINK,
+  SITE_TITLE,
+  SOCIAL_TWITTER
+} from "~/config/constants";
 
 export const meta: MetaFunction = () => ({
   title: `Welcome | ${SITE_TITLE}`
@@ -43,6 +49,36 @@ export default function () {
         unlocking <b>developer productivity</b>, and creating a delightful{" "}
         <b>user experience</b>.
       </blockquote>
+
+      <div className="max-w-4xl">
+        <h3>Current</h3>
+        <p>
+          I take great pride in my ability to communicate and articulate ideas
+          through design and visual language, but perhaps more importantly
+          through soft personal skills. Reading body language, intently
+          listening, being persuasive, and empathizing are all part of my
+          designer toolkit.
+        </p>
+
+        <p>
+          Nowadays, I won't start on a project unless I know the why behind it.
+          I can't do my job effectively unless every screen, block of copy, or
+          interface bit has an intentional value assigned, all supporting user
+          goals first and business goals second. You can read more about my
+          work, here.
+        </p>
+
+        <h3>Contact Me</h3>
+
+        <p>
+          Email is the best way to reach me:{" "}
+          <a href={SITE_EMAIL_LINK}>{SITE_EMAIL_ADDRESS}</a>
+        </p>
+        <p>
+          Feel free to hit me up on <a href={SOCIAL_TWITTER}>Twitter</a> as
+          well.
+        </p>
+      </div>
     </section>
   );
 }

@@ -11,7 +11,7 @@ export const WorkPreview = (props: WorkPreviewProps) => {
 
   // Markup
   const renderImage = () => (
-    <div>
+    <div className="">
       <img
         alt=""
         className="h-20 border transition-all hover:rotate-6 hover:scale-110"
