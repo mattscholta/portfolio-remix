@@ -44,8 +44,9 @@
 .header-link {
   color: unset;
   height: 100%;
-  font-size: 16px;
-  /* font-weight: 600; */
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
   transition: color 140ms ease-out;
 }
 

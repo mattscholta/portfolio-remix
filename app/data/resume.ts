@@ -34,7 +34,6 @@ export const experience: Experience[] = [
       `Delivered a full rebuild & rebrand of the Python + Django website to NextJS`,
       `Migrated to a (nearly) fully containerized stack and development workflow`,
       `Introduced GraphQL and strongly (generated) types across services`,
-      ``,
       `Abstracted a core style-guide used across services`
     ],
     image: `https://haldi.com/favicon.ico`,
@@ -47,11 +46,10 @@ export const experience: Experience[] = [
     date: `Feb 2016 - Apr 2021`,
     description: `<p>Successfully pitched, prototyped, and delivered several high-impact projects within the organization. Assisting in hiring, managing, and mentoring of engineers at various levels, distributed across the globe.</p>`,
     highlights: [
-      `Content Management System`,
-      `Progressive Web Application`,
-      `Monorepo`,
-      `CSS Overhaul`,
-      `Miscellaneous`
+      `Content Management System; Pitched, prototyped, and delivered`,
+      `PWA (Progressive Web App); Pitched, prototyped, and delivered`,
+      `Lerna Monorepo; Pitched, prototyped, and delivered`,
+      `CSS Overhaul; Pitched, prototyped, and delivered`
     ],
     image: `https://thredup.com/favicon.ico`,
     tags: [],
@@ -79,8 +77,8 @@ export const experience: Experience[] = [
     description: `
       <p>While at Creative Lift (now Lift Agency) we developed a variety of Mobile & Desktop applications for Facebook, Snapfish, Union Bank, AOL, Gerber, Proactive, Charter and a variety of others.</p>
       <p>We improved brand communication and provided more effective and consistent user experiences, utilizing various frameworks and custom developed solutions and agile design and development techniques.</p>
-      <p>I was on the team responsible for creating the “Lift Calculator,” an iPhone application that allows users to easily calculate the response rate of marketing campaigns & compare against averages.</p>
-    `,
+      `,
+    // <p>I was on the team responsible for creating the “Lift Calculator,” an iPhone application that allows users to easily calculate the response rate of marketing campaigns & compare against averages.</p>
     highlights: [
       `Building out UX/UI/IxD patterns and maintaining the design system with semantic versioning`,
       `Ensuring color consistency, accessibility, and flexibility in charts/graphs`,
@@ -113,7 +111,7 @@ export const experience: Experience[] = [
     companyUrl: "https://www.iwgroup.agency",
     date: `Sep 2008 - Feb 2010`,
     description: `
-      <p>Development and Interaction Design of varying marketing domains and advertising collateral for clients including.</p>
+      <p>Development and Interaction Design of varying marketing domains and advertising collateral for clients including; McDonalds, FedEx, PG&E</p>
     `,
     highlights: [
       `Building out UX/UI/IxD patterns and maintaining the design system with semantic versioning`,
@@ -123,7 +121,7 @@ export const experience: Experience[] = [
     ],
     // image: "https://www.iwgroup.agency/favicon.ico",
     tags: [],
-    title: `Interactive Developer + Designer`
+    title: `Interactive Designer/Developer`
   },
   {
     company: "Zipidee",

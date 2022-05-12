@@ -26,7 +26,7 @@ export const meta: MetaFunction = () => {
 
 export default function () {
   // Hooks
-  const minValue = 3;
+  const minValue = data.length;
   const [shown, setShown] = useState(minValue);
 
   // Setup
@@ -65,7 +65,7 @@ export default function () {
 
         <div className="resume-sections mb-20 flex flex-1 flex-col gap-10">
           <section>
-            <h1 className="uppercase- mb-10 text-4xl font-semibold">
+            <h1 className="uppercase- mb-10 text-4xl font-extrabold">
               {SITE_AUTHOR}
             </h1>
             <div className="mb-8 border-t border-solid border-color-border" />
@@ -81,7 +81,7 @@ export default function () {
             </div>
           </section>
 
-          {/* AMBITIONS */}
+          {/* AMBITIONS
           <section>
             <div className="sticky top-0 bg-color-background">
               <h2 className="py-8 text-xl">Ambitions</h2>
@@ -90,11 +90,14 @@ export default function () {
 
             <div className="mt-10">
               <p>
-                Started as an Mechanical Engineering major, found Industrial
-                Design, only to get a job doing Design and Development.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
+                ipsa nihil exercitationem autem doloribus dicta, incidunt
+                architecto tempora corporis. Quos, maxime dolores? A voluptate
+                voluptatem illum. Nesciunt error suscipit repellat!
               </p>
             </div>
           </section>
+          */}
 
           {/* EXPERIENCE */}
           <section>

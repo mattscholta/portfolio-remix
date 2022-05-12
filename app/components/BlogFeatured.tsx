@@ -17,7 +17,7 @@ export const BlogFeatured = (props: BlogFeaturedProps) => {
           "https://mattscholta.files.wordpress.com/2017/08/pexels-photo-4164418.jpeg"
         }
         key={"item.id"}
-        slug={"item.slug"}
+        slug={"improving-code-quality"}
         title={"item.title"}
       />
     </div>

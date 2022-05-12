@@ -21,7 +21,7 @@ export const Footer = (_props: FooterProps) => {
   if (isResume) return null;
 
   return (
-    <footer className="justify-center gap-2 text-center text-sm print:hidden">
+    <footer className="mt-10 justify-center gap-2 text-center text-sm print:hidden md:mt-20">
       <div className="m-auto flex justify-center gap-4">
         <a
           className="p-2"

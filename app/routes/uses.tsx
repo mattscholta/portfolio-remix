@@ -24,14 +24,16 @@ export default function () {
   };
 
   return (
-    <div className="m-auto max-w-5xl pt-10">
-      <div className="flex flex-col">
+    <>
+      <section className="bg-color-background-dark text-color-background-light">
         <Hero
-          className="mx-auto max-w-6xl"
+          className="py-20 md:py-40"
           copy="If you're curious"
-          highlight="🔧 Uses"
+          highlight="What I'm using"
         />
+      </section>
 
+      <div className="m-auto mt-20 max-w-5xl">
         <section>
           <div className="sticky top-16 bg-color-background">
             <h1 className="py-8 text-xl">Hardware</h1>
@@ -76,7 +78,7 @@ export default function () {
           </ul>
         </section>
 
-        <section>
+        <section className="mt-20">
           <div className="sticky top-16 bg-color-background">
             <h2 className="py-8 text-xl">Software</h2>
             <div className="mb-10 border-t border-solid border-color-border" />
@@ -90,9 +92,9 @@ export default function () {
 
           <div className="my-10 grid grid-cols-2 gap-10">
             <div>
-              <h3 className="my-4 text-xl">
+              <h3 className="my-4 border-0 border-l-2 border-color-primary pl-4 text-xl">
                 <a
-                  className="font-normal"
+                  className="font-font-serif text-base text-color-copy-light"
                   href="https://code.visualstudio.com/insiders"
                 >
                   <span className="mr-2">🧰</span> Visual Studio Code
@@ -107,7 +109,10 @@ export default function () {
 
             <div>
               <h3 className="my-4 text-xl">
-                <a className="font-normal" href="https://iterm2.com/">
+                <a
+                  className="font-font-serif text-base text-color-copy-light"
+                  href="https://iterm2.com/"
+                >
                   <span className="mr-2">$</span> Iterm2
                 </a>
               </h3>
@@ -121,7 +126,7 @@ export default function () {
             <div>
               <h3 className="my-4 text-xl">
                 <a
-                  className="font-normal"
+                  className="font-font-serif text-base text-color-copy-light"
                   href="https://www.docker.com/products/docker-desktop"
                 >
                   <span className="mr-2">🐳</span> Docker Desktop
@@ -137,9 +142,12 @@ export default function () {
             <div>
               <h3 className="my-4 text-xl">
                 <span className="mr-2">🎨</span>{" "}
-                <a className="font-normal" href="https://www.figma.com/">
+                <a
+                  className="font-font-serif text-base text-color-copy-light"
+                  href="https://www.figma.com/"
+                >
                   Figma
-                </a>{" "}
+                </a>
               </h3>
               <p>
                 It's not that often that get to play designer but I do enjoy
@@ -148,9 +156,20 @@ export default function () {
               </p>
             </div>
           </div>
+
+          {/*
+          <div>
+            <h3 className="my-4 text-xl font-normal">
+              <span className="mr-2">🧩</span> The Rest
+            </h3>
+            <p>
+              And then there are all of those other things like Slack and Gmail.
+            </p>
+          </div>
+          */}
         </section>
 
-        <section>
+        <section className="mt-20">
           <div className="sticky top-16 bg-color-background">
             <h2 className="py-8 text-xl">Miscellaneous</h2>
             <div className="mb-10 border-t border-solid border-color-border" />
@@ -161,6 +180,7 @@ export default function () {
             hauling ass along the coast on my motorcycle 🏍️💨.
           </p>
 
+          {/*
           <div className="mb-20 grid grid-cols-5 gap-10 py-10">
             {images.map((data, index) => (
               <img
@@ -171,8 +191,9 @@ export default function () {
               />
             ))}
           </div>
+          */}
         </section>
       </div>
-    </div>
+    </>
   );
 }

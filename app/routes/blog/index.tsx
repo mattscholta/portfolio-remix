@@ -6,8 +6,8 @@ import { Hero } from "~/components/Hero";
 import { SITE_TITLE } from "~/config/constants";
 import { loader } from "~/routes/api/blog";
 import type { LoaderData } from "~/routes/api/blog";
-import { BlogTags } from "~/components/BlogTags";
 import { BlogFeatured } from "~/components/BlogFeatured";
+import { Tags } from "~/components/Tags";
 
 export { loader };
 
@@ -21,22 +21,25 @@ export default function () {
 
   return (
     <>
-      <section
-        className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20"
-        id="section-1"
-      >
+      <section className="bg-color-background-dark text-color-background-light">
         <Hero
-          className="mx-auto my-20 max-w-6xl"
+          className="mx-auto max-w-6xl py-20 md:py-40"
           copy="Yes, another blog..."
           highlight="a developers ramblings&nbsp;"
         />
+      </section>
 
-        <div className="flex gap-10 p-4 md:p-8">
+      <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20 py-10">
+        <div className="flex flex-col gap-10 p-4 md:flex-row">
           <BlogFeatured className="basis-2/3" />
-          <BlogTags className="basis-1/3" />
+          <Tags
+            className="basis-1/3"
+            heading="Search blog by topics"
+            tags={["one", "two", "three"]}
+          />
         </div>
 
-        <div className="w-full p-4 md:p-4">
+        <div className="w-full p-4">
           <h2 className="mb-12 text-3xl md:text-4xl">All Posts</h2>
           <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
             {data.map((item) => (
@@ -52,7 +55,7 @@ export default function () {
           </div>
         </div>
 
-        <button className="mb-20 border border-color-border p-4">
+        <button className="my-20 border border-color-border p-4">
           Load more +
         </button>
       </section>
