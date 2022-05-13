@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 export interface HeroProps {
   className?: string;
@@ -21,7 +21,9 @@ export const Hero = (props: HeroProps) => {
             {copy}
           </div>
         )}
-        <div className="text-highlight text-4xl md:text-7xl">{highlight}</div>
+        <div className="text-highlight px-3 text-4xl md:text-7xl">
+          {highlight}
+        </div>
       </h1>
     </div>
   );

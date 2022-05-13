@@ -3,7 +3,8 @@
  */
 html {
   background-color: var(--color-background-light);
-  scroll-behavior: smooth;
+  min-width: 320px;
+  /* scroll-behavior: smooth; */
 }
 
 body {

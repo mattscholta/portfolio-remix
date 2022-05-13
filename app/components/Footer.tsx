@@ -66,7 +66,7 @@ export const Footer = (_props: FooterProps) => {
           />
         </a>
       </div>
-      <p>
+      <p className="font-font-monospace">
         Built with <span className="text-color-primary--">&hearts;</span> in{" "}
         <a
           href="https://www.google.com/search?q=san+diego+weather"

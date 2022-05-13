@@ -4,7 +4,7 @@ exports[`Footer Component > should render our footer 1`] = `
 <body>
   <div>
     <footer
-      class="justify-center gap-2 text-center text-sm print:hidden"
+      class="mt-10 justify-center gap-2 text-center text-sm print:hidden md:mt-20"
     >
       <div
         class="m-auto flex justify-center gap-4"
@@ -52,7 +52,9 @@ exports[`Footer Component > should render our footer 1`] = `
           />
         </a>
       </div>
-      <p>
+      <p
+        class="font-font-monospace"
+      >
         Built with 
         <span
           class="text-color-primary--"

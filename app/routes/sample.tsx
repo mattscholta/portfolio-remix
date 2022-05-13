@@ -1,4 +1,5 @@
-import { MetaFunction, useParams } from "remix";
+import { useParams } from "remix";
+import type { MetaFunction } from "remix";
 
 import { Hero } from "~/components/Hero";
 import { ScrollTo } from "~/components/ScrollTo";

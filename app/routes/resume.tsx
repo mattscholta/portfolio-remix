@@ -5,6 +5,7 @@ import { experience as data, social } from "~/data/resume";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { Experience } from "~/components/Experience";
 import { SocialLink } from "~/components/SocialLink";
+import { getTimeWorked } from "~/utils/date-time";
 
 import styles from "~/styles/resume.css";
 
@@ -20,13 +21,15 @@ export const meta: MetaFunction = () => {
   const year = new Date().getFullYear();
 
   return {
+    description: `${SITE_AUTHOR}'s resume`,
     title: `Resume ${year} | ${SITE_TITLE}`
   };
 };
 
 export default function () {
   // Hooks
-  const minValue = data.length;
+  // const minValue = data.length;
+  const minValue = 3;
   const [shown, setShown] = useState(minValue);
 
   // Setup
@@ -37,6 +40,12 @@ export default function () {
     setShown(shown === minValue ? data.length : minValue);
   };
 
+  const start = new Date("02/01/2016");
+  const stop = new Date("04/01/2021");
+  const testing = getTimeWorked(start, stop);
+
+  console.log(` 💬 ~ testing`, testing);
+
   return (
     <div className="m-auto max-w-5xl pt-10">
       <div className="flex flex-col gap-20 px-4 md:flex-row">
@@ -44,7 +53,7 @@ export default function () {
           <div className="sticky top-16">
             <img
               alt={SITE_AUTHOR}
-              className="custom-bg-gradient cursor-pointer overflow-hidden rounded-full p-1 transition-transform hover:scale-110 active:rotate-6 "
+              className="custom-bg-gradient overflow-hidden rounded-full p-1"
               loading="eager"
               src="/images/assets/matt-scaled.webp"
               // src="/jax-sword.webp"
@@ -56,7 +65,7 @@ export default function () {
               ))}
             </div>
             <div className="print:hidden">
-              <button className="ui-btn ui-button text-highlight mt-8 w-full whitespace-nowrap rounded-2xl border border-color-primary py-2 px-4 font-semibold">
+              <button className="ui-btn custom-bg-gradient mt-8 w-full whitespace-nowrap rounded-2xl py-2 px-4 font-semibold text-white">
                 PDF Download
               </button>
             </div>
@@ -81,24 +90,6 @@ export default function () {
             </div>
           </section>
 
-          {/* AMBITIONS
-          <section>
-            <div className="sticky top-0 bg-color-background">
-              <h2 className="py-8 text-xl">Ambitions</h2>
-              <div className="mb-8 border-t border-solid border-color-border" />
-            </div>
-
-            <div className="mt-10">
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
-                ipsa nihil exercitationem autem doloribus dicta, incidunt
-                architecto tempora corporis. Quos, maxime dolores? A voluptate
-                voluptatem illum. Nesciunt error suscipit repellat!
-              </p>
-            </div>
-          </section>
-          */}
-
           {/* EXPERIENCE */}
           <section>
             <div className="sticky top-0 bg-color-background">
@@ -113,7 +104,7 @@ export default function () {
             </div>
             <div className="print:hidden">
               <button
-                className="mx-auto block rounded-2xl border border-color-border bg-color-background-light py-2 px-4 font-font-sans-serif text-xs font-bold uppercase"
+                className="m-10 mx-auto block rounded-2xl border border-color-border bg-color-background-light py-2 px-4 font-font-sans-serif text-xs font-bold uppercase"
                 onClick={onToggleExp}
               >
                 {shown === minValue ? "Show more" : "Show less"}

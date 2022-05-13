@@ -39,9 +39,13 @@ export const Experience = (props: ExperienceProps) => {
             __html: description
           }}
         />
-        <ul className="my-4 ml-4 list-disc text-xs font-light">
+        <ul className="my-4 ml-4 list-disc text-sm font-light">
           {highlights.map((highlight, index) => (
-            <li key={index} dangerouslySetInnerHTML={{ __html: highlight }} />
+            <li
+              className="my-1"
+              key={index}
+              dangerouslySetInnerHTML={{ __html: highlight }}
+            />
           ))}
         </ul>
       </div>

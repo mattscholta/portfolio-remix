@@ -23,9 +23,11 @@ export default function () {
     rel: "noreferrer"
   };
 
+  const cssHardware = `flex gap-4 items-center justify-center flex-1 rounded-md border border-solid border-color-border bg-color-background-light px-4 py-8`;
+
   return (
     <>
-      <section className="bg-color-background-dark text-color-background-light">
+      <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
         <Hero
           className="py-20 md:py-40"
           copy="If you're curious"
@@ -46,13 +48,25 @@ export default function () {
             often supplies a well equipped box.
           </p>
 
+          <div className="my-10 grid grid-cols-3 gap-4">
+            <div className={cssHardware}>
+              <h2 className="text-xl text-color-copy-dark">Laptop</h2>
+            </div>
+            <div className={cssHardware}>
+              <h2 className="text-xl text-color-copy-dark">Monitor</h2>
+            </div>
+            <div className={cssHardware}>
+              <h2 className="text-xl text-color-copy-dark">Desk</h2>
+            </div>
+            <div className={cssHardware}>
+              <h2 className="text-xl text-color-copy-dark">Peripherals</h2>
+            </div>
+            <div className={cssHardware}>
+              <h2 className="text-xl text-color-copy-dark">Storage</h2>
+            </div>
+          </div>
+
           <ul className="my-10 list-disc columns-2 pl-4">
-            <li>
-              Laptop -{" "}
-              <a {...linkProps} href={laptop}>
-                14" MacBook Pro, 2021
-              </a>
-            </li>
             <li className="ml-4">M1 Max with 64GB of RAM 😍 🔥</li>
             <li>
               Monitor - <a href={monitor}>34" LG Curved Ultra-wide</a>
@@ -92,7 +106,7 @@ export default function () {
 
           <div className="my-10 grid grid-cols-2 gap-10">
             <div>
-              <h3 className="my-4 border-0 border-l-2 border-color-primary pl-4 text-xl">
+              <h3 className="my-4 text-xl">
                 <a
                   className="font-font-serif text-base text-color-copy-light"
                   href="https://code.visualstudio.com/insiders"

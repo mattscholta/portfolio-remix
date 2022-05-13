@@ -96,16 +96,6 @@ html.dark {
   --color-primary: #f97316;
 }
 
-.special {
-  animation: gradient 15s ease infinite;
-  /* background: linear-gradient(-45deg, #f5f8fa, #cfd7dd, #57606a); */
-  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
-
-  background-size: 400% 400%;
-  /* background: linear-gradient(-45deg, #57606a, #101214); */
-  /* background: linear-gradient(-45deg, #f00, #101214); */
-}
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;

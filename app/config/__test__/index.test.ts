@@ -6,8 +6,8 @@ describe("seo: metadata", () => {
   let tags: React.MetaHTMLAttributes<HTMLMetaElement>[];
   const metadata = getMetaTags("http://testing.com", false);
 
-  it('24 "metadata" tags', () => {
-    expect(metadata.length).toBe(24);
+  it('23 "metadata" tags', () => {
+    expect(metadata.length).toBe(23);
   });
 
   it('3 "apple" tags', () => {

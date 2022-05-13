@@ -25,9 +25,12 @@ export const Header = (_props: HeaderProps) => {
 
         <div className="flex-1" />
 
-        <div className="mr-8 flex gap-10">
+        <div className="mr-8 flex gap-10 font-font-monospace">
           <NavLink className="header-link" to="/">
-            Home
+            About
+          </NavLink>
+          <NavLink className="header-link" to="/blog">
+            Blog
           </NavLink>
           <NavLink className="header-link" to="/work">
             Portfolio
@@ -37,9 +40,6 @@ export const Header = (_props: HeaderProps) => {
           </NavLink>
           <NavLink className="header-link" to="/uses">
             Uses
-          </NavLink>
-          <NavLink className="header-link" to="/blog">
-            Blog
           </NavLink>
         </div>
       </div>

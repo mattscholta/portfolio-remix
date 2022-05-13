@@ -52,10 +52,10 @@ export const getMetaTags = (url: string, isDark: boolean) => {
       content: defaults.author,
       name: "author"
     },
-    {
-      content: defaults.description,
-      name: "description"
-    },
+    // {
+    //   content: defaults.description,
+    //   name: "description"
+    // },
     {
       content: defaults.image,
       name: "image"

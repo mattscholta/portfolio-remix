@@ -22,6 +22,7 @@ import { useIntro } from "./hooks/useIntro";
 import { usePageTracking } from "./hooks/usePageTracking";
 
 import styles from "./styles/index.css";
+import { Hero } from "./components/Hero";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];

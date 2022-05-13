@@ -11,10 +11,10 @@ export const WorkPreview = (props: WorkPreviewProps) => {
 
   // Markup
   const renderImage = () => (
-    <div className="">
+    <div className="w-full">
       <img
         alt=""
-        className="h-20 border transition-all hover:rotate-6 hover:scale-110"
+        className="w-full border transition-all hover:rotate-3 hover:scale-110"
         src={data.images[0].url}
       />
     </div>
@@ -22,7 +22,7 @@ export const WorkPreview = (props: WorkPreviewProps) => {
 
   return (
     <Link
-      className="work-preview flex items-center gap-4"
+      className="work-preview flex flex-col gap-4"
       to={`/work/${data.slug}`}
     >
       {data.images[0] && renderImage()}
