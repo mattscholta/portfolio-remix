@@ -38,6 +38,11 @@ export const Header = (_props: HeaderProps) => {
           <NavLink className="header-link" to="/resume">
             Resume
           </NavLink>
+          {/*
+          <NavLink className="header-link" to="/sandbox">
+            Sandbox
+          </NavLink>
+          */}
           <NavLink className="header-link" to="/uses">
             Uses
           </NavLink>

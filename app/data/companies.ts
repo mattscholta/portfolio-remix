@@ -22,19 +22,19 @@ export const data: Data[] = [
     company: "Alphabet (Google)",
     className: "h-5 md:h-10",
     image: "/images/svg/google.svg",
-    url: "https://google.com"
+    url: "https://abc.xyz/"
   },
   {
     company: "Meta (Facebook)",
     className: "h-4 md:h-8",
     image: "/images/svg/facebook.svg",
-    url: "https://facebook.com"
+    url: "https://about.facebook.com/"
   },
   {
     company: "Apple",
     className: "h-6 md:h-12",
     image: "/images/svg/apple.svg",
-    url: "https://apple.com"
+    url: "https://www.apple.com/business/"
   },
   {
     company: "Hotwire",

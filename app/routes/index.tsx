@@ -25,7 +25,7 @@ export default function () {
 
   return (
     <>
-      <section className="section-full m-auto flex max-w-6xl items-center justify-center gap-4 py-20 md:py-40">
+      <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-4 py-20 md:flex-row md:py-40">
         <Hero
           className="md:text-right"
           copy={<span className="whitespace-nowrap">{heading}</span>}
