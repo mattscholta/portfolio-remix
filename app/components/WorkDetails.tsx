@@ -7,19 +7,19 @@ import { data } from "~/data/details";
  */
 
 export const WorkDetails = () => {
-  const desc = `This is a <b>non</b> exhaustive list of tools and technologies I've used in my work.`;
+  const desc = `This is a <b>non</b> exhaustive list of tools and technologies I use to make products come to life. I'm also very comfortable pushing pixels in Figma, Adobe, Video, and 3D modelling.`;
 
   // Hooks
-  const refDescription = useRef<HTMLParagraphElement>(null);
-  const refHeading = useRef<HTMLHeadingElement>(null);
+  const refDescription = useRef<HTMLQuoteElement>(null);
   const [heading, setHeading] = useState("Stack");
   const [description, setDesciption] = useState(desc);
 
   return (
     <section className="bg-color-background-dark py-10 text-color-background-light">
-      <div className="my-10 mx-auto flex max-w-7xl flex-col items-start items-center gap-10 px-4 md:my-20 md:flex-row md:px-0">
-        <div className="flex-1">
-          {/* <h2 className="mb-8 text-3xl">Tools</h2> */}
+      <div className="my-10 mx-auto flex max-w-7xl flex-col gap-10 px-4 md:my-20 md:flex-row md:px-0">
+        <div className="basis-2/5">
+          <h2 className="mb-8 text-3xl">Tools</h2>
+
           <div className="flex flex-wrap gap-2">
             {Object.keys(data).map((key) => {
               const isActive = key === heading;
@@ -36,6 +36,10 @@ export const WorkDetails = () => {
                     setHeading(key);
                     setDesciption(data[key]);
                   }}
+                  onMouseEnter={() => {
+                    setHeading(key);
+                    setDesciption(data[key]);
+                  }}
                 >
                   {key}
                 </button>
@@ -44,15 +48,11 @@ export const WorkDetails = () => {
           </div>
         </div>
 
-        <div className="flex-1">
-          <h2 className="mb-8 text-2xl" ref={refHeading}>
-            {heading}
-          </h2>
-          <p
-            dangerouslySetInnerHTML={{ __html: description }}
-            ref={refDescription}
-          />
-        </div>
+        <blockquote
+          className="my-8 basis-3/5 text-xl font-semibold leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: description }}
+          ref={refDescription}
+        />
       </div>
     </section>
   );

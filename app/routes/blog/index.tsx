@@ -27,6 +27,7 @@ export default function () {
           className="mx-auto max-w-6xl py-20 md:py-40"
           copy="Yes, another blog..."
           highlight="a developers ramblings"
+          tag="h1"
         />
       </section>
 

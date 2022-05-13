@@ -28,7 +28,12 @@ export default function () {
   return (
     <>
       <section className="mx-auto max-w-6xl">
-        <Hero className="py-20 md:py-40" copy={date} highlight={data.title} />
+        <Hero
+          className="py-20 md:py-40"
+          copy={date}
+          highlight={data.title}
+          tag="h1"
+        />
       </section>
 
       <img

@@ -53,7 +53,8 @@ export const experience: Experience[] = [
       `Content Management System; Pitched, prototyped, and delivered`,
       `PWA (Progressive Web App); Pitched, prototyped, and delivered`,
       `Lerna Monorepo; Pitched, prototyped, and delivered`,
-      `CSS Overhaul; Pitched, prototyped, and delivered`
+      `CSS Overhaul; Pitched, prototyped, and delivered`,
+      `Apollo Migration, Redux Migration, Checkout Overhaul, and many more...`
     ],
     image: `https://thredup.com/favicon.ico`,
     tags: [],
@@ -64,12 +65,14 @@ export const experience: Experience[] = [
     companyUrl: "https://bynd.com/",
     date: `Nov 2011 - Apr 2015`,
     dateRange: [new Date(2011, 11, 1), new Date(2015, 4, 1)],
-    description: `<p>Maintain and expand design system and its components with a strong emphasis on color system and data visualization. Collaborate with broader product, design, and engineering teams to help establish a stronger UX patterns, and solutions. Focus areas include:</p>`,
+    description: `<p>As the Team Lead, my responsibilities included: pitch work, application architecture, technical documentation/specs, code reviews, mentoring and general management of the San Francisco Engineering team. Clients include;</p>`,
     highlights: [
-      `Building out UX/UI/IxD patterns and maintaining the design system with semantic versioning`,
-      `Ensuring color consistency, accessibility, and flexibility in charts/graphs`,
-      `Facilitating collaboration between product, engineering, and design teams`,
-      `Prototyping and developing internal proof-of-concepts in React`
+      `Pitched, architected, developed and delivered "Google TrainUP"`,
+      `Conceptualized, architected & developed "Google Databoard"`,
+      `Development of "Google Multi-Product" landing pages`,
+      `Prototyped "Facebook Disaster App" with BackboneJS and Facebook API's`,
+      `Development of HTML micro sites internally at Apple within iAds team`,
+      `Pitched an abstraction to minimize time-to-market and costs, which was adopted internally`
     ],
     image: `https://bynd.com/favicon.ico`,
     tags: [],
@@ -84,7 +87,7 @@ export const experience: Experience[] = [
     <p>While at Creative Lift (now Lift Agency) we developed a variety of Mobile & Desktop applications for Facebook, Snapfish, Union Bank, AOL, Gerber, Proactive, Charter and a variety of others.</p>
     <p>We improved brand communication and provided more effective and consistent user experiences, utilizing various frameworks and custom developed solutions and agile design and development techniques.</p>
     `,
-    // <p>I was on the team responsible for creating the “Lift Calculator,” an iPhone application that allows users to easily calculate the response rate of marketing campaigns & compare against averages.</p>
+    // <p>I was on the team responsible for creating the "Lift Calculator," an iPhone application that allows users to easily calculate the response rate of marketing campaigns & compare against averages.</p>
     highlights: [
       `Building out UX/UI/IxD patterns and maintaining the design system with semantic versioning`,
       `Ensuring color consistency, accessibility, and flexibility in charts/graphs`,

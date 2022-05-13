@@ -37,7 +37,7 @@ export const BlogPreview = (props: BlogPreviewProps) => {
       to={`/blog/${slug}`}
     >
       {featured && renderFeatured()}
-      <img alt="" loading="lazy" src={image} />
+      <img alt="" height="auto" loading="lazy" src={image} width="auto" />
       <h3 className="mt-4 mb-2 text-2xl">{title}</h3>
       <div className="font-font-monospace text-sm">{dateString}</div>
       {/* <div dangerouslySetInnerHTML={{ __html: content }} /> */}

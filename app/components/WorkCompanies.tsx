@@ -22,7 +22,10 @@ export const WorkCompanies = () => {
                 <img
                   alt={company}
                   className={`${className} opacity-50 transition-opacity duration-500 hover:opacity-100`}
+                  height="auto"
+                  loading="lazy"
                   src={image}
+                  width="auto"
                 />
               </a>
             );

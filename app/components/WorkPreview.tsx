@@ -15,7 +15,9 @@ export const WorkPreview = (props: WorkPreviewProps) => {
       <img
         alt=""
         className="w-full border transition-all hover:rotate-3 hover:scale-110"
+        height="auto"
         src={data.images[0].url}
+        width="auto"
       />
     </div>
   );

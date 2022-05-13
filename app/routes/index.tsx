@@ -10,7 +10,7 @@ import { WorkDetails } from "~/components/WorkDetails";
 import { AboutAmbitions } from "~/components/AboutAmbitions";
 
 export const meta: MetaFunction = () => ({
-  title: `Welcome | ${SITE_TITLE}`
+  title: `A software engineer | ${SITE_TITLE}`
 });
 
 export default function () {
@@ -25,19 +25,22 @@ export default function () {
 
   return (
     <>
-      <section className="m-auto flex max-w-6xl justify-center gap-4 py-20 md:py-40">
+      <section className="section-full m-auto flex max-w-6xl items-center justify-center gap-4 py-20 md:py-40">
         <Hero
           className="md:text-right"
           copy={<span className="whitespace-nowrap">{heading}</span>}
           highlight={SITE_AUTHOR}
+          tag="h1"
         />
         <div>
           <img
             alt={SITE_AUTHOR}
             className="custom-bg-gradient max-h-32 cursor-pointer overflow-hidden rounded-full p-1 transition-transform hover:scale-110 active:rotate-6 md:max-h-40"
+            height="auto"
             loading="eager"
             onClick={onClick}
             src="/images/assets/matt-scaled.webp"
+            width="auto"
           />
         </div>
       </section>

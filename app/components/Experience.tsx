@@ -14,7 +14,7 @@ export const Experience = (props: ExperienceProps) => {
     <div className="flex flex-col gap-10 md:flex-row" key={title}>
       <div className="flex flex-col gap-2 text-base md:basis-[160px]">
         <div className="flex">
-          <h4 className="flex items-center gap-2 font-bold">
+          <h3 className="flex items-center gap-2 font-bold">
             <a
               className="text-color-copy hover:underline"
               dangerouslySetInnerHTML={{ __html: company }}
@@ -23,9 +23,16 @@ export const Experience = (props: ExperienceProps) => {
               target="_blank"
             />
             {image && (
-              <img alt="" className="h-4 w-4" loading="eager" src={image} />
+              <img
+                alt=""
+                className="h-4 w-4"
+                height="auto"
+                loading="eager"
+                src={image}
+                width="auto"
+              />
             )}
-          </h4>
+          </h3>
         </div>
         <h3 className="uppercase- text-xs font-medium">
           <div className="uppercase">{title}</div>

@@ -22,7 +22,7 @@ export const meta: MetaFunction = () => {
 
   return {
     description: `${SITE_AUTHOR}'s resume`,
-    title: `Resume ${year} | ${SITE_TITLE}`
+    title: `The ${year} online resume of ${SITE_AUTHOR} | ${SITE_TITLE}`
   };
 };
 
@@ -34,6 +34,7 @@ export default function () {
 
   // Setup
   const experience = data.slice(0, shown);
+  const year = new Date().getFullYear();
 
   // Handlers
   const onToggleExp = () => {
@@ -54,8 +55,11 @@ export default function () {
             <img
               alt={SITE_AUTHOR}
               className="custom-bg-gradient overflow-hidden rounded-full p-1"
+              height="auto"
               loading="eager"
               src="/images/assets/matt-scaled.webp"
+              width="auto"
+
               // src="/jax-sword.webp"
             />
 
@@ -75,6 +79,7 @@ export default function () {
         <div className="resume-sections mb-20 flex flex-1 flex-col gap-10">
           <section>
             <h1 className="uppercase- mb-10 text-4xl font-extrabold">
+              <span className="sr-only">The {year} online resume of </span>
               {SITE_AUTHOR}
             </h1>
             <div className="mb-8 border-t border-solid border-color-border" />

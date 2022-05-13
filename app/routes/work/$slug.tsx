@@ -26,6 +26,7 @@ export default function () {
           className="py-20 md:py-40"
           copy={data.company}
           highlight={data.title}
+          tag="h1"
         />
       </div>
 

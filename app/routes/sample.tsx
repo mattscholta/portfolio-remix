@@ -28,6 +28,7 @@ export default function () {
           className="mx-auto max-w-6xl"
           copy="Sample page"
           highlight="Enjoy"
+          tag="h2"
         />
         <ScrollTo id="/sample#anchor" />
       </section>

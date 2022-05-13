@@ -32,13 +32,14 @@ export default function () {
           className="py-20 md:py-40"
           copy="If you're curious"
           highlight="What I'm using"
+          tag="h1"
         />
       </section>
 
       <div className="m-auto mt-20 max-w-5xl">
         <section>
           <div className="sticky top-16 bg-color-background">
-            <h1 className="py-8 text-xl">Hardware</h1>
+            <h2 className="py-8 text-xl">Hardware</h2>
             <div className="mb-10 border-t border-solid border-color-border" />
           </div>
           <p>

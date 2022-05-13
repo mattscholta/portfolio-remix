@@ -6,12 +6,11 @@ import { Hero } from "~/components/Hero";
 import { WorkPreview } from "~/components/WorkPreview";
 import { SITE_TITLE } from "~/config/constants";
 import { loader } from "~/routes/api/work";
-import { Tags } from "~/components/Tags";
 
 export { loader };
 
 export const meta: MetaFunction = () => ({
-  title: `Featured Work | ${SITE_TITLE}`
+  title: `Featured work both past & present | ${SITE_TITLE}`
 });
 
 export default function () {
@@ -25,6 +24,7 @@ export default function () {
           className="py-20 md:py-40"
           copy="Currently"
           highlight="What I'm working on"
+          tag="h1"
         />
       </section>
 
@@ -41,6 +41,7 @@ export default function () {
           className="py-20 md:py-40"
           copy="Relevant Work"
           highlight="What I've built"
+          tag="h2"
         />
       </section>
 

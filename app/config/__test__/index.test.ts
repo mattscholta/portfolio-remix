@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { getMetaTags } from "../seo";
 
 describe("seo: metadata", () => {
