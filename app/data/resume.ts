@@ -36,11 +36,19 @@ export const experience: Experience[] = [
       `Delivered a full rebuild & rebrand of the Python + Django website to NextJS`,
       `Migrated to a (nearly) fully containerized stack and development workflow`,
       `Introduced GraphQL and strongly (generated) types across services`,
-      `Created a Survey framework to enable data driven iteration`,
-      `Abstracted a core style-guide used across services`
+      `Architected a "survey framework" to enable data driven iteration`,
+      `Abstracted a core CSS Style Guide used across services`
     ],
     image: `https://haldi.com/favicon.ico`,
-    tags: [],
+    tags: [
+      "TailwindCSS",
+      "NextJS",
+      "NodeJS",
+      "GraphQL",
+      "TypeScript",
+      "Docker",
+      "Google Cloud"
+    ],
     title: `Principal Engineer`
   },
   {

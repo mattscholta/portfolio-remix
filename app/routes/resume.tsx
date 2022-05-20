@@ -58,9 +58,8 @@ export default function () {
               height="auto"
               loading="eager"
               src="/images/assets/matt-scaled.webp"
-              width="auto"
-
               // src="/jax-sword.webp"
+              width="auto"
             />
 
             <div className="mt-14 flex flex-col gap-2 p-4">
@@ -97,7 +96,7 @@ export default function () {
 
           {/* EXPERIENCE */}
           <section>
-            <div className="sticky top-0 bg-color-background">
+            <div className="bg-color-background">
               <h2 className="py-8 text-xl">Experience</h2>
               <div className="mb-8 border-t border-solid border-color-border" />
             </div>
@@ -119,7 +118,7 @@ export default function () {
 
           {/* PROFICIENCIES */}
           <section>
-            <div className="sticky top-0 bg-color-background">
+            <div className="bg-color-background">
               <h2 className="py-8 text-xl">Proficiencies</h2>
               <div className="mb-8 border-t border-solid border-color-border" />
             </div>
@@ -177,7 +176,7 @@ export default function () {
 
           {/* EDUCATION */}
           <section>
-            <div className="sticky top-0 bg-color-background">
+            <div className="bg-color-background">
               <h2 className="py-8 text-xl">Education</h2>
               <div className="mb-8 border-t border-solid border-color-border" />
             </div>

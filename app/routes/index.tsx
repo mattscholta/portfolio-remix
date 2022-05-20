@@ -10,7 +10,7 @@ import { WorkDetails } from "~/components/WorkDetails";
 import { AboutAmbitions } from "~/components/AboutAmbitions";
 
 export const meta: MetaFunction = () => ({
-  title: `A software engineer | ${SITE_TITLE}`
+  title: `A Software Engineer | ${SITE_TITLE}`
 });
 
 export default function () {

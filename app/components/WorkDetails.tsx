@@ -16,9 +16,9 @@ export const WorkDetails = () => {
 
   return (
     <section className="bg-color-background-dark py-10 text-color-background-light">
-      <div className="my-10 mx-auto flex max-w-7xl flex-col gap-10 px-4 md:my-20 md:flex-row md:px-0">
+      <div className="my-10 mx-auto flex max-w-7xl flex-col gap-10 px-4 md:my-20 md:flex-row">
         <div className="basis-2/5">
-          <h2 className="mb-8 text-3xl">Tools</h2>
+          <h2 className="mb-8 text-3xl">Tools 🛠️</h2>
 
           <div className="flex flex-wrap gap-2">
             {Object.keys(data).map((key) => {
@@ -29,7 +29,7 @@ export const WorkDetails = () => {
 
               return (
                 <button
-                  className={`${coloring} rounded-md px-2 py-1 text-xs`}
+                  className={`${coloring} rounded-md px-2 py-1 text-sm`}
                   key={key}
                   type="button"
                   onClick={() => {

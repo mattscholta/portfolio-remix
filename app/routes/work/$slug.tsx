@@ -33,7 +33,7 @@ export default function () {
       {img && (
         <img
           alt={data.title}
-          className="my-20 w-full border-t border-b border-color-border"
+          className="mb-20 mt-0 w-full border-t border-b border-color-border md:mt-20"
           src={img}
         />
       )}

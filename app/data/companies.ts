@@ -52,12 +52,36 @@ export const data: Data[] = [
     company: "FedEx",
     className: "h-4 md:h-8",
     image: "/images/svg/fedex.svg",
-    url: "https://fedex.com"
+    url: "https://www.fedex.com/en-us/home.html"
   },
   {
     company: "Haldi",
-    className: "h-4 md:h-8",
+    className: "h-3 md:h-6",
     image: "/images/svg/haldi.svg",
     url: "https://haldi.com"
+  },
+  {
+    company: "Charter",
+    className: "h-5 md:h-10",
+    image: "/images/svg/charter.svg",
+    url: "https://charter.com"
+  },
+  {
+    company: "PG&E",
+    className: "h-7 md:h-14",
+    image: "/images/svg/pge.svg",
+    url: "https://pge.com"
+  },
+  {
+    company: "US Census",
+    className: "h-5 md:h-10",
+    image: "/images/svg/census.svg",
+    url: "https://census.com"
+  },
+  {
+    company: "US Army",
+    className: "h-8 md:h-16",
+    image: "/images/svg/army.svg",
+    url: "https://army.com"
   }
 ];

@@ -22,7 +22,6 @@ import { useIntro } from "./hooks/useIntro";
 import { usePageTracking } from "./hooks/usePageTracking";
 
 import styles from "./styles/index.css";
-import { Hero } from "./components/Hero";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
@@ -31,8 +30,8 @@ export const links: LinksFunction = () => {
 export interface LoaderData {
   baseUrl: string;
   canonical: string;
-  theme?: "light" | "dark";
   googleAnalytics: string;
+  theme?: "light" | "dark";
 }
 
 export const loader: LoaderFunction = async (args): Promise<LoaderData> => {

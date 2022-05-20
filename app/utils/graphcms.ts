@@ -1,4 +1,4 @@
-import { GRAPHCMS_URL } from "~/config/settings.server";
+import { GRAPHCMS_TOKEN, GRAPHCMS_URL } from "~/config/settings.server";
 
 /**
  * @name fetchFromGraphCMS
@@ -16,7 +16,10 @@ export const fetchFromGraphCMS = async (
 
   return fetch(GRAPHCMS_URL, {
     body: JSON.stringify(body),
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      Authorization: `Bearer ${GRAPHCMS_TOKEN}`,
+      "Content-Type": "application/json"
+    },
     method: "POST"
   });
 };

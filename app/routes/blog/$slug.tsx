@@ -5,6 +5,8 @@ import { Hero } from "~/components/Hero";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import type { LoaderData } from "~/routes/api/blog/$slug";
 import { loader } from "~/routes/api/blog/$slug";
+import { UserCard } from "~/components/UserCard";
+import { Tags } from "~/components/Tags";
 
 export { loader };
 
@@ -42,7 +44,7 @@ export default function () {
         src={data.imageTemp}
       />
 
-      <section className="m-auto max-w-5xl">
+      <section className="m-auto max-w-6xl">
         <div className="mb-20 p-4">
           <div className="my-8 md:my-12 ">
             <h2 className="text-highlight m-0 mb-2 inline-block text-left text-3xl md:text-4xl">
@@ -52,26 +54,34 @@ export default function () {
           </div>
 
           {/* Content */}
-          <div className="flex gap-10">
+          <div className="flex flex-col gap-10 md:flex-row">
             <div>
               <div
                 className="wysiwyg"
                 dangerouslySetInnerHTML={{ __html: data.content.html }}
               />
-              <div className="mt-20 flex items-center gap-4">
-                <img
-                  alt=""
-                  className="h-10 w-10 rounded-full"
-                  src="/images/assets/matt-scaled.webp"
-                />
+            </div>
+
+            <aside className="flex h-full min-w-[300px] flex-col gap-20">
+              <div className="flex flex-col gap-10 border-0 md:p-4">
                 <div>
-                  <h3 className="text-xl">{SITE_AUTHOR}</h3>
-                  <div className="font-font-monospace text-sm">{date}</div>
+                  <h3 className="mb-4">Tags:</h3>
+                  <Tags
+                    classNameTag="border rounded-md px-2 py-1 text-sm bg-color-background-light"
+                    tags={["one", "two"]}
+                  />
+                </div>
+                <UserCard
+                  copy="<b>Role:</b> Staff Engineer @thredUP"
+                  image="/images/assets/matt-scaled.webp"
+                />
+              </div>
+
+              <div className="flex flex-col gap-10 border-0 border-l border-solid border-color-border-dark p-4">
+                <div>
+                  <h3>Other Posts</h3>
                 </div>
               </div>
-            </div>
-            <aside className="h-full min-w-[200px] border-0 border-l border-solid border-color-border-dark p-4">
-              <h3>Other Posts</h3>
             </aside>
           </div>
         </div>
