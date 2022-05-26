@@ -1,11 +1,12 @@
 export interface Experience {
   company: string;
   companyUrl: string;
+  contract?: boolean;
   date: string;
-  dateRange?: [Date, Date];
-  image?: string;
+  dateRange?: [start: Date, end?: Date];
   description: string;
   highlights: string[];
+  image?: string;
   tags: string[];
   title: string;
 }
@@ -23,31 +24,44 @@ export const experience: Experience[] = [
   //     `Abstracted a core style-guide used across services`
   //   ],
   //   image: `https://rocketcms.org/favicon.ico`,
-  //   tags: [],
+  //   tags: [
+  //      "NodeJS",
+  //      "TailwindCSS",
+  //      "TypeScript"
+  //   ],
   //   title: `Founder`
   // },
   {
-    company: "Haldi Inc.",
+    company: "Haldi",
     companyUrl: "https://haldi.com/",
     date: `Apr 2021 - Present`,
-    dateRange: [new Date(2021, 4, 1), new Date()],
-    description: `<p>One year in and we've accomplished so much. Here are a few milestones worth mentioning.</p>`,
+    dateRange: [new Date(2021, 4, 1)],
+    description: `
+      <p>
+        One year in we've jump-started the organizations code! We've taken a
+        "loosely typed" & "strongly coupled" and successfully flipped it. The
+        entire stack is now containerized and makes us of Firebase Emulators
+        for an incredible development workflow.
+      </p>
+    `,
+    // <p>One year in and we've accomplished so much. Here are a few milestones worth mentioning.</p>
     highlights: [
+      `0% - 80% Docker(ized) stack and development workflow`,
+      `Introduced GraphQL and strongly (generated) typings across services`,
       `Delivered a full rebuild & rebrand of the Python + Django website to NextJS`,
-      `Migrated to a (nearly) fully containerized stack and development workflow`,
-      `Introduced GraphQL and strongly (generated) types across services`,
-      `Architected a "survey framework" to enable data driven iteration`,
-      `Abstracted a core CSS Style Guide used across services`
+      `Survey Framework, CSS Style Guide, Monorepo, Unit & E2E Testing, and more`
     ],
     image: `https://haldi.com/favicon.ico`,
     tags: [
-      "TailwindCSS",
+      "Docker",
+      "Google Cloud",
+      "GraphQL",
+      "GraphQL Nexus",
       "NextJS",
       "NodeJS",
-      "GraphQL",
-      "TypeScript",
-      "Docker",
-      "Google Cloud"
+      "Serverless",
+      "TailwindCSS",
+      "TypeScript"
     ],
     title: `Principal Engineer`
   },
@@ -56,16 +70,29 @@ export const experience: Experience[] = [
     companyUrl: "https://thredup.com/",
     date: `Feb 2016 - Apr 2021`,
     dateRange: [new Date("February 2016"), new Date("April 2021")],
-    description: `<p>Successfully pitched, prototyped, and delivered several high-impact projects within the organization. Assisting in hiring, managing, and mentoring of engineers at various levels, distributed across the globe.</p>`,
+    description: `
+      <p>Successfully pitched, prototyped, and delivered several high-impact projects within the organization. Assisting in hiring, managing, and mentoring of engineers at various levels, distributed across the globe.</p>
+    `,
     highlights: [
       `Content Management System; Pitched, prototyped, and delivered`,
-      `PWA (Progressive Web App); Pitched, prototyped, and delivered`,
+      `Progressive Web App (PWA); Pitched, prototyped, and delivered`,
       `Lerna Monorepo; Pitched, prototyped, and delivered`,
       `CSS Overhaul; Pitched, prototyped, and delivered`,
       `Apollo Migration, Redux Migration, Checkout Overhaul, and many more...`
     ],
     image: `https://thredup.com/favicon.ico`,
-    tags: [],
+    tags: [
+      "CSS",
+      "Docker",
+      "HTML",
+      "Kubernetes",
+      "PostCSS",
+      "NodeJS",
+      "React",
+      "TailwindCSS",
+      "TypeScript",
+      "Webpack"
+    ],
     title: `Staff Engineer`
   },
   {
@@ -73,17 +100,25 @@ export const experience: Experience[] = [
     companyUrl: "https://bynd.com/",
     date: `Nov 2011 - Apr 2015`,
     dateRange: [new Date(2011, 11, 1), new Date(2015, 4, 1)],
-    description: `<p>As the Team Lead, my responsibilities included: pitch work, application architecture, technical documentation/specs, code reviews, mentoring and general management of the San Francisco Engineering team. Clients include;</p>`,
+    description: `<p>
+      As the Team Lead, my responsibilities included: pitch work, application architecture, technical documentation/specs, code reviews, mentoring and general management of the San Francisco Engineering team.
+    </p>`,
     highlights: [
-      `Pitched, architected, developed and delivered "Google TrainUP"`,
-      `Conceptualized, architected & developed "Google Databoard"`,
-      `Development of "Google Multi-Product" landing pages`,
-      `Prototyped "Facebook Disaster App" with BackboneJS and Facebook API's`,
-      `Development of HTML micro sites internally at Apple within iAds team`,
-      `Pitched an abstraction to minimize time-to-market and costs, which was adopted internally`
+      `Google TrainUP; Pitched, architected, developed, and delivered`,
+      `Google Databoard; Conceptualized, architected, developed, and delivered`,
+      `Facebook Disaster Relief; Prototyped with BackboneJS and Facebook API's`,
+      `Apple iAds; Development of HTML micro sites internally for Apple`,
+      `Apple iAds; Pitched an abstraction to minimize production time/cost, which was adopted internally`
     ],
     image: `https://bynd.com/favicon.ico`,
-    tags: [],
+    tags: [
+      "AngularJS",
+      "BackboneJS",
+      "CSS",
+      "Google Cloud",
+      "HTML",
+      "Javascript"
+    ],
     title: `Technical Team Lead`
   },
   {
@@ -91,55 +126,77 @@ export const experience: Experience[] = [
     companyUrl: "https://liftagency.co",
     date: `Jul 2010 - Nov 2011`,
     dateRange: [new Date(2010, 7, 1), new Date(2011, 11, 1)],
-    description: `
-    <p>While at Creative Lift (now Lift Agency) we developed a variety of Mobile & Desktop applications for Facebook, Snapfish, Union Bank, AOL, Gerber, Proactive, Charter and a variety of others.</p>
-    <p>We improved brand communication and provided more effective and consistent user experiences, utilizing various frameworks and custom developed solutions and agile design and development techniques.</p>
-    `,
-    // <p>I was on the team responsible for creating the "Lift Calculator," an iPhone application that allows users to easily calculate the response rate of marketing campaigns & compare against averages.</p>
+    description: `<p>
+      Joining Lift Agency was a conscious decision to move away from any
+      form of a "Design" related role and focus on "Engineering".
+    </p>`,
     highlights: [
-      `Building out UX/UI/IxD patterns and maintaining the design system with semantic versioning`,
-      `Ensuring color consistency, accessibility, and flexibility in charts/graphs`,
-      `Facilitating collaboration between product, engineering, and design teams`,
-      `Prototyping and developing internal proof-of-concepts in React`
+      `Wrote the Charter Checkout system and client side validation flow`,
+      `Experienced all the fun "quirks" of the IE days and Financial Systems`,
+      `Assisted in creating the "Lift Calculator" an iPhone application`
     ],
     image: "https://liftagency.co/favicon.ico",
-    tags: [],
+    tags: [
+      "CSS",
+      "HTML",
+      "JQuery",
+      "Javascript",
+      "Development",
+      "Git",
+      "Adobe Flash",
+      "PHP"
+    ],
     title: `Interactive Developer`
   },
   {
-    company: "Hotwire <small>(contract)</small>",
+    company: "Hotwire",
     companyUrl: "https://hotwire.com",
+    contract: true,
     date: `Apr 2010 - Jun 2010`,
     dateRange: [new Date(2010, 4, 1), new Date(2010, 6, 1)],
-    description: `
-    <p>Worked in a development capacity within the Creative Services department to produce e-mails, banners, and 3rd party widgets during planning, design and production phases. I was responsible for efficiently communicating with Engineering and User Experience departments to achieve team-wide goals.</p>
-    `,
+    description: `<p>
+      Worked in a development capacity within the Creative Services department
+      to produce e-mails, banners, and 3rd party widgets throughout.
+    </p>`,
     highlights: [
-      `Building out UX/UI/IxD patterns and maintaining the design system with semantic versioning`,
-      `Ensuring color consistency, accessibility, and flexibility in charts/graphs`,
-      `Facilitating collaboration between product, engineering, and design teams`,
-      `Prototyping and developing internal proof-of-concepts in React`
+      `Created initial prototypes for interactive widgets`,
+      `Coded various `
     ],
     image: "https://hotwire.com/favicon.ico",
-    tags: [],
+    tags: [
+      "Adobe Illustrator",
+      `Adobe Photoshop`,
+      "CSS",
+      "HTML",
+      "JQuery",
+      "Prototyping"
+    ],
     title: `Graphic Designer`
   },
   {
-    company: "I.W. Group Inc.",
+    company: "I.W. Group",
     companyUrl: "https://www.iwgroup.agency",
     date: `Sep 2008 - Feb 2010`,
     dateRange: [new Date(2008, 8, 1), new Date(2010, 2, 1)],
-    description: `
-    <p>Development and Interaction Design of varying marketing domains and advertising collateral for clients including; McDonalds, FedEx, PG&E</p>
-    `,
+    description: `<p>
+      A hybrid Dev/Design role creating web and interactive materials
+      for clients including; McDonalds, FedEx, PG&E, US Army, US Census, and
+      others.
+    </p>`,
     highlights: [
-      `Building out UX/UI/IxD patterns and maintaining the design system with semantic versioning`,
-      `Ensuring color consistency, accessibility, and flexibility in charts/graphs`,
-      `Facilitating collaboration between product, engineering, and design teams`,
-      `Prototyping and developing internal proof-of-concepts in React`
+      `Management of the APAC Ronald McDonald House Charity web domain`,
+      `Development of Flash media across 3-5 languages and varying dimensions`,
+      `Speaker: New York, non-profit meetup re: Using social networking to enhance brand awareness`
     ],
     // image: "https://www.iwgroup.agency/favicon.ico",
-    tags: [],
+    tags: [
+      "Adobe Flash",
+      "Adobe Illustrator",
+      "Adobe Photoshop",
+      "CSS",
+      "HTML",
+      "JQuery"
+    ],
     title: `Interactive Designer/Developer`
   },
   {
@@ -147,17 +204,26 @@ export const experience: Experience[] = [
     companyUrl: "https://zipidee.com",
     date: `Oct 2007 - Aug 2008`,
     dateRange: [new Date(2007, 10, 1), new Date(2008, 8, 1)],
-    description: `
-      <p>Development and Interaction Design of varying marketing domains and advertising collateral for clients including.</p>
-    `,
+    description: `<p>
+      As with any startup we tend to wear many hats, and this being my first professional / non-freelance position I took every opportunity I could to be involved.
+    </p>`,
     highlights: [
-      `Building out UX/UI/IxD patterns and maintaining the design system with semantic versioning`,
-      `Ensuring color consistency, accessibility, and flexibility in charts/graphs`,
-      `Facilitating collaboration between product, engineering, and design teams`,
-      `Prototyping and developing internal proof-of-concepts in React`
+      `Implemented and managed the video encoding/transcoding processes`,
+      `Balancing speed/quality settings across multiple outputs for varying use-cases`,
+      `Responsible for production of flash components and banners used on domains`,
+      `Development of custom branded, Flash video players for use on partner domains`,
+      `Partners: Amazon, TiVo, ASPCA, The Weather Channel, and many others`
     ],
     // image: "https://www.iwgroup.agency/favicon.ico",
-    tags: [],
+    tags: [
+      `ActionScript 2.0`,
+      `Adobe Flash`,
+      `Adobe Photoshop`,
+      "CSS",
+      `HTML`,
+      `video encoding`,
+      `video transcoding`
+    ],
     title: `Multi-Media Production Artist`
   }
 ];

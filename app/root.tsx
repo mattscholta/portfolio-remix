@@ -57,7 +57,8 @@ export default function App() {
   // Setup
   const { baseUrl, canonical, googleAnalytics, theme } = loader;
   const isDark = theme === "dark";
-  const favicon = isDark ? "/favicon-dark.png" : "/favicon.png";
+  // const favicon = isDark ? "/favicon-dark.png" : "/favicon.png";
+  const favicon = "/images/svg/logo.svg";
   const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
   const metadata = getMetaTags(baseUrl, isDark);
 
@@ -77,8 +78,10 @@ export default function App() {
         <Meta />
 
         <link href={canonical} rel="canonical" />
-        <link href={favicon} rel="icon" />
         <link href={favicon} rel="apple-touch-icon" sizes="48x48" />
+        <link href={favicon} rel="favicon" />
+        <link href={favicon} rel="icon" type="image/svg+xml" />
+        <link href={favicon} rel="mask-icon" type="image/svg+xml" />
         <link href={manifest} rel="manifest" />
 
         {/*
@@ -102,8 +105,6 @@ export default function App() {
         */}
 
         <Links />
-
-        <TrackingGA id={googleAnalytics} />
       </head>
       <body>
         <Header />
@@ -111,6 +112,9 @@ export default function App() {
           <Outlet />
         </main>
         <Footer />
+
+        {/* Analytics */}
+        <TrackingGA id={googleAnalytics} />
 
         {/* Remix */}
         <ScrollRestoration />

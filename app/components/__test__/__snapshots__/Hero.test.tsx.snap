@@ -6,7 +6,7 @@ exports[`Hero Component > should render our Hero 1`] = `
     <div
       class="hero p-4 text-center"
     >
-      <h1
+      <h2
         class="inline-block font-font-serif text-xl font-extrabold md:text-4xl"
       >
         <div
@@ -19,7 +19,7 @@ exports[`Hero Component > should render our Hero 1`] = `
         >
           The HIGHLIGHT
         </div>
-      </h1>
+      </h2>
     </div>
   </div>
 </body>

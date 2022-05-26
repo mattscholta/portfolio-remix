@@ -9,8 +9,10 @@ exports[`BlogPreview Component > should render our BlogPreview 1`] = `
     >
       <img
         alt=""
+        height="auto"
         loading="lazy"
         src=""
+        width="auto"
       />
       <h3
         class="mt-4 mb-2 text-2xl"

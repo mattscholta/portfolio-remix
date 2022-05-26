@@ -1,4 +1,5 @@
 import type { Experience as ExperienceType } from "~/data/resume";
+import { getTimeWorked } from "~/utils/date-time";
 
 export interface ExperienceProps {
   experience: ExperienceType;
@@ -6,9 +7,24 @@ export interface ExperienceProps {
 
 export const Experience = (props: ExperienceProps) => {
   const { experience } = props;
+  const {
+    company,
+    companyUrl,
+    date,
+    dateRange,
+    description,
+    highlights,
+    image,
+    title
+  } = experience;
 
   // Setup
-  const { company, companyUrl, date, description, highlights, image, title } = experience; // prettier-ignore
+  const start = dateRange ? dateRange[0] : new Date();
+  const stop = dateRange?.[1] ? dateRange[1] : new Date();
+  const length = getTimeWorked(start, stop);
+
+  // TEMP
+  console.log(` 💬 ~ Worked at ${company} for`, length);
 
   return (
     <div className="flex flex-col gap-10 md:flex-row" key={title}>
@@ -16,15 +32,20 @@ export const Experience = (props: ExperienceProps) => {
         <div className="flex">
           <h3 className="flex items-center gap-2 font-bold">
             <a
-              className="text-color-copy hover:underline"
+              className="underline-offset-4 hover:underline"
               dangerouslySetInnerHTML={{ __html: company }}
               href={companyUrl}
               rel="noreferrer"
               target="_blank"
             />
+            {experience.contract && (
+              <small className="text-xs font-normal italic text-gray-700">
+                (contract)
+              </small>
+            )}
             {image && (
               <img
-                alt=""
+                alt={`${company} favicon`}
                 className="h-4 w-4"
                 height="auto"
                 loading="eager"
@@ -46,7 +67,7 @@ export const Experience = (props: ExperienceProps) => {
             __html: description
           }}
         />
-        <ul className="my-4 ml-4 list-disc text-sm font-light">
+        <ul className="my-4 ml-4 list-disc text-sm font-light text-color-copy">
           {highlights.map((highlight, index) => (
             <li
               className="my-1"

@@ -2,7 +2,7 @@ import { data } from "~/data/companies";
 
 export const WorkCompanies = () => {
   return (
-    <section className="border-0 border-b border-t border-solid bg-color-background-light p-4 md:p-0">
+    <section className="work-companies border-0 border-b border-t border-solid p-4 md:p-0">
       <div className="my-10 flex-1 md:my-20">
         <h2 className="mb-10 text-center text-xl text-color-copy-light md:mb-20 md:text-4xl">
           Companies I've built things for.

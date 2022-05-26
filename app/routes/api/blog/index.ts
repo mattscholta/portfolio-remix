@@ -29,6 +29,7 @@ const getPosts = gql`
       imageTemp
       intro
       slug
+      tags
       sticky
       title
     }

@@ -5,7 +5,6 @@ import { experience as data, social } from "~/data/resume";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { Experience } from "~/components/Experience";
 import { SocialLink } from "~/components/SocialLink";
-import { getTimeWorked } from "~/utils/date-time";
 
 import styles from "~/styles/resume.css";
 
@@ -41,15 +40,9 @@ export default function () {
     setShown(shown === minValue ? data.length : minValue);
   };
 
-  const start = new Date("02/01/2016");
-  const stop = new Date("04/01/2021");
-  const testing = getTimeWorked(start, stop);
-
-  console.log(` 💬 ~ testing`, testing);
-
   return (
     <div className="m-auto max-w-5xl pt-10">
-      <div className="flex flex-col gap-20 px-4 md:flex-row">
+      <div className="flex flex-col gap-20 px-4 md:flex-row md:px-0">
         <aside className="md:w-1/5">
           <div className="sticky top-16">
             <img
@@ -85,7 +78,7 @@ export default function () {
 
             <div className="flex items-center gap-10">
               <p>
-                <span className="mr-2">👨‍💻</span> A Software Engineer whose
+                <span className="mr-1">👨‍💻</span> Is a Software Engineer whose
                 passion lies in creating <b>quality code</b> written{" "}
                 <b>for humans</b>, unlocking <b>developer productivity</b>, and
                 creating <b>delightful</b> user and developer <b>experiences</b>
@@ -96,7 +89,7 @@ export default function () {
 
           {/* EXPERIENCE */}
           <section>
-            <div className="bg-color-background">
+            <div>
               <h2 className="py-8 text-xl">Experience</h2>
               <div className="mb-8 border-t border-solid border-color-border" />
             </div>
@@ -116,9 +109,9 @@ export default function () {
             </div>
           </section>
 
-          {/* PROFICIENCIES */}
+          {/* PROFICIENCIES
           <section>
-            <div className="bg-color-background">
+            <div>
               <h2 className="py-8 text-xl">Proficiencies</h2>
               <div className="mb-8 border-t border-solid border-color-border" />
             </div>
@@ -173,10 +166,11 @@ export default function () {
               </div>
             </div>
           </section>
+          */}
 
           {/* EDUCATION */}
           <section>
-            <div className="bg-color-background">
+            <div>
               <h2 className="py-8 text-xl">Education</h2>
               <div className="mb-8 border-t border-solid border-color-border" />
             </div>
@@ -187,17 +181,29 @@ export default function () {
               <em className="text-sm text-color-copy-light">(incomplete)</em>
             </h4>
 
-            {/*
-            <div className="mt-10">
-              <p>
-                Started as an Mechanical Engineering major, found Industrial
-                Design, only to get a job doing Design and Development.
+            <div className="mt-8">
+              <p className="text-sm">
+                A late change of major from <b>Mechanical Engineering</b> to{" "}
+                <b>Industrial Design</b> and the lack of available courses I
+                freelanced and went part-time over the course of several years
+                doing graphic/web design, and web development.
               </p>
             </div>
-            */}
-          </section>
 
-          {/* <div className="print:hidden- h-[60vh]" /> */}
+            <ul className="my-4 ml-4 list-disc text-sm font-light">
+              <li className="my-1">
+                {/* <a href="https://www.idsa.org/">IDSA:</a>  */}
+                Industrial Designers Society of America 2004 - 2007
+              </li>
+              <li className="my-1">
+                Teaching Assistant: Automated Manufacturing Systems
+              </li>
+              <li className="my-1">Teaching Assistant: Metals Manufacturing</li>
+              <li className="my-1">
+                Teaching Assistant: Drafting and Sketching for Design
+              </li>
+            </ul>
+          </section>
         </div>
       </div>
     </div>

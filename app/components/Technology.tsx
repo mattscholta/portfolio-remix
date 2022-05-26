@@ -1,44 +1,45 @@
+import classnames from "classnames";
 import { useRef, useState } from "react";
 import { data } from "~/data/details";
 
 /**
- * @name WorkDetails
+ * @name Technology
  * @description tbd...
  */
-
-export const WorkDetails = () => {
+export const Technology = () => {
   const desc = `This is a <b>non</b> exhaustive list of tools and technologies I use to make products come to life. I'm also very comfortable pushing pixels in Figma, Adobe, Video, and 3D modelling.`;
 
   // Hooks
   const refDescription = useRef<HTMLQuoteElement>(null);
   const [heading, setHeading] = useState("Stack");
-  const [description, setDesciption] = useState(desc);
+  const [description, setDescription] = useState(desc);
 
   return (
-    <section className="bg-color-background-dark py-10 text-color-background-light">
-      <div className="my-10 mx-auto flex max-w-7xl flex-col gap-10 px-4 md:my-20 md:flex-row">
+    <section className="bg-color-background-dark py-20 text-color-background-light">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:flex-row md:py-20">
         <div className="basis-2/5">
-          <h2 className="mb-8 text-3xl">Tools 🛠️</h2>
+          <h2 className="mb-8 text-3xl">
+            Technology <span className="ml-2">🧰</span>
+          </h2>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="work-details flex flex-wrap gap-2">
             {Object.keys(data).map((key) => {
-              const isActive = key === heading;
-              const coloring = !isActive
-                ? "bg-color-background-light text-color-background-dark"
-                : "bg-color-primary text-color-background-light";
+              const active = key === heading;
 
               return (
                 <button
-                  className={`${coloring} rounded-md px-2 py-1 text-sm`}
+                  className={classnames(`rounded-md px-2 py-1 text-sm`, {
+                    active
+                  })}
                   key={key}
                   type="button"
                   onClick={() => {
                     setHeading(key);
-                    setDesciption(data[key]);
+                    setDescription(data[key]);
                   }}
                   onMouseEnter={() => {
                     setHeading(key);
-                    setDesciption(data[key]);
+                    setDescription(data[key]);
                   }}
                 >
                   {key}

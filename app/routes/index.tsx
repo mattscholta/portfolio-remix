@@ -3,10 +3,10 @@ import { Outlet } from "remix";
 import type { MetaFunction } from "remix";
 
 import { Hero } from "~/components/Hero";
-import { loader } from "~/routes/api/qualities";
+import { getQuote } from "~/routes/api/qualities";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { WorkCompanies } from "~/components/WorkCompanies";
-import { WorkDetails } from "~/components/WorkDetails";
+import { Technology } from "~/components/Technology";
 import { AboutAmbitions } from "~/components/AboutAmbitions";
 
 export const meta: MetaFunction = () => ({
@@ -19,15 +19,15 @@ export default function () {
 
   // Handlers
   const onClick = async () => {
-    const data = await loader({} as any);
+    const data = await getQuote(heading);
     setHeading(data);
   };
 
   return (
     <>
-      <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-4 py-20 md:flex-row md:py-40">
+      <section className="m-auto flex max-w-6xl flex-col items-center justify-center gap-4 py-20 md:flex-row md:py-40">
         <Hero
-          className="md:text-right"
+          className="py-10 md:py-20 md:text-right"
           copy={<span className="whitespace-nowrap">{heading}</span>}
           highlight={SITE_AUTHOR}
           tag="h1"
@@ -45,7 +45,7 @@ export default function () {
         </div>
       </section>
 
-      <WorkDetails />
+      <Technology />
       <AboutAmbitions />
       <WorkCompanies />
 
@@ -54,29 +54,6 @@ export default function () {
         unlocking <b>developer productivity</b>, and creating a delightful{" "}
         <b>user experience</b>.
       </blockquote>
-
-      {/*
-      <section className="m-auto max-w-6xl gap-20">
-        <h3 className="my-4 text-2xl">Current</h3>
-        <p>
-          I take great pride in my ability to communicate and articulate ideas
-          through design and visual language, but perhaps more importantly
-          through soft personal skills. Reading body language, intently
-          listening, being persuasive, and empathizing are all part of my
-          designer toolkit.
-        </p>
-
-        <h3 className="my-4 text-2xl">Contact Me</h3>
-        <p>
-          Email is the best way to reach me:{" "}
-          <a href={SITE_EMAIL_LINK}>{SITE_EMAIL_ADDRESS}</a>
-        </p>
-        <p>
-          Feel free to hit me up on <a href={SOCIAL_TWITTER}>Twitter</a> as
-          well.
-        </p>
-      </section>
-      */}
 
       <Outlet />
     </>

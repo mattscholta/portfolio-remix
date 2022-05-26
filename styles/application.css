@@ -129,6 +129,19 @@
   }
 }
 
+.work-details button {
+  background-color: theme("colors.white");
+  border: 1px solid theme("colors.white");
+  color: var(--color-copy-dark);
+}
+
+.work-details button.active,
+.work-details button:hover {
+  background-color: var(--color-primary);
+  border-color: theme("colors.white");
+  color: theme("colors.white");
+}
+
 .work-preview span {
   letter-spacing: -0.05em;
 }
@@ -140,6 +153,12 @@
 
 .work-preview:hover p {
   color: var(--color-copy);
+}
+
+.work-companies {
+  background-color: var(--color-background-light);
+  border-bottom: 1px solid var(--color-border-light);
+  border-top: 1px solid var(--color-border-light);
 }
 
 @keyframes pulse {
