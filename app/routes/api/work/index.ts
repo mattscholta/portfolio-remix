@@ -4,6 +4,7 @@ import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
 
 export interface Portfolio {
   company: string;
+  current: boolean;
   images: any;
   overview: string;
   slug: string;
@@ -17,6 +18,7 @@ const getPortfolios = gql`
   query {
     portfolios {
       company
+      current
       images {
         url
       }

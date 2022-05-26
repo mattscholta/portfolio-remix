@@ -76,12 +76,12 @@ export const data: Data[] = [
     company: "US Census",
     className: "h-5 md:h-10",
     image: "/images/svg/census.svg",
-    url: "https://census.com"
+    url: "https://www.census.gov"
   },
   {
     company: "US Army",
     className: "h-8 md:h-16",
     image: "/images/svg/army.svg",
-    url: "https://army.com"
+    url: "https://www.army.mil"
   }
 ];

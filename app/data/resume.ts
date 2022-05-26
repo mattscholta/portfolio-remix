@@ -101,7 +101,11 @@ export const experience: Experience[] = [
     date: `Nov 2011 - Apr 2015`,
     dateRange: [new Date(2011, 11, 1), new Date(2015, 4, 1)],
     description: `<p>
-      As the Team Lead, my responsibilities included: pitch work, application architecture, technical documentation/specs, code reviews, mentoring and general management of the San Francisco Engineering team.
+      Agency life in San Francisco affords the opportunity to work with a
+      variety of "high profile" clients to create and deliver high-impact
+      projects. As Team Lead, my responsibilities included: pitch work,
+      application architecture, technical documentation, code reviews, and
+      mentoring.
     </p>`,
     highlights: [
       `Google TrainUP; Pitched, architected, developed, and delivered`,
@@ -240,11 +244,11 @@ export const social: Social[] = [
     title: `matthew.scholta`,
     url: `mailto:matthew.scholta@gmail.com`
   },
-  {
-    icon: `/images/svg/phone.svg`,
-    title: `(415) 722-7481`,
-    url: `tel:+14157227481`
-  },
+  // {
+  //   icon: `/images/svg/phone.svg`,
+  //   title: `(415) 722-7481`,
+  //   url: `tel:+14157227481`
+  // },
   {
     icon: `/images/svg/github.svg`,
     title: `visormatt`,

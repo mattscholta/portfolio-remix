@@ -17,6 +17,10 @@ export default function () {
   // Hooks
   const data = useLoaderData<LoaderData>();
 
+  // Setup
+  const current = data.filter((node) => node.current);
+  const recent = data.filter((node) => !node.current);
+
   return (
     <>
       <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
@@ -30,7 +34,7 @@ export default function () {
 
       <section>
         <div className="my-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {data.map((node) => (
+          {current.map((node) => (
             <WorkPreview data={node} key={node.slug} />
           ))}
         </div>
@@ -47,7 +51,7 @@ export default function () {
 
       <section>
         <div className="my-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {data.map((node) => (
+          {recent.map((node) => (
             <WorkPreview data={node} key={node.slug} />
           ))}
         </div>
