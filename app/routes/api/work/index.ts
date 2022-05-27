@@ -1,4 +1,5 @@
-import { json, LoaderFunction } from "remix";
+import { json } from "remix";
+import type { LoaderFunction } from "remix";
 
 import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
 
@@ -16,7 +17,7 @@ export type LoaderData = Portfolio[];
 
 const getPortfolios = gql`
   query {
-    portfolios {
+    portfolios(orderBy: date_DESC) {
       company
       current
       images {

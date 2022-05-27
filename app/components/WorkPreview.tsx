@@ -29,17 +29,15 @@ export const WorkPreview = (props: WorkPreviewProps) => {
 
   return (
     <Link
-      className="work-preview flex flex-col gap-4"
+      className="work-preview flex flex-col gap-4 text-color-copy"
       to={`/work/${data.slug}`}
     >
       {/* {data.images[0] && renderImage()} */}
       <div className="flex flex-col">
-        <h3 className="font-font-serif text-xl font-extrabold">
-          <span>{data.title}</span>
-        </h3>
-        <div className="my-1 mb-4 text-sm font-extrabold text-color-copy">
+        <h3 className="font-font-serif text-xl font-extrabold">{data.title}</h3>
+        <span className="text-highlight text- my-1 mb-4 font-extrabold">
           {data.company}
-        </div>
+        </span>
         <p>{data.overview}</p>
       </div>
     </Link>

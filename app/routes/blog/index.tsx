@@ -7,7 +7,7 @@ import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { loader } from "~/routes/api/blog";
 import type { LoaderData } from "~/routes/api/blog";
 import { BlogFeatured } from "~/components/BlogFeatured";
-import { Tags } from "~/components/Tags";
+// import { Tags } from "~/components/Tags";
 
 export { loader };
 
@@ -18,7 +18,7 @@ export const meta: MetaFunction = () => ({
 
 export default function () {
   // Hooks
-  const { posts, tags } = useLoaderData<LoaderData>();
+  const { posts, tags: _tags } = useLoaderData<LoaderData>();
 
   return (
     <>
@@ -54,6 +54,9 @@ export default function () {
                 </li>
                 <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
                   You are not Google - recovering quickly
+                </li>
+                <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
+                  Reviewing pull requests - a simple framework
                 </li>
                 <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
                   ...
@@ -98,9 +101,11 @@ export default function () {
           </div>
         </div>
 
+        {/*
         <button className="my-20 border border-color-border p-4">
           Load more +
         </button>
+        */}
       </section>
     </>
   );

@@ -46,7 +46,7 @@ export default function () {
         <Hero
           className="py-20 md:py-40"
           copy="Currently"
-          highlight="What I'm working on"
+          highlight="What I'm building"
           tag="h1"
         />
       </section>
@@ -62,7 +62,7 @@ export default function () {
       <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
         <Hero
           className="py-20 md:py-40"
-          copy="Relevant Work"
+          copy="Past Work"
           highlight="What I've built"
           tag="h2"
         />

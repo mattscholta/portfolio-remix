@@ -44,7 +44,7 @@ export default function () {
         src={data.imageTemp}
       />
 
-      <section className="m-auto max-w-6xl">
+      <section className="m-auto max-w-2xl">
         <div className="mb-20 p-4">
           <div className="my-8 md:my-12 ">
             <h2 className="text-highlight m-0 mb-2 inline-block text-left text-3xl md:text-4xl">
@@ -62,6 +62,7 @@ export default function () {
               />
             </div>
 
+            {/*
             <aside className="flex h-full min-w-[300px] flex-col gap-20">
               <div className="flex flex-col gap-10 border-0 md:p-4">
                 <div>
@@ -83,6 +84,7 @@ export default function () {
                 </div>
               </div>
             </aside>
+            */}
           </div>
         </div>
       </section>

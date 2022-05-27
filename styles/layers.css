@@ -56,7 +56,7 @@
   }
 
   .work-preview span {
-    @apply text-highlight;
+    /* @apply text-highlight; */
   }
 
   .wysiwyg blockquote a {

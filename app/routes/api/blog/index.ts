@@ -36,7 +36,7 @@ const getPosts = gql`
       }
     }
 
-    posts {
+    posts(orderBy: createdAt_DESC) {
       # posts(stage: DRAFT) {
       content {
         html

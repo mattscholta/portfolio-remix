@@ -48,6 +48,7 @@ export default function () {
         <blockquote>{data.intro}</blockquote>
       </div>
 
+      {/*
       <div className="bg-color-background-dark py-20 text-color-background-light">
         <div className="mx-auto flex max-w-6xl flex-col gap-20 md:flex-row">
           <div className="flex flex-1 flex-col items-center justify-center">
@@ -67,6 +68,7 @@ export default function () {
           </div>
         </div>
       </div>
+      */}
     </>
   );
 }
