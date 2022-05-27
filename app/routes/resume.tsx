@@ -77,7 +77,9 @@ export default function () {
                 className="ui-btn custom-bg-gradient mt-8 w-full whitespace-nowrap rounded-2xl py-2 px-4 text-sm font-normal text-white"
                 onClick={onClick}
               >
-                {copied ? "Copied to clipboard ✓" : "Copy Link"}
+                {copied
+                  ? "Copied to clipboard ✓"
+                  : "Save a tree, share a link!"}
               </button>
             </div>
           </div>
