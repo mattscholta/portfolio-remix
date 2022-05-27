@@ -1,16 +1,10 @@
 import { useState } from "react";
-import {
-  LinksFunction,
-  LoaderFunction,
-  MetaFunction,
-  useLoaderData
-} from "remix";
+import type { LinksFunction, MetaFunction } from "remix";
 
 import { experience as data, social } from "~/data/resume";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { Experience } from "~/components/Experience";
 import { SocialLink } from "~/components/SocialLink";
-import { BASE_URL } from "~/config/settings.server";
 import { copyTextToClipboard } from "~/utils/clipboard";
 
 import styles from "~/styles/resume.css";
@@ -22,10 +16,6 @@ export const links: LinksFunction = () => [
     rel: "stylesheet"
   }
 ];
-
-export const loader: LoaderFunction = () => {
-  return { url: BASE_URL };
-};
 
 export const meta: MetaFunction = () => {
   const year = new Date().getFullYear();
@@ -42,9 +32,6 @@ export default function () {
   const minValue = 3;
   const [copied, setCopied] = useState(false);
   const [shown, setShown] = useState(minValue);
-  const { url } = useLoaderData();
-
-  console.log(` 💬 ~ url`, url);
 
   // Setup
   const experience = data.slice(0, shown);
@@ -53,7 +40,7 @@ export default function () {
   // Handlers
   const onClick = async () => {
     setCopied(true);
-    copyTextToClipboard(`${url}/resume`);
+    copyTextToClipboard(`${window.location.origin}/resume`);
 
     setTimeout(() => {
       setCopied(false);
