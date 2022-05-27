@@ -52,10 +52,10 @@ export default function () {
   };
 
   return (
-    <div className="m-auto max-w-5xl md:pt-10">
+    <div className="m-auto max-w-5xl py-10 md:py-20">
       <div className="flex flex-col gap-20 px-4 md:flex-row md:px-0">
         <aside className="md:w-1/5">
-          <div className="sticky top-16">
+          <div className="sticky top-32">
             <div className="flex flex-row items-center justify-center gap-6 md:flex-col">
               <img
                 alt={SITE_AUTHOR}

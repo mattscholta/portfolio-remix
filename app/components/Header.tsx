@@ -1,22 +1,12 @@
-import classnames from "classnames";
-import { NavLink, useLocation } from "remix";
+import { NavLink } from "remix";
 
 import { Logo } from "./Logo";
 
 export interface HeaderProps {}
 
 export const Header = (_props: HeaderProps) => {
-  // Hooks
-  const { pathname } = useLocation();
-
-  // Setup
-  const isResume = pathname.startsWith("/resume");
-
-  // Styles
-  const cssResume = classnames({ relative: isResume });
-
   return (
-    <header className={`${cssResume} header overflow-hidden print:hidden`}>
+    <header className={`header overflow-hidden print:hidden`}>
       <div className="mx-auto flex h-full w-full max-w-5xl items-center justify-evenly  md:text-sm">
         <NavLink className="header-logo ml-4 gap-2 px-4" to="/">
           <Logo />
