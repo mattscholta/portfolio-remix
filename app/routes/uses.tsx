@@ -23,7 +23,9 @@ export default function () {
       </section>
 
       <UsesHardware />
-      <Technology />
+      <section className="bg-color-background-dark py-20 text-color-background-light">
+        <Technology />
+      </section>
       <UsesSoftware />
       <UsesMisc />
     </>

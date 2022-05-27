@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Outlet } from "remix";
 import type { MetaFunction } from "remix";
 
 import { Hero } from "~/components/Hero";
@@ -45,17 +44,19 @@ export default function () {
         </div>
       </section>
 
-      <Technology />
+      <section className="bg-color-background-dark py-20 text-color-background-light">
+        <blockquote className="mx-auto my-20 max-w-4xl text-2xl font-normal md:my-40 md:text-3xl">
+          Passionate about <b>quality code</b> written <b>for humans</b>,
+          unlocking <b>developer productivity</b>, and creating a delightful{" "}
+          <b>user experience</b>.
+        </blockquote>
+      </section>
+
       <AboutAmbitions />
+      <section className="bg-color-background-dark py-20 text-color-background-light">
+        <Technology />
+      </section>
       <WorkCompanies />
-
-      <blockquote className="mx-auto my-20 max-w-4xl text-2xl font-normal md:my-40 md:text-3xl">
-        Passionate about <b>quality code</b> written <b>for humans</b>,
-        unlocking <b>developer productivity</b>, and creating a delightful{" "}
-        <b>user experience</b>.
-      </blockquote>
-
-      <Outlet />
     </>
   );
 }

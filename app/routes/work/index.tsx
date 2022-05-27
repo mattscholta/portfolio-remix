@@ -45,14 +45,14 @@ export default function () {
       <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
         <Hero
           className="py-20 md:py-40"
-          copy="Currently"
+          copy="Right now..."
           highlight="What I'm building"
           tag="h1"
         />
       </section>
 
-      <section>
-        <div className="my-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <section className="mx-auto md:max-w-6xl">
+        <div className="my-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           {current.map((node) => (
             <WorkPreview data={node} key={node.slug} />
           ))}
@@ -62,7 +62,7 @@ export default function () {
       <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
         <Hero
           className="py-20 md:py-40"
-          copy="Past Work"
+          copy="In the past..."
           highlight="What I've built"
           tag="h2"
         />

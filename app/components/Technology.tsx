@@ -15,46 +15,44 @@ export const Technology = () => {
   const [description, setDescription] = useState(desc);
 
   return (
-    <section className="bg-color-background-dark py-20 text-color-background-light">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:flex-row md:py-20">
-        <div className="basis-2/5">
-          <h2 className="mb-8 text-3xl">
-            Technology <span className="ml-2">🧰</span>
-          </h2>
+    <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:flex-row md:py-20">
+      <div className="basis-2/5">
+        <h2 className="mb-8 text-3xl">
+          Technology <span className="ml-2">🧰</span>
+        </h2>
 
-          <div className="work-details flex flex-wrap gap-2">
-            {Object.keys(data).map((key) => {
-              const active = key === heading;
+        <div className="work-details flex flex-wrap gap-2">
+          {Object.keys(data).map((key) => {
+            const active = key === heading;
 
-              return (
-                <button
-                  className={classnames(`rounded-md px-2 py-1 text-sm`, {
-                    active
-                  })}
-                  key={key}
-                  type="button"
-                  onClick={() => {
-                    setHeading(key);
-                    setDescription(data[key]);
-                  }}
-                  onMouseEnter={() => {
-                    setHeading(key);
-                    setDescription(data[key]);
-                  }}
-                >
-                  {key}
-                </button>
-              );
-            })}
-          </div>
+            return (
+              <button
+                className={classnames(`rounded-md px-2 py-1 text-sm`, {
+                  active
+                })}
+                key={key}
+                type="button"
+                onClick={() => {
+                  setHeading(key);
+                  setDescription(data[key]);
+                }}
+                onMouseEnter={() => {
+                  setHeading(key);
+                  setDescription(data[key]);
+                }}
+              >
+                {key}
+              </button>
+            );
+          })}
         </div>
-
-        <blockquote
-          className="my-8 basis-3/5 text-xl font-light leading-relaxed"
-          dangerouslySetInnerHTML={{ __html: description }}
-          ref={refDescription}
-        />
       </div>
-    </section>
+
+      <blockquote
+        className="my-8 basis-3/5 text-xl font-light leading-relaxed"
+        dangerouslySetInnerHTML={{ __html: description }}
+        ref={refDescription}
+      />
+    </div>
   );
 };

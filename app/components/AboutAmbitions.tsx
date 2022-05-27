@@ -4,8 +4,8 @@
  */
 export const AboutAmbitions = () => {
   return (
-    <section className="mx-auto my-20 max-w-4xl px-4 md:my-40 md:px-0">
-      <h3 className="my-4 text-xl md:text-3xl">Ambitions 👾</h3>
+    <section className="mx-auto my-20 max-w-3xl px-4 md:my-40 md:px-0">
+      <h3 className="my-4 text-xl md:text-3xl">Ambitions 🎯</h3>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur,
         cumque illo ex eaque ducimus dolore sequi ut amet quae, mollitia quia
