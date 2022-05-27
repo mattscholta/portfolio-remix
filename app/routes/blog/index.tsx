@@ -18,7 +18,7 @@ export const meta: MetaFunction = () => ({
 
 export default function () {
   // Hooks
-  const data = useLoaderData<LoaderData>();
+  const { posts, tags } = useLoaderData<LoaderData>();
 
   return (
     <>
@@ -34,19 +34,33 @@ export default function () {
       <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20 py-20">
         <div className="flex flex-col gap-20 p-4 md:flex-row">
           <BlogFeatured className="basis-2/3" />
-          <Tags
-            className="basis-1/3"
-            classNameTag="border-color-border-dark border-solid border px-2 py-1 text-sm rounded-md"
-            heading="Search blog by topics"
-            tags={[
-              "React",
-              "Remix",
-              "TypeScript",
-              "Open Source",
-              "Productivity",
-              "Developer Experience"
-            ]}
-          />
+          <div className="flex basis-1/3 flex-col gap-10">
+            {/*
+            <Tags
+              classNameTag="bg-color-background-light border-solid border px-2 py-1 text-sm rounded-md"
+              heading="Search blog by topics"
+              tags={tags}
+            />
+            */}
+
+            <div>
+              <h3 className="text-2xl">Upcoming Posts</h3>
+              <ul className="mt-8">
+                <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
+                  Throw away code - the product life cycle
+                </li>
+                <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
+                  Developer tooling - debuggers &amp; loggers
+                </li>
+                <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
+                  You are not Google - recovering quickly
+                </li>
+                <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
+                  ...
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         {/*
@@ -71,14 +85,14 @@ export default function () {
         <div className="w-full p-4">
           <h2 className="mb-12 text-3xl md:text-4xl">All Posts</h2>
           <div className="grid w-full gap-10 md:grid-cols-2 lg:grid-cols-3">
-            {data.map((item) => (
+            {posts.map((post) => (
               <BlogPreview
-                content={item.content.html}
-                date={item.date}
-                image={item.imageTemp}
-                key={item.id}
-                slug={item.slug}
-                title={item.title}
+                content={post.content.html}
+                date={post.date}
+                image={post.imageTemp}
+                key={post.id}
+                slug={post.slug}
+                title={post.title}
               />
             ))}
           </div>

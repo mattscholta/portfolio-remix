@@ -67,7 +67,7 @@ export const experience: Experience[] = [
   },
   {
     company: "thredUP",
-    companyUrl: "https://thredup.com/",
+    companyUrl: "https://thredup.com",
     date: `Feb 2016 - Apr 2021`,
     dateRange: [new Date("February 2016"), new Date("April 2021")],
     description: `
@@ -97,7 +97,7 @@ export const experience: Experience[] = [
   },
   {
     company: "Bynd",
-    companyUrl: "https://bynd.com/",
+    companyUrl: "https://bynd.com",
     date: `Nov 2011 - Apr 2015`,
     dateRange: [new Date(2011, 11, 1), new Date(2015, 4, 1)],
     description: `<p>

@@ -19,22 +19,28 @@ export const data: Data[] = [
     url: "https://bynd.com"
   },
   {
+    company: "Haldi",
+    className: "h-3 md:h-6",
+    image: "/images/svg/haldi.svg",
+    url: "https://haldi.com"
+  },
+  {
     company: "Alphabet (Google)",
     className: "h-5 md:h-10",
     image: "/images/svg/google.svg",
     url: "https://abc.xyz/"
   },
   {
-    company: "Meta (Facebook)",
-    className: "h-4 md:h-8",
-    image: "/images/svg/facebook.svg",
-    url: "https://about.facebook.com/"
-  },
-  {
     company: "Apple",
     className: "h-6 md:h-12",
     image: "/images/svg/apple.svg",
     url: "https://www.apple.com/business/"
+  },
+  {
+    company: "Meta (Facebook)",
+    className: "h-4 md:h-8",
+    image: "/images/svg/facebook.svg",
+    url: "https://about.facebook.com/"
   },
   {
     company: "Hotwire",
@@ -53,12 +59,6 @@ export const data: Data[] = [
     className: "h-4 md:h-8",
     image: "/images/svg/fedex.svg",
     url: "https://www.fedex.com/en-us/home.html"
-  },
-  {
-    company: "Haldi",
-    className: "h-3 md:h-6",
-    image: "/images/svg/haldi.svg",
-    url: "https://haldi.com"
   },
   {
     company: "Charter",

@@ -50,7 +50,7 @@ export const Technology = () => {
         </div>
 
         <blockquote
-          className="my-8 basis-3/5 text-xl font-semibold leading-relaxed"
+          className="my-8 basis-3/5 text-xl font-light leading-relaxed"
           dangerouslySetInnerHTML={{ __html: description }}
           ref={refDescription}
         />

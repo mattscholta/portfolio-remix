@@ -2,9 +2,9 @@ import { data } from "~/data/companies";
 
 export const WorkCompanies = () => {
   return (
-    <section className="work-companies border-0 border-b border-t border-solid p-4 md:p-0">
+    <section className="work-companies border-0 border-b border-t border-solid">
       <div className="my-10 flex-1 md:my-20">
-        <h2 className="mb-10 text-center text-xl text-color-copy-light md:mb-20 md:text-4xl">
+        <h2 className="mb-10 text-center text-xl md:mb-20 md:text-4xl">
           Companies I've built things for.
         </h2>
 
@@ -32,13 +32,17 @@ export const WorkCompanies = () => {
           })}
         </div>
 
+        {/*
         <div className="mx-auto -mb-5 pt-10 text-center italic md:-mb-10 md:pt-20">
-          <p className="px-4 text-xs font-light text-color-copy-light opacity-80 md:text-sm">
-            <b>"Agency Life"</b> in <b>San Francisco</b> provided wonderful
-            opportunity to work closely with some of the tech giants and
-            startups.
+          <p className="px-4 text-xs font-light opacity-80 md:text-sm">
+            <b>"Agency Life"</b> provided a wonderful opportunity to work
+            closely with some of the tech giants.
+            <br />
+            Being located in <b>San Francisco</b> I caught the startup bug and
+            love the challenge.
           </p>
         </div>
+        */}
       </div>
     </section>
   );

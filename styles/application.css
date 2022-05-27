@@ -132,7 +132,7 @@
 .work-details button {
   background-color: theme("colors.white");
   border: 1px solid theme("colors.white");
-  color: var(--color-copy-dark);
+  color: var(--color-background-dark);
 }
 
 .work-details button.active,

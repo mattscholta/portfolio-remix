@@ -75,8 +75,8 @@ export const UsesSoftware = () => {
           </h3>
           <p>
             It's not that often that get to play designer but I do enjoy keeping
-            up with the tools. Figma is available in the browser + app and fast,
-            love it!
+            up with the tools. Figma is available in the browser + app,
+            incredibly fast, powerful, and FREE. I love it!
           </p>
         </div>
       </div>
