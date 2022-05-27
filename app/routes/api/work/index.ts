@@ -20,6 +20,7 @@ const getPortfolios = gql`
     portfolios(orderBy: date_DESC) {
       company
       current
+      date
       images {
         url
       }

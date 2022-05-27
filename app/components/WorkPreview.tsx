@@ -14,6 +14,11 @@ export interface WorkPreviewProps {
 export const WorkPreview = (props: WorkPreviewProps) => {
   const { data } = props;
 
+  console.log(` 💬 ~ data`, data);
+
+  // Setup
+  const date = new Date(data.date);
+
   // Markup
   const _renderImage = () => (
     <div className="w-full">
@@ -28,18 +33,17 @@ export const WorkPreview = (props: WorkPreviewProps) => {
   );
 
   return (
-    <Link
-      className="work-preview flex flex-col gap-4 text-color-copy"
-      to={`/work/${data.slug}`}
-    >
+    <Link className="work-preview text-color-copy" to={`/work/${data.slug}`}>
       {/* {data.images[0] && renderImage()} */}
-      <div className="flex flex-col">
-        <h3 className="font-font-serif text-xl font-extrabold">{data.title}</h3>
-        <span className="text-highlight text- my-1 mb-4 font-extrabold">
-          {data.company}
-        </span>
-        <p>{data.overview}</p>
+
+      <h3 className="m-0 font-font-serif text-xl font-bold">{data.title}</h3>
+      <div className="mt-1 mb-6 flex items-baseline gap-2 font-medium text-color-copy-dark">
+        <span>{date.getFullYear()}</span>
+        <span className="font-light">|</span>
+        <span>{data.company}</span>
       </div>
+
+      <p>{data.overview}</p>
     </Link>
   );
 };

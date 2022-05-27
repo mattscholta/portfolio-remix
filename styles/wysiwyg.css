@@ -50,7 +50,7 @@
   list-style: disc;
 }
 
-.wysiwyg code {
+.wysiwyg pre {
   background-color: var(--color-copy);
   color: var(--color-background);
   padding: 0.5rem;

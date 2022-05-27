@@ -55,9 +55,25 @@
     }
   }
 
-  .work-preview span {
-    /* @apply text-highlight; */
+  .work-preview h3 {
+    letter-spacing: -0.05em;
+    line-height: 1.1;
   }
+
+  .work-preview:hover h3 {
+    @apply text-highlight;
+  }
+
+  /*
+  .work-preview span {
+    opacity: 0;
+    transition: opacity 140ms ease-out;
+  }
+
+  .work-preview:hover span {
+    opacity: 1;
+  }
+  */
 
   .wysiwyg blockquote a {
     @apply text-highlight;
