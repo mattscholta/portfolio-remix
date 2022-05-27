@@ -15,7 +15,7 @@ export const Header = (_props: HeaderProps) => {
 
         <div className="flex-1" />
 
-        <div className="mr-8 flex gap-10 font-font-monospace">
+        <div className="flex h-full font-font-monospace">
           <NavLink className="header-link" to="/">
             About
           </NavLink>

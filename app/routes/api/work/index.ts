@@ -6,6 +6,7 @@ import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
 export interface Portfolio {
   company: string;
   current: boolean;
+  date: Date;
   images: any;
   overview: string;
   slug: string;

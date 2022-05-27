@@ -44,6 +44,10 @@
 .header-link {
   color: unset;
   height: 100%;
+  display: flex;
+  justify-items: center;
+  padding: 1rem 1.4rem;
+  align-items: center;
   font-size: 0.9rem;
   transition: color 140ms ease-out;
 }

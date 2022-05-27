@@ -14,8 +14,6 @@ export interface WorkPreviewProps {
 export const WorkPreview = (props: WorkPreviewProps) => {
   const { data } = props;
 
-  console.log(` 💬 ~ data`, data);
-
   // Setup
   const date = new Date(data.date);
 

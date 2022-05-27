@@ -58,9 +58,6 @@ export default function () {
                 <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
                   Reviewing pull requests - a simple framework
                 </li>
-                <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
-                  ...
-                </li>
               </ul>
             </div>
           </div>
