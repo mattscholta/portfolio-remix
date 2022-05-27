@@ -5,9 +5,9 @@ export const UsesHardware = () => {
   const storage = `https://www.amazon.com/gp/product/B01MRSRQLA`;
   const disks = `https://www.amazon.com/gp/product/B01AV1697A`;
   const desk = `https://www.amazon.com/gp/product/B07HJJLLML`;
-  const keyboard = `https://www.apple.com/shop/product/MLA22B/A/magic-keyboard-us-english`;
+  const keyboard = `https://www.apple.com/shop/product/MK2A3LL/A/magic-keyboard-us-english`;
   const headphones = `https://www.amazon.com/Bose-QuietComfort-Wireless-Headphones-Cancelling/dp/B0756CYWWD`;
-  const mouse = `https://www.apple.com/shop/product/MLA02LL/A/magic-mouse-2-silver`;
+  const mouse = `https://www.apple.com/shop/product/MMMQ3AM/A/magic-mouse-black-multi-touch-surface`;
 
   const linkProps = {
     target: "_blank",

@@ -46,10 +46,10 @@ export const experience: Experience[] = [
     `,
     // <p>One year in and we've accomplished so much. Here are a few milestones worth mentioning.</p>
     highlights: [
-      `0% - 80% Docker(ized) stack and development workflow`,
-      `Introduced GraphQL and strongly (generated) typings across services`,
+      `0% - 80% Containerized stack and development workflow`,
+      `Introduced GraphQL and strongly types across services`,
       `Delivered a full rebuild & rebrand of the Python + Django website to NextJS`,
-      `Survey Framework, CSS Style Guide, Monorepo, Unit & E2E Testing, and more`
+      `Survey Framework, CSS Style Guide, Monorepo, Unit/E2E Testing, and more`
     ],
     image: `https://haldi.com/favicon.ico`,
     tags: [
@@ -132,7 +132,8 @@ export const experience: Experience[] = [
     dateRange: [new Date(2010, 7, 1), new Date(2011, 11, 1)],
     description: `<p>
       Joining Lift Agency was a conscious decision to move away from any
-      form of a "Design" related role and focus on "Engineering".
+      form of a "Design" related role and focus on "Engineering". At the time
+      jQuery was the tool of choice and browser support/hacks was an art form.
     </p>`,
     highlights: [
       `Wrote the Charter Checkout system and client side validation flow`,
@@ -141,13 +142,14 @@ export const experience: Experience[] = [
     ],
     image: "https://liftagency.co/favicon.ico",
     tags: [
+      `ActionScript 3.0`,
+      "Adobe Flash",
       "CSS",
-      "HTML",
-      "JQuery",
-      "Javascript",
       "Development",
       "Git",
-      "Adobe Flash",
+      "HTML",
+      "Javascript",
+      "jQuery",
       "PHP"
     ],
     title: `Interactive Developer`
@@ -172,7 +174,7 @@ export const experience: Experience[] = [
       `Adobe Photoshop`,
       "CSS",
       "HTML",
-      "JQuery",
+      "PHP",
       "Prototyping"
     ],
     title: `Graphic Designer`
@@ -189,17 +191,19 @@ export const experience: Experience[] = [
     </p>`,
     highlights: [
       `Management of the APAC Ronald McDonald House Charity web domain`,
-      `Development of Flash media across 3-5 languages and varying dimensions`,
+      `Design & development of interative Flash media across, across 3-5 languages`,
       `Speaker: New York, non-profit meetup re: Using social networking to enhance brand awareness`
     ],
     // image: "https://www.iwgroup.agency/favicon.ico",
     tags: [
+      `ActionScript 2.0`,
+      `ActionScript 3.0`,
       "Adobe Flash",
       "Adobe Illustrator",
       "Adobe Photoshop",
       "CSS",
       "HTML",
-      "JQuery"
+      "jQuery"
     ],
     title: `Interactive Designer/Developer`
   },
@@ -209,14 +213,16 @@ export const experience: Experience[] = [
     date: `Oct 2007 - Aug 2008`,
     dateRange: [new Date(2007, 10, 1), new Date(2008, 8, 1)],
     description: `<p>
-      As with any startup we tend to wear many hats, and this being my first professional / non-freelance position I took every opportunity I could to be involved.
+      As with any startup we tend to wear many hats, and this being my
+      first professional / non-freelance position I took every opportunity
+      I could to be involved.
     </p>`,
     highlights: [
       `Implemented and managed the video encoding/transcoding processes`,
       `Balancing speed/quality settings across multiple outputs for varying use-cases`,
-      `Responsible for production of flash components and banners used on domains`,
       `Development of custom branded, Flash video players for use on partner domains`,
-      `Partners: Amazon, TiVo, ASPCA, The Weather Channel, and many others`
+      `Partners include; TiVo, ASPCA, The Weather Channel, and others`,
+      `Development of interactive Flash components and banners used on site`
     ],
     // image: "https://www.iwgroup.agency/favicon.ico",
     tags: [
@@ -225,8 +231,8 @@ export const experience: Experience[] = [
       `Adobe Photoshop`,
       "CSS",
       `HTML`,
-      `video encoding`,
-      `video transcoding`
+      `Video encoding`,
+      `Video transcoding`
     ],
     title: `Multi-Media Production Artist`
   }

@@ -12,7 +12,7 @@
   .custom-bg-gradient,
   .light .custom-bg-gradient {
     /* @apply from-[hsla(0, 100%, 50%, 1)] to-[hsla(217, 91%, 60%, 1)] bg-gradient-to-l; */
-    @apply bg-gradient-to-tr from-color-primary to-blue-500 text-color-copy;
+    @apply bg-gradient-to-tr from-color-primary to-blue-500;
     animation: gradient var(--duration-text) ease infinite;
     background-size: 400% 400%;
   }

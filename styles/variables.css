@@ -39,6 +39,7 @@
   --color-primary: #f00;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background-transparent: rgb(0 0 0 / 85%);
@@ -95,6 +96,7 @@ html.dark {
 
   --color-primary: #f97316;
 }
+*/
 
 @keyframes gradient {
   0% {

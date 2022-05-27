@@ -1,10 +1,17 @@
 import { useState } from "react";
-import type { LinksFunction, MetaFunction } from "remix";
+import {
+  LinksFunction,
+  LoaderFunction,
+  MetaFunction,
+  useLoaderData
+} from "remix";
 
 import { experience as data, social } from "~/data/resume";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { Experience } from "~/components/Experience";
 import { SocialLink } from "~/components/SocialLink";
+import { BASE_URL } from "~/config/settings.server";
+import { copyTextToClipboard } from "~/utils/clipboard";
 
 import styles from "~/styles/resume.css";
 
@@ -15,6 +22,10 @@ export const links: LinksFunction = () => [
     rel: "stylesheet"
   }
 ];
+
+export const loader: LoaderFunction = () => {
+  return { url: BASE_URL };
+};
 
 export const meta: MetaFunction = () => {
   const year = new Date().getFullYear();
@@ -29,40 +40,57 @@ export default function () {
   // Hooks
   // const minValue = data.length;
   const minValue = 3;
+  const [copied, setCopied] = useState(false);
   const [shown, setShown] = useState(minValue);
+  const { url } = useLoaderData();
+
+  console.log(` 💬 ~ url`, url);
 
   // Setup
   const experience = data.slice(0, shown);
   const year = new Date().getFullYear();
 
   // Handlers
+  const onClick = async () => {
+    setCopied(true);
+    copyTextToClipboard(`${url}/resume`);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 3000);
+  };
+
   const onToggleExp = () => {
     setShown(shown === minValue ? data.length : minValue);
   };
 
   return (
-    <div className="m-auto max-w-5xl pt-10">
+    <div className="m-auto max-w-5xl md:pt-10">
       <div className="flex flex-col gap-20 px-4 md:flex-row md:px-0">
         <aside className="md:w-1/5">
           <div className="sticky top-16">
-            <img
-              alt={SITE_AUTHOR}
-              className="custom-bg-gradient overflow-hidden rounded-full p-1"
-              height="auto"
-              loading="eager"
-              src="/images/assets/matt-scaled.webp"
-              // src="/jax-sword.webp"
-              width="auto"
-            />
-
-            <div className="mt-14 flex flex-col gap-2 p-4">
-              {social.map((data) => (
-                <SocialLink data={data} key={data.title} />
-              ))}
+            <div className="flex flex-row items-center justify-center gap-6 md:flex-col">
+              <img
+                alt={SITE_AUTHOR}
+                className="custom-bg-gradient max-h-48 overflow-hidden rounded-full p-1"
+                height="auto"
+                loading="eager"
+                src="/images/assets/matt-scaled.webp"
+                // src="/jax-sword.webp"
+                width="auto"
+              />
+              <div className="flex flex-shrink-0 flex-col gap-2 p-4">
+                {social.map((data) => (
+                  <SocialLink data={data} key={data.title} />
+                ))}
+              </div>
             </div>
             <div className="print:hidden">
-              <button className="ui-btn custom-bg-gradient mt-8 w-full whitespace-nowrap rounded-2xl py-2 px-4 font-semibold text-white">
-                PDF Download
+              <button
+                className="ui-btn custom-bg-gradient mt-8 w-full whitespace-nowrap rounded-2xl py-2 px-4 text-sm font-normal text-white"
+                onClick={onClick}
+              >
+                {copied ? "Copied to clipboard ✓" : "Copy Link"}
               </button>
             </div>
           </div>
@@ -70,7 +98,7 @@ export default function () {
 
         <div className="resume-sections mb-20 flex flex-1 flex-col gap-10">
           <section>
-            <h1 className="uppercase- mb-10 text-4xl font-extrabold">
+            <h1 className="uppercase- mb-10 text-2xl font-extrabold md:text-4xl">
               <span className="sr-only">The {year} online resume of </span>
               {SITE_AUTHOR}
             </h1>
@@ -78,7 +106,7 @@ export default function () {
 
             <div className="flex items-center gap-10">
               <p>
-                <span className="mr-1">👨‍💻</span> Is a Software Engineer whose
+                <span className="mr-1">👨‍💻</span> A Software Engineer whose
                 passion lies in creating <b>quality code</b> written{" "}
                 <b>for humans</b>, unlocking <b>developer productivity</b>, and
                 creating <b>delightful</b> user and developer <b>experiences</b>
@@ -90,7 +118,7 @@ export default function () {
           {/* EXPERIENCE */}
           <section>
             <div>
-              <h2 className="py-8 text-xl">Experience</h2>
+              <h2 className="py-8 text-lg md:text-xl">Experience</h2>
               <div className="mb-8 border-t border-solid border-color-border" />
             </div>
 
@@ -112,7 +140,7 @@ export default function () {
           {/* PROFICIENCIES
           <section>
             <div>
-              <h2 className="py-8 text-xl">Proficiencies</h2>
+              <h2 className="py-8 text-lg md:text-xl">Proficiencies</h2>
               <div className="mb-8 border-t border-solid border-color-border" />
             </div>
 
@@ -171,7 +199,7 @@ export default function () {
           {/* EDUCATION */}
           <section>
             <div>
-              <h2 className="py-8 text-xl">Education</h2>
+              <h2 className="py-8 text-lg md:text-xl">Education</h2>
               <div className="mb-8 border-t border-solid border-color-border" />
             </div>
 
@@ -196,11 +224,11 @@ export default function () {
                 Industrial Designers Society of America 2004 - 2007
               </li>
               <li className="my-1">
-                Teaching Assistant: Automated Manufacturing Systems
+                Teaching Assistant: Automated Manufacturing Sys.
               </li>
               <li className="my-1">Teaching Assistant: Metals Manufacturing</li>
               <li className="my-1">
-                Teaching Assistant: Drafting and Sketching for Design
+                Teaching Assistant: Drafting &amp; Sketching for Design
               </li>
             </ul>
           </section>

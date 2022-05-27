@@ -32,7 +32,7 @@ export const Experience = (props: ExperienceProps) => {
         <div className="flex">
           <h3 className="flex items-center gap-2 font-bold">
             <a
-              className="underline-offset-4 hover:underline"
+              className="underline-offset-4 hover:underline print:text-color-copy-dark"
               dangerouslySetInnerHTML={{ __html: company }}
               href={companyUrl}
               rel="noreferrer"

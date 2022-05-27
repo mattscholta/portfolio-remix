@@ -18,28 +18,11 @@ export default function () {
   const data = useLoaderData<LoaderData>();
 
   // Setup
-  const current = data.filter((node) => node.current);
-  const recent = data.filter((node) => !node.current);
+  const _current = data.filter((node) => node.current);
+  const _recent = data.filter((node) => !node.current);
 
   return (
     <>
-      <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
-        <Hero
-          className="py-20 md:py-40"
-          copy="Currently"
-          highlight="What I'm working on"
-          tag="h1"
-        />
-      </section>
-
-      <section>
-        <div className="my-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {current.map((node) => (
-            <WorkPreview data={node} key={node.slug} />
-          ))}
-        </div>
-      </section>
-
       <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
         <Hero
           className="py-20 md:py-40"
@@ -51,7 +34,7 @@ export default function () {
 
       <section>
         <div className="my-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {recent.map((node) => (
+          {data.map((node) => (
             <WorkPreview data={node} key={node.slug} />
           ))}
         </div>
