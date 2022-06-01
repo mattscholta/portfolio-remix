@@ -3,13 +3,12 @@ import type { LinksFunction, MetaFunction } from "remix";
 
 import { experience as data, social } from "~/data/resume";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
-import { Experience } from "~/components/Experience";
 import { SocialLink } from "~/components/SocialLink";
 import { copyTextToClipboard } from "~/utils/clipboard";
-
-import styles from "~/styles/resume.css";
-import { Proficiencies } from "~/components/Profeciencies";
+// import { Proficiencies } from "~/components/Profeciencies";
 import { Education } from "~/components/Education";
+import { Experience } from "~/components/Experience";
+import styles from "~/styles/resume.css";
 
 export const links: LinksFunction = () => [
   {
@@ -56,7 +55,7 @@ export default function () {
   return (
     <div className="m-auto max-w-5xl py-10 md:py-20">
       <div className="flex flex-col gap-20 px-4 md:flex-row md:px-0">
-        <aside className="md:w-1/5">
+        <aside className="print:hidden md:w-1/5">
           <div className="sticky top-32">
             <div className="flex flex-row items-center justify-center gap-6 md:flex-col">
               <img
@@ -93,7 +92,7 @@ export default function () {
               <span className="sr-only">The {year} online resume of </span>
               {SITE_AUTHOR}
             </h1>
-            <div className="mb-8 border-t border-solid border-color-border" />
+            <div className="mb-8 border-t border-solid border-color-border print:hidden" />
 
             <div className="flex items-center gap-10">
               <p>
@@ -105,30 +104,8 @@ export default function () {
               </p>
             </div>
           </section>
-
-          {/* EXPERIENCE */}
-          <section>
-            <div>
-              <h2 className="py-8 text-lg md:text-xl">Experience</h2>
-              <div className="mb-8 border-t border-solid border-color-border" />
-            </div>
-
-            <div className="mb-10 flex flex-col gap-10">
-              {experience.map((exp) => (
-                <Experience experience={exp} key={exp.title} />
-              ))}
-            </div>
-            <div className="print:hidden">
-              <button
-                className="m-10 mx-auto block rounded-2xl border border-color-border bg-color-background-light py-2 px-4 font-font-sans-serif text-xs font-bold uppercase"
-                onClick={onToggleExp}
-              >
-                {shown === minValue ? "Show more" : "Show less"}
-              </button>
-            </div>
-          </section>
-
-          <Proficiencies />
+          <Experience />
+          {/* <Proficiencies /> */}
           <Education />
         </div>
       </div>

@@ -1,4 +1,11 @@
 export const UsesSoftware = () => {
+  // Setup
+  const linkProps = {
+    className: "font-font-serif text-base text-color-copy-light",
+    rel: "noreferrer",
+    target: "_blank"
+  };
+
   return (
     <section className="m-auto max-w-5xl px-4 py-20">
       <h2 className="mb-8 text-3xl">
@@ -17,10 +24,7 @@ export const UsesSoftware = () => {
       <div className="my-10 grid grid-cols-2 gap-10">
         <div>
           <h3 className="my-4 text-xl">
-            <a
-              className="font-font-serif text-base text-color-copy-light"
-              href="https://code.visualstudio.com/insiders"
-            >
+            <a {...linkProps} href="https://code.visualstudio.com/insiders">
               <span className="mr-2">🧰</span> Visual Studio Code
             </a>
           </h3>
@@ -33,10 +37,7 @@ export const UsesSoftware = () => {
 
         <div>
           <h3 className="my-4 text-xl">
-            <a
-              className="font-font-serif text-base text-color-copy-light"
-              href="https://iterm2.com/"
-            >
+            <a {...linkProps} href="https://iterm2.com/">
               <span className="mr-2">$</span> Iterm2
             </a>
           </h3>
@@ -50,7 +51,7 @@ export const UsesSoftware = () => {
         <div>
           <h3 className="my-4 text-xl">
             <a
-              className="font-font-serif text-base text-color-copy-light"
+              {...linkProps}
               href="https://www.docker.com/products/docker-desktop"
             >
               <span className="mr-2">🐳</span> Docker Desktop
@@ -66,10 +67,7 @@ export const UsesSoftware = () => {
         <div>
           <h3 className="my-4 text-xl">
             <span className="mr-2">🎨</span>{" "}
-            <a
-              className="font-font-serif text-base text-color-copy-light"
-              href="https://www.figma.com/"
-            >
+            <a {...linkProps} href="https://www.figma.com/">
               Figma
             </a>
           </h3>
