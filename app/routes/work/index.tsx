@@ -54,7 +54,7 @@ export default function () {
       <section className="mx-auto md:max-w-6xl">
         <div className="my-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           {current.map((node) => (
-            <WorkPreview data={node} key={node.slug} />
+            <WorkPreview current={true} data={node} key={node.slug} />
           ))}
         </div>
       </section>
@@ -68,10 +68,12 @@ export default function () {
         />
       </section>
 
-      <section>
-        <div className="my-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {/* <section> */}
+      {/* <div className="my-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"> */}
+      <section className="mx-auto md:max-w-6xl">
+        <div className="my-20 grid grid-cols-1 gap-16 p-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
           {recent.map((node) => (
-            <WorkPreview data={node} key={node.slug} />
+            <WorkPreview current={false} data={node} key={node.slug} />
           ))}
         </div>
       </section>

@@ -36,8 +36,9 @@ const getPosts = gql`
       }
     }
 
-    posts(orderBy: createdAt_DESC) {
-      # posts(stage: DRAFT) {
+    # posts(stage: DRAFT) {
+
+    posts(orderBy: createdAt_ASC) {
       content {
         html
       }

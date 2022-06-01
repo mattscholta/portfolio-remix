@@ -3,6 +3,7 @@ import { Link } from "remix";
 import type { Portfolio } from "~/routes/api/work";
 
 export interface WorkPreviewProps {
+  current: boolean;
   data: Portfolio;
 }
 
@@ -12,7 +13,7 @@ export interface WorkPreviewProps {
  * for all of these past projects so I need to try and focus on the content 🤔
  */
 export const WorkPreview = (props: WorkPreviewProps) => {
-  const { data } = props;
+  const { current = false, data } = props;
 
   // Setup
   const date = new Date(data.date);
@@ -36,8 +37,8 @@ export const WorkPreview = (props: WorkPreviewProps) => {
 
       <h3 className="m-0 font-font-serif text-xl font-bold">{data.title}</h3>
       <div className="mt-1 mb-6 flex items-baseline gap-2 font-medium text-color-copy-dark">
-        <span>{date.getFullYear()}</span>
-        <span className="font-light">|</span>
+        {!current && <span>{date.getFullYear()}</span>}
+        {!current && <span className="font-light">|</span>}
         <span>{data.company}</span>
       </div>
 

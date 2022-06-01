@@ -1,7 +1,14 @@
+import { Hero } from "~/components/Hero";
+
 export default () => {
   return (
-    <div>
-      <h3 className="text-3xl">Sandbox Index Route</h3>
-    </div>
+    <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
+      <Hero
+        className="mx-auto max-w-6xl py-20 md:py-40"
+        copy="Developer sandbox 🏖️"
+        highlight="A place to explore"
+        tag="h1"
+      />
+    </section>
   );
 };

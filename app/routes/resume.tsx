@@ -8,6 +8,8 @@ import { SocialLink } from "~/components/SocialLink";
 import { copyTextToClipboard } from "~/utils/clipboard";
 
 import styles from "~/styles/resume.css";
+import { Proficiencies } from "~/components/Profeciencies";
+import { Education } from "~/components/Education";
 
 export const links: LinksFunction = () => [
   {
@@ -126,101 +128,8 @@ export default function () {
             </div>
           </section>
 
-          {/* PROFICIENCIES
-          <section>
-            <div>
-              <h2 className="py-8 text-lg md:text-xl">Proficiencies</h2>
-              <div className="mb-8 border-t border-solid border-color-border" />
-            </div>
-
-            <p className="text-sm">
-              Not saying I am an "expert" in anything, that's a high bar IMHO.
-              However, these are the tools I use day-in and day-out to make
-              ideas come to life.
-            </p>
-
-            <div className="mt-8 grid grid-cols-1 gap-8 p-1 text-sm md:grid-cols-2">
-              <div className="rounded-md border bg-color-background-light p-4 shadow-md">
-                <h3 className="text-lg text-color-copy-light">DevOps</h3>
-              </div>
-              <div className="rounded-md border bg-color-background-light p-4 shadow-md">
-                <h3 className="text-lg text-color-copy-light">Testing</h3>
-                Redux, REST, Rollup, SQL / MySQL, Sketch, Swarm, Tailwind CSS,
-                TypeScript, Webpack,
-              </div>
-              <div className="rounded-md border bg-color-background-light p-4 shadow-md">
-                <h3 className="text-lg text-color-copy-light">Testing</h3>
-                HTML, Javascript, JWT, Kubernetes, Lerna, NextJS, Node.js,
-                NoSQL, npm, PostCSS, Postgres, React, Remix 🤩, RecoilJS,
-              </div>
-              <div className="rounded-md border bg-color-background-light p-4 shadow-md">
-                <h3 className="text-lg text-color-copy-light">Design</h3>
-                Adobe; you name it I've likely used it, Sketch, Figma
-              </div>
-              <div className="rounded-md border bg-color-background-light p-4 shadow-md">
-                <h3 className="text-lg text-color-copy-light">Testing</h3>
-                Apollo, Agile, AWS, Babel, CSS, Docker, ElasticSearch, Express,
-                Figma, Google Analytics, Google Cloud, Google Tag Manger,
-                Git/GitHub, GraphQL,
-              </div>
-              <div className="rounded-md border bg-color-background-light p-4 shadow-md">
-                <h3 className="text-lg text-color-copy-light">Testing</h3>
-                Apollo, Agile, AWS, Babel, CSS, Docker, ElasticSearch, Express,
-                Figma, Google Analytics, Google Cloud, Google Tag Manger,
-                Git/GitHub, GraphQL,
-              </div>
-              <div className="rounded-md border bg-color-background-light p-4 shadow-md">
-                <h3 className="text-lg text-color-copy-light">Testing</h3>
-                Apollo, Agile, AWS, Babel, CSS, Docker, ElasticSearch, Express,
-                Figma, Google Analytics, Google Cloud, Google Tag Manger,
-                Git/GitHub, GraphQL,
-              </div>
-              <div className="rounded-md border bg-color-background-light p-4 shadow-md">
-                <h3 className="text-lg text-color-copy-light">Testing</h3>
-                Apollo, Agile, AWS, Babel, CSS, Docker, ElasticSearch, Express,
-                Figma, Google Analytics, Google Cloud, Google Tag Manger,
-                Git/GitHub, GraphQL,
-              </div>
-            </div>
-          </section>
-          */}
-
-          {/* EDUCATION */}
-          <section>
-            <div>
-              <h2 className="py-8 text-lg md:text-xl">Education</h2>
-              <div className="mb-8 border-t border-solid border-color-border" />
-            </div>
-
-            <h3>San Francisco State University</h3>
-            <h4 className="font-normal">
-              Industrial Design{" "}
-              <em className="text-sm text-color-copy-light">(incomplete)</em>
-            </h4>
-
-            <div className="mt-8">
-              <p className="text-sm">
-                A late change of major from <b>Mechanical Engineering</b> to{" "}
-                <b>Industrial Design</b> and the lack of available courses I
-                freelanced and went part-time over the course of several years
-                doing graphic/web design, and web development.
-              </p>
-            </div>
-
-            <ul className="my-4 ml-4 list-disc text-sm font-light">
-              <li className="my-1">
-                {/* <a href="https://www.idsa.org/">IDSA:</a>  */}
-                Industrial Designers Society of America 2004 - 2007
-              </li>
-              <li className="my-1">
-                Teaching Assistant: Automated Manufacturing Sys.
-              </li>
-              <li className="my-1">Teaching Assistant: Metals Manufacturing</li>
-              <li className="my-1">
-                Teaching Assistant: Drafting &amp; Sketching for Design
-              </li>
-            </ul>
-          </section>
+          <Proficiencies />
+          <Education />
         </div>
       </div>
     </div>

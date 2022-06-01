@@ -43,15 +43,13 @@ export default function () {
           />
         </div>
       </section>
-
-      <section className="bg-color-background-dark py-20 text-color-background-light">
+      <section className="bg-color-background-dark px-8 py-20 text-color-background-light md:px-0">
         <blockquote className="mx-auto my-20 max-w-4xl text-2xl font-normal md:my-40 md:text-3xl">
           Passionate about <b>quality code</b> written <b>for humans</b>,
           unlocking <b>developer productivity</b>, and creating a delightful{" "}
           <b>user experience</b>.
         </blockquote>
       </section>
-
       <AboutAmbitions />
       <section className="bg-color-background-dark py-20 text-color-background-light">
         <Technology />

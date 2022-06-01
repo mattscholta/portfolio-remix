@@ -4,11 +4,24 @@ exports[`Header Component > should render our footer 1`] = `
 <body>
   <div>
     <header
-      class=" header overflow-hidden print:hidden"
+      class="header overflow-hidden print:hidden closed"
     >
       <div
-        class="mx-auto flex h-full w-full max-w-5xl items-center justify-evenly  md:text-sm"
+        class="mx-auto flex h-full w-full max-w-5xl items-center justify-evenly md:text-sm"
       >
+        <button
+          class="header-logo ml-4 gap-2 px-4 md:hidden"
+          type="button"
+        >
+          <img
+            alt=""
+            class="max-h-4"
+            src="/images/svg/menu.svg"
+          />
+        </button>
+        <div
+          class="flex-1 md:hidden"
+        />
         <a
           aria-current="page"
           class="header-logo ml-4 gap-2 px-4 active"
@@ -37,7 +50,7 @@ exports[`Header Component > should render our footer 1`] = `
           class="flex-1"
         />
         <div
-          class="mr-8 flex gap-10 font-font-monospace"
+          class="flex h-full flex-col font-font-monospace md:flex-row"
         >
           <a
             aria-current="page"

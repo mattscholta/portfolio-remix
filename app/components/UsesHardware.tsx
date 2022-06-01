@@ -18,7 +18,7 @@ export const UsesHardware = () => {
   const cssHardware = `flex gap-4 items-center justify-center flex-1 rounded-md border border-solid border-color-border bg-color-background-light px-4 py-8`;
 
   return (
-    <section className="m-auto max-w-5xl py-20 px-4 md:my-10">
+    <section className="m-auto max-w-6xl py-20 px-4 md:my-10">
       <h2 className="pb-8 text-3xl">
         Hardware <span className="ml-2">💻</span>
       </h2>

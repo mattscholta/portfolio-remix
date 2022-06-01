@@ -1,7 +1,6 @@
 import type { MetaFunction } from "remix";
 import { SITE_TITLE } from "~/config/constants";
 import { Hero } from "~/components/Hero";
-import { Technology } from "~/components/Technology";
 import { UsesMisc } from "~/components/UsesMisc";
 import { UsesSoftware } from "~/components/UsesSoftware";
 import { UsesHardware } from "~/components/UsesHardware";
@@ -21,12 +20,10 @@ export default function () {
           tag="h1"
         />
       </section>
-
       <UsesHardware />
-      <section className="bg-color-background-dark py-20 text-color-background-light">
-        <Technology />
+      <section className="bg-color-background-light">
+        <UsesSoftware />
       </section>
-      <UsesSoftware />
       <UsesMisc />
     </>
   );

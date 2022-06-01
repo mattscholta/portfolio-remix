@@ -1,6 +1,6 @@
 export const UsesSoftware = () => {
   return (
-    <section className="m-auto max-w-5xl px-4 py-20 md:my-10">
+    <section className="m-auto max-w-5xl px-4 py-20">
       <h2 className="mb-8 text-3xl">
         Software <span className="ml-2">👨‍💻</span>
       </h2>

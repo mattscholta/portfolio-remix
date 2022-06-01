@@ -17,7 +17,7 @@ export const Technology = () => {
   return (
     <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:flex-row md:py-20">
       <div className="basis-2/5">
-        <h2 className="mb-8 text-3xl">
+        <h2 className="mb-8 text-xl md:text-3xl">
           Technology <span className="ml-2">🧰</span>
         </h2>
 

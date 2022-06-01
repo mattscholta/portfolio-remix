@@ -46,7 +46,7 @@
   height: 100%;
   display: flex;
   justify-items: center;
-  padding: 1rem 1.4rem;
+  padding: 0.5rem;
   align-items: center;
   font-size: 0.9rem;
   transition: color 140ms ease-out;
@@ -55,6 +55,12 @@
 .header-link:hover,
 .header-link.active {
   color: var(--color-primary);
+}
+
+@screen md {
+  .header-link {
+    padding: 1rem 1.4rem;
+  }
 }
 
 .header-logo svg {
