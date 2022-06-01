@@ -1,8 +1,10 @@
 /**
- * @description tbd...
+ * @name fallbackCopyToClipboard
  * @external https://stackoverflow.com/questions/400212/how-do-i-copy-to-the-clipboard-in-javascript
+ * @description Some code taken from StackOverflow which provides modern
+ * clipboard functionality and a fallback for older browsers.
  */
-export const fallbackCopyTextToClipboard = (text: string) => {
+export const fallbackCopyToClipboard = (text: string) => {
   const textArea = document.createElement("textarea");
   textArea.value = text;
 
@@ -31,7 +33,7 @@ export const copyTextToClipboard = (text: string) => {
   console.log(`📋 copy text to Clipboard`, text);
 
   if (!navigator.clipboard) {
-    fallbackCopyTextToClipboard(text);
+    fallbackCopyToClipboard(text);
     return;
   }
 

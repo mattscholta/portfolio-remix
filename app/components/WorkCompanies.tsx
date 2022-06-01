@@ -2,8 +2,8 @@ import { data } from "~/data/companies";
 
 export const WorkCompanies = () => {
   return (
-    <section className="work-companies border-0 border-b border-t border-solid">
-      <div className="my-10 flex-1 md:my-20">
+    <section className="work-companies border-0 border-b border-solid border-b-color-border ">
+      <div className="flex-1 py-10 md:py-20">
         <h2 className="mb-10 text-center text-xl md:mb-20 md:text-4xl">
           Companies I've built things for.
         </h2>

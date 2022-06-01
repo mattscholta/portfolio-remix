@@ -21,7 +21,7 @@ export const UsesSoftware = () => {
       </p>
       */}
 
-      <div className="my-10 grid grid-cols-2 gap-10">
+      <div className="my-10 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-10">
         <div>
           <h3 className="my-4 text-xl">
             <a {...linkProps} href="https://code.visualstudio.com/insiders">

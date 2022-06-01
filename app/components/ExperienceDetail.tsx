@@ -28,7 +28,7 @@ export const ExperienceDetail = (props: ExperienceDetailProps) => {
 
   return (
     <div className="flex flex-col gap-10 md:flex-row" key={title}>
-      <div className="flex flex-col gap-2 text-base md:basis-[160px]">
+      <div className="flex flex-col gap-2 text-base print:basis-8 md:basis-[160px]">
         <div className="flex">
           <h3 className="flex items-center gap-2 font-bold">
             <a

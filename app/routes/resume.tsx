@@ -4,11 +4,11 @@ import type { LinksFunction, MetaFunction } from "remix";
 import { experience as data, social } from "~/data/resume";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { SocialLink } from "~/components/SocialLink";
-import { copyTextToClipboard } from "~/utils/clipboard";
 // import { Proficiencies } from "~/components/Profeciencies";
 import { Education } from "~/components/Education";
 import { Experience } from "~/components/Experience";
 import styles from "~/styles/resume.css";
+import { useClipboard } from "~/hooks/useClipboard";
 
 export const links: LinksFunction = () => [
   {
@@ -29,27 +29,20 @@ export const meta: MetaFunction = () => {
 
 export default function () {
   // Hooks
-  // const minValue = data.length;
-  const minValue = 3;
+  const { onCopy } = useClipboard();
   const [copied, setCopied] = useState(false);
-  const [shown, setShown] = useState(minValue);
 
   // Setup
-  const experience = data.slice(0, shown);
   const year = new Date().getFullYear();
 
   // Handlers
   const onClick = async () => {
     setCopied(true);
-    copyTextToClipboard(`${window.location.origin}/resume`);
+    onCopy(`${window.location.origin}/resume`);
 
     setTimeout(() => {
       setCopied(false);
     }, 3000);
-  };
-
-  const onToggleExp = () => {
-    setShown(shown === minValue ? data.length : minValue);
   };
 
   return (
@@ -93,7 +86,6 @@ export default function () {
               {SITE_AUTHOR}
             </h1>
             <div className="mb-8 border-t border-solid border-color-border print:hidden" />
-
             <div className="flex items-center gap-10">
               <p>
                 <span className="mr-1">👨‍💻</span> A Software Engineer whose

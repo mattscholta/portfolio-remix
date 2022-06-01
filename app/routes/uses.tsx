@@ -21,7 +21,7 @@ export default function () {
         />
       </section>
       <UsesHardware />
-      <section className="bg-color-background-light">
+      <section className="border-0 border-t border-solid border-t-color-border bg-color-background-light">
         <UsesSoftware />
       </section>
       <UsesMisc />
