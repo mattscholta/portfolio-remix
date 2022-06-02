@@ -70,7 +70,7 @@ export default function () {
                     tags={["one", "two"]}
                   />
                 </div>
-                <UserCard
+                <AppUserCard
                   copy="<b>Role:</b> Staff Engineer @thredUP"
                   image="/images/assets/matt-scaled.webp"
                 />

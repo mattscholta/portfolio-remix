@@ -1,11 +1,12 @@
 export interface Data {
-  company: string;
   className: string;
+  company: string;
   image: string;
   url: string;
 }
 
 export const myDescriptions: Record<string, string> = {
+  default: `This is a <b>non</b> exhaustive list of tools and technologies I use to make products come to life. I'm also very comfortable pushing pixels in Figma, Adobe, Video, and 3D modelling.`,
   TypeScript: `I simply can't say enough good things about TypeScript. As with anything new, there will be hurdles, but once overcome you'll move faster and more confidently. <b>Not writing TypeScript simply is not an option.</b>.`,
   Remix: `Remix is a full stack web framework that lets you focus on the user interface and work back through web standards to deliver a fast, slick, and resilient user experience. People are gonna love using your stuff.`,
   React: `The world of <b>"frontend"</b> and <b>"web"</b> development have never been better and React is a great example. React is performant, easy to use, and encourages great reusable patterns.`,
@@ -22,6 +23,7 @@ export const myDescriptions: Record<string, string> = {
 };
 
 export const data: Record<string, string> = {
+  default: `This is a <b>non</b> exhaustive list of tools and technologies I use to make products come to life. I'm also very comfortable pushing pixels in Figma, Adobe, Video, and 3D modelling.`,
   TypeScript: `TypeScript is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. It is designed for the development of large applications and transpiles to JavaScript.`,
   Remix: `Remix is a full stack web framework that lets you focus on the user interface and work back through web standards to deliver a fast, slick, and resilient user experience. People are gonna love using your stuff.`,
   React: `React is a free and open-source front-end JavaScript library for building user interfaces based on UI components. It is maintained by Meta and a community of individual developers and companies.`,

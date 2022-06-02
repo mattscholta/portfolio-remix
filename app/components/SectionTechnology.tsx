@@ -6,15 +6,15 @@ export interface SectionTechnologyProps {}
 
 /**
  * @name SectionTechnology
- * @description tbd...
+ * @description Section with pills that toggles a bit more information
  */
 export const SectionTechnology = (_props: SectionTechnologyProps) => {
-  const desc = `This is a <b>non</b> exhaustive list of tools and technologies I use to make products come to life. I'm also very comfortable pushing pixels in Figma, Adobe, Video, and 3D modelling.`;
-
   // Hooks
   const refDescription = useRef<HTMLQuoteElement>(null);
-  const [heading, setHeading] = useState("Stack");
-  const [description, setDescription] = useState(desc);
+  const [heading, setHeading] = useState<string>();
+
+  // Setup
+  const description = heading ? data[heading] : data.default;
 
   return (
     <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:flex-row md:py-20">
@@ -33,15 +33,11 @@ export const SectionTechnology = (_props: SectionTechnologyProps) => {
                   active
                 })}
                 key={key}
-                type="button"
                 onClick={() => {
-                  setHeading(key);
-                  setDescription(data[key]);
+                  const newValue = heading === key ? undefined : key;
+                  setHeading(newValue);
                 }}
-                onMouseEnter={() => {
-                  setHeading(key);
-                  setDescription(data[key]);
-                }}
+                type="button"
               >
                 {key}
               </button>

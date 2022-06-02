@@ -1,14 +1,14 @@
 import classnames from "classnames";
 import { SITE_AUTHOR } from "~/config/constants";
 
-export interface UserCardProps {
+export interface AppUserCardProps {
   alt?: string;
   className?: string;
   copy: string;
   image: string;
 }
 
-export const UserCard = (props: UserCardProps) => {
+export const AppUserCard = (props: AppUserCardProps) => {
   const { alt, className, copy, image } = props;
 
   return (

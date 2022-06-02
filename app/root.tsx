@@ -57,10 +57,11 @@ export default function App() {
   // Setup
   const { baseUrl, canonical, googleAnalytics, theme } = loader;
   const isDark = theme === "dark";
-  // const favicon = isDark ? "/favicon-dark.png" : "/favicon.png";
   const favicon = "/images/svg/logo.svg";
   const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
   const metadata = getMetaTags(baseUrl, isDark);
+
+  // const favicon = isDark ? "/favicon-dark.png" : "/favicon.png";
 
   // Styles
   const cssComponent = classnames(theme ?? "", isDark);
@@ -76,34 +77,12 @@ export default function App() {
           <meta {...meta} key={meta.name ?? meta.property ?? index} />
         ))}
         <Meta />
-
         <link href={canonical} rel="canonical" />
         <link href={favicon} rel="apple-touch-icon" sizes="48x48" />
         <link href={favicon} rel="favicon" />
         <link href={favicon} rel="icon" type="image/svg+xml" />
         <link href={favicon} rel="mask-icon" type="image/svg+xml" />
         <link href={manifest} rel="manifest" />
-
-        {/*
-        <link
-          href="https://github.githubassets.com/pinned-octocat.svg"
-          rel="mask-icon"
-          color="#000000"
-        />
-        <link
-          className="js-site-favicon"
-          href="https://github.githubassets.com/favicons/favicon.png"
-          rel="alternate icon"
-          type="image/png"
-        />
-        <link
-          className="js-site-favicon"
-          href="https://github.githubassets.com/favicons/favicon.svg"
-          rel="icon"
-          type="image/svg+xml"
-        />
-        */}
-
         <Links />
       </head>
       <body>
