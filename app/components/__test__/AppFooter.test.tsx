@@ -1,13 +1,13 @@
 import { expect, test } from "vitest";
 import { render } from "@testing-library/react";
 
-import { Footer } from "../Footer";
+import { AppFooter } from "../AppFooter";
 import { MemoryRouter } from "react-router";
 
-describe("Footer Component", () => {
+describe("AppFooter Component", () => {
   const component = render(
     <MemoryRouter>
-      <Footer />
+      <AppFooter />
     </MemoryRouter>
   );
 

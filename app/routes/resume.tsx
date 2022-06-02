@@ -1,12 +1,11 @@
 import { useState } from "react";
 import type { LinksFunction, MetaFunction } from "remix";
 
-import { experience as data, social } from "~/data/resume";
+import { social } from "~/data/resume";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
-import { SocialLink } from "~/components/SocialLink";
-// import { Proficiencies } from "~/components/Profeciencies";
-import { Education } from "~/components/Education";
-import { Experience } from "~/components/Experience";
+import { AppSocialLink } from "~/components/AppSocialLink";
+import { SectionEducation } from "~/components/SectionEducation";
+import { SectionExperience } from "~/components/SectionExperience";
 import styles from "~/styles/resume.css";
 import { useClipboard } from "~/hooks/useClipboard";
 
@@ -62,7 +61,7 @@ export default function () {
               />
               <div className="flex flex-shrink-0 flex-col gap-2 p-4">
                 {social.map((data) => (
-                  <SocialLink data={data} key={data.title} />
+                  <AppSocialLink data={data} key={data.title} />
                 ))}
               </div>
             </div>
@@ -96,9 +95,9 @@ export default function () {
               </p>
             </div>
           </section>
-          <Experience />
-          {/* <Proficiencies /> */}
-          <Education />
+          <SectionExperience />
+          {/* <SectionProficiencies /> */}
+          <SectionEducation />
         </div>
       </div>
     </div>

@@ -1,6 +1,8 @@
 import { data } from "~/data/companies";
 
-export const WorkCompanies = () => {
+export interface SectionCompaniesProps {}
+
+export const SectionCompanies = () => {
   return (
     <section className="work-companies border-0 border-b border-solid border-b-color-border ">
       <div className="flex-1 py-10 md:py-20">

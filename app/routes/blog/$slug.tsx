@@ -1,12 +1,10 @@
 import { useLoaderData } from "remix";
 import type { MetaFunction } from "remix";
 
-import { Hero } from "~/components/Hero";
-import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
+import { AppHero } from "~/components/AppHero";
+import { SITE_TITLE } from "~/config/constants";
 import type { LoaderData } from "~/routes/api/blog/$slug";
 import { loader } from "~/routes/api/blog/$slug";
-import { UserCard } from "~/components/UserCard";
-import { Tags } from "~/components/Tags";
 
 export { loader };
 
@@ -30,7 +28,7 @@ export default function () {
   return (
     <>
       <section className="mx-auto max-w-6xl">
-        <Hero
+        <AppHero
           className="py-20 md:py-40"
           copy={date}
           highlight={data.title}
@@ -67,7 +65,7 @@ export default function () {
               <div className="flex flex-col gap-10 border-0 md:p-4">
                 <div>
                   <h3 className="mb-4">Tags:</h3>
-                  <Tags
+                  <AppTags
                     classNameTag="border rounded-md px-2 py-1 text-sm bg-color-background-light"
                     tags={["one", "two"]}
                   />

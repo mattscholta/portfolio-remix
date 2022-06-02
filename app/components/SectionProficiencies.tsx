@@ -1,6 +1,6 @@
-export interface ProficienciesProps {}
+export interface SectionProficienciesProps {}
 
-export const Proficiencies = () => {
+export const SectionProficiencies = () => {
   return (
     <section>
       <div>

@@ -2,12 +2,12 @@ import { expect, test } from "vitest";
 import { MemoryRouter } from "react-router-dom";
 import { render } from "@testing-library/react";
 
-import { Header } from "../Header";
+import { AppHeader } from "../AppHeader";
 
-describe("Header Component", () => {
+describe("AppHeader Component", () => {
   const component = render(
     <MemoryRouter>
-      <Header />
+      <AppHeader />
     </MemoryRouter>
   );
 

@@ -1,10 +1,12 @@
 import { expect, test } from "vitest";
 import { render } from "@testing-library/react";
 
-import { Hero } from "../Hero";
+import { AppHero } from "../AppHero";
 
-describe("Hero Component", () => {
-  const component = render(<Hero copy="Test Copy" highlight="The HIGHLIGHT" />);
+describe("AppHero Component", () => {
+  const component = render(
+    <AppHero copy="Test Copy" highlight="The HIGHLIGHT" tag="h2" />
+  );
 
   test("should render our Hero", () => {
     expect(component.baseElement).toMatchSnapshot();

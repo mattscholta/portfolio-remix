@@ -1,11 +1,12 @@
 import classnames from "classnames";
-export interface LogoProps {
+
+export interface AppLogoProps {
   className?: string;
   fill?: string;
   height?: number;
 }
 
-export const Logo = (props: LogoProps) => {
+export const AppLogo = (props: AppLogoProps) => {
   const { className = "", fill = "", height = 59 } = props;
 
   // Styles

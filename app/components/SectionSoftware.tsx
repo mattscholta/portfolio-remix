@@ -1,4 +1,10 @@
-export const UsesSoftware = () => {
+export interface SectionSoftwareProps {}
+
+/**
+ * @name SectionSoftware
+ * @description tbd...
+ */
+export const SectionSoftware = () => {
   // Setup
   const linkProps = {
     className: "font-font-serif text-base text-color-copy-light",

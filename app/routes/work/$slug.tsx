@@ -1,7 +1,7 @@
-import { Link, useLoaderData } from "remix";
+import { useLoaderData } from "remix";
 import type { MetaFunction } from "remix";
 
-import { Hero } from "~/components/Hero";
+import { AppHero } from "~/components/AppHero";
 import { SITE_TITLE } from "~/config/constants";
 import { loader } from "~/routes/api/work/$slug";
 import type { LoaderData } from "~/routes/api/work/$slug";
@@ -22,7 +22,7 @@ export default function () {
   return (
     <>
       <div className="m-auto max-w-3xl">
-        <Hero
+        <AppHero
           className="py-20 md:py-40"
           copy={data.company}
           highlight={data.title}

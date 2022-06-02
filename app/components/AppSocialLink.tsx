@@ -1,10 +1,10 @@
 import type { Social } from "~/data/resume";
 
-export interface SocialLinkProps {
+export interface AppSocialLinkProps {
   data: Social;
 }
 
-export const SocialLink = (props: SocialLinkProps) => {
+export const AppSocialLink = (props: AppSocialLinkProps) => {
   const { data } = props;
 
   // Setup

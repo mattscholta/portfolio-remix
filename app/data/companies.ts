@@ -13,16 +13,16 @@ export const data: Data[] = [
     url: "https://thredup.com"
   },
   {
-    company: "Beyond",
-    className: "h-5 md:h-10",
-    image: "/images/svg/bynd.svg",
-    url: "https://bynd.com"
-  },
-  {
     company: "Haldi",
     className: "h-3 md:h-6",
     image: "/images/svg/haldi.svg",
     url: "https://haldi.com"
+  },
+  {
+    company: "Beyond",
+    className: "h-5 md:h-10",
+    image: "/images/svg/bynd.svg",
+    url: "https://bynd.com"
   },
   {
     company: "Alphabet (Google)",

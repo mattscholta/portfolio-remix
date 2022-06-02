@@ -2,15 +2,19 @@ import classNames from "classnames";
 import { useState } from "react";
 import { NavLink } from "remix";
 
-import { Logo } from "./Logo";
+import { AppLogo } from "./AppLogo";
 
-export interface HeaderProps {}
+export interface AppHeaderProps {}
 
-export const Header = (_props: HeaderProps) => {
+export const AppHeader = (_props: AppHeaderProps) => {
   // Hooks
   const [closed, setClosed] = useState(true);
 
   // Handlers
+  const onClose = () => {
+    setClosed(true);
+  };
+
   const onToggle = () => {
     setClosed(!closed);
   };
@@ -30,31 +34,31 @@ export const Header = (_props: HeaderProps) => {
         <div className="flex-1 md:hidden" />
 
         <NavLink className="header-logo ml-4 gap-2 px-4" to="/">
-          <Logo />
+          <AppLogo />
           <span className="sr-only">Home</span>
         </NavLink>
 
         <div className="flex-1" />
 
         <div className="flex h-full flex-col font-font-monospace md:flex-row">
-          <NavLink className="header-link" to="/">
+          <NavLink className="header-link" onClick={onClose} to="/">
             About
           </NavLink>
-          <NavLink className="header-link" to="/blog">
+          <NavLink className="header-link" onClick={onClose} to="/blog">
             Blog
           </NavLink>
-          <NavLink className="header-link" to="/work">
+          <NavLink className="header-link" onClick={onClose} to="/work">
             Portfolio
           </NavLink>
-          <NavLink className="header-link" to="/resume">
+          <NavLink className="header-link" onClick={onClose} to="/resume">
             Resume
           </NavLink>
           {/*
-          <NavLink className="header-link" to="/sandbox">
+          <NavLink className="header-link" onClick={onClose} to="/sandbox">
             Sandbox
           </NavLink>
           */}
-          <NavLink className="header-link" to="/uses">
+          <NavLink className="header-link" onClick={onClose} to="/uses">
             Uses
           </NavLink>
         </div>

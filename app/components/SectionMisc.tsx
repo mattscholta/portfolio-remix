@@ -1,6 +1,10 @@
-export interface UsesMiscProps {}
+export interface SectionMiscProps {}
 
-export const UsesMisc = (_props: UsesMiscProps) => {
+/**
+ * @name SectionMisc
+ * @description tbd...
+ */
+export const SectionMisc = (_props: SectionMiscProps) => {
   return (
     <div className="bg-color-background-dark py-20 text-color-background-light">
       <section className="m-auto max-w-6xl px-4 md:my-20">

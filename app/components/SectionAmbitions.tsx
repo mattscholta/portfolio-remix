@@ -1,10 +1,10 @@
 /**
- * @name AboutAmbitions
+ * @name SectionAmbitions
  * @description tbd...
  */
-export const AboutAmbitions = () => {
+export const SectionAmbitions = () => {
   return (
-    <section className="mx-auto my-20 max-w-3xl px-4 md:my-40 md:px-0">
+    <section className="mx-auto my-20 max-w-5xl px-4 md:my-40 md:px-0">
       <h3 className="my-4 text-xl md:text-3xl">Ambitions 🎯</h3>
       <p>I just want to dance 🕺</p>
       <p>...</p>

@@ -5,9 +5,9 @@ import {
   SOCIAL_TWITTER
 } from "../config/constants";
 
-export interface FooterProps {}
+export interface AppFooterProps {}
 
-export const Footer = (_props: FooterProps) => {
+export const AppFooter = (_props: AppFooterProps) => {
   // const date = new Date();
   // const year = date.getFullYear();
 

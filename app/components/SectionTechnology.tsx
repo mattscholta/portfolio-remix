@@ -2,11 +2,13 @@ import classnames from "classnames";
 import { useRef, useState } from "react";
 import { data } from "~/data/details";
 
+export interface SectionTechnologyProps {}
+
 /**
- * @name Technology
+ * @name SectionTechnology
  * @description tbd...
  */
-export const Technology = () => {
+export const SectionTechnology = (_props: SectionTechnologyProps) => {
   const desc = `This is a <b>non</b> exhaustive list of tools and technologies I use to make products come to life. I'm also very comfortable pushing pixels in Figma, Adobe, Video, and 3D modelling.`;
 
   // Hooks

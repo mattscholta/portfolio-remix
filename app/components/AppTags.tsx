@@ -1,13 +1,13 @@
 import classnames from "classnames";
 
-export interface TagsProps {
+export interface AppTagsProps {
   className?: string;
   classNameTag?: string;
   heading?: string;
   tags: string[];
 }
 
-export const Tags = (props: TagsProps) => {
+export const AppTags = (props: AppTagsProps) => {
   const { className, classNameTag, heading, tags } = props;
 
   return (

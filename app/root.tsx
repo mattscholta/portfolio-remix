@@ -13,9 +13,9 @@ import type { MetaFunction } from "remix";
 
 import { cookieTheme } from "./cookies";
 import { getMetaTags } from "./config/seo";
-import { Footer } from "~/components/Footer";
+import { AppFooter } from "~/components/AppFooter";
 import { BASE_URL, GOOGLE_ANALYTICS } from "./config/settings.server";
-import { Header } from "~/components/Header";
+import { AppHeader } from "~/components/AppHeader";
 import { SITE_TITLE } from "./config/constants";
 import { TrackingGA } from "./components/TrackingGA";
 import { useIntro } from "./hooks/useIntro";
@@ -107,11 +107,11 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Header />
+        <AppHeader />
         <main>
           <Outlet />
         </main>
-        <Footer />
+        <AppFooter />
 
         {/* Analytics */}
         <TrackingGA id={googleAnalytics} />

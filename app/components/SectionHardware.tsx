@@ -1,4 +1,10 @@
-export const UsesHardware = () => {
+export interface SectionHardwareProps {}
+
+/**
+ * @name SectionHardware
+ * @description tbd...
+ */
+export const SectionHardware = () => {
   // Setup
   const laptop = `https://www.apple.com/macbook-pro/`;
   const monitor = `https://www.amazon.com/gp/product/B074JKT894`;

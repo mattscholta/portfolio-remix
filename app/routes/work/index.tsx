@@ -2,7 +2,7 @@ import type { MetaFunction } from "remix";
 import { useLoaderData } from "remix";
 
 import type { LoaderData } from "~/routes/api/work";
-import { Hero } from "~/components/Hero";
+import { AppHero } from "~/components/AppHero";
 import { WorkPreview } from "~/components/WorkPreview";
 import { SITE_TITLE } from "~/config/constants";
 import { loader } from "~/routes/api/work";
@@ -25,7 +25,7 @@ export default function () {
     <>
       {/*
       <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
-        <Hero
+        <AppHero
           className="py-20 md:py-40"
           copy="Relevant Work"
           highlight="What I've built"
@@ -43,7 +43,7 @@ export default function () {
       */}
 
       <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
-        <Hero
+        <AppHero
           className="py-20 md:py-40"
           copy="Right now..."
           highlight="What I'm building"
@@ -60,7 +60,7 @@ export default function () {
       </section>
 
       <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
-        <Hero
+        <AppHero
           className="py-20 md:py-40"
           copy="In the past..."
           highlight="What I've built"

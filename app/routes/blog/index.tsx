@@ -2,12 +2,12 @@ import { useLoaderData } from "remix";
 import type { MetaFunction } from "remix";
 
 import { BlogPreview } from "~/components/BlogPreview";
-import { Hero } from "~/components/Hero";
+import { AppHero } from "~/components/AppHero";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { loader } from "~/routes/api/blog";
 import type { LoaderData } from "~/routes/api/blog";
 import { BlogFeatured } from "~/components/BlogFeatured";
-// import { Tags } from "~/components/Tags";
+// import { AppTags } from "~/components/AppTags";
 
 export { loader };
 
@@ -23,7 +23,7 @@ export default function () {
   return (
     <>
       <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
-        <Hero
+        <AppHero
           className="mx-auto max-w-6xl py-20 md:py-40"
           copy="Yes, another blog..."
           highlight="Developer ramblings"
@@ -36,7 +36,7 @@ export default function () {
           <BlogFeatured className="basis-2/3" />
           <div className="flex basis-1/3 flex-col gap-10">
             {/*
-            <Tags
+            <AppTags
               classNameTag="bg-color-background-light border-solid border px-2 py-1 text-sm rounded-md"
               heading="Search blog by topics"
               tags={tags}

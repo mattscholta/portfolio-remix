@@ -1,14 +1,14 @@
 import classnames from "classnames";
 import type { ReactElement } from "react";
 
-export interface HeroProps {
+export interface AppHeroProps {
   className?: string;
   copy?: string | ReactElement;
   highlight: string;
   tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 }
 
-export const Hero = (props: HeroProps) => {
+export const AppHero = (props: AppHeroProps) => {
   const { className, copy, highlight, tag: Tag = "h2" } = props;
 
   // Styles

@@ -1,11 +1,13 @@
 import type { Experience as ExperienceType } from "~/data/resume";
 import { getTimeWorked } from "~/utils/date-time";
 
-export interface ExperienceDetailProps {
+export interface SectionExperienceDetailProps {
   experience: ExperienceType;
 }
 
-export const ExperienceDetail = (props: ExperienceDetailProps) => {
+export const SectionExperienceDetail = (
+  props: SectionExperienceDetailProps
+) => {
   const { experience } = props;
   const {
     company,

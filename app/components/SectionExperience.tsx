@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { experience as data } from "~/data/resume";
-import { ExperienceDetail } from "./ExperienceDetail";
+import { SectionExperienceDetail } from "./SectionExperienceDetail";
 
-export const Experience = () => {
+export interface SectionExperienceProps {}
+
+export const SectionExperience = () => {
   // Hooks
   // const minValue = data.length;
   const minValue = 3;
@@ -25,7 +27,7 @@ export const Experience = () => {
 
       <div className="mb-10 flex flex-col gap-10">
         {experience.map((exp) => (
-          <ExperienceDetail experience={exp} key={exp.title} />
+          <SectionExperienceDetail experience={exp} key={exp.title} />
         ))}
       </div>
       <div className="print:hidden">
