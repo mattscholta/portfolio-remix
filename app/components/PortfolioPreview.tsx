@@ -1,18 +1,18 @@
 import { Link } from "remix";
 
-import type { Portfolio } from "~/routes/api/work";
+import type { Portfolio } from "~/routes/api/portfolio";
 
-export interface WorkPreviewProps {
+export interface PortfolioPreviewProps {
   current: boolean;
   data: Portfolio;
 }
 
 /**
- * @name WorkPreview
+ * @name PortfolioPreview
  * @description Unfortunately I don't have a ton of great imagery to work with
  * for all of these past projects so I need to try and focus on the content 🤔
  */
-export const WorkPreview = (props: WorkPreviewProps) => {
+export const PortfolioPreview = (props: PortfolioPreviewProps) => {
   const { current = false, data } = props;
 
   // Setup
@@ -32,7 +32,10 @@ export const WorkPreview = (props: WorkPreviewProps) => {
   );
 
   return (
-    <Link className="work-preview text-color-copy" to={`/work/${data.slug}`}>
+    <Link
+      className="work-preview text-color-copy"
+      to={`/portfolio/${data.slug}`}
+    >
       {/* {data.images[0] && renderImage()} */}
 
       <h3 className="m-0 font-font-serif text-xl font-bold">{data.title}</h3>

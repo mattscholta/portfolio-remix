@@ -3,8 +3,8 @@ import type { MetaFunction } from "remix";
 
 import { AppHero } from "~/components/AppHero";
 import { SITE_TITLE } from "~/config/constants";
-import { loader } from "~/routes/api/work/$slug";
-import type { LoaderData } from "~/routes/api/work/$slug";
+import { loader } from "~/routes/api/portfolio/$slug";
+import type { LoaderData } from "~/routes/api/portfolio/$slug";
 
 export { loader };
 
@@ -55,7 +55,7 @@ export default function () {
             <h3 className="mb-4 text-lg font-extrabold">
               Testing another article
             </h3>
-            <Link to="/work">Read more {`>>`}</Link>
+            <Link to="/portfolio">Read more {`>>`}</Link>
           </div>
 
           <div className="border-0 border-solid md:border-l md:border-l-color-border" />
@@ -64,7 +64,7 @@ export default function () {
             <h3 className="mb-4 text-lg font-extrabold">
               Testing another article
             </h3>
-            <Link to="/work">Read more {`>>`}</Link>
+            <Link to="/portfolio">Read more {`>>`}</Link>
           </div>
         </div>
       </div>

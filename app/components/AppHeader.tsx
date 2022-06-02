@@ -47,7 +47,7 @@ export const AppHeader = (_props: AppHeaderProps) => {
           <NavLink className="header-link" onClick={onClose} to="/blog">
             Blog
           </NavLink>
-          <NavLink className="header-link" onClick={onClose} to="/work">
+          <NavLink className="header-link" onClick={onClose} to="/portfolio">
             Portfolio
           </NavLink>
           <NavLink className="header-link" onClick={onClose} to="/resume">

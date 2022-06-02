@@ -8,7 +8,6 @@ import { loader } from "~/routes/api/blog";
 import type { LoaderData } from "~/routes/api/blog";
 import { BlogFeatured } from "~/components/BlogFeatured";
 import { BlogUpcoming } from "~/components/BlogUpcoming";
-// import { AppTags } from "~/components/AppTags";
 
 export { loader };
 
