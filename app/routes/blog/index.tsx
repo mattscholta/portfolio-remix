@@ -1,53 +1,59 @@
-import { MetaFunction, useLoaderData } from "remix";
+import { useLoaderData } from "remix";
+import type { MetaFunction } from "remix";
 
 import { BlogPreview } from "~/components/BlogPreview";
-import { Hero } from "~/components/Hero";
-import { ScrollTo } from "~/components/ScrollTo";
-import { SITE_TITLE } from "~/config/constants";
-import { loader, LoaderData } from "~/routes/api/blog";
+import { AppHero } from "~/components/AppHero";
+import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
+import { loader } from "~/routes/api/blog";
+import type { LoaderData } from "~/routes/api/blog";
+import { BlogFeatured } from "~/components/BlogFeatured";
+import { BlogUpcoming } from "~/components/BlogUpcoming";
 
 export { loader };
 
 export const meta: MetaFunction = () => ({
-  title: `Blog | ${SITE_TITLE}`
+  description: `A collection of development ramblings by ${SITE_AUTHOR}.`,
+  title: `A developers ramblings | ${SITE_TITLE}`
 });
 
-export default function About() {
+export default function () {
   // Hooks
-  const data = useLoaderData<LoaderData>();
+  const { posts, tags: _tags } = useLoaderData<LoaderData>();
+
+  // Setup
+  const slug = "improving-code-quality";
+  const featured = posts.filter((node) => node.slug === slug);
+  const others = posts.filter((node) => node.slug !== slug);
 
   return (
     <>
-      <section
-        className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20"
-        id="section-1"
-      >
-        <Hero
-          className="mx-auto max-w-6xl"
+      <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
+        <AppHero
+          className="mx-auto max-w-6xl py-20 md:py-40"
           copy="Yes, another blog..."
-          highlight="a developers ramblings"
+          highlight="Developer ramblings"
+          tag="h1"
         />
-        <ScrollTo id="/blog#posts" />
       </section>
 
-      <div className="section-anchor" id="posts" />
-      <section className="section-full m-auto mb-40 flex max-w-6xl flex-col items-center justify-center gap-20">
-        <div className="w-full p-4 md:p-8">
-          <h2 className="mb-12 text-center text-3xl md:text-4xl">All Posts</h2>
-          <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {data.map((item) => (
-              <BlogPreview
-                content={item.content.html}
-                date={item.date}
-                image={item.imageTemp}
-                key={item.id}
-                slug={item.slug}
-                title={item.title}
-              />
-            ))}
-          </div>
+      <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20 px-4 py-20">
+        <div className="flex flex-col gap-20 md:flex-row">
+          <BlogFeatured className="basis-2/3" post={featured[0]} />
+          <BlogUpcoming className="basis-1/3" />
         </div>
-        <ScrollTo id="/uses" rotate="rotate-0" />
+
+        <div className="grid w-full gap-10 md:grid-cols-2 lg:grid-cols-3">
+          {others.map((post) => (
+            <BlogPreview
+              content={post.content.html}
+              date={post.date}
+              image={post.imageTemp}
+              key={post.id}
+              slug={post.slug}
+              title={post.title}
+            />
+          ))}
+        </div>
       </section>
     </>
   );

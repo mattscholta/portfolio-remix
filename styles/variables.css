@@ -39,6 +39,7 @@
   --color-primary: #f00;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background-transparent: rgb(0 0 0 / 85%);
@@ -94,4 +95,17 @@ html.dark {
   --color-copy-dark: #57606a;
 
   --color-primary: #f97316;
+}
+*/
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

@@ -1,4 +1,5 @@
-import { json, LoaderFunction } from "remix";
+import { json } from "remix";
+import type { LoaderFunction } from "remix";
 
 import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
 
@@ -10,15 +11,34 @@ export interface Post {
   id: string;
   imageTemp: string;
   slug: string;
-  sticky: string;
+  sticky: boolean;
   title: string;
 }
 
-export type LoaderData = Post[];
+export interface EnumValue {
+  // deprecationReason?: string;
+  // description?: string;
+  // isDeprecated: boolean;
+  name: string;
+}
+
+export type LoaderData = {
+  posts: Post[];
+  tags: string[];
+};
 
 const getPosts = gql`
   query {
-    posts {
+    # Query enum values - https://graphcms.com/docs/api-reference/schema/enumerations
+    __type(name: "Tags") {
+      enumValues {
+        name
+      }
+    }
+
+    # posts(stage: DRAFT) {
+
+    posts(orderBy: createdAt_ASC) {
       content {
         html
       }
@@ -27,6 +47,7 @@ const getPosts = gql`
       imageTemp
       intro
       slug
+      tags
       sticky
       title
     }
@@ -34,11 +55,21 @@ const getPosts = gql`
 `;
 
 export const loader: LoaderFunction = async (): Promise<LoaderData> => {
-  const data = await fetchFromGraphCMS(getPosts);
-  const res = await data.json();
-  const posts = res.data.posts ?? [];
+  try {
+    const data = await fetchFromGraphCMS(getPosts);
+    const res = await data.json();
 
-  if (!posts.length) throw json(`Blog posts not found`, { status: 404 });
+    const posts = res.data.posts ?? [];
+    const tagsData: EnumValue[] = res.data.__type.enumValues ?? [];
+    const tags = tagsData.map((tag: EnumValue) => tag.name).sort();
 
-  return posts;
+    if (!posts.length) throw json(`Blog posts not found`, { status: 404 });
+
+    return {
+      posts,
+      tags
+    };
+  } catch (error) {
+    throw error;
+  }
 };

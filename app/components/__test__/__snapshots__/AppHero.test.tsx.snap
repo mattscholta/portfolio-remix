@@ -1,0 +1,26 @@
+// Vitest Snapshot v1
+
+exports[`AppHero Component > should render our Hero 1`] = `
+<body>
+  <div>
+    <div
+      class="hero p-4 text-center"
+    >
+      <h2
+        class="inline-block font-font-serif text-xl font-extrabold md:text-4xl"
+      >
+        <div
+          class="font-font-monospace text-base font-normal md:text-2xl"
+        >
+          Test Copy
+        </div>
+        <div
+          class="text-highlight px-3 text-4xl md:text-7xl"
+        >
+          The HIGHLIGHT
+        </div>
+      </h2>
+    </div>
+  </div>
+</body>
+`;

@@ -4,27 +4,27 @@ exports[`Header Component > should render our footer 1`] = `
 <body>
   <div>
     <header
-      class="header"
+      class="header overflow-hidden print:hidden closed"
     >
       <div
-        class="relative mx-auto flex h-full w-full max-w-2xl items-center justify-evenly gap-1 text-xs uppercase md:gap-20 md:text-sm"
+        class="mx-auto flex h-full w-full max-w-5xl items-center justify-evenly md:text-sm"
       >
+        <button
+          class="header-logo ml-4 gap-2 px-4 md:hidden"
+          type="button"
+        >
+          <img
+            alt=""
+            class="max-h-4"
+            src="/images/svg/menu.svg"
+          />
+        </button>
+        <div
+          class="flex-1 md:hidden"
+        />
         <a
           aria-current="page"
-          class="header-link px-4 md:px-8 active"
-          href="/"
-        >
-          Home
-        </a>
-        <a
-          class="header-link px-4 md:px-8"
-          href="/work"
-        >
-          Work
-        </a>
-        <a
-          aria-current="page"
-          class="header-logo active"
+          class="header-logo ml-4 gap-2 px-4 active"
           href="/"
         >
           <svg
@@ -36,7 +36,8 @@ exports[`Header Component > should render our footer 1`] = `
             <path
               d="m72.573561 53.8100014-4.7761176-10.8100014-4.7761176 10.8100014h-5.2238824-5.2238824l-4.7761176-10.8100014-4.7761176 10.8100014h-18.9984302l23.7745478-53.8100014 10 22.6334489 10-22.6334489 23.7745479 53.8100014zm-65.46601601-32.0470011 9.61541491-21.7630003h2.8056379l-11.01823389 24.9380633zm2.7140959 6.5404709 12.50515171-28.3034712h3.8379913l-14.4241473 32.6468202zm18.90131901-28.3034712h15.8490314l-23.7745479 53.8100014-4-9.0533796 19.7745479-44.7566218zm0 0h5.441824l-18.5541552 41.9944523-2.7209119-6.1583623zm-23.36631575 14.1239332-5.35664415-12.1239332h10.7132883z"
               fill=""
-              fill-rule="evenodd"
+              rendering-intent="geometricPrecision"
+              text-rendering="geometricPrecision"
             />
           </svg>
           <span
@@ -45,18 +46,44 @@ exports[`Header Component > should render our footer 1`] = `
             Home
           </span>
         </a>
-        <a
-          class="header-link px-4 md:px-8"
-          href="/blog"
+        <div
+          class="flex-1"
+        />
+        <div
+          class="flex h-full flex-col font-font-monospace md:flex-row"
         >
-          Blog
-        </a>
-        <a
-          class="header-link px-4 md:px-8"
-          href="/uses"
-        >
-          Uses
-        </a>
+          <a
+            aria-current="page"
+            class="header-link active"
+            href="/"
+          >
+            About
+          </a>
+          <a
+            class="header-link"
+            href="/blog"
+          >
+            Blog
+          </a>
+          <a
+            class="header-link"
+            href="/work"
+          >
+            Portfolio
+          </a>
+          <a
+            class="header-link"
+            href="/resume"
+          >
+            Resume
+          </a>
+          <a
+            class="header-link"
+            href="/uses"
+          >
+            Uses
+          </a>
+        </div>
       </div>
     </header>
   </div>

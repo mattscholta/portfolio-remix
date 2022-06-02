@@ -1,16 +1,18 @@
-import { MetaFunction, useLoaderData } from "remix";
+import { useLoaderData } from "remix";
+import type { MetaFunction } from "remix";
 
-import { Hero } from "~/components/Hero";
+import { AppHero } from "~/components/AppHero";
 import { SITE_TITLE } from "~/config/constants";
-import { loader, LoaderData } from "~/routes/api/blog/$slug";
+import type { LoaderData } from "~/routes/api/blog/$slug";
+import { loader } from "~/routes/api/blog/$slug";
 
 export { loader };
 
 export const meta: MetaFunction = (args) => ({
-  title: `${args.data.title}... | ${SITE_TITLE}`
+  title: `${args.data.title}... | Blog | ${SITE_TITLE}`
 });
 
-export default function About() {
+export default function () {
   // Hooks
   const data = useLoaderData<LoaderData>();
 
@@ -25,27 +27,74 @@ export default function About() {
 
   return (
     <>
-      <section className="section-full m-auto flex flex-col items-center justify-center">
-        <Hero
-          className="my-20 mx-auto max-w-6xl md:my-40"
+      <section className="mx-auto max-w-6xl">
+        <AppHero
+          className="py-20 md:py-40"
           copy={date}
           highlight={data.title}
+          tag="h1"
         />
-        <img
-          className="border-b border-t border-color-border-dark"
-          src={data.imageTemp}
-          alt=""
-        />
-        <div className="mb-20 max-w-3xl p-4">
-          <h2 className="text-highlight my-8 inline-block text-left text-3xl md:my-12 md:text-4xl">
-            {data.title}
-          </h2>
-          <div
-            className="wysiwyg"
-            dangerouslySetInnerHTML={{ __html: data.content.html }}
-          />
+      </section>
+
+      <img
+        alt=""
+        className="border-b border-t border-color-border-dark"
+        src={data.imageTemp}
+      />
+
+      <section className="m-auto max-w-2xl">
+        <div className="mb-20 p-4">
+          <div className="my-8 md:my-12 ">
+            <h2 className="text-highlight m-0 mb-2 inline-block text-left text-3xl md:text-4xl">
+              {data.title}
+            </h2>
+            <div className="font-font-monospace text-sm">{date}</div>
+          </div>
+
+          {/* Content */}
+          <div className="flex flex-col gap-10 md:flex-row">
+            <div>
+              <div
+                className="wysiwyg"
+                dangerouslySetInnerHTML={{ __html: data.content.html }}
+              />
+            </div>
+
+            {/*
+            <aside className="flex h-full min-w-[300px] flex-col gap-20">
+              <div className="flex flex-col gap-10 border-0 md:p-4">
+                <div>
+                  <h3 className="mb-4">Tags:</h3>
+                  <AppTags
+                    classNameTag="border rounded-md px-2 py-1 text-sm bg-color-background-light"
+                    tags={["one", "two"]}
+                  />
+                </div>
+                <AppUserCard
+                  copy="<b>Role:</b> Staff Engineer @thredUP"
+                  image="/images/assets/matt-scaled.webp"
+                />
+              </div>
+
+              <div className="flex flex-col gap-10 border-0 border-l border-solid border-color-border-dark p-4">
+                <div>
+                  <h3>Other Posts</h3>
+                </div>
+              </div>
+            </aside>
+            */}
+          </div>
         </div>
       </section>
+
+      {/*
+      <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
+        <div className="mx-auto flex max-w-5xl gap-20">
+          <div className="flex-1">One</div>
+          <div className="flex-1">Two</div>
+        </div>
+      </section>
+      */}
     </>
   );
 }

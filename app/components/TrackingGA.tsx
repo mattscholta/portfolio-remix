@@ -17,7 +17,7 @@ export const TrackingGA = (props: TrackingGAProps) => {
 
   return (
     <>
-      <script async defer src={src} type="text/javascript" />
+      <script async={true} defer={true} src={src} type="text/javascript" />
       <script dangerouslySetInnerHTML={{ __html }} type="text/javascript" />
     </>
   );

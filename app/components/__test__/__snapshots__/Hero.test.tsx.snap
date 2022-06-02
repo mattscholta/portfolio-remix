@@ -6,18 +6,20 @@ exports[`Hero Component > should render our Hero 1`] = `
     <div
       class="hero p-4 text-center"
     >
-      <h1
+      <h2
         class="inline-block font-font-serif text-xl font-extrabold md:text-4xl"
       >
-        <div>
+        <div
+          class="font-font-monospace text-base font-normal md:text-2xl"
+        >
           Test Copy
         </div>
         <div
-          class="text-highlight text-4xl md:text-7xl"
+          class="text-highlight px-3 text-4xl md:text-7xl"
         >
           The HIGHLIGHT
         </div>
-      </h1>
+      </h2>
     </div>
   </div>
 </body>
