@@ -20,6 +20,11 @@ export default function () {
   // Hooks
   const { posts, tags: _tags } = useLoaderData<LoaderData>();
 
+  // Setup
+  const slug = "improving-code-quality";
+  const featured = posts.filter((node) => node.slug === slug);
+  const others = posts.filter((node) => node.slug !== slug);
+
   return (
     <>
       <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
@@ -33,12 +38,12 @@ export default function () {
 
       <section className="section-full m-auto flex max-w-6xl flex-col items-center justify-center gap-20 px-4 py-20">
         <div className="flex flex-col gap-20 md:flex-row">
-          <BlogFeatured className="basis-2/3" />
+          <BlogFeatured className="basis-2/3" post={featured[0]} />
           <BlogUpcoming className="basis-1/3" />
         </div>
 
         <div className="grid w-full gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {posts.map((post) => (
+          {others.map((post) => (
             <BlogPreview
               content={post.content.html}
               date={post.date}

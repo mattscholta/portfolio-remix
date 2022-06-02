@@ -1,24 +1,24 @@
 import { BlogPreview } from "~/components/BlogPreview";
+import type { Post } from "~/routes/api/blog";
 
 export interface BlogFeaturedProps {
   className?: string;
+  post: Post;
 }
 
 export const BlogFeatured = (props: BlogFeaturedProps) => {
-  const { className } = props;
+  const { className, post } = props;
 
   return (
     <BlogPreview
       className={className}
-      content=""
-      date={new Date().toISOString()}
-      featured={true}
-      image={
-        "https://mattscholta.files.wordpress.com/2017/08/pexels-photo-4164418.jpeg"
-      }
-      key={"item.id"}
-      slug="featured-slug"
-      title="Our fantastic article"
+      content={post.content.html}
+      date={post.date}
+      featured={post.sticky}
+      image={post.imageTemp}
+      key={post.slug}
+      slug={post.slug}
+      title={post.title}
     />
   );
 };

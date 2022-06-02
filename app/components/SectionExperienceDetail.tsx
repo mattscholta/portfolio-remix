@@ -1,8 +1,8 @@
-import type { Experience as ExperienceType } from "~/data/resume";
+import type { Experience } from "~/data/resume";
 import { getTimeWorked } from "~/utils/date-time";
 
 export interface SectionExperienceDetailProps {
-  experience: ExperienceType;
+  experience: Experience;
 }
 
 export const SectionExperienceDetail = (
@@ -23,10 +23,10 @@ export const SectionExperienceDetail = (
   // Setup
   const start = dateRange ? dateRange[0] : new Date();
   const stop = dateRange?.[1] ? dateRange[1] : new Date();
-  const length = getTimeWorked(start, stop);
+  const _length = getTimeWorked(start, stop);
 
   // TEMP
-  console.log(` 💬 ~ Worked at ${company} for`, length);
+  // console.log(` 💬 ~ Worked at ${company} for`, length);
 
   return (
     <div className="flex flex-col gap-10 md:flex-row" key={title}>
@@ -64,17 +64,13 @@ export const SectionExperienceDetail = (
       </div>
 
       <div className="flex-1 text-sm leading-4">
-        <div
-          dangerouslySetInnerHTML={{
-            __html: description
-          }}
-        />
+        <div dangerouslySetInnerHTML={{ __html: description }} />
         <ul className="my-4 ml-4 list-disc text-sm font-light text-color-copy">
           {highlights.map((highlight, index) => (
             <li
               className="my-1"
-              key={index}
               dangerouslySetInnerHTML={{ __html: highlight }}
+              key={index}
             />
           ))}
         </ul>

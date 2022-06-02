@@ -11,7 +11,7 @@ export interface Post {
   id: string;
   imageTemp: string;
   slug: string;
-  sticky: string;
+  sticky: boolean;
   title: string;
 }
 
