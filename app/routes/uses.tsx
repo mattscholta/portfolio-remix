@@ -21,10 +21,12 @@ export default function () {
         />
       </section>
       <SectionHardware />
-      <section className="border-0 border-t border-solid border-t-color-border bg-color-background-light">
+      <div className="border-0 border-t border-solid border-t-color-border bg-color-background-light">
         <SectionSoftware />
-      </section>
-      <SectionMisc />
+      </div>
+      <div className="bg-color-background-dark py-20 text-color-background-light">
+        <SectionMisc />
+      </div>
     </>
   );
 }

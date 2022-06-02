@@ -158,8 +158,8 @@ export const experience: Experience[] = [
     company: "Hotwire",
     companyUrl: "https://hotwire.com",
     contract: true,
-    date: `Apr 2010 - Jun 2010`,
-    dateRange: [new Date(2010, 4, 1), new Date(2010, 6, 1)],
+    date: `Apr 2010 - July 2010`,
+    dateRange: [new Date(2010, 4, 1), new Date(2010, 7, 1)],
     description: `<p>
       Worked in a development capacity within the Creative Services department
       to produce e-mails, banners, and 3rd party widgets throughout.
