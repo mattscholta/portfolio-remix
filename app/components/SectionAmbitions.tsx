@@ -5,7 +5,7 @@
 export const SectionAmbitions = () => {
   return (
     <section className="mx-auto my-20 max-w-3xl px-4 md:my-40 md:px-0">
-      <h3 className="my-4 text-xl md:text-3xl">Ambitions 🎯</h3>
+      <h2 className="my-4 text-xl md:text-3xl">Ambitions 🎯</h2>
 
       <div className="flex gap-10">
         <div className="flex-1">
@@ -16,18 +16,13 @@ export const SectionAmbitions = () => {
             challenges and opportunities to simply push myself and the products
             I help create.
           </p>
-        </div>
-
-        {/*
-        <div className="flex-1">
-          <p>Improve the parts that go unseeen.</p>
-          <p>The opportunity to mentor and teach</p>
           <p>
-            <b>Build</b>, <b>automate</b>, <b>experiment</b>, <b>iterate</b> and
-            most importantly <b>learn</b>!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere
+            laudantium impedit eum voluptatum maxime? Nesciunt eum voluptatibus
+            illo inventore voluptates molestiae hic accusamus aperiam natus
+            modi! Assumenda error facere quos.
           </p>
         </div>
-        */}
       </div>
     </section>
   );
