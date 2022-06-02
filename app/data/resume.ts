@@ -38,9 +38,9 @@ export const experience: Experience[] = [
     dateRange: [new Date(2021, 4, 1)],
     description: `
       <p>
-        One year in we've jump-started the organizations code! We've taken a
-        "loosely typed" & "strongly coupled" and successfully flipped it. The
-        entire stack is now containerized and makes us of Firebase Emulators
+        One year in we've jump-started the organizations code! Taking a
+        "loosely typed and strongly coupled" system and successfully flipping it.
+        The entire stack is now containerized and makes us of Firebase Emulators
         for an incredible development workflow.
       </p>
     `,
@@ -161,20 +161,21 @@ export const experience: Experience[] = [
     date: `Apr 2010 - July 2010`,
     dateRange: [new Date(2010, 4, 1), new Date(2010, 7, 1)],
     description: `<p>
-      Worked in a development capacity within the Creative Services department
-      to produce e-mails, banners, and 3rd party widgets throughout.
+      Worked in a hybrid Dev/Design capacity within the Creative Services
+      department producing e-mails, banners, and 3rd party widgets.
     </p>`,
     highlights: [
       `Created initial prototypes for interactive widgets`,
-      `Coded various `
+      `General design of marketing collateral`
     ],
     image: "https://hotwire.com/favicon.ico",
     tags: [
       "Adobe Illustrator",
       `Adobe Photoshop`,
       "CSS",
+      "Design",
       "HTML",
-      "PHP",
+      "jQuery",
       "Prototyping"
     ],
     title: `Graphic Designer`
@@ -215,7 +216,7 @@ export const experience: Experience[] = [
     description: `<p>
       As with any startup we tend to wear many hats, and this being my
       first professional / non-freelance position I took every opportunity
-      I could to be involved.
+      I could to be learn.
     </p>`,
     highlights: [
       `Implemented and managed the video encoding/transcoding processes`,

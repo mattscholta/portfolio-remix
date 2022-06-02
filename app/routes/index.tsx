@@ -24,7 +24,7 @@ export default function () {
 
   return (
     <>
-      <section className="m-auto flex max-w-6xl flex-col items-center justify-center gap-4 py-20 md:flex-row md:py-40">
+      <section className="m-auto flex max-w-6xl flex-col-reverse items-center justify-center gap-4 py-20 md:flex-row md:py-40">
         <AppHero
           className="py-10 md:py-20 md:text-right"
           copy={<span className="whitespace-nowrap">{heading}</span>}
