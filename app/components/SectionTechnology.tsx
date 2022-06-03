@@ -13,6 +13,7 @@ export const SectionTechnology = () => {
 
   // Setup
   const description = heading ? data[heading] : data.default;
+  const keys = Object.keys(data).filter((key) => key !== "default");
 
   return (
     <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:flex-row md:py-20">
@@ -22,7 +23,7 @@ export const SectionTechnology = () => {
         </h2>
 
         <div className="work-details flex flex-wrap gap-2">
-          {Object.keys(data).map((key) => {
+          {keys.map((key) => {
             const active = key === heading;
 
             return (
