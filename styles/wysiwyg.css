@@ -9,9 +9,9 @@
 .wysiwyg h4,
 .wysiwyg h5,
 .wysiwyg h6 {
-  color: theme("colors.color-copy-light");
+  color: theme("colors.color-copy");
   font-family: theme("fontFamily.sans");
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 1rem;
   margin-top: 2rem;
 }
