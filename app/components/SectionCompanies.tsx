@@ -1,7 +1,5 @@
 import { data } from "~/data/companies";
 
-export interface SectionCompaniesProps {}
-
 export const SectionCompanies = () => {
   return (
     <section className="work-companies border-0 border-b border-solid border-b-color-border ">

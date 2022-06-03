@@ -11,6 +11,7 @@ exports[`AppHeader Component > should render our footer 1`] = `
       >
         <button
           class="header-logo ml-4 gap-2 px-4 md:hidden"
+          title="Toggle menu"
           type="button"
         >
           <img
@@ -67,7 +68,7 @@ exports[`AppHeader Component > should render our footer 1`] = `
           </a>
           <a
             class="header-link"
-            href="/work"
+            href="/portfolio"
           >
             Portfolio
           </a>

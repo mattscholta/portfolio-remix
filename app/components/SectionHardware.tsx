@@ -1,9 +1,3 @@
-export interface SectionHardwareProps {}
-
-/**
- * @name SectionHardware
- * @description tbd...
- */
 export const SectionHardware = () => {
   // Setup
   const laptop = `https://www.apple.com/macbook-pro/`;
@@ -16,8 +10,8 @@ export const SectionHardware = () => {
   const mouse = `https://www.apple.com/shop/product/MMMQ3AM/A/magic-mouse-black-multi-touch-surface`;
 
   const linkProps = {
-    target: "_blank",
-    rel: "noreferrer"
+    rel: "noreferrer",
+    target: "_blank"
   };
 
   // Styles

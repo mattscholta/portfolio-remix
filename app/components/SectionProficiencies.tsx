@@ -1,5 +1,3 @@
-export interface SectionProficienciesProps {}
-
 export const SectionProficiencies = () => {
   return (
     <section>

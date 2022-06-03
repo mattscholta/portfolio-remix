@@ -3,10 +3,6 @@ import { useLocation } from "remix";
 
 import { BASE_URL } from "~/config/settings.server";
 
-/**
- * @name usePageTracking
- * @description tbd...
- */
 export const usePageTracking = () => {
   const { pathname } = useLocation();
 

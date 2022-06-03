@@ -4,9 +4,7 @@ import { NavLink } from "remix";
 
 import { AppLogo } from "./AppLogo";
 
-export interface AppHeaderProps {}
-
-export const AppHeader = (_props: AppHeaderProps) => {
+export const AppHeader = () => {
   // Hooks
   const [closed, setClosed] = useState(true);
 
@@ -27,6 +25,7 @@ export const AppHeader = (_props: AppHeaderProps) => {
         <button
           className="header-logo ml-4 gap-2 px-4 md:hidden"
           onClick={onToggle}
+          title="Toggle menu"
           type="button"
         >
           <img src="/images/svg/menu.svg" className="max-h-4" alt="" />

@@ -9,26 +9,31 @@
 .wysiwyg h4,
 .wysiwyg h5,
 .wysiwyg h6 {
-  color: var(--color-copy);
-  font-family: var(--font-serif);
-  font-weight: 900;
+  color: theme("colors.color-copy");
+  font-family: theme("fontFamily.sans");
+  font-weight: 500;
   margin-bottom: 1rem;
   margin-top: 2rem;
 }
 
+.wysiwyg h1 {
+  font-family: theme("fontFamily.font-serif");
+  font-weight: 900;
+}
+
 .wysiwyg h1,
 .wysiwyg h2 {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 .wysiwyg h3,
 .wysiwyg h4 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 .wysiwyg h5,
 .wysiwyg h6 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .wysiwyg p {

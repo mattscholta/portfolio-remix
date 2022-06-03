@@ -42,7 +42,7 @@ export default function () {
       </section>
 
       <section>
-        <div className="bg-color-background-dark text-color-background">
+        <div className="border-0 border-t border-b border-color-border bg-color-background-light text-color-background-dark">
           <AppHero
             className="py-20 md:py-40"
             copy="In the past..."

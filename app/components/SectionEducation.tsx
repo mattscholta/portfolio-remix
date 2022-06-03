@@ -1,6 +1,4 @@
-export interface SectionEducationProps {}
-
-export const SectionEducation = (_props: SectionEducationProps) => {
+export const SectionEducation = () => {
   return (
     <section>
       <div>
