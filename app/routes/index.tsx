@@ -34,7 +34,7 @@ export default function () {
         <div>
           <img
             alt={SITE_AUTHOR}
-            className="custom-bg-gradient max-h-32 cursor-pointer overflow-hidden rounded-full p-1 transition-transform hover:scale-110 active:rotate-6 md:max-h-40"
+            className="custom-bg-gradient aspect-square max-h-32 cursor-pointer overflow-hidden rounded-full p-1 transition-transform hover:scale-110 active:rotate-6 md:max-h-40"
             height="auto"
             loading="eager"
             onClick={onClick}

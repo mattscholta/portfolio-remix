@@ -6,8 +6,8 @@ import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { AppSocialLink } from "~/components/AppSocialLink";
 import { SectionEducation } from "~/components/SectionEducation";
 import { SectionExperience } from "~/components/SectionExperience";
-import styles from "~/styles/resume.css";
 import { useClipboard } from "~/hooks/useClipboard";
+import styles from "~/styles/resume.css";
 
 export const links: LinksFunction = () => [
   {
@@ -52,7 +52,7 @@ export default function () {
             <div className="flex flex-row items-center justify-center gap-6 md:flex-col">
               <img
                 alt={SITE_AUTHOR}
-                className="custom-bg-gradient max-h-48 overflow-hidden rounded-full p-1"
+                className="custom-bg-gradient aspect-square max-h-48 overflow-hidden rounded-full p-1"
                 height="auto"
                 loading="eager"
                 src="/images/assets/matt-scaled.webp"

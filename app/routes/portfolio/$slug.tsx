@@ -33,8 +33,9 @@ export default function () {
       {img && (
         <img
           alt={data.title}
-          className="mb-20 mt-0 w-full border-t border-b border-color-border md:mt-20"
+          className="mb-20 mt-0 w-full border-t border-b border-color-border"
           src={img}
+          style={{ aspectRatio: "2/1" }}
         />
       )}
       <div className="relative m-auto flex max-w-3xl flex-col">
