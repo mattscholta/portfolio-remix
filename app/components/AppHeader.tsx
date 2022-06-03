@@ -4,9 +4,11 @@ import { NavLink } from "remix";
 
 import { AppLogo } from "./AppLogo";
 
-export interface AppHeaderProps {}
-
-export const AppHeader = (_props: AppHeaderProps) => {
+/**
+ * @name AppHeader
+ * @description tbd...
+ */
+export const AppHeader = () => {
   // Hooks
   const [closed, setClosed] = useState(true);
 

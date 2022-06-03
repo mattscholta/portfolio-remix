@@ -1,5 +1,3 @@
-export interface SectionAmbitionsProps {}
-
 /**
  * @name SectionAmbitions
  * @description tbd...

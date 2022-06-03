@@ -1,5 +1,3 @@
-export interface SectionSoftwareProps {}
-
 /**
  * @name SectionSoftware
  * @description tbd...

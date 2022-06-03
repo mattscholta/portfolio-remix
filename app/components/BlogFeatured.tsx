@@ -6,6 +6,10 @@ export interface BlogFeaturedProps {
   post: Post;
 }
 
+/**
+ * @name BlogFeatured
+ * @description tbd...
+ */
 export const BlogFeatured = (props: BlogFeaturedProps) => {
   const { className, post } = props;
 

@@ -5,6 +5,10 @@ export interface SectionExperienceDetailProps {
   experience: Experience;
 }
 
+/**
+ * @name SectionExperienceDetail
+ * @description tbd...
+ */
 export const SectionExperienceDetail = (
   props: SectionExperienceDetailProps
 ) => {

@@ -2,13 +2,11 @@ import classnames from "classnames";
 import { useRef, useState } from "react";
 import { data } from "~/data/details";
 
-export interface SectionTechnologyProps {}
-
 /**
  * @name SectionTechnology
  * @description Section with pills that toggles a bit more information
  */
-export const SectionTechnology = (_props: SectionTechnologyProps) => {
+export const SectionTechnology = () => {
   // Hooks
   const refDescription = useRef<HTMLQuoteElement>(null);
   const [heading, setHeading] = useState<string>();

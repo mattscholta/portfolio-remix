@@ -1,5 +1,7 @@
-export interface SectionProficienciesProps {}
-
+/**
+ * @name SectionProficiencies
+ * @description tbd...
+ */
 export const SectionProficiencies = () => {
   return (
     <section>

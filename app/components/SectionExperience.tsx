@@ -2,8 +2,10 @@ import { useState } from "react";
 import { experience as data } from "~/data/resume";
 import { SectionExperienceDetail } from "./SectionExperienceDetail";
 
-export interface SectionExperienceProps {}
-
+/**
+ * @name SectionExperience
+ * @description tbd...
+ */
 export const SectionExperience = () => {
   // Hooks
   // const minValue = data.length;

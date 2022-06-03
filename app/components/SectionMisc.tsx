@@ -1,10 +1,8 @@
-export interface SectionMiscProps {}
-
 /**
  * @name SectionMisc
  * @description tbd...
  */
-export const SectionMisc = (_props: SectionMiscProps) => {
+export const SectionMisc = () => {
   return (
     <section className="m-auto max-w-6xl px-4 md:my-20">
       <div className="flex flex-col gap-10 md:flex-row">
