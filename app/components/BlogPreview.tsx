@@ -11,10 +11,6 @@ export interface BlogPreviewProps {
   image: string;
 }
 
-/**
- * @name BlogPreview
- * @description tbd...
- */
 export const BlogPreview = (props: BlogPreviewProps) => {
   const { className, date, featured, slug, image, title } = props;
 

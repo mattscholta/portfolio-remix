@@ -4,10 +4,6 @@ import { NavLink } from "remix";
 
 import { AppLogo } from "./AppLogo";
 
-/**
- * @name AppHeader
- * @description tbd...
- */
 export const AppHeader = () => {
   // Hooks
   const [closed, setClosed] = useState(true);

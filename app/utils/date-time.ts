@@ -1,9 +1,5 @@
 import { differenceInMonths } from "date-fns";
 
-/**
- * @name getTimeWorked
- * @description tbd...
- */
 export const getTimeWorked = (start: Date, end: Date) => {
   const months = differenceInMonths(end, start);
   const years = Math.floor(months / 12);

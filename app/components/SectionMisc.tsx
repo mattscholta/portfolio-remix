@@ -1,7 +1,3 @@
-/**
- * @name SectionMisc
- * @description tbd...
- */
 export const SectionMisc = () => {
   return (
     <section className="m-auto max-w-6xl px-4 md:my-20">

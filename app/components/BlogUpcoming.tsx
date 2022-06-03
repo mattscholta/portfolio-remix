@@ -4,10 +4,6 @@ export interface BlogUpcomingProps {
   className?: string;
 }
 
-/**
- * @name BlogUpcoming
- * @description tbd...
- */
 export const BlogUpcoming = (props: BlogUpcomingProps) => {
   const { className } = props;
 

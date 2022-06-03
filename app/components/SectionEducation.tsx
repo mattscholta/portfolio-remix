@@ -1,7 +1,3 @@
-/**
- * @name SectionEducation
- * @description tbd...
- */
 export const SectionEducation = () => {
   return (
     <section>

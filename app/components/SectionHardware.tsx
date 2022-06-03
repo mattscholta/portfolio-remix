@@ -1,7 +1,3 @@
-/**
- * @name SectionHardware
- * @description tbd...
- */
 export const SectionHardware = () => {
   // Setup
   const laptop = `https://www.apple.com/macbook-pro/`;

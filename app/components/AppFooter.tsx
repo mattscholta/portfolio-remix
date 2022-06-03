@@ -5,10 +5,6 @@ import {
   SOCIAL_TWITTER
 } from "../config/constants";
 
-/**
- * @name AppFooter
- * @description tbd...
- */
 export const AppFooter = () => {
   // const date = new Date();
   // const year = date.getFullYear();

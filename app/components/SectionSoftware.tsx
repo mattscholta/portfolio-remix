@@ -1,7 +1,3 @@
-/**
- * @name SectionSoftware
- * @description tbd...
- */
 export const SectionSoftware = () => {
   // Setup
   const linkProps = {
