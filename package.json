@@ -42,7 +42,7 @@
     "autoprefixer": "^10.4.7",
     "concurrently": "^7.2.1",
     "cross-env": "^7.0.3",
-    "cssnano": "^5.1.10",
+    "cssnano": "^5.1.11",
     "eslint": "^8.16.0",
     "jsdom": "^19.0.0",
     "postcss": "^8.4.14",
