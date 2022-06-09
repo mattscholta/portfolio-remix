@@ -4,7 +4,7 @@ import { NavLink } from "remix";
 
 import { AppLogo } from "./AppLogo";
 
-export const AppHeader = () => {
+export const AppHeaderMobile = () => {
   // Hooks
   const [closed, setClosed] = useState(true);
 
@@ -19,11 +19,13 @@ export const AppHeader = () => {
 
   return (
     <header
-      className={classNames("header overflow-hidden print:hidden", { closed })}
+      className={classNames("header overflow-hidden print:hidden", {
+        closed
+      })}
     >
-      <div className="mx-auto flex h-full w-full max-w-5xl items-center justify-evenly md:text-sm">
+      <div className="flex h-14 w-full items-center md:text-sm">
         <button
-          className="header-logo ml-4 gap-2 px-4 md:hidden"
+          className="header-logo ml-2 gap-2 px-4 md:hidden"
           onClick={onToggle}
           title="Toggle menu"
           type="button"
@@ -37,9 +39,11 @@ export const AppHeader = () => {
           <span className="sr-only">Home</span>
         </NavLink>
 
-        <div className="flex-1" />
+        <div className="flex-1 pl-20" />
+      </div>
 
-        <nav className="flex h-full flex-col font-font-monospace md:flex-row">
+      <div className="h-full font-font-monospace md:flex-row">
+        <nav className="flex flex-col md:flex-row">
           <NavLink className="header-link" onClick={onClose} to="/">
             About
           </NavLink>
@@ -53,10 +57,10 @@ export const AppHeader = () => {
             Resume
           </NavLink>
           {/*
-          <NavLink className="header-link" onClick={onClose} to="/sandbox">
-            Sandbox
-          </NavLink>
-          */}
+        <NavLink className="header-link" onClick={onClose} to="/sandbox">
+          Sandbox
+        </NavLink>
+        */}
           <NavLink className="header-link" onClick={onClose} to="/uses">
             Uses
           </NavLink>

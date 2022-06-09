@@ -6,8 +6,9 @@ export const SectionAmbitions = () => {
         Over the past 7 years I've been working at startups and I love the
         flexibility it provides. It's allowed me to shift focus from the
         Frontend, to Backend, and into DevOps. I'm always looking for{" "}
-        <b className="italic">new challenges</b> and opportunities to push
-        myself and the products I help create.
+        <b className="italic">new challenges</b> and{" "}
+        <b className="italic">opportunities</b> to push myself, and the products
+        I help create.
       </p>
     </section>
   );
