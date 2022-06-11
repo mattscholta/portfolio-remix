@@ -4,7 +4,7 @@ exports[`AppHeader Component > should render our footer 1`] = `
 <body>
   <div>
     <header
-      class="header overflow-hidden print:hidden closed"
+      class="header hidden overflow-hidden print:hidden md:block closed"
     >
       <div
         class="mx-auto flex h-full w-full max-w-5xl items-center justify-evenly md:text-sm"
@@ -50,7 +50,7 @@ exports[`AppHeader Component > should render our footer 1`] = `
         <div
           class="flex-1"
         />
-        <div
+        <nav
           class="flex h-full flex-col font-font-monospace md:flex-row"
         >
           <a
@@ -84,7 +84,7 @@ exports[`AppHeader Component > should render our footer 1`] = `
           >
             Uses
           </a>
-        </div>
+        </nav>
       </div>
     </header>
   </div>

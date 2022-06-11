@@ -16,6 +16,7 @@ import { getMetaTags } from "./config/seo";
 import { AppFooter } from "~/components/AppFooter";
 import { BASE_URL, GOOGLE_ANALYTICS } from "./config/settings.server";
 import { AppHeader } from "~/components/AppHeader";
+import { AppHeaderMobile } from "~/components/AppHeaderMobile";
 import { SITE_TITLE } from "./config/constants";
 import { TrackingGA } from "./components/TrackingGA";
 import { useIntro } from "./hooks/useIntro";
@@ -87,9 +88,12 @@ export default function App() {
       </head>
       <body>
         <AppHeader />
+        <AppHeaderMobile />
+
         <main>
           <Outlet />
         </main>
+
         <AppFooter />
 
         {/* Analytics */}

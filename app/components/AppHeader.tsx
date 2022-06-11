@@ -19,7 +19,10 @@ export const AppHeader = () => {
 
   return (
     <header
-      className={classNames("header overflow-hidden print:hidden", { closed })}
+      className={classNames(
+        "header hidden overflow-hidden print:hidden md:block",
+        { closed }
+      )}
     >
       <div className="mx-auto flex h-full w-full max-w-5xl items-center justify-evenly md:text-sm">
         <button
@@ -39,7 +42,7 @@ export const AppHeader = () => {
 
         <div className="flex-1" />
 
-        <div className="flex h-full flex-col font-font-monospace md:flex-row">
+        <nav className="flex h-full flex-col font-font-monospace md:flex-row">
           <NavLink className="header-link" onClick={onClose} to="/">
             About
           </NavLink>
@@ -60,7 +63,7 @@ export const AppHeader = () => {
           <NavLink className="header-link" onClick={onClose} to="/uses">
             Uses
           </NavLink>
-        </div>
+        </nav>
       </div>
     </header>
   );

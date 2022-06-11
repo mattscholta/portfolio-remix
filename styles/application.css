@@ -46,7 +46,7 @@
   height: 100%;
   display: flex;
   justify-items: center;
-  padding: 0.5rem;
+  padding: theme("spacing.2") theme("spacing.4");
   align-items: center;
   font-size: 0.9rem;
   transition: color 140ms ease-out;

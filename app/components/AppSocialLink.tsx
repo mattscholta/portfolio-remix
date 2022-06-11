@@ -8,6 +8,7 @@ export const AppSocialLink = (props: AppSocialLinkProps) => {
   const { data } = props;
 
   // Setup
+  const alt = `Follow me on ${data.title}`;
   const size = 14;
 
   return (
@@ -18,12 +19,7 @@ export const AppSocialLink = (props: AppSocialLinkProps) => {
       rel="noopener noreferrer"
       target="_blank"
     >
-      <img
-        alt="Follow me on xxxxx"
-        height={size}
-        src={data.icon}
-        width={size}
-      />
+      <img alt={alt} height={size} src={data.icon} width={size} />
       {data.title}
     </a>
   );
