@@ -88,10 +88,12 @@ export default function App() {
       </head>
       <body>
         <AppHeader />
-        {/* <AppHeaderMobile /> */}
+        <AppHeaderMobile />
+
         <main>
           <Outlet />
         </main>
+
         <AppFooter />
 
         {/* Analytics */}

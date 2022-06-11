@@ -19,7 +19,10 @@ export const AppHeader = () => {
 
   return (
     <header
-      className={classNames("header overflow-hidden print:hidden", { closed })}
+      className={classNames(
+        "header hidden overflow-hidden print:hidden md:block",
+        { closed }
+      )}
     >
       <div className="mx-auto flex h-full w-full max-w-5xl items-center justify-evenly md:text-sm">
         <button

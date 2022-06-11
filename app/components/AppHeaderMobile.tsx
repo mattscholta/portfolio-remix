@@ -17,15 +17,43 @@ export const AppHeaderMobile = () => {
     setClosed(!closed);
   };
 
+  // Markup
+  const renderNavigation = () => {
+    return (
+      <nav className="mt-14 flex flex-col items-center gap-4 md:flex-row">
+        <NavLink className="header-link" onClick={onClose} to="/">
+          About
+        </NavLink>
+        <NavLink className="header-link" onClick={onClose} to="/blog">
+          Blog
+        </NavLink>
+        <NavLink className="header-link" onClick={onClose} to="/portfolio">
+          Portfolio
+        </NavLink>
+        <NavLink className="header-link" onClick={onClose} to="/resume">
+          Resume
+        </NavLink>
+        {/*
+        <NavLink className="header-link" onClick={onClose} to="/sandbox">
+          Sandbox
+        </NavLink>
+        */}
+        <NavLink className="header-link" onClick={onClose} to="/uses">
+          Uses
+        </NavLink>
+      </nav>
+    );
+  };
+
   return (
     <header
-      className={classNames("header overflow-hidden print:hidden", {
+      className={classNames("header overflow-hidden print:hidden md:hidden", {
         closed
       })}
     >
       <div className="flex h-14 w-full items-center md:text-sm">
         <button
-          className="header-logo ml-2 gap-2 px-4 md:hidden"
+          className="header-logo ml-2 h-full gap-2 px-4 md:hidden"
           onClick={onToggle}
           title="Toggle menu"
           type="button"
@@ -34,8 +62,11 @@ export const AppHeaderMobile = () => {
         </button>
         <div className="flex-1 md:hidden" />
 
-        <NavLink className="header-logo ml-4 gap-2 px-4" to="/">
-          <AppLogo />
+        <NavLink
+          className="header-logo ml-4 flex h-full items-center gap-2 px-4"
+          to="/"
+        >
+          <AppLogo className="h-full" />
           <span className="sr-only">Home</span>
         </NavLink>
 
@@ -43,28 +74,7 @@ export const AppHeaderMobile = () => {
       </div>
 
       <div className="h-full font-font-monospace md:flex-row">
-        <nav className="flex flex-col md:flex-row">
-          <NavLink className="header-link" onClick={onClose} to="/">
-            About
-          </NavLink>
-          <NavLink className="header-link" onClick={onClose} to="/blog">
-            Blog
-          </NavLink>
-          <NavLink className="header-link" onClick={onClose} to="/portfolio">
-            Portfolio
-          </NavLink>
-          <NavLink className="header-link" onClick={onClose} to="/resume">
-            Resume
-          </NavLink>
-          {/*
-        <NavLink className="header-link" onClick={onClose} to="/sandbox">
-          Sandbox
-        </NavLink>
-        */}
-          <NavLink className="header-link" onClick={onClose} to="/uses">
-            Uses
-          </NavLink>
-        </nav>
+        {!closed && renderNavigation()}
       </div>
     </header>
   );

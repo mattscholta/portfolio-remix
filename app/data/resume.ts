@@ -38,7 +38,7 @@ export const experience: Experience[] = [
     dateRange: [new Date(2021, 4, 1)],
     description: `
       <p>
-        One year in we've jump-started the organizations code! Taking a
+        One year in we've jump-started the organization's code! Taking a
         "loosely typed and strongly coupled" system and successfully flipping it.
         The entire stack is now containerized and makes us of Firebase Emulators
         for an incredible development workflow.
@@ -70,9 +70,11 @@ export const experience: Experience[] = [
     companyUrl: "https://thredup.com",
     date: `Feb 2016 - Apr 2021`,
     dateRange: [new Date("February 2016"), new Date("April 2021")],
-    description: `
-      <p>Successfully pitched, prototyped, and delivered several high-impact projects within the organization. Assisting in hiring, managing, and mentoring of engineers at various levels, distributed across the globe.</p>
-    `,
+    description: `<p>
+      Successfully pitched, prototyped, and delivered several high-impact
+      projects within the organization. Assisting in hiring, managing, and
+      mentoring engineers at various levels, distributed across the globe.
+    </p>`,
     highlights: [
       `Content Management System; Pitched, prototyped, and delivered`,
       `Progressive Web App (PWA); Pitched, prototyped, and delivered`,
@@ -133,10 +135,10 @@ export const experience: Experience[] = [
     description: `<p>
       Joining Lift Agency was a conscious decision to move away from any
       form of a "Design" related role and focus on "Engineering". At the time
-      jQuery was the tool of choice and browser support/hacks was an art form.
+      jQuery was the tool of choice and browser support/hacks were an art form.
     </p>`,
     highlights: [
-      `Wrote the Charter Checkout system and client side validation flow`,
+      `Wrote the Charter Checkout system and client-side validation flow`,
       `Experienced all the fun "quirks" of the IE days and Financial Systems`,
       `Assisted in creating the "Lift Calculator" an iPhone application`
     ],
@@ -186,13 +188,13 @@ export const experience: Experience[] = [
     date: `Sep 2008 - Feb 2010`,
     dateRange: [new Date(2008, 8, 1), new Date(2010, 2, 1)],
     description: `<p>
-      A hybrid Dev/Design role creating web and interactive materials
-      for clients including; McDonalds, FedEx, PG&E, US Army, US Census, and
+      A hybrid Dev/Design role creating web and interactive materials for
+      clients including; McDonald's, FedEx, PG&E, US Army, US Census, and
       others.
     </p>`,
     highlights: [
       `Management of the APAC Ronald McDonald House Charity web domain`,
-      `Design & development of interative Flash media across, across 3-5 languages`,
+      `Design & development of interactive Flash media, across 3-5 languages`,
       `Speaker: New York, non-profit meetup re: Using social networking to enhance brand awareness`
     ],
     // image: "https://www.iwgroup.agency/favicon.ico",
@@ -214,9 +216,9 @@ export const experience: Experience[] = [
     date: `Oct 2007 - Aug 2008`,
     dateRange: [new Date(2007, 10, 1), new Date(2008, 8, 1)],
     description: `<p>
-      As with any startup we tend to wear many hats, and this being my
-      first professional / non-freelance position I took every opportunity
-      I could to be learn.
+      As with any startup, we tend to wear many hats, and this being my first
+      professional / non-freelance position I took every opportunity I could
+      to learn.
     </p>`,
     highlights: [
       `Implemented and managed the video encoding/transcoding processes`,
