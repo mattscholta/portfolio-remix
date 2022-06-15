@@ -5,24 +5,24 @@ exports[`BlogPreview Component > should render our BlogPreview 1`] = `
   <div>
     <a
       class="blog-preview relative flex flex-col"
-      href="/blog/undefined"
+      href="/blog/hello-world"
     >
       <img
-        alt="test title"
+        alt="Hello World"
         height="auto"
         loading="lazy"
-        src=""
+        src="https://example.com/image.jpg"
         width="auto"
       />
       <h3
         class="mt-4 mb-2 text-2xl"
       >
-        test title
+        Hello World
       </h3>
       <div
         class="font-font-monospace text-sm"
       >
-        Invalid Date
+        12/31/2019
       </div>
     </a>
   </div>

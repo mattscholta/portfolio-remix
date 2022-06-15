@@ -12,7 +12,14 @@ export default defineConfig({
       "~": resolve(__dirname, "./app")
     }
   },
+
   test: {
+    coverage: {
+      all: true,
+      exclude: ["node_modules", "public/build/**/*"],
+      include: [],
+      reporter: ["text", "json", "html"]
+    },
     globals: true,
     environment: "jsdom",
     setupFiles: "./test/setup.ts"
