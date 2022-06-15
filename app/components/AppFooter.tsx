@@ -1,4 +1,4 @@
-import { useLocation } from "remix";
+import { useLocation } from "@remix-run/react";
 import {
   SOCIAL_GITHUB,
   SOCIAL_LINKEDIN,

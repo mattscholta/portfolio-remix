@@ -1,6 +1,6 @@
+import { NavLink } from "@remix-run/react";
 import classNames from "classnames";
 import { useState } from "react";
-import { NavLink } from "remix";
 
 import { AppLogo } from "./AppLogo";
 

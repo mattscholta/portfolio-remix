@@ -1,0 +1,29 @@
+// Vitest Snapshot v1
+
+exports[`AppUserCard Component > should render our AppUserCard 1`] = `
+<body>
+  <div>
+    <div
+      class="user-card-classname flex items-center gap-4"
+    >
+      <img
+        alt="Image Alt text, because we should do better!"
+        class="h-10 w-10 rounded-full border border-color-border-dark"
+        src="https://via.placeholder.com/150"
+      />
+      <div>
+        <h3
+          class="text-xl"
+        >
+          Matthew Scholta
+        </h3>
+        <div
+          class="font-font-monospace text-xs"
+        >
+          lorem ipsum dolor sit amet
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
