@@ -1,28 +1,28 @@
 // Vitest Snapshot v1
 
-exports[`BlogPreview Component > should render our BlogPreview 1`] = `
+exports[`BlogFeatured Component > should render our BlogFeatured 1`] = `
 <body>
   <div>
     <a
       class="blog-preview relative flex flex-col"
-      href="/blog/undefined"
+      href="/blog/test-slug"
     >
       <img
-        alt="test title"
+        alt="Test Title"
         height="auto"
         loading="lazy"
-        src=""
+        src="https://via.placeholder.com/150"
         width="auto"
       />
       <h3
         class="mt-4 mb-2 text-2xl"
       >
-        test title
+        Test Title
       </h3>
       <div
         class="font-font-monospace text-sm"
       >
-        Invalid Date
+        12/31/2019
       </div>
     </a>
   </div>
