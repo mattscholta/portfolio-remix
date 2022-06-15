@@ -1,5 +1,5 @@
 import * as React from "react";
-import { useLocation } from "remix";
+import { useLocation } from "@remix-run/react";
 
 import { BASE_URL } from "~/config/settings.server";
 

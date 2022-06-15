@@ -1,4 +1,5 @@
-import { json, LoaderFunction } from "remix";
+import { json } from "@remix-run/node";
+import type { LoaderFunction } from "@remix-run/node";
 
 import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
 

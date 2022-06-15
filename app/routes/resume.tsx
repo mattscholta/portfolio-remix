@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { LinksFunction, MetaFunction } from "remix";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
 import { social } from "~/data/resume";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";

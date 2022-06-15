@@ -1,4 +1,4 @@
-import { useNavigate } from "remix";
+import { useNavigate } from "@remix-run/react";
 import { BASE_URL } from "~/config/settings.server";
 
 export const usePageTransition = () => {

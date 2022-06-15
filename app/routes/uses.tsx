@@ -1,4 +1,4 @@
-import type { MetaFunction } from "remix";
+import type { MetaFunction } from "@remix-run/node";
 import { SITE_TITLE } from "~/config/constants";
 import { AppHero } from "~/components/AppHero";
 import { SectionHardware } from "~/components/SectionHardware";

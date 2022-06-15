@@ -1,4 +1,4 @@
-import { LoaderFunction } from "remix";
+import type { LoaderFunction } from "@remix-run/node";
 
 const qualities = [
   "A problem solver 🧩",

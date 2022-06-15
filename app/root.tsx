@@ -7,9 +7,9 @@ import {
   Scripts,
   ScrollRestoration,
   useLoaderData
-} from "remix";
-import type { LinksFunction, LoaderFunction } from "remix";
-import type { MetaFunction } from "remix";
+} from "@remix-run/react";
+import type { LinksFunction, LoaderFunction } from "@remix-run/node";
+import type { MetaFunction } from "@remix-run/node";
 
 import { cookieTheme } from "./cookies";
 import { getMetaTags } from "./config/seo";

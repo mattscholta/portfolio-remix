@@ -1,5 +1,5 @@
 import classnames from "classnames";
-import { Link } from "remix";
+import { Link } from "@remix-run/react";
 
 export interface ScrollToProps {
   className?: string;

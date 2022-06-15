@@ -1,5 +1,5 @@
-import type { MetaFunction } from "remix";
-import { useLoaderData } from "remix";
+import type { MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
 
 import type { LoaderData } from "~/routes/api/portfolio";
 import { AppHero } from "~/components/AppHero";
