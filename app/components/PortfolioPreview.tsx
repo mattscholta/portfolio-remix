@@ -1,5 +1,4 @@
-import { Link } from "remix";
-
+import { Link } from "@remix-run/react";
 import type { Portfolio } from "~/routes/api/portfolio";
 
 export interface PortfolioPreviewProps {

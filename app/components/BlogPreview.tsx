@@ -1,5 +1,5 @@
+import { Link } from "@remix-run/react";
 import classnames from "classnames";
-import { Link } from "remix";
 
 export interface BlogPreviewProps {
   className?: string;
