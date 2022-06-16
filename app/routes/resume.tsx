@@ -3,6 +3,7 @@ import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
 import { social } from "~/data/resume";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
+import { AppShareLink } from "~/components/AppShareButton";
 import { AppSocialLink } from "~/components/AppSocialLink";
 import { SectionEducation } from "~/components/SectionEducation";
 import { SectionExperience } from "~/components/SectionExperience";
@@ -65,15 +66,15 @@ export default function () {
                 ))}
               </div>
             </div>
-            <div className="print:hidden">
-              <button
-                className="ui-btn custom-bg-gradient mt-8 w-full whitespace-nowrap rounded-2xl py-2 px-4 text-sm font-normal text-white"
-                onClick={onClick}
+            <div className="mt-8 flex gap-4 print:hidden">
+              <a
+                className="ui-btn custom-bg-gradient flex-1 whitespace-nowrap rounded-2xl py-2 px-4 text-center text-sm font-normal text-white"
+                download={true}
+                href="/Matthew_Scholta_2022.pdf"
               >
-                {copied
-                  ? "Copied to clipboard ✓"
-                  : "Save a tree, share a link!"}
-              </button>
+                Download Resume
+              </a>
+              <AppShareLink />
             </div>
           </div>
         </aside>
@@ -86,12 +87,21 @@ export default function () {
             </h1>
             <div className="mb-8 border-t border-solid border-color-border print:hidden" />
             <div className="flex items-center gap-10">
+              {/*
               <p>
                 <span className="mr-1">👨‍💻</span> A Software Engineer whose
                 passion lies in creating <b>quality code</b> written{" "}
                 <b>for humans</b>, unlocking <b>developer productivity</b>, and
                 creating <b>delightful</b> user and developer <b>experiences</b>
                 .
+              </p>
+              */}
+
+              <p>
+                <span className="mr-1">👨‍💻</span> A Software Engineer whose
+                passion lies in creating <b>quality code</b> written{" "}
+                <b>for humans</b>, unlocking <b>developer productivity</b>, and
+                creating a delightful <b>user experience</b>.
               </p>
             </div>
           </section>
