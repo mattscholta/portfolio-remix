@@ -6,6 +6,7 @@ node_modules
 .env
 .vercel
 .output
+*.map
 
 /build/
 /public/build
