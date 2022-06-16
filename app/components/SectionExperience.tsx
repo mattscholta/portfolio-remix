@@ -30,7 +30,7 @@ export const SectionExperience = () => {
       </div>
       <div className="print:hidden">
         <button
-          className="m-10 mx-auto block rounded-2xl border border-color-border bg-color-background-light py-2 px-4 font-font-sans-serif text-xs font-bold uppercase"
+          className="ui-btn custom-bg-gradient m-10 mx-auto block rounded-2xl border border-color-border bg-color-background-light py-2 px-4 font-font-sans-serif text-xs text-white"
           onClick={onToggleExp}
         >
           {shown === minValue ? "Show more" : "Show less"}
