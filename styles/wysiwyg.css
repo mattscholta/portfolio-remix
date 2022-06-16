@@ -60,5 +60,5 @@
   color: var(--color-background);
   padding: 0.5rem;
   margin: 1rem 0;
-  /* display: block; */
+  overflow: auto;
 }

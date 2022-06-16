@@ -38,7 +38,7 @@ export default function () {
 
       <img
         alt=""
-        className="border-b border-t border-color-border-dark"
+        className="w-full border-b border-t border-color-border-dark"
         src={data.imageTemp}
       />
 

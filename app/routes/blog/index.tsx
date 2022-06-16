@@ -21,9 +21,8 @@ export default function () {
   const { posts, tags: _tags } = useLoaderData<LoaderData>();
 
   // Setup
-  const slug = "improving-code-quality";
-  const featured = posts.filter((node) => node.slug === slug);
-  const others = posts.filter((node) => node.slug !== slug);
+  const featured = posts.filter((node) => node.sticky);
+  const others = posts.filter((node) => !node.sticky);
 
   return (
     <>
