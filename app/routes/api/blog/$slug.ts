@@ -5,6 +5,7 @@ import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
 
 export interface Post {
   content: {
+    raw: any;
     html: string;
   };
   createdAt: string;
@@ -25,6 +26,7 @@ const getPost = gql`
     post(where: { slug: $slug }) {
       content {
         html
+        raw
       }
       createdAt
       date

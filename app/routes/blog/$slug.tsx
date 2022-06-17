@@ -1,10 +1,22 @@
 import { useLoaderData } from "@remix-run/react";
-import type { MetaFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
 import { AppHero } from "~/components/AppHero";
 import { SITE_TITLE } from "~/config/constants";
 import type { LoaderData } from "~/routes/api/blog/$slug";
 import { loader } from "~/routes/api/blog/$slug";
+import { AppWysiwyg } from "~/components/AppWysiwyg";
+
+import stylesLines from "prismjs/plugins/line-numbers/prism-line-numbers.css";
+import stylesTheme from "prismjs/themes/prism-tomorrow.css";
+import "prismjs/plugins/line-numbers/prism-line-numbers";
+
+export const links: LinksFunction = () => {
+  return [
+    { rel: "stylesheet", href: stylesLines },
+    { rel: "stylesheet", href: stylesTheme }
+  ];
+};
 
 export { loader };
 
@@ -42,7 +54,7 @@ export default function () {
         src={data.imageTemp}
       />
 
-      <section className="m-auto max-w-2xl">
+      <section className="m-auto max-w-4xl">
         <div className="mb-20 p-4">
           <div className="my-8 md:my-12 ">
             <h2 className="text-highlight m-0 mb-2 inline-block text-left text-3xl md:text-4xl">
@@ -52,49 +64,9 @@ export default function () {
           </div>
 
           {/* Content */}
-          <div className="flex flex-col gap-10 md:flex-row">
-            <div>
-              <div
-                className="wysiwyg"
-                dangerouslySetInnerHTML={{ __html: data.content.html }}
-              />
-            </div>
-
-            {/*
-            <aside className="flex h-full min-w-[300px] flex-col gap-20">
-              <div className="flex flex-col gap-10 border-0 md:p-4">
-                <div>
-                  <h3 className="mb-4">Tags:</h3>
-                  <AppTags
-                    classNameTag="border rounded-md px-2 py-1 text-sm bg-color-background-light"
-                    tags={["one", "two"]}
-                  />
-                </div>
-                <AppUserCard
-                  copy="<b>Role:</b> Staff Engineer @thredUP"
-                  image="/images/assets/matt-scaled.webp"
-                />
-              </div>
-
-              <div className="flex flex-col gap-10 border-0 border-l border-solid border-color-border-dark p-4">
-                <div>
-                  <h3>Other Posts</h3>
-                </div>
-              </div>
-            </aside>
-            */}
-          </div>
+          <AppWysiwyg content={data.content.raw} />
         </div>
       </section>
-
-      {/*
-      <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
-        <div className="mx-auto flex max-w-5xl gap-20">
-          <div className="flex-1">One</div>
-          <div className="flex-1">Two</div>
-        </div>
-      </section>
-      */}
     </>
   );
 }
