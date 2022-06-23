@@ -31,7 +31,14 @@ export const AppHeader = () => {
           title="Toggle menu"
           type="button"
         >
-          <img src="/images/svg/menu.svg" className="max-h-4" alt="" />
+          <img
+            alt="Toggle Menu"
+            className="max-h-4"
+            height={16}
+            loading="eager"
+            src="/images/svg/menu.svg"
+            width={19}
+          />
         </button>
         <div className="flex-1 md:hidden" />
 

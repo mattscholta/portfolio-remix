@@ -82,7 +82,7 @@ export const experience: Experience[] = [
       `CSS Overhaul; Pitched, prototyped, and delivered`,
       `Apollo Migration, Redux Migration, Checkout Overhaul, and many more...`
     ],
-    image: `https://thredup.com/favicon.ico`,
+    image: `https://cf-tup-assets.thredup.com/shop/images/manifest_v2/favicon_96.png`,
     tags: [
       "CSS",
       "Docker",

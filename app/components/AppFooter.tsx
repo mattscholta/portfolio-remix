@@ -31,6 +31,7 @@ export const AppFooter = () => {
             alt="Follow me on LinkedIn"
             className="footer-social"
             height={16}
+            loading="lazy"
             src="/images/svg/linkedin.svg"
             width={16}
           />
@@ -45,6 +46,7 @@ export const AppFooter = () => {
             alt="Follow me on GitHub"
             className="footer-social"
             height={16}
+            loading="lazy"
             src="/images/svg/github.svg"
             width={16}
           />
@@ -59,6 +61,7 @@ export const AppFooter = () => {
             alt="Follow me on Twitter"
             className="footer-social"
             height={16}
+            loading="lazy"
             src="/images/svg/twitter.svg"
             width={16}
           />

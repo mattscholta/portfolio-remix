@@ -15,9 +15,12 @@ exports[`AppHeader Component > should render our footer 1`] = `
           type="button"
         >
           <img
-            alt=""
+            alt="Toggle Menu"
             class="max-h-4"
+            height="16"
+            loading="eager"
             src="/images/svg/menu.svg"
+            width="19"
           />
         </button>
         <div

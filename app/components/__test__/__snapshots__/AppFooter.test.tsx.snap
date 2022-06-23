@@ -19,6 +19,7 @@ exports[`AppFooter Component > should render our footer 1`] = `
             alt="Follow me on LinkedIn"
             class="footer-social"
             height="16"
+            loading="lazy"
             src="/images/svg/linkedin.svg"
             width="16"
           />
@@ -33,6 +34,7 @@ exports[`AppFooter Component > should render our footer 1`] = `
             alt="Follow me on GitHub"
             class="footer-social"
             height="16"
+            loading="lazy"
             src="/images/svg/github.svg"
             width="16"
           />
@@ -47,6 +49,7 @@ exports[`AppFooter Component > should render our footer 1`] = `
             alt="Follow me on Twitter"
             class="footer-social"
             height="16"
+            loading="lazy"
             src="/images/svg/twitter.svg"
             width="16"
           />
