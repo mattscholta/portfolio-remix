@@ -16,20 +16,26 @@ export const SectionMisc = () => {
           <img
             alt="Me, my son, and our dog at the beach"
             className="aspect-square max-w-[47%] flex-grow"
-            width={200}
+            height="auto"
+            loading="lazy"
             src="https://s3-us-west-1.amazonaws.com/mattscholta/instagram/05.jpg"
+            width={200}
           />
           <img
             alt="My 2014 Triumph Thruxton 900 in front of a Lifeguard tower"
             className="aspect-square max-w-[47%] flex-grow"
-            width={200}
+            height="auto"
+            loading="lazy"
             src="https://s3-us-west-1.amazonaws.com/mattscholta/instagram/07.jpg"
+            width={200}
           />
           <img
             alt="My 2014 Triumph Thruxton 900 in front some cool reeds"
             className="aspect-square flex-grow"
-            width={200}
+            height="auto"
+            loading="lazy"
             src="https://s3-us-west-1.amazonaws.com/mattscholta/instagram/06.jpg"
+            width={200}
           />
         </div>
       </div>

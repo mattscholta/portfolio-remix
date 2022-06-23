@@ -49,9 +49,12 @@ export default function () {
       </section>
 
       <img
-        alt=""
+        alt={data.title}
         className="w-full border-b border-t border-color-border-dark"
+        height="auto"
+        loading="eager"
         src={data.imageTemp}
+        width="100%"
       />
 
       <section className="m-auto max-w-4xl">

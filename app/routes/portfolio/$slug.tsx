@@ -34,8 +34,11 @@ export default function () {
         <img
           alt={data.title}
           className="mb-20 mt-0 w-full border-t border-b border-color-border"
+          height="auto"
+          loading="eager"
           src={img}
           style={{ aspectRatio: "2/1" }}
+          width="100%"
         />
       )}
       <div className="relative m-auto flex max-w-3xl flex-col">
