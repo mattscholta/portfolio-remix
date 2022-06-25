@@ -1,4 +1,3 @@
-import { useState } from "react";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
 import { social } from "~/data/resume";
@@ -7,7 +6,6 @@ import { AppShareLink } from "~/components/AppShareButton";
 import { AppSocialLink } from "~/components/AppSocialLink";
 import { SectionEducation } from "~/components/SectionEducation";
 import { SectionExperience } from "~/components/SectionExperience";
-import { useClipboard } from "~/hooks/useClipboard";
 import styles from "~/styles/resume.css";
 
 export const links: LinksFunction = () => [
@@ -22,28 +20,14 @@ export const meta: MetaFunction = () => {
   const year = new Date().getFullYear();
 
   return {
-    description: `${SITE_AUTHOR}'s resume`,
-    title: `The ${year} online resume of ${SITE_AUTHOR} | ${SITE_TITLE}`
+    description: `The online resume of ${SITE_AUTHOR}, a software engineer located in San Diego, California.`,
+    title: `${year} Resume | ${SITE_TITLE}`
   };
 };
 
 export default function () {
-  // Hooks
-  const { onCopy } = useClipboard();
-  const [copied, setCopied] = useState(false);
-
   // Setup
   const year = new Date().getFullYear();
-
-  // Handlers
-  const onClick = async () => {
-    setCopied(true);
-    onCopy(`${window.location.origin}/resume`);
-
-    setTimeout(() => {
-      setCopied(false);
-    }, 3000);
-  };
 
   return (
     <div className="m-auto max-w-5xl py-10 md:py-20">
