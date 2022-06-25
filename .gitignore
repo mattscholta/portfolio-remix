@@ -8,8 +8,9 @@ node_modules
 .output
 *.map
 
+/app/styles/
 /build/
-/public/build
+/public/build/
 /api/index.js
 
 .env
