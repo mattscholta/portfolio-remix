@@ -10,7 +10,7 @@ import { loader } from "~/routes/api/portfolio";
 export { loader };
 
 export const meta: MetaFunction = () => ({
-  title: `Featured work both past & present | ${SITE_TITLE}`
+  title: `Featured Work | ${SITE_TITLE}`
 });
 
 export default function () {
