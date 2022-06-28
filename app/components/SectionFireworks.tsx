@@ -75,7 +75,14 @@ export const SectionFireworks = () => {
     setEnabled(true);
   }, []);
 
-  return <Fireworks style={style} enabled={enabled} options={options} />;
+  return (
+    <Fireworks
+      className="hidden md:block"
+      style={style}
+      enabled={enabled}
+      options={options}
+    />
+  );
 };
 
 export default SectionFireworks;
