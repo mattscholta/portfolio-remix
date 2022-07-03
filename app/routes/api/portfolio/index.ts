@@ -1,7 +1,8 @@
 import { json } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
 
-import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
+import { fetchFromGraphCMS } from "~/utils/graphcms";
+import { getPortfolios } from "~/queries/getPortfolios";
 
 export interface Portfolio {
   company: string;
@@ -15,23 +16,6 @@ export interface Portfolio {
 }
 
 export type LoaderData = Portfolio[];
-
-const getPortfolios = gql`
-  query {
-    portfolios(orderBy: date_DESC) {
-      company
-      current
-      date
-      images {
-        url
-      }
-      overview
-      slug
-      thumbnailTemp
-      title
-    }
-  }
-`;
 
 export const loader: LoaderFunction = async (args): Promise<LoaderData> => {
   const data = await fetchFromGraphCMS(getPortfolios);

@@ -1,7 +1,8 @@
 import { json } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
 
-import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
+import { fetchFromGraphCMS } from "~/utils/graphcms";
+import { getPortfolioBySlug } from "~/queries/getPortfolio";
 
 export type LoaderData = {
   company: string;
@@ -18,24 +19,6 @@ export type LoaderData = {
   slug: string;
   title: string;
 };
-
-const getPortfolioBySlug = gql`
-  query portfolios($slug: String!) {
-    portfolios(where: { slug: $slug }) {
-      company
-      content {
-        html
-      }
-      id
-      images {
-        url
-      }
-      intro
-      slug
-      title
-    }
-  }
-`;
 
 export const loader: LoaderFunction = async (args): Promise<LoaderData> => {
   const { slug } = args.params;
