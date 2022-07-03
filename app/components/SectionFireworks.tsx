@@ -6,6 +6,18 @@ export const SectionFireworks = () => {
   const { enabled, options, setEnabled } = useFireworks({
     initialStart: false,
     initialOptions: {
+      autoresize: true,
+      brightness: {
+        min: 50,
+        max: 80,
+        decay: {
+          min: 0.015,
+          max: 0.03
+        }
+      },
+      boundaries: {
+        visible: process.env.NODE_ENV !== "production"
+      },
       intensity: 0,
       hue: {
         min: 0,
@@ -26,34 +38,20 @@ export const SectionFireworks = () => {
       particles: 150,
       trace: 13,
       explosion: 3,
-      autoresize: true,
-      brightness: {
-        min: 50,
-        max: 80,
-        decay: {
-          min: 0.015,
-          max: 0.03
-        }
-      },
-      boundaries: {
-        visible: process.env.NODE_ENV !== "production"
-      },
-      sound: {
-        enabled: false,
-        files: [
-          "https://fireworks.js.org/sounds/explosion0.mp3",
-          "https://fireworks.js.org/sounds/explosion1.mp3",
-          "https://fireworks.js.org/sounds/explosion2.mp3"
-        ],
-        volume: {
-          min: 1,
-          max: 2
-        }
-      },
+      // sound: {
+      //   enabled: true,
+      //   files: [
+      //     "https://fireworks.js.org/sounds/explosion0.mp3",
+      //     "https://fireworks.js.org/sounds/explosion1.mp3",
+      //     "https://fireworks.js.org/sounds/explosion2.mp3"
+      //   ],
+      //   volume: {
+      //     min: 1,
+      //     max: 10
+      //   }
+      // },
       mouse: {
-        click: true,
-        move: true,
-        max: 1
+        click: true
       }
     }
   });
@@ -61,6 +59,7 @@ export const SectionFireworks = () => {
   // Setup
   const style: React.CSSProperties = {
     bottom: 0,
+    cursor: "crosshair",
     inset: 0,
     height: "100%",
     left: 0,

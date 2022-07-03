@@ -1,7 +1,8 @@
 import { json } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
 
-import { fetchFromGraphCMS, gql } from "~/utils/graphcms";
+import { fetchFromGraphCMS } from "~/utils/graphcms";
+import { getPosts } from "~/queries/getPosts";
 
 export interface Post {
   content: {
@@ -26,33 +27,6 @@ export type LoaderData = {
   posts: Post[];
   tags: string[];
 };
-
-const getPosts = gql`
-  query {
-    # Query enum values - https://graphcms.com/docs/api-reference/schema/enumerations
-    __type(name: "Tags") {
-      enumValues {
-        name
-      }
-    }
-
-    # posts(stage: DRAFT) {
-
-    posts(orderBy: createdAt_ASC) {
-      content {
-        html
-      }
-      date
-      id
-      imageTemp
-      intro
-      slug
-      tags
-      sticky
-      title
-    }
-  }
-`;
 
 export const loader: LoaderFunction = async (): Promise<LoaderData> => {
   try {
