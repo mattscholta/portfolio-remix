@@ -8,9 +8,9 @@ import { SITE_UPDATED } from "~/config/constants";
 import { getSitemap } from "~/queries/getSitemap";
 
 /**
+ * @method GET
  * @name /sitemap.xml
  * @description Generate a sitemap.xml for SEO purposes
- * @returns
  */
 export const loader: LoaderFunction = async (args) => {
   const staticUrls = ["/", "/blog", "/portfolio", "/resume", "/uses"];
