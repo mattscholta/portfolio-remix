@@ -123,7 +123,7 @@ export const getMetaTags = (url: string, isDark: boolean) => {
 
     // Twitter
     {
-      content: `summary`,
+      content: `summary_large_image`,
       property: "twitter:card" // summary | summary_large_image
     },
     {
@@ -138,10 +138,10 @@ export const getMetaTags = (url: string, isDark: boolean) => {
       content: data.image,
       property: "twitter:image"
     },
-    // {
-    //   content: `@visormatt`,
-    //   property: 'twitter:site'
-    // },
+    {
+      content: `@visormatt`,
+      property: "twitter:site"
+    },
     {
       content: data.title,
       property: "twitter:title"

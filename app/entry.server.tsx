@@ -6,18 +6,18 @@ import { artwork } from "~/config/artwork";
 
 export default function handleRequest(
   request: Request,
-  responseStatusCode: number,
-  responseHeaders: Headers,
+  resStatus: number,
+  resHeaders: Headers,
   remixContext: EntryContext
 ) {
+  resHeaders.set("Content-Type", "text/html");
+
   const markup = renderToString(
     <RemixServer context={remixContext} url={request.url} />
   );
 
-  responseHeaders.set("Content-Type", "text/html");
-
   return new Response("<!DOCTYPE html>" + artwork + markup, {
-    status: responseStatusCode,
-    headers: responseHeaders
+    status: resStatus,
+    headers: resHeaders
   });
 }
