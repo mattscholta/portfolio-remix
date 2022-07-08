@@ -5,7 +5,7 @@ describe("seo: metadata", () => {
   const metadata = getMetaTags("http://testing.com", false);
 
   it('## "metadata" tags', () => {
-    expect(metadata.length).toBe(24);
+    expect(metadata.length).toBe(25);
   });
 
   it('## "apple" tags', () => {
@@ -35,7 +35,7 @@ describe("seo: metadata", () => {
       metaTag.property?.startsWith("twitter:")
     );
 
-    expect(tags.length).toBe(5);
+    expect(tags.length).toBe(6);
   });
 
   it('## "viewport" tags', () => {
