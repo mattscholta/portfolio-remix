@@ -23,6 +23,7 @@ export default function () {
     setHeading(data);
   };
 
+  // const isBrowser = typeof window !== "undefined";
   // const SectionFireworks = React.lazy(
   //   () => import("~/components/SectionFireworks")
   // );
@@ -30,9 +31,12 @@ export default function () {
   return (
     <>
       <div className="relative">
+        {/*
+        <React.Suspense fallback={null}>
+          {isBrowser ? <SectionFireworks /> : null}
+        </React.Suspense>
+        */}
         <SectionFireworks />
-        {/* <React.Suspense fallback={null}>
-        </React.Suspense> */}
         <section className="relative z-0 m-auto flex max-w-6xl flex-col-reverse items-center justify-center gap-4 py-20 md:flex-row md:py-40">
           <AppHero
             className="py-10 md:py-20 md:text-right"

@@ -1,4 +1,4 @@
-import { hydrate } from "react-dom";
+import { hydrateRoot } from "react-dom/client";
 import { RemixBrowser } from "@remix-run/react";
 
 if ("serviceWorker" in navigator) {
@@ -7,4 +7,4 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-hydrate(<RemixBrowser />, document);
+hydrateRoot(document, <RemixBrowser />);
