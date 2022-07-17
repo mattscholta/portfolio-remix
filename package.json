@@ -29,7 +29,7 @@
     "reading-time": "^1.5.0"
   },
   "devDependencies": {
-    "@remix-run/dev": "^1.6.4",
+    "@remix-run/dev": "^1.6.5",
     "@remix-run/eslint-config": "^1.6.4",
     "@remix-run/serve": "^1.6.4",
     "@testing-library/jest-dom": "^5.16.4",
