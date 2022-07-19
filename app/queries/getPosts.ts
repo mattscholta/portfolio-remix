@@ -9,9 +9,7 @@ export const getPosts = gql`
       }
     }
 
-    # posts(stage: DRAFT) {
-
-    posts(orderBy: createdAt_ASC) {
+    posts(orderBy: date_DESC) {
       content {
         html
       }

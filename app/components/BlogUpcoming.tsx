@@ -16,9 +16,6 @@ export const BlogUpcoming = (props: BlogUpcomingProps) => {
             We are all salesmen
           </li>
           <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
-            Github CoPilot
-          </li>
-          <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
             Developer tooling - debuggers &amp; loggers
           </li>
           <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
