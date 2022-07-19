@@ -8,7 +8,8 @@ import {
   ScrollRestoration,
   useLoaderData
 } from "@remix-run/react";
-import type { LinksFunction, LoaderFunction } from "@remix-run/node";
+import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
 import type { MetaFunction } from "@remix-run/node";
 
 import { cookieTheme } from "./cookies";
@@ -35,16 +36,16 @@ export interface LoaderData {
   theme?: "light" | "dark";
 }
 
-export const loader: LoaderFunction = async (args): Promise<LoaderData> => {
+export const loader = async (args: DataFunctionArgs) => {
   const { request } = args;
 
   const canonical = request.url;
   const baseUrl = BASE_URL;
   const header = request.headers.get("cookie");
   const cookie = (await cookieTheme.parse(header)) ?? {};
-  const { theme } = cookie;
+  const { theme = "light" } = cookie;
 
-  return { baseUrl, canonical, theme, googleAnalytics: GOOGLE_ANALYTICS };
+  return json({ baseUrl, canonical, theme, googleAnalytics: GOOGLE_ANALYTICS });
 };
 
 export const meta: MetaFunction = (args) => ({
@@ -53,10 +54,10 @@ export const meta: MetaFunction = (args) => ({
 
 export default function App() {
   // Hooks
-  const loader = useLoaderData<LoaderData>();
+  const data = useLoaderData<typeof loader>();
 
   // Setup
-  const { baseUrl, canonical, googleAnalytics, theme } = loader;
+  const { baseUrl, canonical, googleAnalytics, theme } = data;
   const isDark = theme === "dark";
   const favicon = "/images/svg/logo.svg";
   const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
