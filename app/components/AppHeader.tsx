@@ -50,24 +50,49 @@ export const AppHeader = () => {
         <div className="flex-1" />
 
         <nav className="flex h-full flex-col font-font-monospace md:flex-row">
-          <NavLink className="header-link" onClick={onClose} to="/">
+          <NavLink
+            className="header-link"
+            onClick={onClose}
+            prefetch="intent"
+            to="/"
+          >
             About
           </NavLink>
-          <NavLink className="header-link" onClick={onClose} to="/blog">
+          <NavLink
+            className="header-link"
+            onClick={onClose}
+            prefetch="intent"
+            to="/blog"
+          >
             Blog
           </NavLink>
-          <NavLink className="header-link" onClick={onClose} to="/portfolio">
+          <NavLink
+            className="header-link"
+            onClick={onClose}
+            prefetch="intent"
+            to="/portfolio"
+          >
             Portfolio
           </NavLink>
-          <NavLink className="header-link" onClick={onClose} to="/resume">
+          <NavLink
+            className="header-link"
+            onClick={onClose}
+            prefetch="intent"
+            to="/resume"
+          >
             Resume
           </NavLink>
           {/*
-          <NavLink className="header-link" onClick={onClose} to="/sandbox">
+          <NavLink className="header-link" onClick={onClose} prefetch="intent" to="/sandbox">
             Sandbox
           </NavLink>
           */}
-          <NavLink className="header-link" onClick={onClose} to="/uses">
+          <NavLink
+            className="header-link"
+            onClick={onClose}
+            prefetch="intent"
+            to="/uses"
+          >
             Uses
           </NavLink>
         </nav>

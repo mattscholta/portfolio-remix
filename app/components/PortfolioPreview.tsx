@@ -33,6 +33,7 @@ export const PortfolioPreview = (props: PortfolioPreviewProps) => {
   return (
     <Link
       className="work-preview text-color-copy"
+      prefetch="intent"
       to={`/portfolio/${data.slug}`}
     >
       {/* {data.images[0] && renderImage()} */}

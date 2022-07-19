@@ -34,6 +34,7 @@ export const BlogPreview = (props: BlogPreviewProps) => {
   return (
     <Link
       className={classnames("blog-preview relative flex flex-col", className)}
+      prefetch="intent"
       to={`/blog/${slug}`}
     >
       {/* {featured && _renderFeatured()} */}
