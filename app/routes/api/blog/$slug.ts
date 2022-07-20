@@ -1,4 +1,4 @@
-import { json } from "@remix-run/node";
+import { json, Response } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
 
 import { fetchFromGraphCMS } from "~/utils/graphcms";
@@ -29,7 +29,7 @@ export const loader: LoaderFunction = async (args): Promise<LoaderData> => {
   const res = await data.json();
 
   if (!res.data.post) {
-    throw json(`Post "${slug}" not found`, { status: 404 });
+    throw new Response(`Post "${slug}" not found`, { status: 404 });
   }
 
   return res.data.post;

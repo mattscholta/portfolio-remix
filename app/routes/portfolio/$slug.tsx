@@ -1,4 +1,4 @@
-import { useLoaderData } from "@remix-run/react";
+import { useCatch, useLoaderData } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 
 import { AppHero } from "~/components/AppHero";
@@ -9,7 +9,7 @@ import type { LoaderData } from "~/routes/api/portfolio/$slug";
 export { loader };
 
 export const meta: MetaFunction = (args) => ({
-  title: `${args.data.title} | ${SITE_TITLE}`
+  title: `${args.data?.title} | ${SITE_TITLE}`
 });
 
 export default function () {
@@ -76,3 +76,22 @@ export default function () {
     </>
   );
 }
+
+export const CatchBoundary = () => {
+  const caught = useCatch();
+
+  if (caught.status === 404) {
+    return (
+      <section className="mx-auto max-w-6xl">
+        <AppHero
+          className="py-20 md:py-40"
+          copy="Uh oh..."
+          highlight="404"
+          tag="h1"
+        />
+      </section>
+    );
+  }
+
+  throw new Error("Unexpected error");
+};

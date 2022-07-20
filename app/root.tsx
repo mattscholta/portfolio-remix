@@ -6,6 +6,7 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useCatch,
   useLoaderData
 } from "@remix-run/react";
 import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
@@ -109,21 +110,76 @@ export default function App() {
   );
 }
 
-export function ErrorBoundary({ error }: any) {
-  console.error(error);
+export function CatchBoundary() {
+  const caught = useCatch();
+  const favicon = "/images/svg/logo.svg";
+  const manifest = "/manifest.json";
 
   return (
     <html>
       <head>
         <title>Oh no!</title>
         <Meta />
+        <link href={favicon} rel="apple-touch-icon" sizes="48x48" />
+        <link href={favicon} rel="favicon" />
+        <link href={favicon} rel="icon" type="image/svg+xml" />
+        <link href={favicon} rel="mask-icon" type="image/svg+xml" />
+        <link href={manifest} rel="manifest" />
         <Links />
       </head>
 
       <body>
-        {/* add the UI you want your users to see */}
+        <AppHeader />
+        <AppHeaderMobile />
+
+        <main>
+          <div className="mx-auto max-w-5xl pt-10">
+            <h1>
+              {caught.status} {caught.statusText} - Catch Boundary
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+              enim minima esse ipsam! Sit consequatur doloribus earum facere
+              eaque quaerat molestiae. Sed cupiditate ea non ipsum? Sed aliquid
+              quis quia.
+            </p>
+          </div>
+        </main>
+
+        <AppFooter />
+
+        {/* Analytics */}
+        {/* <TrackingGA id={googleAnalytics} /> */}
+
+        <Scripts />
+      </body>
+    </html>
+  );
+}
+
+export function ErrorBoundary({ error }: { error: unknown }) {
+  // Setup
+  const favicon = "/images/svg/logo.svg";
+  const manifest = "/manifest.json";
+
+  console.error(`🧧 Error`, error);
+
+  return (
+    <html>
+      <head>
+        <title>Oh no!</title>
+        <Meta />
+        <link href={favicon} rel="apple-touch-icon" sizes="48x48" />
+        <link href={favicon} rel="favicon" />
+        <link href={favicon} rel="icon" type="image/svg+xml" />
+        <link href={favicon} rel="mask-icon" type="image/svg+xml" />
+        <link href={manifest} rel="manifest" />
+        <Links />
+      </head>
+
+      <body>
         <div className="m-auto max-w-5xl">
-          <h1>Oh no!</h1>
+          <h1>Oh no! - Error Boundary</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
             enim minima esse ipsam! Sit consequatur doloribus earum facere eaque
