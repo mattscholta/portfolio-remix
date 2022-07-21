@@ -21,7 +21,8 @@ import { AppHeaderMobile } from "~/components/AppHeaderMobile";
 import {
   SITE_DESCRIPTION,
   SITE_SHARE_IMAGE,
-  SITE_TITLE
+  SITE_TITLE,
+  SITE_URL
 } from "~/config/constants";
 import { TrackingGA } from "~/components/TrackingGA";
 import { useIntro } from "~/hooks/useIntro";
@@ -57,7 +58,7 @@ export const meta: MetaFunction = (args) => ({
   ...getMetaData({
     canonical: args.data?.canonical,
     description: SITE_DESCRIPTION,
-    image: `${args.data?.baseUrl}${SITE_SHARE_IMAGE}`,
+    image: `${SITE_URL}${SITE_SHARE_IMAGE}`,
     title: SITE_TITLE
   })
 });
