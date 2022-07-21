@@ -15,7 +15,7 @@ import type { MetaFunction } from "@remix-run/node";
 
 import { cookieTheme } from "~/cookies";
 import { AppFooter } from "~/components/AppFooter";
-import { GOOGLE_ANALYTICS } from "~/config/settings.server";
+import { BASE_URL, GOOGLE_ANALYTICS } from "~/config/settings.server";
 import { AppHeader } from "~/components/AppHeader";
 import { AppHeaderMobile } from "~/components/AppHeaderMobile";
 import {
@@ -43,19 +43,20 @@ export interface LoaderData {
 export const loader = async (args: DataFunctionArgs) => {
   const { request } = args;
 
+  const baseUrl = BASE_URL;
   const canonical = request.url;
   const header = request.headers.get("cookie");
   const cookie = (await cookieTheme.parse(header)) ?? {};
   const { theme = "light" } = cookie;
 
-  return json({ canonical, theme, googleAnalytics: GOOGLE_ANALYTICS });
+  return json({ baseUrl, canonical, theme, googleAnalytics: GOOGLE_ANALYTICS });
 };
 
 export const meta: MetaFunction = (args) => ({
   ...getMetaData({
     canonical: args.data?.canonical,
     description: SITE_DESCRIPTION,
-    image: SITE_SHARE_IMAGE,
+    image: `${args.data?.baseUrl}${SITE_SHARE_IMAGE}`,
     title: SITE_TITLE
   })
 });
