@@ -8,13 +8,19 @@ import { loader } from "~/routes/api/blog";
 import type { LoaderData } from "~/routes/api/blog";
 import { BlogFeatured } from "~/components/BlogFeatured";
 import { BlogUpcoming } from "~/components/BlogUpcoming";
+import { getMetaData } from "~/metadata";
 
 export { loader };
 
-export const meta: MetaFunction = () => ({
-  description: `A collection of development ramblings by ${SITE_AUTHOR}.`,
-  title: `A developers ramblings | ${SITE_TITLE}`
-});
+export const meta: MetaFunction = (args) => {
+  return {
+    ...getMetaData({
+      canonical: args.parentsData?.root?.canonical,
+      description: `A collection of ramblings by ${SITE_AUTHOR}.`,
+      title: `A developers ramblings | ${SITE_TITLE}`
+    })
+  };
+};
 
 export default function () {
   // Hooks
@@ -46,6 +52,7 @@ export default function () {
             <BlogPreview
               content={post.content.html}
               date={post.date}
+              heading="h2"
               image={post.imageTemp}
               key={post.id}
               slug={post.slug}

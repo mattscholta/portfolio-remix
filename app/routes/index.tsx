@@ -8,10 +8,18 @@ import { SectionCompanies } from "~/components/SectionCompanies";
 import { SectionTechnology } from "~/components/SectionTechnology";
 import { SectionAmbitions } from "~/components/SectionAmbitions";
 import { SectionFireworks } from "~/components/SectionFireworks";
+import { getMetaData } from "~/metadata";
 
-export const meta: MetaFunction = () => ({
-  title: `A Software Engineer | ${SITE_TITLE}`
-});
+export const meta: MetaFunction = (args) => {
+  // console.log(` 💬 ~ args.data`, args.data);
+
+  return {
+    ...getMetaData({
+      canonical: args.parentsData?.root?.canonical,
+      title: `A Software Engineer | ${SITE_TITLE}`
+    })
+  };
+};
 
 export default function () {
   // Hooks

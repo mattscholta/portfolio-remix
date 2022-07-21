@@ -15,6 +15,7 @@ export const BlogFeatured = (props: BlogFeaturedProps) => {
       content={post.content.html}
       date={post.date}
       featured={post.sticky}
+      heading="h2"
       image={post.imageTemp}
       key={post.slug}
       slug={post.slug}

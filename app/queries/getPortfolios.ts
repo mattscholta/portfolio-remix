@@ -6,6 +6,7 @@ export const getPortfolios = gql`
       company
       current
       date
+      description
       images {
         url
       }

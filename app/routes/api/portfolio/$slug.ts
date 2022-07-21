@@ -1,4 +1,4 @@
-import { json } from "@remix-run/node";
+import { Response } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
 
 import { fetchFromGraphCMS } from "~/utils/graphcms";
@@ -28,7 +28,7 @@ export const loader: LoaderFunction = async (args): Promise<LoaderData> => {
   const portfolios = res.data.portfolios ?? [];
 
   if (portfolios.length !== 1) {
-    throw json(`Portfolio "${slug}" not found`, { status: 404 });
+    throw new Response(`Portfolio "${slug}" not found`, { status: 404 });
   }
 
   return portfolios[0];

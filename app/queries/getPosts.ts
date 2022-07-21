@@ -14,6 +14,7 @@ export const getPosts = gql`
         html
       }
       date
+      description
       id
       imageTemp
       intro

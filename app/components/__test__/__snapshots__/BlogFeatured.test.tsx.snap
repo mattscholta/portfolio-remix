@@ -14,11 +14,11 @@ exports[`BlogFeatured Component > should render our BlogFeatured 1`] = `
         src="https://via.placeholder.com/150"
         width="auto"
       />
-      <h3
+      <h2
         class="mt-4 mb-2 text-2xl"
       >
         Test Title
-      </h3>
+      </h2>
       <div
         class="font-font-monospace text-sm"
       >

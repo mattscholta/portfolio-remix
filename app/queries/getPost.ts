@@ -9,6 +9,7 @@ export const getPost = gql`
       }
       createdAt
       date
+      description
       images {
         url
       }

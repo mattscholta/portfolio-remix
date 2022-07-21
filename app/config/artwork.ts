@@ -2,6 +2,7 @@ import {
   MESSAGE_HIRE_CONOSLE,
   SITE_AUTHOR,
   SITE_EMAIL_ADDRESS,
+  SITE_YEAR,
   SOCIAL_GITHUB,
   SOCIAL_LINKEDIN,
   SOCIAL_TWITTER
@@ -26,7 +27,7 @@ const artwork = `
       .*|  |  |*.       - LinkedIn ${SOCIAL_LINKEDIN}
      /  |  |  |  \\      - Twitter ${SOCIAL_TWITTER}
      |,-'--|--'-.|
-        \\     /        Ⓒ ${new Date().getFullYear()}
+        \\     /        Ⓒ ${SITE_YEAR}
          \\ | /
            |
 

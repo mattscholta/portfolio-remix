@@ -1,16 +1,23 @@
-import { useLoaderData } from "@remix-run/react";
+import { useCatch, useLoaderData } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 
 import { AppHero } from "~/components/AppHero";
-import { SITE_TITLE } from "~/config/constants";
 import { loader } from "~/routes/api/portfolio/$slug";
 import type { LoaderData } from "~/routes/api/portfolio/$slug";
+import { getMetaData } from "~/metadata";
 
 export { loader };
 
-export const meta: MetaFunction = (args) => ({
-  title: `${args.data.title} | ${SITE_TITLE}`
-});
+export const meta: MetaFunction = (args) => {
+  const image = args.data?.images[0] ? args.data?.images[0]?.url : false;
+
+  return getMetaData({
+    canonical: args.parentsData?.root?.canonical,
+    description: args.data?.description,
+    image,
+    title: args.data?.title
+  });
+};
 
 export default function () {
   // Hooks
@@ -76,3 +83,23 @@ export default function () {
     </>
   );
 }
+
+export const CatchBoundary = () => {
+  // Hooks
+  const caught = useCatch();
+
+  if (caught.status === 404) {
+    return (
+      <section className="mx-auto max-w-6xl">
+        <AppHero
+          className="py-20 md:py-40"
+          copy="Uh oh..."
+          highlight="404"
+          tag="h1"
+        />
+      </section>
+    );
+  }
+
+  throw new Error("Unexpected error");
+};

@@ -1,8 +1,7 @@
-import { useLoaderData } from "@remix-run/react";
+import { useCatch, useLoaderData } from "@remix-run/react";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
 import { AppHero } from "~/components/AppHero";
-import { SITE_TITLE } from "~/config/constants";
 import type { LoaderData } from "~/routes/api/blog/$slug";
 import { loader } from "~/routes/api/blog/$slug";
 import { AppWysiwyg } from "~/components/AppWysiwyg";
@@ -10,6 +9,7 @@ import { AppWysiwyg } from "~/components/AppWysiwyg";
 import stylesLines from "prismjs/plugins/line-numbers/prism-line-numbers.css";
 import stylesTheme from "prismjs/themes/prism-tomorrow.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers";
+import { getMetaData } from "~/metadata";
 
 export const links: LinksFunction = () => {
   return [
@@ -20,9 +20,17 @@ export const links: LinksFunction = () => {
 
 export { loader };
 
-export const meta: MetaFunction = (args) => ({
-  title: `${args.data.title}... | Blog | ${SITE_TITLE}`
-});
+export const meta: MetaFunction = (args) => {
+  // console.log(` 💬 ~ args.data`, args.data);
+
+  return {
+    ...getMetaData({
+      canonical: args.parentsData?.root?.canonical,
+      description: args.data?.description,
+      title: args.data?.title
+    })
+  };
+};
 
 export default function () {
   // Hooks
@@ -73,3 +81,23 @@ export default function () {
     </>
   );
 }
+
+export const CatchBoundary = () => {
+  // Hooks
+  const caught = useCatch();
+
+  if (caught.status === 400) {
+    return (
+      <section className="mx-auto max-w-6xl">
+        <AppHero
+          className="py-20 md:py-40"
+          copy="Uh oh..."
+          highlight="404"
+          tag="h1"
+        />
+      </section>
+    );
+  }
+
+  throw new Error("Unexpected error");
+};
