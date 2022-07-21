@@ -13,13 +13,13 @@ import { getSitemap } from "~/queries/getSitemap";
  * @description Generate a sitemap.xml for SEO purposes
  */
 export const loader: LoaderFunction = async (args) => {
-  const staticUrls = ["/", "/blog", "/portfolio", "/resume", "/uses"];
-
   const data = await fetchFromGraphCMS(getSitemap);
   const res = await data.json();
+  const routes = ["/blog", "/portfolio", "/resume", "/uses"];
+
   const { portfolios, posts } = res.data;
 
-  const links = staticUrls.map(
+  const links = routes.map(
     (path: string) => `  <url>
     <changefreq>monthly</changefreq>
     <loc>${BASE_URL}${path}</loc>

@@ -1,4 +1,4 @@
-import { json } from "@remix-run/node";
+import { Response } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
 
 import { fetchFromGraphCMS } from "~/utils/graphcms";
@@ -37,7 +37,9 @@ export const loader: LoaderFunction = async (): Promise<LoaderData> => {
     const tagsData: EnumValue[] = res.data.__type.enumValues ?? [];
     const tags = tagsData.map((tag: EnumValue) => tag.name).sort();
 
-    if (!posts.length) throw json(`Blog posts not found`, { status: 404 });
+    if (!posts.length) {
+      throw new Response(`Blog posts not found`, { status: 404 });
+    }
 
     return {
       posts,
