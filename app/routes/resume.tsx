@@ -1,11 +1,13 @@
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
 import { social } from "~/data/resume";
-import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
+import { SITE_AUTHOR, SITE_TITLE, SITE_YEAR } from "~/config/constants";
 import { AppShareLink } from "~/components/AppShareButton";
 import { AppSocialLink } from "~/components/AppSocialLink";
 import { SectionEducation } from "~/components/SectionEducation";
 import { SectionExperience } from "~/components/SectionExperience";
+import { getMetaData } from "~/metadata";
+
 import styles from "~/styles/resume.css";
 
 export const links: LinksFunction = () => [
@@ -16,19 +18,19 @@ export const links: LinksFunction = () => [
   }
 ];
 
-export const meta: MetaFunction = () => {
-  const year = new Date().getFullYear();
+export const meta: MetaFunction = (args) => {
+  // console.log(` 💬 ~ args.data`, args.data);
 
   return {
-    description: `The online resume of ${SITE_AUTHOR}, a software engineer located in San Diego, California.`,
-    title: `${year} Resume | ${SITE_TITLE}`
+    ...getMetaData({
+      canonical: args.parentsData?.root?.canonical,
+      description: `The online resume of ${SITE_AUTHOR}, a Software Engineer located in San Diego, California.`,
+      title: `${SITE_YEAR} Resume | ${SITE_TITLE}`
+    })
   };
 };
 
 export default function () {
-  // Setup
-  const year = new Date().getFullYear();
-
   return (
     <div className="m-auto max-w-5xl py-10 md:py-20">
       <div className="flex flex-col gap-20 px-4 md:flex-row md:px-0">
@@ -66,7 +68,7 @@ export default function () {
         <div className="resume-sections mb-20 flex flex-1 flex-col gap-10">
           <section>
             <h1 className="uppercase- mb-10 text-2xl font-extrabold md:text-4xl">
-              <span className="sr-only">The {year} online resume of </span>
+              <span className="sr-only">The {SITE_YEAR} online resume of </span>
               {SITE_AUTHOR}
             </h1>
             <div className="mb-8 border-t border-solid border-color-border print:hidden" />

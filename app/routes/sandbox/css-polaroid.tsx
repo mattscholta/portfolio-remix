@@ -1,4 +1,19 @@
+import type { MetaFunction } from "@remix-run/node";
 import { AppHero } from "~/components/AppHero";
+import { SITE_TITLE } from "~/config/constants";
+import { getMetaData } from "~/metadata";
+
+export const meta: MetaFunction = (args) => {
+  // console.log(` 💬 ~ args.data`, args.data);
+
+  return {
+    ...getMetaData({
+      canonical: args.parentsData?.root?.canonical,
+      description: `A Sandbox project making a Poloroid camera with CSS.`,
+      title: `Sandbox | ${SITE_TITLE}`
+    })
+  };
+};
 
 export default () => {
   return (

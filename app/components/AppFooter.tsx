@@ -6,9 +6,6 @@ import {
 } from "../config/constants";
 
 export const AppFooter = () => {
-  // const date = new Date();
-  // const year = date.getFullYear();
-
   // Hooks
   const { pathname } = useLocation();
 

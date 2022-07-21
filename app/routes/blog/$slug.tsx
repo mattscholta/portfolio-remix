@@ -9,6 +9,7 @@ import { AppWysiwyg } from "~/components/AppWysiwyg";
 import stylesLines from "prismjs/plugins/line-numbers/prism-line-numbers.css";
 import stylesTheme from "prismjs/themes/prism-tomorrow.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers";
+import { getMetaData } from "~/metadata";
 
 export const links: LinksFunction = () => {
   return [
@@ -19,10 +20,17 @@ export const links: LinksFunction = () => {
 
 export { loader };
 
-export const meta: MetaFunction = (args) => ({
-  description: args.data?.excerpt,
-  title: args.data?.title
-});
+export const meta: MetaFunction = (args) => {
+  // console.log(` 💬 ~ args.data`, args.data);
+
+  return {
+    ...getMetaData({
+      canonical: args.parentsData?.root?.canonical,
+      description: args.data?.description,
+      title: args.data?.title
+    })
+  };
+};
 
 export default function () {
   // Hooks
@@ -75,6 +83,7 @@ export default function () {
 }
 
 export const CatchBoundary = () => {
+  // Hooks
   const caught = useCatch();
 
   if (caught.status === 400) {

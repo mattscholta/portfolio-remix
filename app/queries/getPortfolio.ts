@@ -7,6 +7,7 @@ export const getPortfolioBySlug = gql`
       content {
         html
       }
+      description
       id
       images {
         url

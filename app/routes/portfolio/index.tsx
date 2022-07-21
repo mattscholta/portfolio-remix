@@ -4,14 +4,23 @@ import { useLoaderData } from "@remix-run/react";
 import type { LoaderData } from "~/routes/api/portfolio";
 import { AppHero } from "~/components/AppHero";
 import { PortfolioPreview } from "~/components/PortfolioPreview";
-import { SITE_TITLE } from "~/config/constants";
 import { loader } from "~/routes/api/portfolio";
+import { getMetaData } from "~/metadata";
+import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 
 export { loader };
 
-export const meta: MetaFunction = () => ({
-  title: `Featured Work | ${SITE_TITLE}`
-});
+export const meta: MetaFunction = (args) => {
+  // console.log(` 💬 ~ args.data`, args.data);
+
+  return {
+    ...getMetaData({
+      canonical: args.parentsData?.root?.canonical,
+      description: `A collection of ramblings by ${SITE_AUTHOR}.`,
+      title: `Featured Work | ${SITE_TITLE}`
+    })
+  };
+};
 
 export default function () {
   // Hooks

@@ -4,10 +4,19 @@ import { AppHero } from "~/components/AppHero";
 import { SectionHardware } from "~/components/SectionHardware";
 import { SectionMisc } from "~/components/SectionMisc";
 import { SectionSoftware } from "~/components/SectionSoftware";
+import { getMetaData } from "~/metadata";
 
-export const meta: MetaFunction = () => ({
-  title: `Uses | ${SITE_TITLE}`
-});
+export const meta: MetaFunction = (args) => {
+  // console.log(` 💬 ~ args.data`, args.data);
+
+  return {
+    ...getMetaData({
+      canonical: args.parentsData?.root?.canonical,
+      description: `Check out uses.tech for a list of more /uses pages!`,
+      title: `Uses | ${SITE_TITLE}`
+    })
+  };
+};
 
 export default function () {
   return (
