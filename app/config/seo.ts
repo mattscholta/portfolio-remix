@@ -1,8 +1,6 @@
 import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_TITLE } from "./constants";
 
 export interface Data {
-  description: string;
-  title: string;
   path: string;
   image: string;
 }
@@ -15,25 +13,18 @@ export interface Data {
 export const getMetaTags = (url: string, isDark: boolean) => {
   const defaults = {
     author: SITE_AUTHOR,
-    description: SITE_DESCRIPTION,
     image: `${url}/images/assets/share.jpg`,
-    robots: "index, follow",
-    title: SITE_TITLE
+    robots: "index, follow"
   };
 
   const themeColor = isDark ? "#000" : "#f5f8fa";
   const data: Data = {
-    description: defaults.description,
     image: defaults.image,
-    path: url,
-    title: defaults.title
+    path: url
   };
 
   return [
     // Browser
-    {
-      charSet: "utf-8"
-    },
     {
       content: "dark light",
       name: "color-scheme"

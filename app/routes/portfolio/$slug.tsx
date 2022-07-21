@@ -2,14 +2,14 @@ import { useCatch, useLoaderData } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/node";
 
 import { AppHero } from "~/components/AppHero";
-import { SITE_TITLE } from "~/config/constants";
 import { loader } from "~/routes/api/portfolio/$slug";
 import type { LoaderData } from "~/routes/api/portfolio/$slug";
 
 export { loader };
 
 export const meta: MetaFunction = (args) => ({
-  title: `${args.data?.title} | ${SITE_TITLE}`
+  description: args.data?.intro ?? args.data?.excerpt,
+  title: args.data?.title
 });
 
 export default function () {

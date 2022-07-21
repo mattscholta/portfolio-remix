@@ -5,17 +5,12 @@ describe("seo: metadata", () => {
   const metadata = getMetaTags("http://testing.com", false);
 
   it('## "metadata" tags', () => {
-    expect(metadata.length).toBe(25);
+    expect(metadata.length).toBe(24);
   });
 
   it('## "apple" tags', () => {
     tags = metadata.filter((metaTag) => metaTag.name?.startsWith("apple-"));
     expect(tags.length).toBe(3);
-  });
-
-  it('## "charSet" tags', () => {
-    tags = metadata.filter((metaTag) => metaTag.charSet === "utf-8");
-    expect(tags.length).toBe(1);
   });
 
   // it('## "facebook" tags', () => {

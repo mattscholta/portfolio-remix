@@ -19,7 +19,7 @@ import { AppFooter } from "~/components/AppFooter";
 import { BASE_URL, GOOGLE_ANALYTICS } from "./config/settings.server";
 import { AppHeader } from "~/components/AppHeader";
 import { AppHeaderMobile } from "~/components/AppHeaderMobile";
-import { SITE_TITLE } from "./config/constants";
+import { SITE_DESCRIPTION, SITE_TITLE } from "./config/constants";
 import { TrackingGA } from "./components/TrackingGA";
 import { useIntro } from "./hooks/useIntro";
 import { usePageTracking } from "./hooks/usePageTracking";
@@ -50,6 +50,9 @@ export const loader = async (args: DataFunctionArgs) => {
 };
 
 export const meta: MetaFunction = (args) => ({
+  charSet: "utf-8",
+  charset: "utf-8",
+  description: SITE_DESCRIPTION,
   title: SITE_TITLE
 });
 
@@ -79,13 +82,14 @@ export default function App() {
         {metadata.map((meta, index) => (
           <meta {...meta} key={meta.name ?? meta.property ?? index} />
         ))}
-        <Meta />
         <link href={canonical} rel="canonical" />
         <link href={favicon} rel="apple-touch-icon" sizes="48x48" />
         <link href={favicon} rel="favicon" />
         <link href={favicon} rel="icon" type="image/svg+xml" />
         <link href={favicon} rel="mask-icon" type="image/svg+xml" />
         <link href={manifest} rel="manifest" />
+
+        <Meta />
         <Links />
       </head>
       <body>

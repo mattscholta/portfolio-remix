@@ -2,7 +2,6 @@ import { useCatch, useLoaderData } from "@remix-run/react";
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
 import { AppHero } from "~/components/AppHero";
-import { SITE_TITLE } from "~/config/constants";
 import type { LoaderData } from "~/routes/api/blog/$slug";
 import { loader } from "~/routes/api/blog/$slug";
 import { AppWysiwyg } from "~/components/AppWysiwyg";
@@ -21,7 +20,8 @@ export const links: LinksFunction = () => {
 export { loader };
 
 export const meta: MetaFunction = (args) => ({
-  title: `${args.data?.title}... | Blog | ${SITE_TITLE}`
+  description: args.data?.excerpt,
+  title: args.data?.title
 });
 
 export default function () {
