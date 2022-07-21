@@ -1,5 +1,6 @@
 import type { HtmlMetaDescriptor } from "@remix-run/node";
 import { SITE_AUTHOR, SITE_SHARE_IMAGE, SITE_TITLE } from "./config/constants";
+import { BASE_URL } from "./config/settings.server";
 
 export interface MetaDataOptions {
   canonical: string;
@@ -11,7 +12,7 @@ export interface MetaDataOptions {
 const defaults: MetaDataOptions = {
   canonical: "",
   description: `The online portfolio of ${SITE_AUTHOR}, a Software Engineer!`,
-  image: SITE_SHARE_IMAGE,
+  image: `${BASE_URL}${SITE_SHARE_IMAGE}`,
   title: SITE_TITLE
 };
 

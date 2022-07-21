@@ -7,7 +7,7 @@ export const SITE_EMAIL_LINK = `mailto:${SITE_EMAIL_ADDRESS}`;
 export const SITE_FACEBOOK = "https://www.facebook.com/rocket-cms";
 export const SITE_INSTAGRAM = "https://www.instagram.com/rocket-cms";
 export const SITE_SHARE_IMAGE = "/images/assets/share.jpg";
-export const SITE_TITLE = "Matthew Scholta - Software Engineer";
+export const SITE_TITLE = `${SITE_AUTHOR} - A Software Engineer`;
 export const SITE_UPDATED = new Date("2022-07-20");
 export const SITE_YEAR = new Date().getFullYear();
 

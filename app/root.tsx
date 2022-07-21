@@ -35,6 +35,7 @@ export const links: LinksFunction = () => {
 };
 
 export interface LoaderData {
+  baseUrl: string;
   canonical: string;
   googleAnalytics: string;
   theme?: "light" | "dark";
