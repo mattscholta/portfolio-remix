@@ -41,7 +41,7 @@ export const PortfolioPreview = (props: PortfolioPreviewProps) => {
 
       <h3 className="m-0 font-font-serif text-xl font-bold">{data.title}</h3>
       <div className="mt-1 mb-6 flex items-baseline gap-2 font-medium text-color-copy-dark">
-        {!current && <span>{SITE_YEAR}</span>}
+        {!current && <span>{new Date(date).getFullYear()}</span>}
         {!current && <span className="font-light">|</span>}
         <span>{data.company}</span>
       </div>
