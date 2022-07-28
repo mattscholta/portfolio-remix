@@ -32,10 +32,43 @@ export const experience: Experience[] = [
   //   title: `Founder`
   // },
   {
+    company: "ShiftSmart",
+    companyUrl: "https://shiftsmart.com/",
+    date: `Sept 2022 - Present`,
+    dateRange: [new Date(2022, 9, 1)],
+    description: `
+      <p>
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor
+        sit amet, consectetur adipiscing elit.
+      </p>
+    `,
+    // <p>One year in and we've accomplished so much. Here are a few milestones worth mentioning.</p>
+    highlights: [
+      // `0% - 80% Containerized stack and development workflow`,
+      // `Introduced GraphQL and strongly types across services`,
+      // `Delivered a full rebuild & rebrand of the Python + Django website to NextJS`,
+      // `Survey Framework, CSS Style Guide, Monorepo, Unit/E2E Testing, and more`
+    ],
+    image: `https://assets-global.website-files.com/602a3f3e454f14956d14543a/602a3f3e454f1438b61455af_ShiftsmartIcon.png`,
+    tags: [
+      "Docker",
+      "Google Cloud",
+      "GraphQL",
+      "GraphQL Nexus",
+      "NextJS",
+      "NodeJS",
+      "Serverless",
+      "TailwindCSS",
+      "TypeScript"
+    ],
+    title: `Staff Engineer`
+  },
+  {
     company: "Haldi",
     companyUrl: "https://haldi.com/",
-    date: `Apr 2021 - Present`,
-    dateRange: [new Date(2021, 4, 1)],
+    date: `Apr 2021 - Aug 2022`,
+    dateRange: [new Date(2021, 4, 1), new Date(2022, 8, 1)],
     description: `
       <p>
         One year in we've jump-started the organization's code! Taking a
