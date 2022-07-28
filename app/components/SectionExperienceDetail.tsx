@@ -26,7 +26,7 @@ export const SectionExperienceDetail = (
   const _length = getTimeWorked(start, stop);
 
   // TEMP
-  console.log(` 💬 ~ Worked at ${company} for`, _length);
+  // console.log(`Worked at ${company} for`, _length);
 
   return (
     <div className="flex flex-col gap-10 md:flex-row" key={title}>
