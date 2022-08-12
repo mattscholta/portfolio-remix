@@ -14,5 +14,5 @@ node_modules
 /public/build/
 /api/index.js
 
-.env
+.env*
 !.env.default
