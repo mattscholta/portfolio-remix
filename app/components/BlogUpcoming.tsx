@@ -12,9 +12,11 @@ export const BlogUpcoming = (props: BlogUpcomingProps) => {
       <div>
         <h3 className="text-2xl">Upcoming Posts</h3>
         <ul className="mt-8">
+          {/*
           <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
             Career (re)alignment.
           </li>
+          */}
           <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
             Lerna is back!
           </li>
