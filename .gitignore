@@ -8,10 +8,11 @@ node_modules
 .output
 *.map
 
+/api/
 /app/styles/
 /build/
 /public/build/
 /api/index.js
 
-.env
+.env*
 !.env.default

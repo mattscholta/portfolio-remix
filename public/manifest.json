@@ -1,57 +1,57 @@
 {
   "author": "Matthew Scholta",
-  "background_color": "#f5f8fa",
+  "background_color": "#ff0000",
   "default_locale": "en",
   "display": "standalone",
   "dir": "ltr",
-  "description": "2022 Portfolio",
+  "description": "2022 Portfolio of Matthew Scholta",
   "icons": [
     {
       "purpose": "any",
       "sizes": "48x48",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/48x48.png",
+      "src": "https://mattscholta.com/branding/icon-48.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
       "sizes": "96x96",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/96x96.png",
+      "src": "https://mattscholta.com/branding/icon-96.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
       "sizes": "144x144",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/144x144.png",
+      "src": "https://mattscholta.com/branding/icon-144.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
       "sizes": "192x192",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/192x192.png",
+      "src": "https://mattscholta.com/branding/icon-192.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
       "sizes": "256x256",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/256x256.png",
+      "src": "https://mattscholta.com/branding/icon-256.png",
       "type": "image/png"
     },
     {
       "purpose": "any maskable",
       "sizes": "256x256",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/256x256.png",
+      "src": "https://mattscholta.com/branding/icon-256.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
       "sizes": "384x384",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/384x384.png",
+      "src": "https://mattscholta.com/branding/icon-384.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
       "sizes": "512x512",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/512x512.png",
+      "src": "https://mattscholta.com/branding/icon-512.png",
       "type": "image/png"
     }
   ],
@@ -63,6 +63,6 @@
   "shortcuts": [],
   "short_name": "Portfolio",
   "start_url": "/",
-  "theme_color": "#f00",
+  "theme_color": "#ff0000",
   "version": "1.0"
 }
