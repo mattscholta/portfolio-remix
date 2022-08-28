@@ -4,7 +4,7 @@ import { SectionExperienceDetail } from "./SectionExperienceDetail";
 
 export const SectionExperience = () => {
   // Hooks
-  const minValue = 3;
+  const minValue = 4;
   const [shown, setShown] = useState(minValue);
 
   // Setup

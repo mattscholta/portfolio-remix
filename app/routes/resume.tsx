@@ -19,8 +19,6 @@ export const links: LinksFunction = () => [
 ];
 
 export const meta: MetaFunction = (args) => {
-  // console.log(` 💬 ~ args.data`, args.data);
-
   return {
     ...getMetaData({
       canonical: args.parentsData?.root?.canonical,
@@ -43,7 +41,6 @@ export default function () {
                 height="auto"
                 loading="eager"
                 src="/images/assets/matt-scaled.webp"
-                // src="/jax-sword.webp"
                 width="auto"
               />
               <div className="flex flex-shrink-0 flex-col gap-2 p-4">
