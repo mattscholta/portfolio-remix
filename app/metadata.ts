@@ -27,7 +27,7 @@ export const getMetaDataBase = (): HtmlMetaDescriptor => ({
   author: SITE_AUTHOR,
   charset: "utf-8",
   "color-scheme": "dark light",
-  "theme-color": "themeColor",
+  "theme-color": "#ff0000",
   viewport: `initial-scale=1, viewport-fit=cover, width=device-width`
 });
 
