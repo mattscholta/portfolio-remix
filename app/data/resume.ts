@@ -291,9 +291,4 @@ export const social: Social[] = [
     title: `@visormatt`,
     url: `https://twitter.com/visormatt`
   }
-  // {
-  //   icon: `/images/svg/github.svg`,
-  //   title: `PDF Download`,
-  //   url: `https://mattscholta.com/resume.pdf`
-  // }
 ];
