@@ -39,12 +39,10 @@ export const experience: Experience[] = [
     dateRange: [new Date(2022, 9, 1)],
     description: `
       <p>
-        lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem
-        ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor
-        sit amet, consectetur adipiscing elit.
+        After welcoming a baby girl in August, I'll be starting early September.
       </p>
     `,
-    highlights: [`To be determined, we're just getting started!`],
+    highlights: [],
     image: `https://assets-global.website-files.com/602a3f3e454f14956d14543a/602a3f3e454f1438b61455af_ShiftsmartIcon.png`,
     tags: ["NodeJS", "TypeScript"],
     title: `Staff Engineer`
