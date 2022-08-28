@@ -70,16 +70,6 @@ export default function () {
             </h1>
             <div className="mb-8 border-t border-solid border-color-border print:hidden" />
             <div className="flex items-center gap-10">
-              {/*
-              <p>
-                <span className="mr-1">👨‍💻</span> A Software Engineer whose
-                passion lies in creating <b>quality code</b> written{" "}
-                <b>for humans</b>, unlocking <b>developer productivity</b>, and
-                creating <b>delightful</b> user and developer <b>experiences</b>
-                .
-              </p>
-              */}
-
               <p>
                 <span className="mr-1">👨‍💻</span> A Software Engineer whose
                 passion lies in creating <b>quality code</b> written{" "}
