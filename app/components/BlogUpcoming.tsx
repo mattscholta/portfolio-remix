@@ -32,9 +32,6 @@ export const BlogUpcoming = (props: BlogUpcomingProps) => {
           <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
             Reviewing pull requests - a simple framework
           </li>
-          <li className="mb-2 rounded-md border bg-color-background-light p-2 text-sm">
-            DIY: Umbrella Stand
-          </li>
         </ul>
       </div>
     </div>
