@@ -16,7 +16,7 @@ export const BlogPreview = (props: BlogPreviewProps) => {
   const { className, date, heading = "h3", slug, image, title } = props;
 
   // Setup
-  const Heading = heading;
+  const Heading = heading as any;
   const created = new Date(date);
   const dateString = created.toLocaleDateString("en-US", {
     weekday: undefined,
@@ -32,7 +32,12 @@ export const BlogPreview = (props: BlogPreviewProps) => {
       to={`/blog/${slug}`}
     >
       {/* {featured && _renderFeatured()} */}
+
+      {/* TODO: Add a nice CSS transition here */}
+      {/* <div className="border border-color-border-dark bg-color-background-dark p-1"> */}
       <img alt={title} height="auto" loading="lazy" src={image} width="auto" />
+      {/* </div> */}
+
       <Heading className="mt-4 mb-2 text-2xl">{title}</Heading>
       <div className="font-font-monospace text-sm">{dateString}</div>
       {/* <div dangerouslySetInnerHTML={{ __html: content }} /> */}

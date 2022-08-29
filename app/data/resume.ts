@@ -36,7 +36,7 @@ export const experience: Experience[] = [
     company: "ShiftSmart",
     companyUrl: "https://shiftsmart.com/",
     date: `Sept 2022 - Present`,
-    dateRange: [new Date(2022, 9, 1)],
+    dateRange: [new Date(2022, 9, 6)],
     description: `
       <p>
         After welcoming a baby girl in August, I'll be starting early September.
