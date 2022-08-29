@@ -30,8 +30,6 @@ export default function () {
   // Setup
   const data = filterBlogPosts(posts);
 
-  console.log(` 💬 ~ filterBlogPosts ---> `, filterBlogPosts(posts));
-
   return (
     <>
       <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
