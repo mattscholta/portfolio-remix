@@ -17,7 +17,7 @@ export default function handleRequest(
   );
 
   return new Response("<!DOCTYPE html>" + artwork + markup, {
+    headers: resHeaders,
     status: resStatus,
-    headers: resHeaders
   });
 }

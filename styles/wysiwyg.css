@@ -62,3 +62,7 @@
   margin: 1rem 0;
   overflow: auto;
 }
+
+.wysiwyg img {
+  margin-bottom: 1rem;
+}
