@@ -1,4 +1,4 @@
-import { json, Response } from "@remix-run/node";
+import { Response } from "@remix-run/node";
 import type { LoaderFunction } from "@remix-run/node";
 
 import { fetchFromGraphCMS } from "~/utils/graphcms";
@@ -16,6 +16,7 @@ export interface Post {
   };
   imageTemp: string;
   intro: string;
+  tags: string[];
   title: string;
   updatedAt: string;
 }

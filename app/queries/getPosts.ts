@@ -21,6 +21,7 @@ export const getPosts = gql`
       slug
       tags
       sticky
+      tags
       title
     }
   }

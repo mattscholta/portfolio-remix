@@ -50,7 +50,7 @@
     "concurrently": "^7.3.0",
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.13",
-    "eslint": "^8.22.0",
+    "eslint": "^8.23.0",
     "jsdom": "^20.0.0",
     "postcss": "^8.4.16",
     "postcss-cli": "^10.0.0",

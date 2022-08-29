@@ -11,12 +11,10 @@ import { SectionFireworks } from "~/components/SectionFireworks";
 import { getMetaData } from "~/metadata";
 
 export const meta: MetaFunction = (args) => {
-  // console.log(` 💬 ~ args.data`, args.data);
-
   return {
     ...getMetaData({
       canonical: args.parentsData?.root?.canonical,
-      title: `A Software Engineer | ${SITE_TITLE}`
+      title: `${SITE_TITLE}`
     })
   };
 };
@@ -31,19 +29,9 @@ export default function () {
     setHeading(data);
   };
 
-  // const isBrowser = typeof window !== "undefined";
-  // const SectionFireworks = React.lazy(
-  //   () => import("~/components/SectionFireworks")
-  // );
-
   return (
     <>
       <div className="relative">
-        {/*
-        <React.Suspense fallback={null}>
-          {isBrowser ? <SectionFireworks /> : null}
-        </React.Suspense>
-        */}
         <SectionFireworks />
         <section className="relative z-0 m-auto flex max-w-6xl flex-col-reverse items-center justify-center gap-4 py-20 md:flex-row md:py-40">
           <AppHero
