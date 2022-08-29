@@ -15,6 +15,7 @@ export const getPost = gql`
       }
       imageTemp
       intro
+      tags
       title
       updatedAt
     }

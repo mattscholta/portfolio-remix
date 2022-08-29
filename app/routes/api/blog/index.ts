@@ -13,6 +13,7 @@ export interface Post {
   imageTemp: string;
   slug: string;
   sticky: boolean;
+  tags: string[];
   title: string;
 }
 
