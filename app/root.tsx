@@ -9,7 +9,7 @@ import {
   useCatch,
   useLoaderData
 } from "@remix-run/react";
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from "@vercel/analytics/react";
 import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import type { MetaFunction } from "@remix-run/node";
@@ -25,7 +25,7 @@ import {
   SITE_TITLE,
   SITE_URL
 } from "~/config/constants";
-import { TrackingGA } from "~/components/TrackingGA";
+// import { TrackingGA } from "~/components/TrackingGA";
 import { useIntro } from "~/hooks/useIntro";
 import { usePageTracking } from "~/hooks/usePageTracking";
 import { getMetaData } from "~/metadata";
@@ -69,7 +69,7 @@ export default function App() {
   const data = useLoaderData<typeof loader>();
 
   // Setup
-  const { canonical, googleAnalytics, theme } = data;
+  const { canonical, theme } = data;
   const isDark = theme === "dark";
   const favicon = "/images/svg/logo.svg";
   const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
@@ -97,16 +97,14 @@ export default function App() {
       <body>
         <AppHeader />
         <AppHeaderMobile />
-
         <main>
           <Outlet />
         </main>
-
         <AppFooter />
 
         {/* Analytics */}
         <Analytics />
-        <TrackingGA id={googleAnalytics} />
+        {/* <TrackingGA id={googleAnalytics} /> */}
 
         {/* Remix */}
         <ScrollRestoration />
