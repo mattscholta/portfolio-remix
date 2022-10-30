@@ -9,6 +9,7 @@ import {
   useCatch,
   useLoaderData
 } from "@remix-run/react";
+import { Analytics } from '@vercel/analytics/react';
 import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import type { MetaFunction } from "@remix-run/node";
@@ -104,6 +105,7 @@ export default function App() {
         <AppFooter />
 
         {/* Analytics */}
+        <Analytics />
         <TrackingGA id={googleAnalytics} />
 
         {/* Remix */}
