@@ -44,7 +44,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@types/gtag.js": "^0.0.11",
     "@types/prismjs": "^1.26.0",
-    "@types/react": "^18.0.21",
+    "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.6",
     "@vitejs/plugin-react": "^2.1.0",
     "autoprefixer": "^10.4.12",
