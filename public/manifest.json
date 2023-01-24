@@ -4,7 +4,8 @@
   "default_locale": "en",
   "display": "standalone",
   "dir": "ltr",
-  "description": "2022 Portfolio of Matthew Scholta",
+  "description": "2023 Portfolio of Matthew Scholta, a software Engineer",
+  "id": "/",
   "icons": [
     {
       "purpose": "any",
@@ -60,7 +61,32 @@
   "name": "2022 Portfolio",
   "orientation": "portrait",
   "scope": "/",
-  "shortcuts": [],
+  "shortcuts": [
+    {
+      "name": "How's weather today?",
+      "short_name": "Today",
+      "description": "View weather information for today",
+      "url": "/today?source=pwa",
+      "icons": [
+        {
+          "src": "/images/today.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "How's weather tomorrow?",
+      "short_name": "Tomorrow",
+      "description": "View weather information for tomorrow",
+      "url": "/tomorrow?source=pwa",
+      "icons": [
+        {
+          "src": "/images/tomorrow.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
   "short_name": "Portfolio",
   "start_url": "/",
   "theme_color": "#ff0000",

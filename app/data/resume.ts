@@ -213,7 +213,7 @@ export const experience: Experience[] = [
       `Design & development of interactive Flash media, across 3-5 languages`,
       `Speaker: New York, non-profit meetup re: Using social networking to enhance brand awareness`
     ],
-    // image: "https://www.iwgroup.agency/favicon.ico",
+    image: `https://assets.website-files.com/6210110d90c0080391bd2d70/62ec7ce2c60a5c558566f5f1_IW%20favicon.png`,
     tags: [
       `ActionScript 2.0`,
       `ActionScript 3.0`,

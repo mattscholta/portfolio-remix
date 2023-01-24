@@ -4,7 +4,8 @@
   "default_locale": "en",
   "display": "standalone",
   "dir": "ltr",
-  "description": "2022 Portfolio",
+  "description": "2023 Portfolio of Matthew Scholta, a software Engineer",
+  "id": "/",
   "icons": [
     {
       "purpose": "any",
