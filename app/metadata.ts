@@ -23,7 +23,7 @@ const defaults: MetaDataOptions = {
 export const getMetaDataBase = (): HtmlMetaDescriptor => ({
   "apple-mobile-web-app-capable": "yes",
   "apple-mobile-web-app-status-bar-style": "black",
-  "apple-mobile-web-app-title": `2022 Portfolio`,
+  "apple-mobile-web-app-title": `2023 Portfolio`,
   author: SITE_AUTHOR,
   charset: "utf-8",
   "color-scheme": "dark light",

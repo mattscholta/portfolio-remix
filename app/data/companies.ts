@@ -6,12 +6,12 @@ export interface Data {
 }
 
 export const data: Data[] = [
-  // {
-  //   company: "ShiftSmart",
-  //   className: "h-4 md:h-8",
-  //   image: "/images/svg/shiftsmart.svg",
-  //   url: "https://shiftsmart.com"
-  // },
+  {
+    company: "shiftsmart",
+    className: "h-4 md:h-8",
+    image: "/images/svg/shiftsmart.svg",
+    url: "https://shiftsmart.com"
+  },
   {
     company: "thredUP",
     className: "h-4 md:h-8",

@@ -33,7 +33,7 @@ export const experience: Experience[] = [
   // },
 
   {
-    company: "ShiftSmart",
+    company: "Shiftsmart",
     companyUrl: "https://shiftsmart.com/",
     date: `Sept 2022 - Present`,
     dateRange: [new Date(2022, 9, 6)],
@@ -42,7 +42,10 @@ export const experience: Experience[] = [
         After welcoming a baby girl in August, I'll be starting early September.
       </p>
     `,
-    highlights: [],
+    highlights: [
+      `Prototyped and delivered a Remix + TailwindCSS application for external partners`,
+      `Dockerized the development workflow and tooling`
+    ],
     image: `https://assets-global.website-files.com/602a3f3e454f14956d14543a/602a3f3e454f1438b61455af_ShiftsmartIcon.png`,
     tags: ["NodeJS", "TypeScript"],
     title: `Staff Engineer`
