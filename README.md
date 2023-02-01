@@ -22,8 +22,11 @@ That being said I am really excited to see what the future holds for Remix. Its 
 Currently the API calls are made to an external service, [GraphCMS][graphcms]. Now, until we can move to [Prisma](https://www.prisma.io/) (or something a little more portable for "local development") you'll see failed API calls 🤷‍♂️.
 
 ```bash
-npm install
-npm run dev
+# Install Yarn or use NPM
+# npm install --global yarn
+
+yarn install
+yarn dev
 ```
 
 <!-- Links -->

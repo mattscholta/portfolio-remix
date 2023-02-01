@@ -9,7 +9,6 @@ import {
   useCatch,
   useLoaderData
 } from "@remix-run/react";
-import { Analytics } from "@vercel/analytics/react";
 import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import type { MetaFunction } from "@remix-run/node";
@@ -25,23 +24,16 @@ import {
   SITE_TITLE,
   SITE_URL
 } from "~/config/constants";
-// import { TrackingGA } from "~/components/TrackingGA";
 import { useIntro } from "~/hooks/useIntro";
-import { usePageTracking } from "~/hooks/usePageTracking";
 import { getMetaData } from "~/metadata";
+import { TrackingGA } from "~/components/TrackingGA";
+import { usePageTracking } from "~/hooks/usePageTracking";
 
 import styles from "~/styles/index.css";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
 };
-
-export interface LoaderData {
-  baseUrl: string;
-  canonical: string;
-  googleAnalytics: string;
-  theme?: "light" | "dark";
-}
 
 export const loader = async (args: DataFunctionArgs) => {
   const { request } = args;
@@ -52,7 +44,7 @@ export const loader = async (args: DataFunctionArgs) => {
   const cookie = (await cookieTheme.parse(header)) ?? {};
   const { theme = "light" } = cookie;
 
-  return json({ baseUrl, canonical, theme, googleAnalytics: GOOGLE_ANALYTICS });
+  return json({ baseUrl, canonical, googleAnalytics: GOOGLE_ANALYTICS, theme });
 };
 
 export const meta: MetaFunction = (args) => ({
@@ -69,10 +61,11 @@ export default function App() {
   const data = useLoaderData<typeof loader>();
 
   // Setup
-  const { canonical, theme } = data;
+  const { canonical, googleAnalytics, theme } = data;
   const isDark = theme === "dark";
   const favicon = "/images/svg/logo.svg";
-  const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
+  const manifest = "/manifest.json";
+  // const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
 
   // Styles
   const cssComponent = classnames(theme ?? "", isDark);
@@ -103,8 +96,7 @@ export default function App() {
         <AppFooter />
 
         {/* Analytics */}
-        <Analytics />
-        {/* <TrackingGA id={googleAnalytics} /> */}
+        <TrackingGA id={googleAnalytics} />
 
         {/* Remix */}
         <ScrollRestoration />
@@ -186,13 +178,12 @@ export function ErrorBoundary({ error }: { error: unknown }) {
       </head>
 
       <body>
-        <div className="m-auto max-w-5xl">
-          <h1>Oh no! - Error Boundary</h1>
+        <div className="m-auto flex h-screen max-w-5xl flex-col justify-center">
+          <h1 className="mb-4 text-2xl">Oh no!</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
-            enim minima esse ipsam! Sit consequatur doloribus earum facere eaque
-            quaerat molestiae. Sed cupiditate ea non ipsum? Sed aliquid quis
-            quia.
+            Sorry but I seemed to have broken something.
+            <br />
+            Please try again later :(
           </p>
         </div>
         <Scripts />

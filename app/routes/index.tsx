@@ -7,7 +7,7 @@ import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { SectionCompanies } from "~/components/SectionCompanies";
 import { SectionTechnology } from "~/components/SectionTechnology";
 import { SectionAmbitions } from "~/components/SectionAmbitions";
-import { SectionFireworks } from "~/components/SectionFireworks";
+// import { SectionFireworks } from "~/components/SectionFireworks";
 import { getMetaData } from "~/metadata";
 
 export const meta: MetaFunction = (args) => {
@@ -32,7 +32,7 @@ export default function () {
   return (
     <>
       <div className="relative">
-        <SectionFireworks />
+        {/* <SectionFireworks /> */}
         <section className="relative z-0 m-auto flex max-w-6xl flex-col-reverse items-center justify-center gap-4 py-20 md:flex-row md:py-40">
           <AppHero
             className="py-10 md:py-20 md:text-right"

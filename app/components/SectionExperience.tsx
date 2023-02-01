@@ -24,7 +24,10 @@ export const SectionExperience = () => {
 
       <div className="mb-10 flex flex-col gap-10">
         {experience.map((exp) => (
-          <SectionExperienceDetail experience={exp} key={exp.title} />
+          <SectionExperienceDetail
+            experience={exp}
+            key={`${exp.company}/${exp.title}`}
+          />
         ))}
       </div>
       <div className="print:hidden">

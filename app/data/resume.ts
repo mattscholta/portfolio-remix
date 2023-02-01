@@ -33,7 +33,7 @@ export const experience: Experience[] = [
   // },
 
   {
-    company: "ShiftSmart",
+    company: "Shiftsmart",
     companyUrl: "https://shiftsmart.com/",
     date: `Sept 2022 - Present`,
     dateRange: [new Date(2022, 9, 6)],
@@ -43,6 +43,10 @@ export const experience: Experience[] = [
       </p>
     `,
     highlights: [],
+    // highlights: [
+    //   `Prototyped and delivered a Remix + TailwindCSS application for external partners`,
+    //   `Dockerized the development workflow and tooling`
+    // ],
     image: `https://assets-global.website-files.com/602a3f3e454f14956d14543a/602a3f3e454f1438b61455af_ShiftsmartIcon.png`,
     tags: ["NodeJS", "TypeScript"],
     title: `Staff Engineer`
@@ -213,7 +217,7 @@ export const experience: Experience[] = [
       `Design & development of interactive Flash media, across 3-5 languages`,
       `Speaker: New York, non-profit meetup re: Using social networking to enhance brand awareness`
     ],
-    // image: "https://www.iwgroup.agency/favicon.ico",
+    image: `https://assets.website-files.com/6210110d90c0080391bd2d70/62ec7ce2c60a5c558566f5f1_IW%20favicon.png`,
     tags: [
       `ActionScript 2.0`,
       `ActionScript 3.0`,

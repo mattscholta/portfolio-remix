@@ -4,54 +4,55 @@
   "default_locale": "en",
   "display": "standalone",
   "dir": "ltr",
-  "description": "2022 Portfolio",
+  "description": "2023 Portfolio of Matthew Scholta, a software Engineer",
+  "id": "/",
   "icons": [
     {
       "purpose": "any",
       "sizes": "48x48",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/48x48.png",
+      "src": "/branding/icons/icon-48.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
       "sizes": "96x96",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/96x96.png",
+      "src": "/branding/icons/icon-96.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
       "sizes": "144x144",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/144x144.png",
-      "type": "image/png"
-    },
-    {
-      "purpose": "any",
-      "sizes": "192x192",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/192x192.png",
-      "type": "image/png"
-    },
-    {
-      "purpose": "any",
-      "sizes": "256x256",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/256x256.png",
+      "src": "/branding/icons/icon-144.png",
       "type": "image/png"
     },
     {
       "purpose": "any maskable",
+      "sizes": "192x192",
+      "src": "/branding/icons/icon-192.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
       "sizes": "256x256",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/256x256.png",
+      "src": "/branding/icons/icon-256.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "256x256",
+      "src": "/branding/icons/icon-256.png",
       "type": "image/png"
     },
     {
       "purpose": "any",
       "sizes": "384x384",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/384x384.png",
+      "src": "/branding/icons/icon-384.png",
       "type": "image/png"
     },
     {
-      "purpose": "any",
+      "purpose": "any maskable",
       "sizes": "512x512",
-      "src": "https://res.cloudinary.com/mattscholta/image/upload/v1614475665/mattscholta/icons/512x512.png",
+      "src": "/branding/icons/icon-512.png",
       "type": "image/png"
     }
   ],
@@ -60,32 +61,7 @@
   "name": "2022 Portfolio",
   "orientation": "portrait",
   "scope": "/",
-  "shortcuts": [
-    {
-      "name": "How's weather today?",
-      "short_name": "Today",
-      "description": "View weather information for today",
-      "url": "/today?source=pwa",
-      "icons": [
-        {
-          "src": "/images/today.png",
-          "sizes": "192x192"
-        }
-      ]
-    },
-    {
-      "name": "How's weather tomorrow?",
-      "short_name": "Tomorrow",
-      "description": "View weather information for tomorrow",
-      "url": "/tomorrow?source=pwa",
-      "icons": [
-        {
-          "src": "/images/tomorrow.png",
-          "sizes": "192x192"
-        }
-      ]
-    }
-  ],
+  "shortcuts": [],
   "short_name": "Portfolio",
   "start_url": "/",
   "theme_color": "#FD5A1E",
