@@ -29,7 +29,7 @@ export const AppFooter = () => {
             className="footer-social"
             height={16}
             loading="lazy"
-            src="/images/svg/linkedin.svg"
+            src="/images/svg/linkedin-dark.svg"
             width={16}
           />
         </a>
@@ -44,7 +44,7 @@ export const AppFooter = () => {
             className="footer-social"
             height={16}
             loading="lazy"
-            src="/images/svg/github.svg"
+            src="/images/svg/github-dark.svg"
             width={16}
           />
         </a>
@@ -59,7 +59,7 @@ export const AppFooter = () => {
             className="footer-social"
             height={16}
             loading="lazy"
-            src="/images/svg/twitter.svg"
+            src="/images/svg/twitter-dark.svg"
             width={16}
           />
         </a>
