@@ -26,8 +26,8 @@ import {
 } from "~/config/constants";
 import { useIntro } from "~/hooks/useIntro";
 import { getMetaData } from "~/metadata";
-// import { TrackingGA } from "~/components/TrackingGA";
-// import { usePageTracking } from "~/hooks/usePageTracking";
+import { TrackingGA } from "~/components/TrackingGA";
+import { usePageTracking } from "~/hooks/usePageTracking";
 
 import styles from "~/styles/index.css";
 
@@ -74,7 +74,7 @@ export default function App() {
 
   // Life Cycle
   useIntro();
-  // usePageTracking();
+  usePageTracking();
 
   return (
     <html lang="en" className={cssComponent}>
@@ -98,7 +98,7 @@ export default function App() {
         <AppFooter />
 
         {/* Analytics */}
-        {/* <TrackingGA id={googleAnalytics} /> */}
+        <TrackingGA id={googleAnalytics} />
 
         {/* Remix */}
         <ScrollRestoration />
