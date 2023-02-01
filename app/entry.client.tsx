@@ -24,7 +24,6 @@ if (window.requestIdleCallback) {
 
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
-    console.log(`👋 ~ /worker.js`);
     navigator.serviceWorker.register("/worker.js");
   });
 

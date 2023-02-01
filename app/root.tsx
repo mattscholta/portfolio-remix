@@ -64,10 +64,8 @@ export default function App() {
   const { canonical, googleAnalytics, theme } = data;
   const isDark = theme === "dark";
   const favicon = "/images/svg/logo.svg";
-  const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
-
-  // console.log(`👋 ~ data`, data);
-  console.log(`👋 ~ canonical`, canonical);
+  const manifest = "/manifest.json";
+  // const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
 
   // Styles
   const cssComponent = classnames(theme ?? "", isDark);
