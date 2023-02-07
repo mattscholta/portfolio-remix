@@ -15,7 +15,7 @@ import type { MetaFunction } from "@remix-run/node";
 
 import { cookieTheme } from "~/cookies";
 import { AppFooter } from "~/components/AppFooter";
-import { BASE_URL, GOOGLE_ANALYTICS } from "~/config/settings.server";
+import { BASE_URL } from "~/config/settings.server";
 import { AppHeader } from "~/components/AppHeader";
 import { AppHeaderMobile } from "~/components/AppHeaderMobile";
 import {
@@ -26,7 +26,6 @@ import {
 } from "~/config/constants";
 import { useIntro } from "~/hooks/useIntro";
 import { getMetaData } from "~/metadata";
-import { TrackingGA } from "~/components/TrackingGA";
 import { usePageTracking } from "~/hooks/usePageTracking";
 
 import styles from "~/styles/index.css";
@@ -44,7 +43,7 @@ export const loader = async (args: DataFunctionArgs) => {
   const cookie = (await cookieTheme.parse(header)) ?? {};
   const { theme = "light" } = cookie;
 
-  return json({ baseUrl, canonical, googleAnalytics: GOOGLE_ANALYTICS, theme });
+  return json({ baseUrl, canonical, theme });
 };
 
 export const meta: MetaFunction = (args) => ({
@@ -61,7 +60,7 @@ export default function App() {
   const data = useLoaderData<typeof loader>();
 
   // Setup
-  const { canonical, googleAnalytics, theme } = data;
+  const { canonical, theme } = data;
   const isDark = theme === "dark";
   const favicon = "/images/svg/logo.svg";
   const manifest = "/manifest.json";
@@ -94,9 +93,6 @@ export default function App() {
           <Outlet />
         </main>
         <AppFooter />
-
-        {/* Analytics */}
-        <TrackingGA id={googleAnalytics} />
 
         {/* Remix */}
         <ScrollRestoration />
