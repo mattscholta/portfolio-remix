@@ -39,10 +39,11 @@ export default function () {
   // Setup
   const created = new Date(data.date);
   const date = created.toLocaleDateString("en-US", {
-    weekday: undefined,
-    year: "numeric",
+    day: "numeric",
     month: "long",
-    day: "numeric"
+    timeZone: "UTC",
+    weekday: undefined,
+    year: "numeric"
   });
 
   return (
