@@ -13,7 +13,7 @@ export default function handleRequest(
     <RemixServer context={remixContext} url={request.url} />
   );
 
-  responseHeaders.set("Content-Type", "text/html");
+  responseHeaders.set("Content-Type", "text/html; charset=UTF-8;");
 
   return new Response("<!DOCTYPE html>" + artwork + markup, {
     headers: responseHeaders,

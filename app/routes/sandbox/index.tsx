@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { AppHero } from "~/components/AppHero";
+import { SandboxSidebar } from "~/components/SandboxSidebar";
 import { SITE_TITLE } from "~/config/constants";
 import { getMetaData } from "~/metadata";
 
@@ -24,6 +25,17 @@ export default () => {
         highlight="A place to explore"
         tag="h1"
       />
+      <div className="flex">
+        <div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
+            deleniti sunt aliquam animi corrupti quod dolorem libero obcaecati
+            id harum similique iste iure, velit perspiciatis dolores nisi
+            veniam. Eligendi, eum!
+          </p>
+        </div>
+        <SandboxSidebar />
+      </div>
     </section>
   );
 };

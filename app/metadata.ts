@@ -21,14 +21,14 @@ const defaults: MetaDataOptions = {
 };
 
 export const getMetaDataBase = (): HtmlMetaDescriptor => ({
-  "apple-mobile-web-app-capable": "yes",
-  "apple-mobile-web-app-status-bar-style": "black",
-  "apple-mobile-web-app-title": `2023 Portfolio`,
-  author: SITE_AUTHOR,
   charset: "utf-8",
+  author: SITE_AUTHOR,
   "color-scheme": "dark light",
   "theme-color": "#ff0000",
-  viewport: `initial-scale=1, viewport-fit=cover, width=device-width`
+  viewport: `initial-scale=1, viewport-fit=cover, width=device-width`,
+  "apple-mobile-web-app-capable": "yes",
+  "apple-mobile-web-app-status-bar-style": "black",
+  "apple-mobile-web-app-title": `2023 Portfolio`
 });
 
 export const getMetaData = (options: MetaDataOptions): HtmlMetaDescriptor => ({

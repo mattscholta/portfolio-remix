@@ -1,5 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { AppHero } from "~/components/AppHero";
+import { SandboxSidebar } from "~/components/SandboxSidebar";
 import { SITE_TITLE } from "~/config/constants";
 import { getMetaData } from "~/metadata";
 
@@ -25,20 +26,23 @@ export default () => {
         tag="h1"
       />
 
-      <div className="w-full bg-white py-20">
-        <div
-          className="relative mx-auto bg-slate-500"
-          style={{
-            backgroundImage: `url("/images/sandbox/css-polaroid.jpg")`,
-            backgroundPosition: "bottom right",
-            height: "550px",
-            width: "650px"
-          }}
-        >
-          <div className="ml-20 mr-20 mt-20 rounded-tl-lg rounded-tr-lg bg-[#2e2e30]">
-            asdfasdf
+      <div className="flex bg-white text-gray-800">
+        <div className="w-full py-20">
+          <div
+            className="relative mx-auto bg-slate-500"
+            style={{
+              backgroundImage: `url("/images/sandbox/css-polaroid.jpg")`,
+              backgroundPosition: "bottom right",
+              height: "550px",
+              width: "650px"
+            }}
+          >
+            <div className="ml-20 mr-20 mt-20">
+              <h3>Sandboxes</h3>
+            </div>
           </div>
         </div>
+        <SandboxSidebar />
       </div>
     </section>
   );

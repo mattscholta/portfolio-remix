@@ -22,7 +22,7 @@ exports[`BlogPreview Component > should render our BlogPreview 1`] = `
       <div
         class="font-font-monospace text-sm"
       >
-        12/31/2019
+        01/01/2020
       </div>
     </a>
   </div>
