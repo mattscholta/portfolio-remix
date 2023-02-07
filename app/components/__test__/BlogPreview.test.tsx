@@ -33,7 +33,7 @@ describe("BlogPreview Component", () => {
   test("should render our BlogPreview", () => {
     expect(component.baseElement).toMatchSnapshot();
 
-    const elDate = component.getByText("12/31/2019"); // props.post.date
+    const elDate = component.getByText("01/01/2020"); // props.post.date
     const elHeading = component.getByText(props.title);
     const elImages = component.getAllByAltText(props.title ?? "_no_alt_");
 

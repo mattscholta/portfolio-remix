@@ -19,10 +19,11 @@ export const BlogPreview = (props: BlogPreviewProps) => {
   const Heading = heading as any;
   const created = new Date(date);
   const dateString = created.toLocaleDateString("en-US", {
-    weekday: undefined,
-    year: "numeric",
+    day: "2-digit",
     month: "2-digit",
-    day: "numeric"
+    timeZone: "UTC",
+    weekday: undefined,
+    year: "numeric"
   });
 
   return (
