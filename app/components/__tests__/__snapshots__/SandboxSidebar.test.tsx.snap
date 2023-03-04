@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SandboxSidebar Component > should render 1`] = `
+<body>
+  <div>
+    <div
+      class="p-4"
+    >
+      <h2>
+        🔗 Sandbox Sidebar
+      </h2>
+    </div>
+  </div>
+</body>
+`;
