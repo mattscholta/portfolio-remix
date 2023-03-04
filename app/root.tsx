@@ -1,4 +1,3 @@
-import classnames from "classnames";
 import {
   Links,
   LiveReload,
@@ -13,7 +12,6 @@ import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import type { MetaFunction } from "@remix-run/node";
 
-import { cookieTheme } from "~/cookies";
 import { AppFooter } from "~/components/AppFooter";
 import { BASE_URL } from "~/config/settings.server";
 import { AppHeader } from "~/components/AppHeader";
@@ -40,10 +38,10 @@ export const loader = async (args: DataFunctionArgs) => {
   const baseUrl = BASE_URL;
   const canonical = request.url;
   const header = request.headers.get("cookie");
-  const cookie = (await cookieTheme.parse(header)) ?? {};
-  const { theme = "light" } = cookie;
+  // const cookie = (await cookieTheme.parse(header)) ?? {};
+  // const { theme = "light" } = cookie;
 
-  return json({ baseUrl, canonical, theme });
+  return json({ baseUrl, canonical });
 };
 
 export const meta: MetaFunction = (args) => ({
@@ -60,21 +58,16 @@ export default function App() {
   const data = useLoaderData<typeof loader>();
 
   // Setup
-  const { canonical, theme } = data;
-  const isDark = theme === "dark";
+  const { canonical } = data;
   const favicon = "/images/svg/logo.svg";
   const manifest = "/manifest.json";
-  // const manifest = isDark ? "/manifest-dark.json" : "/manifest.json";
-
-  // Styles
-  const cssComponent = classnames(theme ?? "", isDark);
 
   // Life Cycle
   useIntro();
   usePageTracking();
 
   return (
-    <html lang="en" className={cssComponent}>
+    <html lang="en">
       <head>
         <link href={canonical} rel="canonical" />
         <link href={favicon} rel="apple-touch-icon" sizes="48x48" />
