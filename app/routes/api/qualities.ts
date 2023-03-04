@@ -10,7 +10,7 @@ const qualities = [
   "A rule breaker 🙊"
 ];
 
-export const loader: LoaderFunction = async (args): Promise<string> => {
+export const loader: LoaderFunction = async (_args) => {
   return getQuote();
 };
 
