@@ -15,7 +15,6 @@
 /.templates/
 /api/
 /api/index.js
-/app/styles/
 /build/
 /coverage
 /node_modules

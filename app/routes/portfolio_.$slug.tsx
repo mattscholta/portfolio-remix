@@ -1,22 +1,23 @@
-import { useCatch, useLoaderData } from "@remix-run/react";
-import type { MetaFunction } from "@vercel/remix";
-
+import type { LoaderData } from "~/routes/api.portfolio.$slug";
 import { AppHero } from "~/components/AppHero";
 import { loader } from "~/routes/api.portfolio.$slug";
-import type { LoaderData } from "~/routes/api.portfolio.$slug";
-import { getMetaData } from "~/metadata";
+import { MetaFunction, useLoaderData } from "@remix-run/react";
 
 export { loader };
 
 export const meta: MetaFunction = (args) => {
   const image = args.data?.images[0] ? args.data?.images[0]?.url : false;
 
-  return getMetaData({
-    canonical: args.parentsData?.root?.canonical,
-    description: args.data?.description,
-    image,
-    title: args.data?.title
-  });
+  return [
+    // getMetaData({
+    //   canonical: args.parentsData?.root?.canonical,
+    //   image,
+    // })
+    {
+      description: args.data?.description
+    },
+    { title: args.data?.title }
+  ];
 };
 
 export default function () {

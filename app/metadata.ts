@@ -1,4 +1,4 @@
-import type { HtmlMetaDescriptor } from "@vercel/remix";
+import type { V2_HtmlMetaDescriptor } from "@vercel/remix";
 import {
   SITE_AUTHOR,
   SITE_SHARE_IMAGE,
@@ -20,38 +20,99 @@ const defaults: MetaDataOptions = {
   title: SITE_TITLE
 };
 
-export const getMetaDataBase = (): HtmlMetaDescriptor => ({
-  charset: "utf-8",
-  author: SITE_AUTHOR,
-  "color-scheme": "dark light",
-  "theme-color": "#ff0000",
-  viewport: `initial-scale=1, viewport-fit=cover, width=device-width`,
-  "apple-mobile-web-app-capable": "yes",
-  "apple-mobile-web-app-status-bar-style": "black",
-  "apple-mobile-web-app-title": `2023 Portfolio`
-});
+export const getMetaDataBase = (): V2_HtmlMetaDescriptor[] => [
+  {
+    charset: "utf-8"
+  },
+  {
+    author: SITE_AUTHOR
+  },
+  {
+    property: "color-scheme",
+    content: "dark light"
+  },
+  {
+    "theme-color": "#ff0000"
+  },
+  {
+    viewport: `initial-scale=1, viewport-fit=cover, width=device-width`
+  },
+  {
+    "apple-mobile-web-app-capable": "yes"
+  },
+  {
+    "apple-mobile-web-app-status-bar-style": "black"
+  },
+  {
+    "apple-mobile-web-app-title": `2023 Portfolio`
+  }
+];
 
-export const getMetaData = (options: MetaDataOptions): HtmlMetaDescriptor => ({
-  ...getMetaDataBase(),
+export const getMetaData = (
+  options: MetaDataOptions
+): V2_HtmlMetaDescriptor[] => [
+  // ...getMetaDataBase(),
 
   // SEO Meta Tags
-  description: options.description || defaults.description,
-  image: options.image || defaults.image,
-  name: options.title || defaults.title,
-  title: options.title || defaults.title,
+  {
+    name: "description",
+    content: options.description || defaults.description
+  },
+  {
+    image: options.image || defaults.image
+  },
+  {
+    name: options.title || defaults.title
+  },
+  {
+    title: options.title || defaults.title
+  },
 
   // Open Graph
-  "og:description": options.description || defaults.description,
-  "og:image": options.image || defaults.image,
-  "og:title": options.title || defaults.title,
-  "og:type": "website",
-  "og:url": options.canonical || defaults.canonical,
+  {
+    property: "og:description",
+    content: options.description || defaults.description
+  },
+  {
+    property: "og:image",
+    content: options.image || defaults.image
+  },
+  {
+    property: "og:title",
+    content: options.title || defaults.title
+  },
+  {
+    property: "og:type",
+    content: "website"
+  },
+  {
+    property: "og:url",
+    content: options.canonical || defaults.canonical
+  },
 
   // Twitter
-  "twitter:card": `summary_large_image`,
-  "twitter:creator": `@visormatt`,
-  "twitter:description": options.description || defaults.description,
-  "twitter:image": options.image || defaults.image,
-  "twitter:site": `@visormatt`,
-  "twitter:title": options.title || defaults.title
-});
+  {
+    property: "twitter:card",
+    content: `summary_large_image`
+  },
+  {
+    property: "twitter:creator",
+    content: `@visormatt`
+  },
+  {
+    property: "twitter:description",
+    content: options.description || defaults.description
+  },
+  {
+    property: "twitter:image",
+    content: options.image || defaults.image
+  },
+  {
+    property: "twitter:site",
+    content: `@visormatt`
+  },
+  {
+    property: "twitter:title",
+    content: options.title || defaults.title
+  }
+];

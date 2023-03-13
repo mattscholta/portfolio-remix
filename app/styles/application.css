@@ -1,0 +1,182 @@
+/**
+ * The bits that we need to style outside of just inline classes
+ */
+
+.blog-preview {
+  color: var(--color-copy);
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.blog-preview img {
+  border: 1px solid var(--color-border-light);
+}
+
+.blog-preview.both {
+  transition: all 140ms ease-out;
+}
+
+.blog-preview:hover {
+  background-image: unset;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blog-preview img {
+    border-color: var(--color-border-light);
+  }
+}
+
+.icon-link path {
+  fill: var(--color-primary);
+}
+
+.experience div {
+  color: var(--color-copy-light);
+  font-style: italic;
+}
+
+.footer-social path {
+  fill: green;
+}
+
+.header-link {
+  color: unset;
+  height: 100%;
+  display: flex;
+  justify-items: center;
+  padding: theme("spacing.2") theme("spacing.4");
+  align-items: center;
+  font-size: 0.9rem;
+  transition: color 140ms ease-out;
+}
+
+.header-link:hover,
+.header-link.active {
+  color: var(--color-primary);
+}
+
+@screen md {
+  .header-link {
+    padding: 1rem 1.4rem;
+  }
+}
+
+.header-logo svg {
+  max-height: 24px;
+}
+
+@screen md {
+  .header-logo svg {
+    max-height: 32px;
+  }
+}
+
+.header-logo path {
+  fill: var(--color-copy-light);
+  transition: fill 140ms ease-out;
+}
+
+.header-logo:hover path,
+.header-logo.active path {
+  fill: var(--color-primary);
+}
+
+.hero {
+  line-height: 1.1;
+}
+
+.hero h1 {
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.hero h1,
+.hero h1 span {
+  line-height: 1.1;
+}
+
+.pulse {
+  animation: pulse 1400ms infinite;
+}
+
+.scroll-to {
+  border-color: var(--color-border);
+  transition: border 140ms ease-out, color 140ms ease-out;
+}
+
+.scroll-to:hover {
+  border-color: var(--color-background);
+  color: var(--color-primary);
+}
+
+.section-anchor {
+  margin-top: calc(var(--header-height) + calc(var(--footer-height) / 2));
+  padding-top: calc(var(--header-height) + calc(var(--footer-height) / 2));
+}
+
+.section-subcontent {
+  background-color: var(--color-background-light);
+  border-bottom: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-copy-light);
+  padding: 4rem 0;
+  margin: 4rem 0;
+}
+
+.section-full {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+.svg-social path {
+  fill: #24292e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .svg-social path {
+    fill: #cfd7dd;
+  }
+}
+
+.work-details button {
+  background-color: theme("colors.white");
+  border: 1px solid theme("colors.white");
+  color: var(--color-background-dark);
+}
+
+.work-details button.active,
+.work-details button:hover {
+  background-color: var(--color-primary);
+  border-color: theme("colors.white");
+  color: theme("colors.white");
+}
+
+.work-preview span {
+  letter-spacing: -0.05em;
+}
+
+.work-preview p {
+  color: var(--color-copy-dark);
+  transition: color 140ms ease-out;
+}
+
+.work-preview:hover p {
+  color: var(--color-copy);
+}
+
+.work-companies {
+  background-color: var(--color-background-light);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

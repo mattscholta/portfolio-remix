@@ -1,0 +1,68 @@
+/**
+ * We save raw HTML markup for some elements that are controlled using
+ * GraphCMS, so we add this selector to normalize the styles a bit w/o
+ * requiring nested classes.
+ */
+.wysiwyg h1,
+.wysiwyg h2,
+.wysiwyg h3,
+.wysiwyg h4,
+.wysiwyg h5,
+.wysiwyg h6 {
+  color: theme("colors.color-copy");
+  font-family: theme("fontFamily.sans");
+  font-weight: 500;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.wysiwyg h1 {
+  font-family: theme("fontFamily.font-serif");
+  font-weight: 900;
+}
+
+.wysiwyg h1,
+.wysiwyg h2 {
+  font-size: 1.4rem;
+}
+
+.wysiwyg h3,
+.wysiwyg h4 {
+  font-size: 1.2rem;
+}
+
+.wysiwyg h5,
+.wysiwyg h6 {
+  font-size: 1rem;
+}
+
+.wysiwyg p {
+  color: var(--color-copy);
+  margin-bottom: 1rem;
+}
+
+.wysiwyg ol,
+.wysiwyg ul {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.wysiwyg ol li {
+  list-style: decimal;
+}
+
+.wysiwyg ul li {
+  list-style: disc;
+}
+
+.wysiwyg pre {
+  background-color: var(--color-copy);
+  color: var(--color-background);
+  padding: 0.5rem;
+  margin: 1rem 0;
+  overflow: auto;
+}
+
+.wysiwyg img {
+  margin-bottom: 1rem;
+}

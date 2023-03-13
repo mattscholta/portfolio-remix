@@ -1,21 +1,25 @@
-import type { MetaFunction } from "@vercel/remix";
-import { SITE_TITLE } from "~/config/constants";
+import type { MetaFunction } from "@remix-run/react";
 import { AppHero } from "~/components/AppHero";
 import { SectionHardware } from "~/components/SectionHardware";
 import { SectionMisc } from "~/components/SectionMisc";
 import { SectionSoftware } from "~/components/SectionSoftware";
-import { getMetaData } from "~/metadata";
+import { SITE_TITLE } from "~/config/constants";
 
 export const meta: MetaFunction = (args) => {
   // console.log(` 💬 ~ args.data`, args.data);
 
-  return {
-    ...getMetaData({
-      canonical: args.parentsData?.root?.canonical,
-      description: `Check out uses.tech for a list of more /uses pages!`,
+  return [
+    {
       title: `Uses | ${SITE_TITLE}`
-    })
-  };
+    },
+    {
+      name: "description",
+      content: `Check out uses.tech for a list of more /uses pages!`
+    }
+    // ...getMetaData({
+    //   canonical: args.parentsData?.root?.canonical,
+    // })
+  ];
 };
 
 export default function () {

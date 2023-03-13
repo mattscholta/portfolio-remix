@@ -1,4 +1,4 @@
-import { Response, json } from "@vercel/remix";
+import { json } from "@vercel/remix";
 import type { LoaderFunction } from "@vercel/remix";
 
 import { fetchFromGraphCMS } from "~/utils/graphcms";

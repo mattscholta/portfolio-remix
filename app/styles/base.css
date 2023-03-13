@@ -1,0 +1,97 @@
+/**
+ * The "base" style sheet is used to customize our generic HTML tags a bit
+ */
+html {
+  background-color: var(--color-background-light);
+  min-width: 320px;
+
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-copy);
+  font-family: var(--font-sans-serif);
+}
+
+body {
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 900;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+blockquote {
+  box-sizing: content-box;
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 4rem 2rem;
+  overflow: auto;
+  overflow: visible;
+  text-align: center;
+}
+
+@screen md {
+  blockquote {
+    margin: 4rem 4rem;
+  }
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+p:last-of-type {
+  margin: unset;
+}
+
+main {
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+footer {
+  height: var(--footer-height);
+}
+
+header {
+  align-items: center;
+  background-color: var(--color-background-light);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-copy);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: height 140ms ease-out;
+  z-index: 10;
+}
+
+header.closed {
+  height: var(--header-height);
+}
+
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: unset;
+  }
+}
+
+.main {
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+}

@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  scrollbar-color: var(--color-primary) var(--color-background);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  cursor: pointer;
+  height: theme("spacing.2");
+  width: theme("spacing.2");
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  /* border: 2px solid var(--spot-white); */
+  /* border-radius: 10px; */
+  border-radius: theme("spacing.1");
+}
+
+/*
+::-moz-selection {
+  background: var(--color-primary);
+  color: var(--spot-white);
+}
+
+::selection {
+  background: var(--color-primary);
+  color: var(--spot-white);
+}
+
+:focus-visible {
+  border: unset;
+  box-shadow: unset;
+  outline-color: var(--color-primary);
+}
+*/

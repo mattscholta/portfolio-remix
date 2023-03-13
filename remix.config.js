@@ -2,19 +2,16 @@
  * @type {import('@remix-run/dev').AppConfig}
  */
 module.exports = {
-  future: {
-    v2_errorBoundary: true,
-    v2_routeConvention: true,
-    v2_normalizeFormMethod: true
-  },
-  // serverBuildDirectory: "build",
+  future: {},
   serverBuildPath: "./build/index.js",
   serverDependenciesToBundle: [
     "decode-uri-component",
     "filter-obj",
-    "split-on-first"
+    "split-on-first",
   ],
+  serverModuleFormat: "cjs",
+  tailwind: true,
   watchPaths: async () => {
     return ["./docs/*", "./public/styles/**/*", "./README.md"];
-  }
+  },
 };
