@@ -1,10 +1,10 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
-import type { LoaderData } from "~/routes/api/portfolio";
+import type { LoaderData } from "~/routes/api.portfolio";
 import { AppHero } from "~/components/AppHero";
 import { PortfolioPreview } from "~/components/PortfolioPreview";
-import { loader } from "~/routes/api/portfolio";
+import { loader } from "~/routes/api.portfolio";
 import { getMetaData } from "~/metadata";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 

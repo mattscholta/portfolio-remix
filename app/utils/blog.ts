@@ -1,4 +1,4 @@
-import type { Post } from "~/routes/api/blog";
+import type { Post } from "~/routes/api.blog";
 
 export interface BlogData {
   data: Post[];
