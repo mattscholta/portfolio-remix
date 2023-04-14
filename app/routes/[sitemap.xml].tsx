@@ -1,4 +1,4 @@
-import type { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction } from "@vercel/remix";
 
 import { fetchFromGraphCMS } from "~/utils/graphcms";
 import type { Post } from "~/routes/api.blog";

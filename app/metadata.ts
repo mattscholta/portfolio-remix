@@ -1,4 +1,4 @@
-import type { HtmlMetaDescriptor } from "@remix-run/node";
+import type { HtmlMetaDescriptor } from "@vercel/remix";
 import {
   SITE_AUTHOR,
   SITE_SHARE_IMAGE,

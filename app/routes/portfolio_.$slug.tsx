@@ -1,5 +1,5 @@
 import { useCatch, useLoaderData } from "@remix-run/react";
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@vercel/remix";
 
 import { AppHero } from "~/components/AppHero";
 import { loader } from "~/routes/api.portfolio.$slug";
@@ -40,7 +40,7 @@ export default function () {
       {img && (
         <img
           alt={data.title}
-          className="mb-20 mt-0 w-full border-t border-b border-color-border"
+          className="mb-20 mt-0 w-full border-b border-t border-color-border"
           height="auto"
           loading="eager"
           src={img}

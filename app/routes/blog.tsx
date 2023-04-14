@@ -1,5 +1,5 @@
 import { useLoaderData } from "@remix-run/react";
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@vercel/remix";
 
 import { BlogPreview } from "~/components/BlogPreview";
 import { AppHero } from "~/components/AppHero";

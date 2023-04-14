@@ -2572,6 +2572,15 @@
   resolved "https://registry.yarnpkg.com/@vercel/analytics/-/analytics-0.1.11.tgz#727a0ac655a4a89104cdea3e6925476470299428"
   integrity sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==
 
+"@vercel/remix@^1.15.0":
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/@vercel/remix/-/remix-1.15.0.tgz#1d73def407db0e489c3aee59c63b8180d4834475"
+  integrity sha512-IS4K9u6M8oCc9VKxnS308+B0l+PHWxmBS6/o0aI2yBRQiG+yxxXn/UfPPvNDNJsfGsdcTmW/VR9dbN5EskY32g==
+  dependencies:
+    "@remix-run/node" "1.15.0"
+    "@remix-run/server-runtime" "1.15.0"
+    isbot "3.6.7"
+
 "@vitejs/plugin-react@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-3.1.0.tgz#d1091f535eab8b83d6e74034d01e27d73c773240"
@@ -5630,6 +5639,11 @@ isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
   integrity sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==
+
+isbot@3.6.7:
+  version "3.6.7"
+  resolved "https://registry.yarnpkg.com/isbot/-/isbot-3.6.7.tgz#38bd4792542291500e355da7798e7afae31802ec"
+  integrity sha512-SXNUQaNZlj/+9jdrGnAp6WW0YoHe3MIwwc6oRIYuhhERBUt7/L6I7JkMiA2sX9fcvS7gZ2C7GWgmDZfOOU4I5g==
 
 isexe@^2.0.0:
   version "2.0.0"

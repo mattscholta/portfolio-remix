@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@vercel/remix";
 import { useLoaderData } from "@remix-run/react";
 
 import type { LoaderData } from "~/routes/api.portfolio";
@@ -51,7 +51,7 @@ export default function () {
       </section>
 
       <section>
-        <div className="border-0 border-t border-b border-color-border bg-color-background-light text-color-background-dark">
+        <div className="border-0 border-b border-t border-color-border bg-color-background-light text-color-background-dark">
           <AppHero
             className="py-20 md:py-40"
             copy="In the past..."

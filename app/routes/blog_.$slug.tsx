@@ -1,5 +1,5 @@
 import { useCatch, useLoaderData } from "@remix-run/react";
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@vercel/remix";
 
 import { AppHero } from "~/components/AppHero";
 import type { LoaderData } from "~/routes/api.blog.$slug";
