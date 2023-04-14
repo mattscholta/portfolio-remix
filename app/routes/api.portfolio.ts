@@ -1,7 +1,7 @@
-// import { Response } from "@remix-run/node";
-// import type { LoaderFunction } from "@remix-run/node";
-import { json } from "@remix-run/node";
-import type { LoaderFunction } from "@remix-run/node";
+// import { Response } from "@vercel/remix";
+// import type { LoaderFunction } from "@vercel/remix";
+import { json } from "@vercel/remix";
+import type { LoaderFunction } from "@vercel/remix";
 
 import { fetchFromGraphCMS } from "~/utils/graphcms";
 import { getPortfolios } from "~/queries/getPortfolios";

@@ -6,11 +6,12 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
-  useLoaderData
+  useLoaderData,
+  useRouteError
 } from "@remix-run/react";
-import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
-import { json } from "@remix-run/node";
-import type { MetaFunction } from "@remix-run/node";
+import type { DataFunctionArgs, LinksFunction } from "@vercel/remix";
+import { json } from "@vercel/remix";
+import type { MetaFunction } from "@vercel/remix";
 
 import { AppFooter } from "~/components/AppFooter";
 import { BASE_URL } from "~/config/settings.server";
@@ -146,7 +147,10 @@ export function CatchBoundary() {
   );
 }
 
-export function ErrorBoundary({ error }: { error: unknown }) {
+export function ErrorBoundary() {
+  // Hooks
+  const error = useRouteError();
+
   // Setup
   const favicon = "/images/svg/logo.svg";
   const manifest = "/manifest.json";

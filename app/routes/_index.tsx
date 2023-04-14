@@ -1,8 +1,8 @@
 import * as React from "react";
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@vercel/remix";
 
 import { AppHero } from "~/components/AppHero";
-import { getQuote } from "~/routes/api/qualities";
+import { getQuote } from "~/routes/api.qualities";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 import { SectionCompanies } from "~/components/SectionCompanies";
 import { SectionTechnology } from "~/components/SectionTechnology";
@@ -53,7 +53,7 @@ export default function () {
           </div>
         </section>
       </div>
-      <section className="border-0 border-t border-b border-solid border-color-border bg-color-background-light px-8 py-20 text-color-background-dark md:px-0">
+      <section className="border-0 border-b border-t border-solid border-color-border bg-color-background-light px-8 py-20 text-color-background-dark md:px-0">
         <blockquote className="mx-auto my-20 max-w-4xl text-2xl font-normal md:my-40 md:text-3xl">
           Passionate about <b>quality code</b> written <b>for humans</b>,
           unlocking <b>developer productivity</b>, and creating a delightful{" "}

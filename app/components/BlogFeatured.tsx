@@ -1,5 +1,5 @@
 import { BlogPreview } from "~/components/BlogPreview";
-import type { Post } from "~/routes/api/blog";
+import type { Post } from "~/routes/api.blog";
 
 export interface BlogFeaturedProps {
   className?: string;

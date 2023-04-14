@@ -1,4 +1,4 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { MetaFunction } from "@vercel/remix";
 import { AppHero } from "~/components/AppHero";
 import { SandboxSidebar } from "~/components/SandboxSidebar";
 import { SITE_TITLE } from "~/config/constants";
@@ -10,7 +10,7 @@ export const meta: MetaFunction = (args) => {
   return {
     ...getMetaData({
       canonical: args.parentsData?.root?.canonical,
-      description: `A Sandbox project making a Poloroid camera with CSS.`,
+      description: `A Sandbox for Remix-Run and various web experiments.`,
       title: `Sandbox | ${SITE_TITLE}`
     })
   };
@@ -21,26 +21,18 @@ export default () => {
     <section className="bg-gradient-dark-- bg-color-background-dark text-color-background">
       <AppHero
         className="mx-auto max-w-6xl py-20 md:py-40"
-        copy="Looked like a fun challenge"
-        highlight="CSS Polaroid Camera"
+        copy="Developer sandbox 🏖️"
+        highlight="A place to explore"
         tag="h1"
       />
-
-      <div className="flex bg-white text-gray-800">
-        <div className="w-full py-20">
-          <div
-            className="relative mx-auto bg-slate-500"
-            style={{
-              backgroundImage: `url("/images/sandbox/css-polaroid.jpg")`,
-              backgroundPosition: "bottom right",
-              height: "550px",
-              width: "650px"
-            }}
-          >
-            <div className="ml-20 mr-20 mt-20">
-              <h3>Sandboxes</h3>
-            </div>
-          </div>
+      <div className="flex">
+        <div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni
+            deleniti sunt aliquam animi corrupti quod dolorem libero obcaecati
+            id harum similique iste iure, velit perspiciatis dolores nisi
+            veniam. Eligendi, eum!
+          </p>
         </div>
         <SandboxSidebar />
       </div>

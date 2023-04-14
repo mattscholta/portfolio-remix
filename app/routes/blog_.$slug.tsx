@@ -1,9 +1,9 @@
 import { useCatch, useLoaderData } from "@remix-run/react";
-import type { LinksFunction, MetaFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@vercel/remix";
 
 import { AppHero } from "~/components/AppHero";
-import type { LoaderData } from "~/routes/api/blog/$slug";
-import { loader } from "~/routes/api/blog/$slug";
+import type { LoaderData } from "~/routes/api.blog.$slug";
+import { loader } from "~/routes/api.blog.$slug";
 import { AppWysiwyg } from "~/components/AppWysiwyg";
 
 import stylesLines from "prismjs/plugins/line-numbers/prism-line-numbers.css";
