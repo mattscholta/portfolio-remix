@@ -6,7 +6,8 @@ import {
   Scripts,
   ScrollRestoration,
   useCatch,
-  useLoaderData
+  useLoaderData,
+  useRouteError
 } from "@remix-run/react";
 import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
@@ -146,7 +147,10 @@ export function CatchBoundary() {
   );
 }
 
-export function ErrorBoundary({ error }: { error: unknown }) {
+export function ErrorBoundary() {
+  // Hooks
+  const error = useRouteError();
+
   // Setup
   const favicon = "/images/svg/logo.svg";
   const manifest = "/manifest.json";
