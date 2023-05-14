@@ -28,7 +28,7 @@
     "classnames": "^2.3.2",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
-    "fireworks-js": "^2.10.2",
+    "fireworks-js": "^2.10.4",
     "gsap": "^3.11.5",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
