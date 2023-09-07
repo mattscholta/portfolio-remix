@@ -3,12 +3,15 @@
  */
 module.exports = {
   future: {
+    v2_dev: true,
     v2_errorBoundary: true,
-    v2_routeConvention: true,
-    v2_normalizeFormMethod: true
+    v2_headers: true,
+    v2_meta: false,
+    v2_normalizeFormMethod: true,
+    v2_routeConvention: true
   },
   // serverBuildDirectory: "build",
-  serverBuildPath: "./build/index.js",
+  // serverBuildPath: "./build/index.js",
   serverDependenciesToBundle: [
     "decode-uri-component",
     "filter-obj",
