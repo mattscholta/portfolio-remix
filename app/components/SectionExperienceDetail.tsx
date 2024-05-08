@@ -17,7 +17,7 @@ export const SectionExperienceDetail = (
     description,
     highlights,
     image,
-    title
+    title,
   } = experience;
 
   // Setup
@@ -26,11 +26,11 @@ export const SectionExperienceDetail = (
   const _length = getTimeWorked(start, stop);
 
   // TEMP
-  // console.log(`Worked at ${company} for`, _length);
+  console.log(`Worked at ${company} for`, _length);
 
   return (
     <div className="flex flex-col gap-10 md:flex-row" key={title}>
-      <div className="flex flex-col gap-2 text-base print:basis-8 md:basis-[160px]">
+      <div className="flex flex-col gap-2 text-base md:basis-[160px] print:basis-8">
         <div className="flex">
           <h3 className="flex items-center gap-2 font-bold">
             <a

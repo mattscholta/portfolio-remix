@@ -1,13 +1,14 @@
-import type { LoaderFunction } from "@vercel/remix";
+import type { LoaderFunction } from "@remix-run/node";
 
 const qualities = [
   "A problem solver 🧩",
   "A creative thinker 🤔",
   "A team player 🤝",
+  "A father and husband 👨‍👩‍👧",
   "A self starter  🏇",
   "An innovator 💡",
   "A perpetual learner 📚",
-  "A rule breaker 🙊"
+  "A rule breaker 🙊",
 ];
 
 export const loader: LoaderFunction = async (_args) => {

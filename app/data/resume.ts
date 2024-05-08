@@ -39,18 +39,20 @@ export const experience: Experience[] = [
     dateRange: [new Date(2022, 9, 6)],
     description: `
       <p>
-        After welcoming a baby girl in August, I'll be starting early September.
+        Nearly two years in and we've made some incredible strides. We've paid
+        down significant technical debt and have begun to see the fruits of our
+        labor.
       </p>
     `,
     highlights: [
-      `Prototyped and delivered a Remix + TailwindCSS application for external partners`,
-      `Adoption of TypeScript in our React Native application`,
-      `Dockerized the development workflow and tooling`,
-      `... And we're just getting started!`
+      `0 - 1 addition of a NX Monorepo with 12+ applications and 20+ packages`,
+      `Adoption of Remix, TailwindCSS, Expo, NestJS, GraphQL, Github Actions, and more`,
+      // `Dockerized the development workflow and tooling`,
+      // `... And we're just getting started!`,
     ],
     image: `https://assets-global.website-files.com/602a3f3e454f14956d14543a/602a3f3e454f1438b61455af_ShiftsmartIcon.png`,
     tags: ["NodeJS", "TypeScript"],
-    title: `Staff Engineer`
+    title: `Staff Engineer`,
   },
   {
     company: "Haldi",
@@ -70,7 +72,7 @@ export const experience: Experience[] = [
       `0% - 80% Containerized stack and development workflow`,
       `Introduced GraphQL and strongly types across services`,
       `Delivered a full rebuild & rebrand of the Python + Django website to NextJS`,
-      `Survey Framework, CSS Style Guide, Monorepo, Unit/E2E Testing, and more`
+      `Survey Framework, CSS Style Guide, Monorepo, Unit/E2E Testing, and more`,
     ],
     image: `https://haldi.com/favicon.ico`,
     tags: [
@@ -82,9 +84,9 @@ export const experience: Experience[] = [
       "NodeJS",
       "Serverless",
       "TailwindCSS",
-      "TypeScript"
+      "TypeScript",
     ],
-    title: `Principal Engineer`
+    title: `Principal Engineer`,
   },
   {
     company: "thredUP",
@@ -101,7 +103,7 @@ export const experience: Experience[] = [
       `Progressive Web App (PWA); Pitched, prototyped, and delivered`,
       `Lerna Monorepo; Pitched, prototyped, and delivered`,
       `CSS Overhaul; Pitched, prototyped, and delivered`,
-      `Apollo Migration, Redux Migration, Checkout Overhaul, and many more...`
+      `Apollo Migration, Redux Migration, Checkout Overhaul, and many more...`,
     ],
     image: `https://cf-tup-assets.thredup.com/shop/images/manifest_v2/favicon_96.png`,
     tags: [
@@ -114,9 +116,9 @@ export const experience: Experience[] = [
       "React",
       "TailwindCSS",
       "TypeScript",
-      "Webpack"
+      "Webpack",
     ],
-    title: `Staff Engineer`
+    title: `Staff Engineer`,
   },
   {
     company: "Bynd",
@@ -135,18 +137,18 @@ export const experience: Experience[] = [
       `Google Databoard; Conceptualized, architected, developed, and delivered`,
       `Facebook Disaster Relief; Prototyped with BackboneJS and Facebook API's`,
       `Apple iAds; Development of HTML micro sites internally for Apple`,
-      `Apple iAds; Pitched an abstraction to minimize production time/cost, which was adopted internally`
+      `Apple iAds; Pitched an abstraction to minimize production time/cost, which was adopted internally`,
     ],
-    image: `https://bynd.com/favicon.ico`,
+    image: `https://assets-global.website-files.com/646e3fdd996bec75dd974e1f/64c389c72e68f265c7ab93bb_bynd-favicon.jpg`,
     tags: [
       "AngularJS",
       "BackboneJS",
       "CSS",
       "Google Cloud",
       "HTML",
-      "Javascript"
+      "Javascript",
     ],
-    title: `Technical Team Lead`
+    title: `Technical Team Lead`,
   },
   {
     company: "Lift Agency",
@@ -161,7 +163,7 @@ export const experience: Experience[] = [
     highlights: [
       `Wrote the Charter Checkout system and client-side validation flow`,
       `Experienced all the fun "quirks" of the IE days and Financial Systems`,
-      `Assisted in creating the "Lift Calculator" an iPhone application`
+      `Assisted in creating the "Lift Calculator" an iPhone application`,
     ],
     image: "https://liftagency.co/favicon.ico",
     tags: [
@@ -173,9 +175,9 @@ export const experience: Experience[] = [
       "HTML",
       "Javascript",
       "jQuery",
-      "PHP"
+      "PHP",
     ],
-    title: `Interactive Developer`
+    title: `Interactive Developer`,
   },
   {
     company: "Hotwire",
@@ -189,7 +191,7 @@ export const experience: Experience[] = [
     </p>`,
     highlights: [
       `Created initial prototypes for interactive widgets`,
-      `General design of marketing collateral`
+      `General design of marketing collateral`,
     ],
     image: "https://hotwire.com/favicon.ico",
     tags: [
@@ -199,9 +201,9 @@ export const experience: Experience[] = [
       "Design",
       "HTML",
       "jQuery",
-      "Prototyping"
+      "Prototyping",
     ],
-    title: `Graphic Designer`
+    title: `Graphic Designer`,
   },
   {
     company: "I.W. Group",
@@ -216,7 +218,7 @@ export const experience: Experience[] = [
     highlights: [
       `Management of the APAC Ronald McDonald House Charity web domain`,
       `Design & development of interactive Flash media, across 3-5 languages`,
-      `Speaker: New York, non-profit meetup re: Using social networking to enhance brand awareness`
+      `Speaker: New York, non-profit meetup re: Using social networking to enhance brand awareness`,
     ],
     image: `https://assets.website-files.com/6210110d90c0080391bd2d70/62ec7ce2c60a5c558566f5f1_IW%20favicon.png`,
     tags: [
@@ -227,9 +229,9 @@ export const experience: Experience[] = [
       "Adobe Photoshop",
       "CSS",
       "HTML",
-      "jQuery"
+      "jQuery",
     ],
-    title: `Interactive Designer/Developer`
+    title: `Interactive Designer/Developer`,
   },
   {
     company: "Zipidee",
@@ -246,7 +248,7 @@ export const experience: Experience[] = [
       `Balancing speed/quality settings across multiple outputs for varying use-cases`,
       `Development of custom branded, Flash video players for use on partner domains`,
       `Partners include; TiVo, ASPCA, The Weather Channel, and others`,
-      `Development of interactive Flash components and banners used on site`
+      `Development of interactive Flash components and banners used on site`,
     ],
     // image: "https://www.iwgroup.agency/favicon.ico",
     tags: [
@@ -256,10 +258,10 @@ export const experience: Experience[] = [
       "CSS",
       `HTML`,
       `Video encoding`,
-      `Video transcoding`
+      `Video transcoding`,
     ],
-    title: `Multi-Media Production Artist`
-  }
+    title: `Multi-Media Production Artist`,
+  },
 ];
 
 export interface Social {
@@ -272,7 +274,7 @@ export const social: Social[] = [
   {
     icon: `/images/svg/envelope.svg`,
     title: `matthew.scholta`,
-    url: `mailto:matthew.scholta@gmail.com`
+    url: `mailto:matthew.scholta@gmail.com`,
   },
   // {
   //   icon: `/images/svg/phone.svg`,
@@ -282,16 +284,16 @@ export const social: Social[] = [
   {
     icon: `/images/svg/github.svg`,
     title: `visormatt`,
-    url: `https://github.com/visormatt`
+    url: `https://github.com/visormatt`,
   },
   {
     icon: `/images/svg/linkedin.svg`,
     title: `/in/MatthewScholta`,
-    url: `https://www.linkedin.com/in/MatthewScholta`
+    url: `https://www.linkedin.com/in/MatthewScholta`,
   },
   {
     icon: `/images/svg/twitter.svg`,
     title: `@visormatt`,
-    url: `https://twitter.com/visormatt`
-  }
+    url: `https://twitter.com/visormatt`,
+  },
 ];

@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./app/**/*.{js,ts,jsx,tsx}"],
+  plugins: [require("postcss")],
   theme: {
     extend: {
       colors: {
@@ -28,6 +29,5 @@ module.exports = {
         xs: "320px"
       }
     }
-  },
-  plugins: []
+  }
 };

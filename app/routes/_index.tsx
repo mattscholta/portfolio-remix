@@ -1,22 +1,37 @@
+import type { MetaFunction } from "@remix-run/react";
 import * as React from "react";
-import type { MetaFunction } from "@vercel/remix";
-
 import { AppHero } from "~/components/AppHero";
 import { getQuote } from "~/routes/api.qualities";
-import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
+import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
 import { SectionCompanies } from "~/components/SectionCompanies";
 import { SectionTechnology } from "~/components/SectionTechnology";
 import { SectionAmbitions } from "~/components/SectionAmbitions";
 // import { SectionFireworks } from "~/components/SectionFireworks";
-import { getMetaData } from "~/metadata";
+// import { getMetaData } from "~/metadata";
 
 export const meta: MetaFunction = (args) => {
-  return {
-    ...getMetaData({
-      canonical: args.parentsData?.root?.canonical,
-      title: `${SITE_TITLE}`
-    })
-  };
+  return [
+    {
+      title: `${SITE_TITLE}`,
+    },
+    {
+      name: "description",
+      content: SITE_DESCRIPTION,
+    },
+    {
+      tagName: "link",
+      rel: "canonical",
+      href: args.data?.canonical,
+    },
+
+    // {
+    //   name: "canonical",
+    //   content: args.data?.canonical
+    // }
+    // ...getMetaData({
+    //   canonical: args.parentsData?.root?.canonical,
+    // })
+  ];
 };
 
 export default function () {

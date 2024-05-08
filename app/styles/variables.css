@@ -1,0 +1,111 @@
+/* prettier-ignore */
+
+:root {
+  --font-monospace: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+  --font-sans-serif: sans-serif;
+  --font-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+  --header-height: theme('spacing.14');
+  --footer-height: 4rem;
+}
+
+@screen md {
+  :root {
+    --header-height: 4rem;
+  }
+}
+
+/**
+ *
+ *          COLOR PALETTE
+ *
+ */
+:root {
+  --color-background-transparent: rgb(255 255 255 / 85%);
+  --color-background-transparent-light: rgb(255 255 255 / 25%);
+
+  --color-background-light: #fff;
+  --color-background: #f5f8fa;
+  --color-background-dark: #101214;
+
+  --color-border-light: #f5f8fa;
+  --color-border: #cfd7dd;
+  --color-border-dark: #57606a;
+
+  --color-copy-light: #57606a;
+  --color-copy: #24292e;
+  --color-copy-dark: #57606a;
+
+  --color-primary: #f00;
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background-transparent: rgb(0 0 0 / 85%);
+    --color-background-transparent: rgb(0 0 0 / 25%);
+
+    --color-background-light: #101214;
+    --color-background: #000;
+    --color-background-dark: #f5f8fa;
+
+    --color-border-light: #57606a;
+    --color-border: #24292e;
+    --color-border-dark: #57606a;
+
+    --color-copy-light: #f5f8fa;
+    --color-copy: #cfd7dd;
+    --color-copy-dark: #57606a;
+
+    --color-primary: #f97316;
+  }
+}
+
+html.light {
+  --color-background-transparent: rgb(255 255 255 / 85%);
+
+  --color-background-light: #fff;
+  --color-background: #f5f8fa;
+  --color-background-dark: #101214;
+
+  --color-border-light: #f5f8fa;
+  --color-border: #cfd7dd;
+  --color-border-dark: #57606a;
+
+  --color-copy-light: #57606a;
+  --color-copy: #24292e;
+  --color-copy-dark: #57606a;
+
+  --color-primary: #f00;
+}
+
+html.dark {
+  --color-background-transparent: rgb(0 0 0 / 85%);
+
+  --color-background-light: #101214;
+  --color-background: #000;
+  --color-background-dark: #f5f8fa;
+
+  --color-border-light: #57606a;
+  --color-border: #24292e;
+  --color-border-dark: #57606a;
+
+  --color-copy-light: #f5f8fa;
+  --color-copy: #cfd7dd;
+  --color-copy-dark: #57606a;
+
+  --color-primary: #f97316;
+}
+*/
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

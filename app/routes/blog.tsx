@@ -1,26 +1,30 @@
-import { useLoaderData } from "@remix-run/react";
-import type { MetaFunction } from "@vercel/remix";
-
-import { BlogPreview } from "~/components/BlogPreview";
-import { AppHero } from "~/components/AppHero";
-import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
-import { loader } from "~/routes/api.blog";
 import type { LoaderData } from "~/routes/api.blog";
+import type { MetaFunction } from "@remix-run/react";
+import { AppHero } from "~/components/AppHero";
 import { BlogFeatured } from "~/components/BlogFeatured";
+import { BlogPreview } from "~/components/BlogPreview";
 import { BlogUpcoming } from "~/components/BlogUpcoming";
-import { getMetaData } from "~/metadata";
 import { filterBlogPosts } from "~/utils/blog";
+import { loader } from "~/routes/api.blog";
+import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
+import { useLoaderData } from "@remix-run/react";
 
 export { loader };
 
 export const meta: MetaFunction = (args) => {
-  return {
-    ...getMetaData({
-      canonical: args.parentsData?.root?.canonical,
-      description: `A collection of ramblings by ${SITE_AUTHOR}.`,
+  return [
+    {
       title: `A developers ramblings | ${SITE_TITLE}`
-    })
-  };
+    },
+    {
+      name: "description",
+      content: `A collection of ramblings by ${SITE_AUTHOR}.`
+    }
+
+    // ...getMetaData({
+    //   canonical: args.parentsData?.root?.canonical,
+    // })
+  ];
 };
 
 export default function () {

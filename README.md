@@ -1,4 +1,4 @@
-# 🏎️💨 2023 Portfolio
+# 🏎️💨 2024 Portfolio
 
 > Remix is a full stack web framework that lets you focus on the user interface and work back through web fundamentals to deliver a fast, slick, and resilient user experience. People are gonna love using your stuff.
 
@@ -6,7 +6,7 @@ This repo is rebuild and re-skin of my [NextJS][nextjs] portfolio from 2021. Bot
 
 That being said I am really excited to see what the future holds for Remix. Its one of those `full circle` moments where in our industry and beautifully orchestrated by Remix. More to come in a blog post, it deserves it.
 
-- [2022/2023 Portfolio](https://mattscholta.com) build with [Remix][remix]
+- [Current Portfolio](https://mattscholta.com) build with [Remix][remix]
 - [2021 Portfolio](https://2021.mattscholta.com) build with [NextJS][nextjs]
 
 **Technology:**
@@ -26,7 +26,7 @@ Currently the API calls are made to an external service, [GraphCMS][graphcms]. N
 cp .env.example .env
 
 # Install Yarn or use NPM
-# npm install --global yarn
+npm install --global yarn
 
 # 📦 Install dependencies
 yarn install

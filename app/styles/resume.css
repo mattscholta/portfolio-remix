@@ -1,0 +1,17 @@
+/* @media print {
+  .custom-bg-gradient {
+    border: 1px solid;
+  }
+
+  main {
+    font-size: 10px;
+  }
+
+  main h1 {
+    font-size: 10px !important;
+  }
+
+  .resume-sections {
+    gap: 0;
+  }
+} */

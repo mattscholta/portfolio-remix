@@ -1,38 +1,41 @@
-import type { LinksFunction, MetaFunction } from "@vercel/remix";
-
-import { social } from "~/data/resume";
-import { SITE_AUTHOR, SITE_TITLE, SITE_YEAR } from "~/config/constants";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { AppShareLink } from "~/components/AppShareButton";
 import { AppSocialLink } from "~/components/AppSocialLink";
 import { SectionEducation } from "~/components/SectionEducation";
 import { SectionExperience } from "~/components/SectionExperience";
-import { getMetaData } from "~/metadata";
-
+import { SITE_AUTHOR, SITE_TITLE, SITE_YEAR } from "~/config/constants";
+import { social } from "~/data/resume";
 import styles from "~/styles/resume.css";
 
 export const links: LinksFunction = () => [
   {
     href: styles,
     media: "print",
-    rel: "stylesheet"
-  }
+    rel: "stylesheet",
+  },
 ];
 
 export const meta: MetaFunction = (args) => {
-  return {
-    ...getMetaData({
-      canonical: args.parentsData?.root?.canonical,
-      description: `The online resume of ${SITE_AUTHOR}, a Software Engineer located in San Diego, California.`,
-      title: `${SITE_YEAR} Resume | ${SITE_TITLE}`
-    })
-  };
+  return [
+    {
+      title: `${SITE_YEAR} Resume | ${SITE_TITLE}`,
+    },
+    {
+      name: "description",
+      content: `The online resume of ${SITE_AUTHOR}, a Software Engineer located in San Diego, California.`,
+    },
+  ];
+
+  // ...getMetaData({
+  //   canonical: args.parentsData?.root?.canonical,
+  // })
 };
 
 export default function () {
   return (
     <div className="m-auto max-w-5xl py-10 md:py-20">
       <div className="flex flex-col gap-20 px-4 md:flex-row md:px-0">
-        <aside className="print:hidden md:w-1/5">
+        <aside className="md:w-1/5 print:hidden">
           <div className="sticky top-32">
             <div className="flex flex-row items-center justify-center gap-6 md:flex-col">
               <img
@@ -53,7 +56,7 @@ export default function () {
               <a
                 className="ui-btn custom-bg-gradient flex-1 whitespace-nowrap rounded-2xl px-4 py-2 text-center text-sm font-normal text-white"
                 download={true}
-                href="/resume/Matthew_Scholta_2023.pdf"
+                href="/resume/Matthew_Scholta_2024.pdf"
               >
                 Download Resume
               </a>

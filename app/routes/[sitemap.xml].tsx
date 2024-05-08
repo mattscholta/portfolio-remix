@@ -1,11 +1,10 @@
-import type { LoaderFunction } from "@vercel/remix";
-
-import { fetchFromGraphCMS } from "~/utils/graphcms";
-import type { Post } from "~/routes/api.blog";
+import type { LoaderFunction } from "@remix-run/node";
 import type { Portfolio } from "~/routes/api.portfolio";
+import type { Post } from "~/routes/api.blog";
 import { BASE_URL } from "~/config/settings.server";
-import { SITE_UPDATED } from "~/config/constants";
+import { fetchFromGraphCMS } from "~/utils/graphcms";
 import { getSitemap } from "~/queries/getSitemap";
+import { SITE_UPDATED } from "~/config/constants";
 
 /**
  * @method GET
@@ -62,8 +61,8 @@ export const loader: LoaderFunction = async (args) => {
     headers: {
       "Content-Type": "application/xml",
       "xml-version": "1.0",
-      encoding: "UTF-8"
+      encoding: "UTF-8",
     },
-    status: 200
+    status: 200,
   });
 };

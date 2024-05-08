@@ -1,25 +1,27 @@
-import type { MetaFunction } from "@vercel/remix";
-import { useLoaderData } from "@remix-run/react";
-
 import type { LoaderData } from "~/routes/api.portfolio";
+import type { MetaFunction } from "@remix-run/react";
+import { useLoaderData } from "@remix-run/react";
 import { AppHero } from "~/components/AppHero";
 import { PortfolioPreview } from "~/components/PortfolioPreview";
 import { loader } from "~/routes/api.portfolio";
-import { getMetaData } from "~/metadata";
 import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 
 export { loader };
 
 export const meta: MetaFunction = (args) => {
-  // console.log(` 💬 ~ args.data`, args.data);
+  return [
+    {
+      title: `Featured Work | ${SITE_TITLE}`,
+    },
+    {
+      name: "description",
+      content: `A collection of ramblings by ${SITE_AUTHOR}.`,
+    },
 
-  return {
-    ...getMetaData({
-      canonical: args.parentsData?.root?.canonical,
-      description: `A collection of ramblings by ${SITE_AUTHOR}.`,
-      title: `Featured Work | ${SITE_TITLE}`
-    })
-  };
+    // ...getMetaData({
+    //   canonical: args.parentsData?.root?.canonical,
+    // })
+  ];
 };
 
 export default function () {

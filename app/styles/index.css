@@ -1,0 +1,11 @@
+/**
+ * Stitch together our applications CSS into this single file, doubtful we'll
+ * ever need to split it up any further but we have that option.
+ */
+@import "../tailwind.css";
+@import "./variables.css";
+@import "./base.css";
+@import "./application.css";
+@import "./layers.css";
+@import "./scrollbar.css";
+@import "./wysiwyg.css";
