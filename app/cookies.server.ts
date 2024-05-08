@@ -1,4 +1,4 @@
-// import { createCookie } from "@vercel/remix";
+// import { createCookie } from '@remix-run/node';
 // import { COOKIE_THEME } from "./config/constants";
 
 // /**

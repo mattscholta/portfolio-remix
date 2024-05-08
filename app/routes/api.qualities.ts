@@ -1,4 +1,4 @@
-import type { LoaderFunction } from "@vercel/remix";
+import type { LoaderFunction } from "@remix-run/node";
 
 const qualities = [
   "A problem solver 🧩",

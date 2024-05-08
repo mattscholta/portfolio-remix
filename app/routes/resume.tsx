@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from "@vercel/remix";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import { AppShareLink } from "~/components/AppShareButton";
 import { AppSocialLink } from "~/components/AppSocialLink";
 import { SectionEducation } from "~/components/SectionEducation";

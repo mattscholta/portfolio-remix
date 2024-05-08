@@ -1,4 +1,4 @@
-import type { LoaderFunction } from "@vercel/remix";
+import type { LoaderFunction } from "@remix-run/node";
 import type { Portfolio } from "~/routes/api.portfolio";
 import type { Post } from "~/routes/api.blog";
 import { BASE_URL } from "~/config/settings.server";
@@ -61,8 +61,8 @@ export const loader: LoaderFunction = async (args) => {
     headers: {
       "Content-Type": "application/xml",
       "xml-version": "1.0",
-      encoding: "UTF-8"
+      encoding: "UTF-8",
     },
-    status: 200
+    status: 200,
   });
 };

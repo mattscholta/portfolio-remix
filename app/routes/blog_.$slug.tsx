@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from "@vercel/remix";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import type { LoaderData } from "~/routes/api.blog.$slug";
 import { AppHero } from "~/components/AppHero";
 import { AppWysiwyg } from "~/components/AppWysiwyg";
@@ -12,7 +12,7 @@ import "prismjs/plugins/line-numbers/prism-line-numbers";
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: stylesLines },
-    { rel: "stylesheet", href: stylesTheme }
+    { rel: "stylesheet", href: stylesTheme },
   ];
 };
 
@@ -23,20 +23,20 @@ export const meta: MetaFunction = (args) => {
 
   return [
     {
-      title: args.data?.title || "Blog | Post not found!"
+      title: args.data?.title || "Blog | Post not found!",
       // ...getMetaData({
       //   canonical: args.parentsData?.root?.canonical,
       // })
     },
     {
       name: "description",
-      content: args.data?.description
+      content: args.data?.description,
     },
     {
       tagName: "link",
       rel: "canonical",
-      href: args.data?.canonical
-    }
+      href: args.data?.canonical,
+    },
   ];
 };
 
@@ -51,7 +51,7 @@ export default function () {
     month: "long",
     timeZone: "UTC",
     weekday: undefined,
-    year: "numeric"
+    year: "numeric",
   });
 
   return (

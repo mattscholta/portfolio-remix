@@ -5,11 +5,11 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
-  useLoaderData
+  useLoaderData,
 } from "@remix-run/react";
 import type { MetaFunction } from "@remix-run/react";
-import type { DataFunctionArgs, LinksFunction } from "@vercel/remix";
-import { json } from "@vercel/remix";
+import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
+import { json } from "@remix-run/node";
 
 import { AppFooter } from "~/components/AppFooter";
 import { BASE_URL } from "~/config/settings.server";
@@ -19,7 +19,7 @@ import {
   SITE_DESCRIPTION,
   SITE_SHARE_IMAGE,
   SITE_TITLE,
-  SITE_URL
+  SITE_URL,
 } from "~/config/constants";
 import { useIntro } from "~/hooks/useIntro";
 import { usePageTracking } from "~/hooks/usePageTracking";
@@ -30,7 +30,7 @@ import tailwind from "~/tailwind.css";
 export const links: LinksFunction = () => {
   return [
     { rel: "stylesheet", href: tailwind },
-    { rel: "stylesheet", href: styles }
+    { rel: "stylesheet", href: styles },
   ];
 };
 
@@ -51,21 +51,21 @@ export const meta: MetaFunction = (args) => {
 
   return [
     {
-      title: SITE_TITLE
+      title: SITE_TITLE,
     },
     {
       name: "description",
-      content: args.data.description
+      content: args.data.description,
     },
     {
       name: "image",
-      content: `${SITE_URL}${SITE_SHARE_IMAGE}`
+      content: `${SITE_URL}${SITE_SHARE_IMAGE}`,
     },
     {
       tagName: "link",
       rel: "canonical",
-      href: args.data.canonical
-    }
+      href: args.data.canonical,
+    },
     // ...getMetaData({
     //   canonical: args.data?.canonical,
     // })
