@@ -4,16 +4,14 @@ import { SandboxSidebar } from "~/components/SandboxSidebar";
 import { SITE_TITLE } from "~/config/constants";
 
 export const meta: MetaFunction = (args) => {
-  // console.log(` 💬 ~ args.data`, args.data);
-
   return [
     {
-      title: `Sandbox | ${SITE_TITLE}`
+      title: `Sandbox | ${SITE_TITLE}`,
     },
     {
       name: "description",
-      content: `A Sandbox for Remix-Run and various web experiments.`
-    }
+      content: `A Sandbox for Remix-Run and various web experiments.`,
+    },
     // ...getMetaData({
     //   canonical: args.parentsData?.root?.canonical,
     // })

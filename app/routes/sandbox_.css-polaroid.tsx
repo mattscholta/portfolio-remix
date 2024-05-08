@@ -4,16 +4,13 @@ import { SandboxSidebar } from "~/components/SandboxSidebar";
 import { SITE_TITLE } from "~/config/constants";
 
 export const meta: MetaFunction = (args) => {
-  // console.log(` 💬 ~ args.data`, args.data);
-  // console.log(`👋 ~ args:`, args);
-
   return [
     {
-      title: `Sandbox | ${SITE_TITLE}`
+      title: `Sandbox | ${SITE_TITLE}`,
     },
     {
-      description: `A Sandbox project making a Poloroid camera with CSS.`
-    }
+      description: `A Sandbox project making a Poloroid camera with CSS.`,
+    },
     // {
     //   canonical: args.parentsData?.root?.canonical
     // }
@@ -39,7 +36,7 @@ export default () => {
               backgroundImage: `url("/images/sandbox/css-polaroid.jpg")`,
               backgroundPosition: "bottom right",
               height: "550px",
-              width: "650px"
+              width: "650px",
             }}
           >
             <div className="ml-20 mr-20 mt-20">

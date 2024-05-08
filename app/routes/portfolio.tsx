@@ -9,16 +9,14 @@ import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
 export { loader };
 
 export const meta: MetaFunction = (args) => {
-  // console.log(` 💬 ~ args.data`, args.data);
-
   return [
     {
-      title: `Featured Work | ${SITE_TITLE}`
+      title: `Featured Work | ${SITE_TITLE}`,
     },
     {
       name: "description",
-      content: `A collection of ramblings by ${SITE_AUTHOR}.`
-    }
+      content: `A collection of ramblings by ${SITE_AUTHOR}.`,
+    },
 
     // ...getMetaData({
     //   canonical: args.parentsData?.root?.canonical,

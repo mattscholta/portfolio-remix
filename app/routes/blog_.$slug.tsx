@@ -90,23 +90,3 @@ export default function () {
     </>
   );
 }
-
-// export const CatchBoundary = () => {
-//   // Hooks
-//   const caught = useCatch();
-
-//   if (caught.status === 400) {
-//     return (
-//       <section className="mx-auto max-w-6xl">
-//         <AppHero
-//           className="py-20 md:py-40"
-//           copy="Uh oh..."
-//           highlight="404"
-//           tag="h1"
-//         />
-//       </section>
-//     );
-//   }
-
-//   throw new Error("Unexpected error");
-// };

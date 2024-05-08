@@ -2,30 +2,27 @@ import type { MetaFunction } from "@remix-run/react";
 import * as React from "react";
 import { AppHero } from "~/components/AppHero";
 import { getQuote } from "~/routes/api.qualities";
-import { SITE_AUTHOR, SITE_TITLE } from "~/config/constants";
+import { SITE_AUTHOR, SITE_DESCRIPTION, SITE_TITLE } from "~/config/constants";
 import { SectionCompanies } from "~/components/SectionCompanies";
 import { SectionTechnology } from "~/components/SectionTechnology";
 import { SectionAmbitions } from "~/components/SectionAmbitions";
-
 // import { SectionFireworks } from "~/components/SectionFireworks";
 // import { getMetaData } from "~/metadata";
 
 export const meta: MetaFunction = (args) => {
-  // console.log(`👋 ~ args in index:`, args);
-
   return [
     {
-      title: `${SITE_TITLE}`
+      title: `${SITE_TITLE}`,
     },
     {
       name: "description",
-      content: `asdfasdfasdf SITE_DESCRIPTION`
+      content: SITE_DESCRIPTION,
     },
     {
       tagName: "link",
       rel: "canonical",
-      href: args.data?.canonical
-    }
+      href: args.data?.canonical,
+    },
 
     // {
     //   name: "canonical",

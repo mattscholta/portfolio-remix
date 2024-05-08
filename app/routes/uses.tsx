@@ -6,16 +6,14 @@ import { SectionSoftware } from "~/components/SectionSoftware";
 import { SITE_TITLE } from "~/config/constants";
 
 export const meta: MetaFunction = (args) => {
-  // console.log(` 💬 ~ args.data`, args.data);
-
   return [
     {
-      title: `Uses | ${SITE_TITLE}`
+      title: `Uses | ${SITE_TITLE}`,
     },
     {
       name: "description",
-      content: `Check out uses.tech for a list of more /uses pages!`
-    }
+      content: `Check out uses.tech for a list of more /uses pages!`,
+    },
     // ...getMetaData({
     //   canonical: args.parentsData?.root?.canonical,
     // })

@@ -47,8 +47,6 @@ export const loader = async (args: DataFunctionArgs) => {
 };
 
 export const meta: MetaFunction = (args) => {
-  // console.log(`👋 ~ args in root:`, args);
-
   return [
     {
       title: SITE_TITLE,
